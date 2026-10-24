@@ -34,13 +34,25 @@ def test_gazetteer_fully_resolved_and_in_place():
     assert C._in_bbox(nik.representative_longitude, nik.representative_latitude, C.EGYPT_BBOX)
 
 
-def test_legion_bases_joined_and_egyptian_legion_in_egypt():
-    leg = pd.read_csv(DER / "legions_c150_joined.csv")
-    with_base = leg[leg.base.notna()]
-    assert with_base.representative_longitude.notna().all()
-    ii = leg[leg.legion == "II Traiana"].iloc[0]
-    assert C._in_bbox(ii.representative_longitude, ii.representative_latitude, C.EGYPT_BBOX)
-    assert (leg.review_status == "machine_summary_only").all()   # provisional scaffold, never 'inspected'
+def test_legion_snapshots_primary_sources():
+    snap = pd.read_csv(DER / "legion_snapshots.csv")
+    tac = snap[snap.snapshot == "AD23_Tacitus"]
+    assert tac.n_legions.sum() == 25                      # Ann. 4.5 regional counts
+    assert tac.set_index("region").loc["Aegyptus", "n_legions"] == 2
+    assert (tac.review_status == "inspected").all()
+    dio = snap[snap.snapshot == "c229_Dio"]
+    assert (dio.review_status == "machine_summary_only").all()   # never promoted without verbatim text
+    assert "III Cyrenaica" in dio.set_index("region").loc["Arabia", "legions"]
+
+
+def test_egypt_legion_series_and_k16_resolution():
+    eg = pd.read_csv(DER / "egypt_legion_series.csv")
+    w1 = eg[eg.date_from_ce.between(23, 70)]
+    assert set(w1.value_low) == {2}
+    assert eg[eg.anchor_id == "MIL-EG-LEG-PIUS"].value_low.item() == 1
+    m = pd.read_csv(C.CUR / "egypt_military_anchors.csv").set_index("anchor_id")
+    assert m.loc["MIL-COPTOS-LEGIO-III", "epistemic_status"] == "disputed"
+    assert not (C.CUR / "legions_c150_provisional.csv").exists()    # Wikipedia scaffold retired (D018)
 
 
 def test_orbis_edges_selected_by_geography_not_label():

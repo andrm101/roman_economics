@@ -28,3 +28,11 @@ date,tool,query_or_url,purpose,results_used,notes
 2026-10-24,web_search,Alexandrian tetradrachm silver content data,inflation,none usable,
 2026-10-24,web_fetch,en.wikipedia.org/wiki/List_of_Roman_legions,legions,SRC-WIKIPEDIA-LEGIONS,machine summary; provisional
 2026-10-24,git ls-remote,isawnyu/pleiades.datasets; AWMC/geodata; emeeks/orbis_v2; nomisma/data,acquisition,three fetched,
+2026-10-24,git (sparse clone),PerseusDL/canonical-greekLit@0189b9c8 (tlg0385 Dio; tlg0526 Josephus BJ; tlg0099 Strabo),legion dispositions (primary),SRC-JOSEPHUS-BJ; SRC-STRABO-GEOG,Dio grc2 ends at 55.9: 55.23-24 absent
+2026-10-24,git (sparse clone),PerseusDL/canonical-latinLit@0700a6b7 (phi1351.phi005 Tacitus Annals),legion dispositions (primary),SRC-TACITUS-ANN,Ann. 4.5 read in Latin and Church-Brodribb
+2026-10-24,git (sparse clone),OpenGreekAndLatin/First1KGreek@03776b39,Dio 55.23-24,none,tlg0385 not present
+2026-10-24,WebSearch + WebFetch,lexundria.com/dio/55.23/cy; /55.24/cy,Dio legion list,SRC-DIO-CARY,machine summary only (tool refused verbatim quotation)
+2026-10-24,WebSearch,CIL VI 3492 ILS 2288 EDH,legion list inscription,none,no edition reached; DOC-CIL-6-3492 registered as not inspected
+2026-10-24,attachment,Adams 2007 Land Transport in Roman Egypt (PDF supplied),camel loads; desert costs; supply,SRC-ADAMS-2007,pp. 36-45; 79-83; 208-210; 222-235; 288 read
+2026-10-24,attachment,de Soto et al. 2025 Scientific Data 12:1731 (PDF supplied),Itiner-e field definitions,SRC-ITINERE-PAPER-2025,Table 2; certainty categories; Egypt and Eastern Desert sections
+2026-10-24,WebFetch,github.com/papyri/idp.data,reporting channel for K12,none,Issues enabled; README recommends Papyrological Editor for single-document text fixes

@@ -1,0 +1,42 @@
+snapshot,date_ce,region,legion,n_legions,source_id,locus,passage_id,record_origin,epistemic_status,review_status
+AD23_Tacitus,23,Rhine (both Germanies),,8,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Hispania,,3,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Africa,,2,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Aegyptus,,2,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Syria to Euphrates,,4,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Pannonia,,2,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Moesia,,2,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+AD23_Tacitus,23,Dalmatia,,2,SRC-TACITUS-ANN,Ann. 4.5,PAS-TAC-ANN-4.5,literary_statement,accepted_working,inspected
+c229_Dio,229,Britannia superior,II Augusta,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Phoenice,III Gallica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Arabia,III Cyrenaica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Numidia,III Augusta,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Syria,IV Scythica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Dacia,V Macedonica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Britannia inferior,VI Victrix,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Iudaea,VI Ferrata,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Moesia superior,VII Claudia,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Germania superior,VIII Augusta,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Pannonia superior,X Gemina,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Iudaea,X (Fretensis),1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Moesia inferior,XI Claudia,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Cappadocia,XII Fulminata,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Dacia,XIII Gemina,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Pannonia superior,XIV Gemina,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Cappadocia,XV Apollinaris,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Britannia superior,XX Valeria Victrix,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Germania,XXII (Primigenia),1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Moesia inferior,I Italica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Pannonia inferior,I Adiutrix,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Hispania,VII Gemina,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Pannonia inferior,II Adiutrix,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Moesia superior,IV Flavia,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Syria,XVI Flavia,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Germania inferior,I Minervia,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,not stated in summary,II (Traiana) 'Aegyptian',1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,not stated in summary,XXX (Ulpia),1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Noricum,II Italica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Raetia,III Italica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Mesopotamia,I Parthica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Mesopotamia,III Parthica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only
+c229_Dio,229,Italia,II Parthica,1,SRC-DIO-CARY,55.23-24,,literary_statement,uncertain,machine_summary_only

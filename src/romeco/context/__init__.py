@@ -179,16 +179,25 @@ def build_urban_areas() -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------------
-# Legions: provisional disposition joined to Pleiades
+# Legions: primary-source snapshots (D018; replaces the Wikipedia scaffold)
 # ---------------------------------------------------------------------------
-def build_legions(pl: pd.DataFrame) -> pd.DataFrame:
-    leg = pd.read_csv(CUR / "legions_c150_provisional.csv")
-    cw = pd.read_csv(CUR / "place_crosswalk.csv")
-    cw = cw[cw.role.str.contains("legion_base")][["name", "pleiades_id"]]
-    m = leg.merge(cw, left_on="base", right_on="name", how="left").drop(columns="name")
-    m = m.merge(pl[["id", "title", "representative_longitude", "representative_latitude", "place_types"]],
-                left_on="pleiades_id", right_on="id", how="left").drop(columns="id")
-    return m
+def build_legions() -> tuple[pd.DataFrame, pd.DataFrame]:
+    """(snapshot counts by region, Egypt legion-count series).
+
+    Snapshots: Tacitus Ann. 4.5 (AD 23, verbatim TEI) and Dio 55.23-24 (Dio's day,
+    machine summary). Egypt series: legion_count_egypt rows of egypt_military_anchors.csv.
+    review_status is carried through so machine-summary rows stay visible.
+    """
+    d = pd.read_csv(CUR / "legion_dispositions_primary.csv")
+    snap = (d.groupby(["snapshot", "date_ce", "region", "review_status"], as_index=False)
+              .agg(n_legions=("n_legions", "sum"),
+                   legions=("legion", lambda x: "; ".join(v for v in x if isinstance(v, str) and v))))
+    m = pd.read_csv(CUR / "egypt_military_anchors.csv")
+    eg = (m[m.quantity_concept == "legion_count_egypt"]
+          [["anchor_id", "date_from_ce", "date_to_ce", "value_low", "value_high", "unit_or_formation",
+            "source_id", "page", "record_origin", "epistemic_status", "review_status"]]
+          .sort_values("date_from_ce"))
+    return snap, eg
 
 
 # ---------------------------------------------------------------------------
@@ -250,7 +259,9 @@ def build_all(verbose: bool = False) -> dict[str, Path]:
     save(build_awmc_roads(), "awmc_roads_summary")
     save(build_orbis_pilot_edges(gaz), "orbis_pilot_edges")
     save(build_urban_areas(), "awmc_urban_areas")
-    save(build_legions(pl), "legions_c150_joined")
+    snap, eg = build_legions()
+    save(snap, "legion_snapshots")
+    save(eg, "egypt_legion_series")
     save(build_deflators(), "egypt_price_deflators")
     regime = hermapollon_post_break_share()
     (OUT / "hermapollon_price_regime.json").write_text(json.dumps(regime, indent=2))

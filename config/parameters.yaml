@@ -110,11 +110,11 @@ parameters:
   camel_capacity_kg:
     definition: Payload of one camel load on the Coptos-Berenike route
     unit: kg
-    baseline: 200
-    bounds: [150, 250]
-    status: exploratory
-    evidence: []
-    note: "Placeholder; candidate source Adams 2007 (cited_only)."
+    baseline: 181           # 400 lb avoirdupois (Adams 2007: 80) [calculated: 400 x 0.4536]
+    bounds: [150, 200]
+    status: external_estimate
+    evidence: [ANC-CAMEL-LOAD-CUSTOMS, ANC-CAMEL-LOAD-ADAMS, ANC-CAMEL-LOAD-EDICT]
+    note: "Modal Fayum customs load 6 artabas (~400 lb); Edict 17.4 600 Roman lb = 193.7 kg (CR-WT-ROM-001; AD 301, transfer assumption). Bounds = modern camel-corps limits 150-200 kg (Adams n.51). Fayum loads are for shorter routes; desert loads may be lower."
   route_nile_km:
     definition: Juliopolis-Coptos river distance
     unit: km
@@ -163,7 +163,7 @@ parameters:
     bounds: [1200, 1200]
     status: external_estimate
     evidence: [PL-ARMY-PAY-85-193]
-    note: "Use as a scale: HS 1.2 m per 1,000 soldier-years. Garrison size of Egypt NOT yet sourced."
+    note: "Use as a scale: HS 1.2 m per 1,000 soldier-years. Legion COUNT in Egypt now sourced (egypt_legions_W1/W2); legion and auxiliary MANPOWER still not sourced."
   praesidium_garrison:
     definition: Soldiers per Eastern Desert praesidium
     unit: soldiers
@@ -194,3 +194,60 @@ parameters:
     status: external_estimate
     evidence: [CTX-ITINERE-COPTOS-MYOS]
     note: "Itiner-e shortest path c. 182 km (about half on 'Certain' segments); ORBIS geometry 170 km."
+  # ---- session 5: Adams 2007 transport anchors; primary-source legion counts ----
+  camel_load_artabas:
+    definition: Wheat carried per camel load
+    unit: artaba
+    baseline: 6
+    bounds: [4, 6]
+    status: external_estimate
+    evidence: [ANC-CAMEL-LOAD-CUSTOMS]
+    note: "6 artabas in 94% of Fayum camel wheat loads; 4 for a foal. Artaba size varied (Adams 80)."
+  desert_days_coptos_berenike:
+    definition: Caravan transit time Coptos-Berenike
+    unit: days
+    baseline: 12
+    bounds: [12, 14]
+    status: external_estimate
+    evidence: [ANC-PLINY-DESERT-DAYS, CTX-ITINERE-COPTOS-BERENIKE]
+    note: "Pliny 12 days (~30 km/day per Adams 45). Upper bound [calculated]: Itiner-e 402-408 km at 30 km/day = 13.4-13.6 days."
+  desert_freight_dr_per_camel_trip:
+    definition: Charge per camel load, Coptos-Berenike (one way)
+    unit: drachma_EG
+    baseline: null
+    bounds: [45, null]
+    status: external_estimate
+    evidence: [ANC-CAMEL-HIRE-RATE, ANC-ALUM-FREIGHT-RATE, ANC-PLINY-DESERT-DAYS]
+    note: "Adams 231: 4 dr/day x 12 days = 48 dr hire; Western Desert alum rate 7.5 dr/talent x 6 talents = 45 dr. Explicitly 'very much at the lower end'; luxury freight likely index-linked to value. Lower bound only."
+  egypt_legions_W1:
+    definition: Legions stationed in Egypt, 1st century CE (from AD 23 to 70 at least)
+    unit: legions
+    baseline: 2
+    bounds: [2, 2]
+    status: measured_input
+    evidence: [MIL-EG-LEG-TAC-23, MIL-EG-LEG-JOS-66, MIL-EG-LEG-JOS-70, MIL-EG-LEG-STRABO]
+    note: "Three under the early Augustan arrangement (Strabo 17.1.12); two in AD 23, 66 and 70, at Alexandria in 66-70."
+  egypt_legions_W2:
+    definition: Legions stationed in Egypt, 100-200 CE
+    unit: legions
+    baseline: 1             # from c. 138 (Pius)
+    bounds: [1, 2]
+    status: external_estimate
+    evidence: [MIL-EG-LEGIO-II-TRAIANA, MIL-EG-LEG-III-CYR-ARABIA, MIL-EG-LEG-PIUS, MIL-EG-LEG-DIO-229]
+    note: "2 is possible only before c. 139 (III Cyrenaica to Arabia before 139; II Traiana in Egypt by 128). The second 1st-c. legion's fate is not documented in inspected sources."
+  berenike_supply_camel_loads_month:
+    definition: Camel loads per month needed to supply Berenike's population
+    unit: camel_loads_per_month
+    baseline: 2000
+    bounds: [2000, 2000]
+    status: external_estimate
+    evidence: [ANC-RUFFING-BERENIKE-LOADS]
+    note: "Ruffing via Adams 225; derivation not inspected. Desert-road confounder for WP2."
+  mons_claudianus_supply_loads_month:
+    definition: Camel loads of wheat per month to supply Mons Claudianus
+    unit: camel_loads_per_month
+    baseline: 150
+    bounds: [120, 150]
+    status: external_estimate
+    evidence: [ANC-MONS-CLAUD-SUPPLY, ANC-CAMEL-LOAD-CUSTOMS]
+    note: "Adams 209: c. 900 persons x 1 artaba/month / 6 artabas per load; Hadrianic minimum 730 personnel gives ~122 [calculated]. Wheat only (wine, oil, fodder excluded); different road (Kainopolis)."

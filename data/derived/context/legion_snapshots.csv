@@ -1,0 +1,31 @@
+snapshot,date_ce,region,review_status,n_legions,legions
+AD23_Tacitus,23,Aegyptus,inspected,2,
+AD23_Tacitus,23,Africa,inspected,2,
+AD23_Tacitus,23,Dalmatia,inspected,2,
+AD23_Tacitus,23,Hispania,inspected,3,
+AD23_Tacitus,23,Moesia,inspected,2,
+AD23_Tacitus,23,Pannonia,inspected,2,
+AD23_Tacitus,23,Rhine (both Germanies),inspected,8,
+AD23_Tacitus,23,Syria to Euphrates,inspected,4,
+c229_Dio,229,Arabia,machine_summary_only,1,III Cyrenaica
+c229_Dio,229,Britannia inferior,machine_summary_only,1,VI Victrix
+c229_Dio,229,Britannia superior,machine_summary_only,2,II Augusta; XX Valeria Victrix
+c229_Dio,229,Cappadocia,machine_summary_only,2,XII Fulminata; XV Apollinaris
+c229_Dio,229,Dacia,machine_summary_only,2,V Macedonica; XIII Gemina
+c229_Dio,229,Germania,machine_summary_only,1,XXII (Primigenia)
+c229_Dio,229,Germania inferior,machine_summary_only,1,I Minervia
+c229_Dio,229,Germania superior,machine_summary_only,1,VIII Augusta
+c229_Dio,229,Hispania,machine_summary_only,1,VII Gemina
+c229_Dio,229,Italia,machine_summary_only,1,II Parthica
+c229_Dio,229,Iudaea,machine_summary_only,2,VI Ferrata; X (Fretensis)
+c229_Dio,229,Mesopotamia,machine_summary_only,2,I Parthica; III Parthica
+c229_Dio,229,Moesia inferior,machine_summary_only,2,XI Claudia; I Italica
+c229_Dio,229,Moesia superior,machine_summary_only,2,VII Claudia; IV Flavia
+c229_Dio,229,Noricum,machine_summary_only,1,II Italica
+c229_Dio,229,Numidia,machine_summary_only,1,III Augusta
+c229_Dio,229,Pannonia inferior,machine_summary_only,2,I Adiutrix; II Adiutrix
+c229_Dio,229,Pannonia superior,machine_summary_only,2,X Gemina; XIV Gemina
+c229_Dio,229,Phoenice,machine_summary_only,1,III Gallica
+c229_Dio,229,Raetia,machine_summary_only,1,III Italica
+c229_Dio,229,Syria,machine_summary_only,2,IV Scythica; XVI Flavia
+c229_Dio,229,not stated in summary,machine_summary_only,2,II (Traiana) 'Aegyptian'; XXX (Ulpia)

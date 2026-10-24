@@ -231,7 +231,9 @@ Expected outcome, stated now: with the current evidence M1 and M2 will be **obse
 | N | exploratory | Strabo | Augustan, one port, ambiguous |
 | O | measured_input | Pliny | Literary, moralising |
 | route_nile_km | exploratory (lower bound 646 km) | Pliny withdrawn (K17) | Pliny's 309 mp is shorter than the great circle |
-| route_desert_km | measured_input [380, 409] | Pliny; ORBIS; Itiner-e | Sources share lineage (K18) |
+| route_desert_km | measured_input [380, 409] | Pliny; ORBIS; Itiner-e | Sources share lineage; Itiner-e is a least-cost model (K18) |
+| camel_capacity_kg | external_estimate 181 [150, 200] | Adams 2007: 79–80 | Fayum loads; desert loads may differ |
+| desert_freight_dr_per_camel_trip | external_estimate ≥ 45 | Adams 2007: 231 | lower bound only |
 | λ, κ, c, p, camel_capacity_kg | exploratory | **0** | Drive almost all of the receipts range; λ is the key unidentified quantity |
 
 ### 7.5 Observation model (latent process → surviving traces)

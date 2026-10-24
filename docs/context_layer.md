@@ -1,4 +1,4 @@
-# Context layer: legions, cities, roads, prices/inflation (v0.2, 2026-10-24)
+# Context layer: legions, cities, roads, prices/inflation (v0.3, 2026-10-24)
 
 Purpose: track four families of conditioning variables requested by the researcher. They enter the pilot as **constraints, confounders and deflators** for RQ1; they do not open a new research question (D012).
 
@@ -15,21 +15,45 @@ Claim tags: **[sourced]**, **[calculated]**, **[assumption]**. All derived table
 | Cities (area, status, monuments) | Hanson 2016 Cities Database (DOI 10.5287/bodleian:eqapevAn8) | researcher-supplied (sha256 `5b9fc019…`) | **read; aggregates only committed (D016)** | not stated |
 | Prices / wages (Egypt) | Harper 2016 DARMC xlsx (companion to Harper 2016, *JEH* 76: 803–39) | researcher-supplied (sha256 `167a62be…`) | **read; aggregates only committed (D016)** | not stated |
 | Coin fineness | Ponting et al. 2021 ISIS dataset (DOI 10.5286/ISIS.E.98003576) | ISIS | **blocked; probably raw spectra** | CC BY 4.0 |
-| Legions | No open structured dataset reachable. Provisional c. 150–165 table extracted from Wikipedia (machine summary) | web | scaffold only | CC BY-SA |
+| Legions | Primary texts via Perseus TEI (Strabo, Tacitus, Josephus; canonical-greekLit `0189b9c8`, canonical-latinLit `0700a6b7`) + Nappo 2018; Dio 55.23–24 as machine summary | GitHub / web | **read verbatim** (Dio: summary only). Wikipedia scaffold retired (D018) | CC BY-SA 4.0 markup; PD editions |
+| Transport (Egypt) | Adams 2007, *Land Transport in Roman Egypt* (OUP) | researcher-supplied PDF | **inspected** | all rights reserved (private use) |
 
 Plus curated anchors read directly in the two project books (`data/curated/context/*.csv`, every page re-checked programmatically).
 
 ## 2. Legions and garrisons
 
-**Inspected anchors (Nappo 2018) [sourced]:**
+**Primary texts read verbatim [sourced]** (`data/curated/context/legion_passages.csv`):
+
+| Date | Legions in Egypt | Source | Note |
+|---|---|---|---|
+| Augustan (Strabo in Egypt c. 25–20 BCE) | 3 (one at Alexandria, one at Babylon) | Strabo 17.1.12, 17.1.30 | plus 9 cohorts (3 Alexandria, 3 Syene, 3 elsewhere) and 3 alae |
+| AD 23 | 2 | Tacitus *Ann.* 4.5 ("parique numero Aegyptus") | empire total 25 |
+| AD 66 | 2, in Alexandria | Josephus *BJ* 2.387, 2.494 | |
+| AD 70 | 2 ("the two legions from Alexandria") | Josephus *BJ* 6.238 | detachments at Jerusalem |
+| by 128 | II Traiana Fortis in Egypt | Nappo 2018: 80 | inspected secondary |
+| before 139 | III Cyrenaica moved to Arabia (replacing VI Ferrata) | Nappo 2018: 80–81 n. 305 | inspected secondary |
+| from Pius | 1 (II Traiana, sole legion) | Nappo 2018: 80 | inspected secondary |
+| Dio's day (c. 229) | II "the Egyptian"; III Cyrenaica in Arabia | Dio 55.23–24 | **machine summary only** |
+
+**K16 resolved for W2:** Nappo's own p. 81 n. 305, Dio and Josephus all contradict p. 55 ("III Cyrenaica at Coptos until Caracalla"), which is now `disputed`. Parameters: `egypt_legions_W1` = 2; `egypt_legions_W2` = 1 (2 only before c. 139).
+
+**Still missing:**
+- Legion and auxiliary **manpower**: no inspected source gives unit strengths.
+- When the second 1st-century legion left Egypt.
+- ILS 2288 (CIL VI 3492): no edition reached.
+
+**Other inspected anchors (Nappo 2018) [sourced]:**
 - Myos Hormos garrison of 50–100 under a *curator praesidii*, early 1st c. to c. 125 (p. 53).
 - Eastern Desert praesidia of 22–24 men each (p. 57).
-- II Traiana Fortis in Egypt by 128 and the sole legion of the province from Antoninus Pius (p. 80); a vexillation on the Farasan islands in 143–144 (pp. 78–80).
-- Nappo places III Cyrenaica at Coptos until Caracalla (p. 55). This **conflicts** with the provisional disposition table, which puts it at Bostra c. 150–165 (K16).
+- Vexillation of II Traiana on the Farasan islands, 143–144 (pp. 78–80).
+
+**Desert supply loads (Adams 2007) [sourced; scholarly estimates]:**
+- **Berenike:** about 2,000 camel loads a month to supply its population (Ruffing via Adams p. 225; derivation not inspected).
+- **Mons Claudianus:** about 900 artabas of wheat a month, i.e. about 150 camel loads (p. 209), on a different road (Kainopolis), 120 km and a 10-day round trip.
+- **State caravans:** state caravans from Berenike are attested in AD 163 (P. Lond. II 328; p. 234).
 
 **Derived [calculated]:**
 - **Eastern Desert installations.** Pleiades lists 99 fort/station places in the Eastern Desert box; 58 have dated locations overlapping 100–200 CE, and 36 are undated.
-- **Legion bases.** 29 of 32 provisional legion entries have a base resolved to Pleiades through a reviewed crosswalk (`place_crosswalk.csv`, status `project_match_unreviewed`).
 - **Pay as a fiscal scale.** Legionary pay of HS 1,200 a year (AD 85 – Severus; Rathbone 2009: 311) turns the E000 receipts envelope (HS 14.1 m – 415.6 m) into roughly **12,000 – 346,000 soldier-years of pay** **[calculated; conditional]**. This compares fiscal receipts with the cost of a garrison whose size is **not yet sourced**.
 
 **Why it matters for RQ1.** Garrisons and quarries draw supplies over the same desert roads. They are the main confounder for the desert-throughput test of H1a/H1b. The praesidia network is also the infrastructure whose cost Nappo and Tomber disagree about (K5).
@@ -46,6 +70,12 @@ Plus curated anchors read directly in the two project books (`data/curated/conte
 - **Coptos–Berenike length agrees across three sources:** Pliny 257 mp ≈ 380 km; Nappo "quasi 400 km" (p. 57); ORBIS geometry 379.5 km. They **share lineage**, so this is agreement, not confirmation.
 - **Itiner-e (network shortest path, snapped graph) [calculated]:** Coptos–Berenike **402–408 km**, all segments `Conjectured` (Desert Networks lineage); Coptos–Myos Hormos **c. 182 km** (ORBIS 170). A 6–7% gap with Pliny/ORBIS (K18); `route_desert_km` bounds widened to [380, 409].
 - **Pliny's Juliopolis–Coptos 309 mp (≈457 km) is physically impossible as a river distance:** the great-circle distance alone is 646 km [calculated]. Withdrawn as a parameter value (K17, D017); `route_nile_km` is now exploratory with lower bound 646.
+- **Itiner-e caveat (paper inspected):** Eastern Desert lines are Desert Networks least-cost paths between known stations, calibrated on 60 modern caravan itineraries (de Soto et al. 2025: 8). They are a camel-travel model, not surveyed roads; only 2.7% of Itiner-e road length is `Certain`. My haversine lengths match the dataset's `Shape_Leng` (402.4 vs 402.1 km).
+- **Adams 2007 transport anchors [sourced]:**
+  - Camel load 6 artabas ≈ 400 lb (pp. 79–80); Edict 17.4 gives 600 Roman lb (AD 301).
+  - Hire up to 4 dr/day (BGU III 921); Western Desert alum freight 7 dr 3 ob per talent (BGU III 697, AD 145).
+  - Hence ≥ 45–48 dr per camel for Coptos–Berenike, which Adams calls "very much at the lower end" (p. 231).
+  - Koptos–Myos Hormos 173–174 km, 5–7 days (pp. 37, 45).
 - **Finding: ORBIS v2 road "time" is not evidence.** On every road edge `field_s` = km ÷ 30.0 and `field_e` = 1.05 × `field_s` (tested). The 12.6 "days" for Coptos–Berenike, close to Pliny's 12, is a 30 km/day assumption (D013).
 - **AWMC roads:** 3,010 km of segments touch the Eastern Desert box. Nappo gives 2,000–2,200 km for the seven main desert roads (p. 55). The box also catches minor and Nile-edge roads, and AWMC roads are **undated**.
 - **ORBIS identity trap:** its "Nicopolis" is the Epirote city. Edges are now selected by geography, never by label (D014).
@@ -71,6 +101,6 @@ Plus curated anchors read directly in the two project books (`data/curated/conte
 
 1. **Done:** Itiner-e, Hanson, Harper received and integrated. Outstanding: Itiner-e field description docx (certainty/date field definitions); licences for Hanson and Harper before any row-level release.
 5. **Nile distance (K17):** find a sourced Juliopolis–Coptos river distance or a reading/unit explanation of Pliny's 309 mp.
-2. **Legion dispositions:** replace the Wikipedia scaffold with a scholarly list. The best primary anchor is the c. AD 165 inscription listing legions by province (ILS 2288), plus a modern disposition table.
-3. **Egypt garrison size:** needed before the pay-scale comparison means anything. Candidate sources are cited by Nappo (Daris 2000; Cuvigny; Bagnall 1986).
+2. **Legions:** done (D018). Still open: verbatim Dio 55.23–24; ILS 2288.
+3. **Egypt garrison manpower:** needed before the pay-scale comparison means anything. Candidate sources are cited by Nappo (Daris 2000; Cuvigny; Bagnall 1986).
 4. **Tetradrachm fineness series** for Egypt (closed currency): not found in reachable open data.

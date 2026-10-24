@@ -1,0 +1,7 @@
+anchor_id,date_from_ce,date_to_ce,value_low,value_high,unit_or_formation,source_id,page,record_origin,epistemic_status,review_status
+MIL-EG-LEG-STRABO,-26.0,23,3.0,3.0,legions (unnamed),SRC-STRABO-GEOG,17.1.12; 17.1.30,literary_statement,accepted_working,inspected
+MIL-EG-LEG-TAC-23,23.0,23,2.0,2.0,legions (unnamed),SRC-TACITUS-ANN,Ann. 4.5,literary_statement,accepted_working,inspected
+MIL-EG-LEG-JOS-66,66.0,66,2.0,2.0,legions in the city,SRC-JOSEPHUS-BJ,BJ 2.387; 2.494,literary_statement,accepted_working,inspected
+MIL-EG-LEG-JOS-70,70.0,70,2.0,2.0,'the two legions from Alexandria',SRC-JOSEPHUS-BJ,BJ 6.238,literary_statement,accepted_working,inspected
+MIL-EG-LEG-PIUS,138.0,161,1.0,1.0,Legio II Traiana Fortis,SRC-NAPPO-2018,80,scholarly_reconstruction,accepted_working,inspected
+MIL-EG-LEG-DIO-229,229.0,229,1.0,1.0,"II (Traiana), 'the Egyptian' (Cary)",SRC-DIO-CARY,55.24,literary_statement,uncertain,machine_summary_only
