@@ -1,0 +1,5 @@
+scenario,regime,wheat_dr_per_artaba,index_vs_pre_break,applies_to
+pre_break_central,70s-160s,9.0,1.0,W1 and Hermapollon if dated before the break
+pre_break_low,70s-160s,6.0,0.6666666666666666,seasonal/inter-annual band
+pre_break_high,70s-160s,12.0,1.3333333333333333,seasonal/inter-annual band
+post_break_central,190s-250s,16.0,1.7777777777777777,Hermapollon only if dated after the break (HGV range 126-175 makes this unlikely)

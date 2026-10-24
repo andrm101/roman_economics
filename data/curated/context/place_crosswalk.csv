@@ -1,0 +1,46 @@
+name,pleiades_id,role,match_status,note
+Alexandria,727070,pilot_node,project_match_unreviewed,port;settlement
+Iuliopolis/Nikopolis,727131,pilot_node; legion_base,project_match_unreviewed,Pliny's Juliopolis (start of Nile leg) and Nicopolis legionary base
+Coptos,786010,pilot_node,project_match_unreviewed,
+Berenike,785986,pilot_node,project_match_unreviewed,
+Myos Hormos,786069,pilot_node,project_match_unreviewed,Pleiades title carries '?' (identification uncertainty flagged by Pleiades)
+Apollonopolis Magna,785974,pilot_node,project_match_unreviewed,alternative Nile terminus (Strabo 17.1.45)
+Kaine/Maximianopolis,786047,pilot_node,project_match_unreviewed,Nile terminus for the Myos Hormos road (to verify)
+Klaudianon (Mons Claudianus),766375,quarry; desert_traffic_competitor,project_match_unreviewed,fort;quarry
+Porphyrites (Mons Porphyrites),766391,quarry; desert_traffic_competitor,project_match_unreviewed,mountain;quarry
+Didymoi,786015,praesidium,project_match_unreviewed,Coptos-Berenike road
+Maximianon,786064,praesidium,project_match_unreviewed,Coptos-Myos Hormos road
+Krokodilo,786054,praesidium,project_match_unreviewed,Coptos-Myos Hormos road
+Novum Hydreuma,786076,praesidium,project_match_unreviewed,Pliny's Novum Hydreuma (to verify)
+Apollonos (Hydreuma),785976,praesidium,project_match_unreviewed,fort; Pliny's Hydreuma Apollinis (to verify)
+Muziris,50146,pilot_node_external,project_match_unreviewed,Malabar coast
+Aelana/Aila,746700,comparator,project_match_unreviewed,
+Brigetio,197180,legion_base,project_match_unreviewed,settlement record
+Novae,197413,legion_base,project_match_unreviewed,
+Bonna,108818,legion_base,project_match_unreviewed,fort
+Aquincum,197131,legion_base,project_match_unreviewed,Aquincum Castra (fort)
+Isca Augusta,79532,legion_base,project_match_unreviewed,Isca Silurum (fort-2)
+Nicopolis,727131,legion_base,project_match_unreviewed,
+Lambaesis,334570,legion_base,project_match_unreviewed,fort;settlement
+Bostra,678073,legion_base,project_match_unreviewed,
+Raphanea,668350,legion_base,project_match_unreviewed,Raphaneai
+Castra Regina,118929,legion_base,project_match_unreviewed,fort
+Singidunum,207443,legion_base,project_match_unreviewed,
+Zeugma,658636,legion_base,project_match_unreviewed,
+Troesmis,217025,legion_base,project_match_unreviewed,fort;settlement
+Caparcotna,678266,legion_base,project_match_unreviewed,Legio/Caporcotani
+Eburacum,89175,legion_base,project_match_unreviewed,
+Viminacium,207549,legion_base,project_match_unreviewed,settlement record (station 236721 also exists)
+Castra Legionis,236512,legion_base,project_match_unreviewed,Pleiades 'Legio VII Gemina'
+Argentorate,108754,legion_base,project_match_unreviewed,fort
+Hierosolyma,687928,legion_base,project_match_unreviewed,
+Vindobona,128537,legion_base,project_match_unreviewed,fort-2
+Durostorum,216800,legion_base,project_match_unreviewed,
+Melitene,629040,legion_base,project_match_unreviewed,settlement
+Apulum,206927,legion_base,project_match_unreviewed,fort;settlement
+Carnuntum,128376,legion_base,project_match_unreviewed,fort-2
+Satala,874684,legion_base,project_match_unreviewed,fort
+Samosata,658587,legion_base,project_match_unreviewed,
+Deva,79420,legion_base,project_match_unreviewed,fort-2
+Moguntiacum,109169,legion_base,project_match_unreviewed,
+Castra Vetera,108867,legion_base,project_match_unreviewed,fort-2

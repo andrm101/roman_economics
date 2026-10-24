@@ -1,0 +1,4 @@
+{
+  "p_after_break": 0.06,
+  "assumption": "uniform document date and uniform break date (integer years)"
+}

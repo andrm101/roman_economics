@@ -148,12 +148,27 @@ def cmd_mass() -> pd.DataFrame:
     return df
 
 
+def cmd_fetch() -> None:
+    from romeco.ingest.fetch import fetch_all
+    lock = fetch_all()
+    for name, e in lock.items():
+        n = len(e.get("files", {}))
+        size = sum(v["bytes"] for v in e.get("files", {}).values()) / 1e6
+        print(f"{name:15s} {e.get('status', 'fetched'):28s} files={n:2d} {size:7.1f} MB")
+
+
+def cmd_context() -> None:
+    from romeco.context import build_all
+    build_all(verbose=True)
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context"])
     args = ap.parse_args(argv)
     {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
-     "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass}[args.command]()
+     "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass,
+     "fetch": cmd_fetch, "context": cmd_context}[args.command]()
 
 
 if __name__ == "__main__":

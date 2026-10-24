@@ -1,0 +1,48 @@
+from_site,to_site,route_type,field_e,field_s,field_m,geometry_km,record_origin,eastern_desert,km_per_field_s
+Aelana,Petra,road,4.155,3.957,0,118.9,model_output (ORBIS v2; field semantics undocumented),False,30.05
+Alexandria,Hierakonpolis,road,2.177,2.073,0,62.1,model_output (ORBIS v2; field semantics undocumented),False,29.96
+Alexandria,Paraetonium,road,10.005,9.529,0,285.6,model_output (ORBIS v2; field semantics undocumented),False,29.97
+Ammon,Oasis Parva,road,13.075,12.452,0,373.1,model_output (ORBIS v2; field semantics undocumented),False,29.96
+Aphroditopolis,Herakleopolis,road,1.416,1.349,0,40.6,model_output (ORBIS v2; field semantics undocumented),False,30.1
+Aphroditopolis,Memphis,road,1.922,1.831,0,54.9,model_output (ORBIS v2; field semantics undocumented),False,29.98
+Ascalon,Eleutheropolis,road,1.197,1.14,0,34.2,model_output (ORBIS v2; field semantics undocumented),False,30.0
+Ascalon,Gaza,road,0.92,0.876,0,26.3,model_output (ORBIS v2; field semantics undocumented),False,30.02
+Ascalon,Lydda,road,1.734,1.652,0,49.6,model_output (ORBIS v2; field semantics undocumented),False,30.02
+Berenice,Coptos,road,13.268,12.637,0,379.5,model_output (ORBIS v2; field semantics undocumented),True,30.03
+Catabathmus Maior,Paraetonium,road,7.399,7.046,0,211.2,model_output (ORBIS v2; field semantics undocumented),False,29.97
+Clysma,Pelusium,road,5.44,5.181,0,155.8,model_output (ORBIS v2; field semantics undocumented),False,30.07
+Coptos,Klaudianon,road,4.949,4.714,0,141.7,model_output (ORBIS v2; field semantics undocumented),True,30.06
+Coptos,Mons Porphyrites,road,5.833,5.556,0,166.9,model_output (ORBIS v2; field semantics undocumented),True,30.04
+Coptos,Myos Hormos,road,5.958,5.674,0,170.0,model_output (ORBIS v2; field semantics undocumented),True,29.96
+Coptos,Ptolemais Hermiou,road,4.655,4.433,0,133.1,model_output (ORBIS v2; field semantics undocumented),True,30.02
+Coptos,Thebai,road,1.539,1.465,0,44.1,model_output (ORBIS v2; field semantics undocumented),True,30.1
+Eleutheropolis,Ierusalem,road,1.51,1.439,0,43.6,model_output (ORBIS v2; field semantics undocumented),False,30.3
+Emmaus,Ierusalem,road,0.897,0.854,0,25.8,model_output (ORBIS v2; field semantics undocumented),False,30.21
+Emmaus,Lydda,road,0.615,0.586,0,17.6,model_output (ORBIS v2; field semantics undocumented),False,30.03
+Gaza,Petra,road,6.395,6.091,0,183.4,model_output (ORBIS v2; field semantics undocumented),False,30.11
+Gaza,Raphia,road,1.076,1.025,0,30.7,model_output (ORBIS v2; field semantics undocumented),False,29.95
+Heliopolis,Memphis,road,1.142,1.087,0,32.7,model_output (ORBIS v2; field semantics undocumented),False,30.08
+Heliopolis,Pelusium,road,5.879,5.599,0,168.0,model_output (ORBIS v2; field semantics undocumented),False,30.01
+Herakleopolis,Krokodilopolis,road,1.13,1.076,0,32.4,model_output (ORBIS v2; field semantics undocumented),False,30.11
+Herakleopolis,Oxyrhynchus,road,1.911,1.82,0,54.7,model_output (ORBIS v2; field semantics undocumented),False,30.05
+Hermopolis Magna,Lykopolis,road,2.926,2.787,0,83.7,model_output (ORBIS v2; field semantics undocumented),False,30.03
+Hermopolis Magna,Oxyrhynchus,road,3.868,3.684,0,110.7,model_output (ORBIS v2; field semantics undocumented),False,30.05
+Hibis,Kellis,road,5.756,5.482,0,164.4,model_output (ORBIS v2; field semantics undocumented),False,29.99
+Hibis,Mounesis,road,2.996,2.853,0,85.9,model_output (ORBIS v2; field semantics undocumented),False,30.11
+Hierakonpolis,Naucratis,road,0.818,0.779,0,23.4,model_output (ORBIS v2; field semantics undocumented),False,30.04
+Hierasykaminos,Syene,road,4.31,4.105,0,123.6,model_output (ORBIS v2; field semantics undocumented),True,30.11
+Kellis,Mothis,road,0.503,0.479,0,14.3,model_output (ORBIS v2; field semantics undocumented),False,29.85
+Krokodilopolis,Oasis Parva,road,8.32,7.924,0,237.6,model_output (ORBIS v2; field semantics undocumented),False,29.98
+Lykopolis,Ptolemais Hermiou,road,3.423,3.26,0,97.9,model_output (ORBIS v2; field semantics undocumented),False,30.03
+Memphis,Terenouthis,road,2.938,2.798,0,84.0,model_output (ORBIS v2; field semantics undocumented),False,30.02
+Mothis,Qasr Farafra,road,8.195,7.805,0,234.4,model_output (ORBIS v2; field semantics undocumented),False,30.03
+Naucratis,Boubastis,road,3.316,3.158,0,94.6,model_output (ORBIS v2; field semantics undocumented),False,29.96
+Naucratis,Terenouthis,road,1.988,1.893,0,56.9,model_output (ORBIS v2; field semantics undocumented),False,30.06
+Oasis Parva,Qasr Farafra,road,5.952,5.669,0,170.4,model_output (ORBIS v2; field semantics undocumented),False,30.06
+Omboi,Syene,road,1.447,1.378,0,41.5,model_output (ORBIS v2; field semantics undocumented),True,30.12
+Paraetonium,Ammon,road,11.59,11.038,0,331.5,model_output (ORBIS v2; field semantics undocumented),False,30.03
+Pelusium,Boubastis,road,4.178,3.979,0,119.4,model_output (ORBIS v2; field semantics undocumented),False,30.01
+Pelusium,Raphia,road,5.978,5.693,0,170.6,model_output (ORBIS v2; field semantics undocumented),False,29.97
+Petra,Philadelpheia,road,7.229,6.885,0,207.2,model_output (ORBIS v2; field semantics undocumented),False,30.09
+Thebai,Mounesis,road,8.821,8.401,0,252.0,model_output (ORBIS v2; field semantics undocumented),True,30.0
+Thebai,Omboi,road,5.736,5.463,0,164.4,model_output (ORBIS v2; field semantics undocumented),True,30.09

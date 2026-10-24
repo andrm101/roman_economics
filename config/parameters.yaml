@@ -126,4 +126,60 @@ parameters:
     unit: km
     baseline: 380.36        # 257 mp x 1.48
     status: measured_input
-    evidence: [ANC-PLINY-DESERT]
+    evidence: [ANC-PLINY-DESERT, MIL-ED-COPTOS-BERENIKE-KM, CTX-ORBIS-COPTOS-BERENIKE]
+    note: "Three sources agree (~380 km) but share lineage: ORBIS geometry and Nappo's figure are not independent of Pliny/surveys."
+  # ---- context layer (legions, cities, roads, prices) — session 3 ----
+  egypt_wheat_price_pre_break:
+    definition: Farm-gate wheat price band in middle Egypt, AD 80s-160s
+    unit: drachma_EG_per_artaba
+    baseline: 9
+    bounds: [6, 12]
+    status: external_estimate
+    evidence: [PL-EG-WHEAT-W1]
+    note: "Price regime covering W1 (from the 70s) and the Hermapollon (126-175): nominal values comparable without deflation inside this band."
+  egypt_price_break_ratio:
+    definition: Ratio of price levels after vs before the late-2nd-century break (160s-190s)
+    unit: ratio
+    baseline: 2
+    bounds: [1.33, 2.0]
+    status: external_estimate
+    evidence: [PL-EG-DOUBLING, PL-EG-WHEAT-W3]
+    note: "Median 16/9 = 1.78; 'doubling' per Rathbone. Mechanism (Antonine plague) disputed."
+  p_hermapollon_post_break:
+    definition: Probability the Hermapollon valuation post-dates the price break
+    unit: probability
+    baseline: 0.06
+    bounds: [0.0, 0.3]
+    status: exploratory
+    evidence: [CTX-HERMAPOLLON-POSTBREAK-P]
+    note: "Uniform-date assumption on HGV 126-175 and a break in 160-199; upper bound allows for a mid-160s break."
+  legionary_pay_HS:
+    definition: Gross annual pay of a legionary/auxiliary infantryman, AD 85 - Septimius Severus
+    unit: sestertius_per_year
+    baseline: 1200
+    bounds: [1200, 1200]
+    status: external_estimate
+    evidence: [PL-ARMY-PAY-85-193]
+    note: "Use as a scale: HS 1.2 m per 1,000 soldier-years. Garrison size of Egypt NOT yet sourced."
+  praesidium_garrison:
+    definition: Soldiers per Eastern Desert praesidium
+    unit: soldiers
+    baseline: 23
+    bounds: [22, 24]
+    status: external_estimate
+    evidence: [MIL-PRAESIDIA-SIZE]
+  ed_military_installations_W2:
+    definition: Military installations (fort/station) active in the Eastern Desert, 100-200 CE
+    unit: places
+    baseline: null
+    bounds: [58, 94]
+    status: external_estimate
+    evidence: [CTX-PLEIADES-ED-MIL-W2]
+    note: "Pleiades editorial dating; upper bound adds undated places. Not all were simultaneously garrisoned."
+  annual_inflation_1_2c:
+    definition: Average annual price inflation in the first two centuries CE (upper bound)
+    unit: fraction_per_year
+    baseline: null
+    bounds: [0.0, 0.01]
+    status: external_estimate
+    evidence: [PL-ROM-INFL-1-2C]

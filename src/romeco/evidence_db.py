@@ -81,6 +81,30 @@ def build(db_path: str | Path = ":memory:", root: Path = ROOT) -> duckdb.DuckDBP
                 con.execute("INSERT OR IGNORE INTO dependency VALUES (?,?,'depends_on')",
                             [r["interpretation_id"], rid])
 
+    ctx = root / "data" / "curated" / "context"
+    for fname, qcol, lo, hi, doc_col in (("price_level_anchors.csv", "quantity_concept", "value_low", "value_high", None),
+                                         ("coin_fineness_anchors.csv", "coin", "silver_fraction_low", "silver_fraction_high", None),
+                                         ("egypt_military_anchors.csv", "quantity_concept", "value_low", "value_high", None)):
+        path = ctx / fname
+        if not path.exists():
+            continue
+        for r in _rows(path):
+            first_src = r["source_id"].split(";")[0].strip()
+            vlo, vhi, vc = _num(r[lo]), _num(r[hi]), _num(r.get("value_central", ""))
+            vlo = vc if vlo is None else vlo
+            vhi = (vc if vc is not None else vlo) if vhi is None else vhi
+            con.execute(ins, [r["anchor_id"], None, r.get("ancient_basis") or r.get("place") or r.get("reign_or_event"),
+                              r[qcol], vlo, vhi,
+                              r.get("unit", "fraction_silver"), r.get("note", ""), r["source_id"], first_src, r["page"],
+                              r["record_origin"], r["epistemic_status"], r["review_status"]])
+    derived = root / "data" / "derived" / "context" / "context_assertions.csv"
+    if derived.exists():
+        for r in _rows(derived):
+            con.execute(ins, [r["assertion_id"], None, None, r["quantity_concept"], _num(r["value_low"]),
+                              _num(r["value_high"]), r["unit"], r["claim_text"], "PROJECT",
+                              r["source"].split(";")[0].strip(), None, "project_derivation", "accepted_working",
+                              "inspected"])
+
     params = yaml.safe_load((root / "config" / "parameters.yaml").read_text(encoding="utf-8"))["parameters"]
     for pid, p in params.items():
         lo, hi = (p.get("bounds") or [None, None])

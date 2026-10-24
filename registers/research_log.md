@@ -23,3 +23,12 @@
 - Two DDbDP encoding issues logged (K12); code overrides them and tests will flag upstream fixes.
 - WP1 acceptance: primary readings now `inspected`; 4 interpretive assertions remain `machine_summary_only` (De Romanis 2012/2014). Blocked: shell access to ISAW Papers 8 (allowlist). Needs direct reading or researcher review before WP1 can be closed.
 - E000 rerun with rejected interpretation excluded: baseline receipts HS 18.4 m–414.7 m; envelope unchanged (HS 14.1 m–415.6 m). E001 added (pepper mass scenarios).
+
+## 2026-10-24 — Session 3 (context layer: legions, cities, roads, prices/inflation)
+
+- Researcher asked to track legions, cities, roads and inflation. Only GitHub is reachable from this environment; Zenodo, OxREP, DARMC, Wikidata, Pleiades site, ISAW are blocked.
+- Fetched with pins and checksums: Pleiades GIS tables (CC BY 3.0), AWMC geodata (ODbL), ORBIS v2 (MIT). Registered Itiner-e, Hanson Cities DB, Harper price DB, ISIS silver data as manual downloads.
+- Read and anchored (pages re-verified by code): Rathbone 2009 Tables 15.1–15.2 and pp. 305–313; Ponting 2009 pp. 273–277; Hitchner 2009 p. 282; Nappo 2018 pp. 53–57, 78–80, 182–187. Corrected four page numbers during verification.
+- Built `romeco.context`: pilot gazetteer (45 places, all resolved), Eastern Desert military installations (99; 58 active 100–200 CE), Egypt settlements, AWMC road lengths, ORBIS pilot edges, urban footprints, legion bases (29/32 joined), price deflators.
+- Findings: ORBIS v2 road time = km/30 (not evidence; D013); ORBIS 'Nicopolis' identity trap (D014); W1 (70s on) and Hermapollon in one stable price band; P(Hermapollon after price break) ≈ 0.06 [assumption-dependent]; Hitchner vs Ponting fineness conflict (K15); III Cyrenaica location conflict (K16).
+- Tests: 62 passing.

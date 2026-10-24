@@ -1,0 +1,12 @@
+anchor_id,coin,reign_or_event,date_from_ce,date_to_ce,silver_fraction_low,silver_fraction_high,measurement_basis,source_id,page,record_origin,epistemic_status,review_status,note
+CF-DEN-NERO-PIUS,denarius,Nero to Antoninus Pius,64,161,0.88,0.94,unstated (likely surface/older analyses),SRC-HITCHNER-2009,282,scholarly_reconstruction,disputed,inspected,"'fell slightly from 94 to 88%'. Conflicts with Ponting 2009: 274 heart-metal 80% after the 64 reform (K15)."
+CF-DEN-NERO-64,denarius,Neronian reform,64,68,0.80,0.80,heart-metal (30 coins),SRC-PONTING-2009,274,archaeological_observation,accepted_working,inspected,"Disguised by blanching; corrects Walker's 93.5%. Last Neronian issue 90%."
+CF-DEN-NERO-60,denarius,corona civica issues,60,61,0.985,0.995,heart-metal,SRC-PONTING-2009,274,archaeological_observation,accepted_working,inspected,0.5-1.5% copper added; one issue only
+CF-DEN-VESP,denarius,Vespasian,69,79,0.80,0.80,heart-metal (provisional),SRC-PONTING-2009,274-275,archaeological_observation,uncertain,inspected,"'very provisional results'"
+CF-DEN-MARCUS,denarius,Marcus Aurelius,161,180,0.78,0.78,unstated,SRC-HITCHNER-2009,282,scholarly_reconstruction,uncertain,inspected,
+CF-DEN-COMMODUS,denarius,late Commodus,185,192,0.74,0.74,unstated,SRC-HITCHNER-2009,282,scholarly_reconstruction,uncertain,inspected,
+CF-DEN-SEPT,denarius,Septimius Severus,193,211,0.50,0.55,unstated / heart-metal,SRC-HITCHNER-2009; SRC-PONTING-2009,282; 277,scholarly_reconstruction,uncertain,inspected,"Hitchner 55%; Ponting 'reduced to 50%' by Severus' reign"
+CF-DEN-CARACALLA,denarius,Caracalla,211,217,0.51,0.51,unstated,SRC-HITCHNER-2009,282,scholarly_reconstruction,uncertain,inspected,
+CF-DEN-ELAG-SEVALEX,denarius,Elagabalus and Severus Alexander,218,235,0.45,0.45,unstated,SRC-HITCHNER-2009,282,scholarly_reconstruction,uncertain,inspected,"'about 45%'"
+CF-SILVER-C270,silver coinage (antoninianus),c. 270,265,274,0.01,0.01,unstated,SRC-NAPPO-2018,184,scholarly_reconstruction,uncertain,inspected,"'appena l'1%'"
+CF-AURELIAN-274,silver coinage (Aurelianic),Aurelian reform,274,275,0.04,0.05,unstated,SRC-NAPPO-2018,185,scholarly_reconstruction,uncertain,inspected,First increase in fineness in fifty years

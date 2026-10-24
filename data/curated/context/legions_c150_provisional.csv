@@ -1,0 +1,33 @@
+legion,base,province_code,existed_from,existed_to,base_status_c150_165,source_id,review_status
+I Adiutrix,Brigetio,PAN,AD 68,AD 444,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+I Italica,Novae,MI,AD 66,post 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+I Minervia,Bonna,GI,AD 82,post 300,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+II Adiutrix,Aquincum,PAN,AD 70,after 269,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+II Augusta,Isca Augusta,BRIT,48 BC,after 300,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+II Italica,,,AD 165,after 400,base from 180,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+II Traiana,Nicopolis,AEG,AD 105,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+III Augusta,Lambaesis,MAUR,43 BC,after 350,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+III Cyrenaica,Bostra,AR,36 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+III Gallica,Raphanea,SYR,49 BC,after 300,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+III Italica,Castra Regina,RT,AD 165,after 300,listed (base date to verify),SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+IV Flavia Felix,Singidunum,MS,AD 70,before 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+IV Scythica,Zeugma,SYR,42 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+V Macedonica,Troesmis,MI,43 BC,after 600,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+VI Ferrata,Caparcotna,JUD,58 BC,at least 250,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+VI Victrix,Eburacum,BRIT,41 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+VII Claudia,Viminacium,MS,58 BC,c. 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+VII Gemina,Castra Legionis,HISP,AD 68,c. 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+VIII Augusta,Argentorate,GS,59 BC,at least 371,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+IX Hispana,,,before 58 BC,132? or 161?,no base c. 150 (last Nijmegen 121-130?),SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+X Fretensis,Hierosolyma,JUD?,40 BC,at least c. 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+X Gemina,Vindobona,PAN,42 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XI Claudia,Durostorum,MI,42 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XII Fulminata,Melitene,CAP,43 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XIII Gemina,Apulum,DC,57 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XIV Gemina,Carnuntum,PAN,57 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XV Apollinaris,Satala,CAP,41 BC,after 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XVI Flavia Firma,Samosata,SYR,AD 70,at least 300,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XX Valeria Victrix,Deva,BRIT,31 BC,at least 250,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XXII Deiotariana,,AEG?,48 BC,132? or 161?,no base c. 150 (last Alexandria to c. 123),SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XXII Primigenia,Moguntiacum,GS,AD 39,c. 300,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only
+XXX Ulpia Victrix,Castra Vetera,GI,AD 105,post 400,listed,SRC-WIKIPEDIA-LEGIONS,machine_summary_only

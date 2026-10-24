@@ -302,3 +302,13 @@ Next:
 **Consequences.** Fiscal bounds (E000) are unaffected, because they depend on value, which both readings share. The desert-throughput test (WP2) must be run under both readings (D011). Two DDbDP encoding issues were found and are overridden in code (K12). Reporting them upstream requires your papyri.info account and is your call.
 
 **Still open for WP1 closure:** direct reading of De Romanis 2014 (open access, but blocked to this environment) and 2020, plus the Tyche 2011 article, to move INT-HERM-02/04/05 and INT-TET-03 out of `machine_summary_only`.
+
+---
+
+## 10. Context layer (session 3)
+
+Legions, cities, roads and prices/inflation are now tracked as conditioning variables (D012). They act as constraints, confounders, node scales and deflators; they are not a new research question. See [`docs/context_layer.md`](context_layer.md). The results that bear on RQ1:
+
+- W1 (from the 70s) and the Hermapollon fall in the same stable Egyptian price band. Nominal comparisons between them need no deflator.
+- Garrison and quarry supply traffic is the main confounder for the WP2 desert-throughput test. The praesidia network is mapped (58 installations active in 100–200 CE per Pleiades).
+- ORBIS v2 road "time" is a constant-speed transform of length and is not evidence of travel time (D013).

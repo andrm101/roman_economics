@@ -1,0 +1,46 @@
+name,pleiades_id,role,match_status,title,uri,representative_longitude,representative_latitude,place_types,year_from,year_to,resolved,note
+Alexandria,727070,pilot_node,project_match_unreviewed,Alexandria,https://pleiades.stoa.org/places/727070,29.909773,31.201435,port;settlement,-330.0,640.0,True,port;settlement
+Iuliopolis/Nikopolis,727131,pilot_node; legion_base,project_match_unreviewed,Iuliopolis/Nikopolis,https://pleiades.stoa.org/places/727131,29.950022,31.233348,settlement,-30.0,300.0,True,Pliny's Juliopolis (start of Nile leg) and Nicopolis legionary base
+Coptos,786010,pilot_node,project_match_unreviewed,Coptos,https://pleiades.stoa.org/places/786010,32.815910366666664,25.996398966666664,archaeological-site;port;settlement,-750.0,640.0,True,
+Berenike,785986,pilot_node,project_match_unreviewed,Berenice/Berenike,https://pleiades.stoa.org/places/785986,35.474818850000005,23.91062525,archaeological-site;port;settlement,-330.0,640.0,True,
+Myos Hormos,786069,pilot_node,project_match_unreviewed,Myos Hormos?,https://pleiades.stoa.org/places/786069,34.24401,26.156611,port;settlement,-30.0,640.0,True,Pleiades title carries '?' (identification uncertainty flagged by Pleiades)
+Apollonopolis Magna,785974,pilot_node,project_match_unreviewed,Apollonopolis Magna,https://pleiades.stoa.org/places/785974,32.872446,24.9778875,archaeological-site;settlement,-750.0,300.0,True,alternative Nile terminus (Strabo 17.1.45)
+Kaine/Maximianopolis,786047,pilot_node,project_match_unreviewed,Kaine/Maximianopolis,https://pleiades.stoa.org/places/786047,32.701875666666666,26.149885333333334,settlement,-30.0,640.0,True,Nile terminus for the Myos Hormos road (to verify)
+Klaudianon (Mons Claudianus),766375,quarry; desert_traffic_competitor,project_match_unreviewed,Klaudianon,https://pleiades.stoa.org/places/766375,33.486944,26.809167,fort;quarry,-30.0,300.0,True,fort;quarry
+Porphyrites (Mons Porphyrites),766391,quarry; desert_traffic_competitor,project_match_unreviewed,Porphyrites (mountain),https://pleiades.stoa.org/places/766391,33.266667,27.216667,mountain;quarry,-30.0,300.0,True,mountain;quarry
+Didymoi,786015,praesidium,project_match_unreviewed,Didymoi,https://pleiades.stoa.org/places/786015,33.39477916193718,25.754333052843297,fort;fort-2,,,True,Coptos-Berenike road
+Maximianon,786064,praesidium,project_match_unreviewed,Maximianon,https://pleiades.stoa.org/places/786064,33.78754319438619,26.0009357899772,fort-2,,,True,Coptos-Myos Hormos road
+Krokodilo,786054,praesidium,project_match_unreviewed,Krokodilo,https://pleiades.stoa.org/places/786054,33.401161405524086,25.942610967372318,archaeological-site;fort,,,True,Coptos-Myos Hormos road
+Novum Hydreuma,786076,praesidium,project_match_unreviewed,Novum Hydreuma,https://pleiades.stoa.org/places/786076,35.2347791,24.1842341,fort-2;station,-330.0,640.0,True,Pliny's Novum Hydreuma (to verify)
+Apollonos (Hydreuma),785976,praesidium,project_match_unreviewed,Apollonos,https://pleiades.stoa.org/places/785976,34.748068,24.498288,fort,-30.0,640.0,True,fort; Pliny's Hydreuma Apollinis (to verify)
+Muziris,50146,pilot_node_external,project_match_unreviewed,Muziris,https://pleiades.stoa.org/places/50146,76.213146,10.153976,port;settlement,-30.0,640.0,True,Malabar coast
+Aelana/Aila,746700,comparator,project_match_unreviewed,Aelana/Aila,https://pleiades.stoa.org/places/746700,34.999966316991475,29.530634564186784,fortified-settlement;port;settlement,-750.0,640.0,True,
+Brigetio,197180,legion_base,project_match_unreviewed,Brigetio,https://pleiades.stoa.org/places/197180,18.169507,47.735239,settlement,-30.0,640.0,True,settlement record
+Novae,197413,legion_base,project_match_unreviewed,Novae,https://pleiades.stoa.org/places/197413,17.2361262,43.3893681,settlement;settlement-modern,1700.0,2100.0,True,
+Bonna,108818,legion_base,project_match_unreviewed,Bonna,https://pleiades.stoa.org/places/108818,7.096251,50.732632,fort,-30.0,640.0,True,fort
+Aquincum,197131,legion_base,project_match_unreviewed,Aquincum Castra,https://pleiades.stoa.org/places/197131,19.048286,47.558849,fort,-30.0,640.0,True,Aquincum Castra (fort)
+Isca Augusta,79532,legion_base,project_match_unreviewed,Isca Silurum,https://pleiades.stoa.org/places/79532,-2.955263,51.610323,fort-2,-30.0,640.0,True,Isca Silurum (fort-2)
+Nicopolis,727131,legion_base,project_match_unreviewed,Iuliopolis/Nikopolis,https://pleiades.stoa.org/places/727131,29.950022,31.233348,settlement,-30.0,300.0,True,
+Lambaesis,334570,legion_base,project_match_unreviewed,Lambaesis,https://pleiades.stoa.org/places/334570,6.254841051015733,35.48966423097267,fort;settlement,,,True,fort;settlement
+Bostra,678073,legion_base,project_match_unreviewed,Bostra/Col. Nova Traiana Alexandriana,https://pleiades.stoa.org/places/678073,36.48130075191139,32.5204513361516,mosque;settlement;temple-2,,,True,
+Raphanea,668350,legion_base,project_match_unreviewed,Raphaneai,https://pleiades.stoa.org/places/668350,36.39298,34.966351,settlement,-30.0,640.0,True,Raphaneai
+Castra Regina,118929,legion_base,project_match_unreviewed,Reginum/Castra Regina,https://pleiades.stoa.org/places/118929,12.09851225,49.019807400000005,defensive-wall;fort,-30.0,640.0,True,fort
+Singidunum,207443,legion_base,project_match_unreviewed,Singidunum,https://pleiades.stoa.org/places/207443,20.4579465,44.812991,settlement,-30.0,640.0,True,
+Zeugma,658636,legion_base,project_match_unreviewed,Zeugma,https://pleiades.stoa.org/places/658636,37.870220110868885,37.05773319865275,archaeological-site;settlement,-330.0,640.0,True,
+Troesmis,217025,legion_base,project_match_unreviewed,Troesmis,https://pleiades.stoa.org/places/217025,28.19514671092972,45.143218644200445,fort;fort-2;settlement,-30.0,640.0,True,fort;settlement
+Caparcotna,678266,legion_base,project_match_unreviewed,Legio/Caporcotani/Maximianopolis,https://pleiades.stoa.org/places/678266,35.186378500000004,32.575288,settlement,-30.0,640.0,True,Legio/Caporcotani
+Eburacum,89175,legion_base,project_match_unreviewed,Eburacum,https://pleiades.stoa.org/places/89175,-1.082304,53.957672,settlement,-30.0,640.0,True,
+Viminacium,207549,legion_base,project_match_unreviewed,Viminacium,https://pleiades.stoa.org/places/207549,21.1913635,44.7266235,settlement,-30.0,640.0,True,settlement record (station 236721 also exists)
+Castra Legionis,236512,legion_base,project_match_unreviewed,Legio VII Gemina,https://pleiades.stoa.org/places/236512,-5.569203,42.5996765,amphitheatre;fort-2,-30.0,640.0,True,Pleiades 'Legio VII Gemina'
+Argentorate,108754,legion_base,project_match_unreviewed,Argentorate,https://pleiades.stoa.org/places/108754,7.747407,48.582416,fort;fort-2,-30.0,640.0,True,fort
+Hierosolyma,687928,legion_base,project_match_unreviewed,Ierusalem/Hierosolyma/Col. Aelia Capitolina,https://pleiades.stoa.org/places/687928,35.234978,31.7771895,archaeological-site;findspot;settlement,-330.0,640.0,True,
+Vindobona,128537,legion_base,project_match_unreviewed,Vindobona,https://pleiades.stoa.org/places/128537,16.37387293249529,48.20740911307259,fort-2;settlement-modern,,,True,fort-2
+Durostorum,216800,legion_base,project_match_unreviewed,Durostorum,https://pleiades.stoa.org/places/216800,27.260103,44.119108,settlement,-30.0,640.0,True,
+Melitene,629040,legion_base,project_match_unreviewed,Melitene,https://pleiades.stoa.org/places/629040,38.361152,38.382217,settlement,-750.0,640.0,True,settlement
+Apulum,206927,legion_base,project_match_unreviewed,Apulum,https://pleiades.stoa.org/places/206927,23.572315,46.066695,fort;settlement,-30.0,300.0,True,fort;settlement
+Carnuntum,128376,legion_base,project_match_unreviewed,Carnuntum,https://pleiades.stoa.org/places/128376,16.867891,48.113346,fort-2,-30.0,640.0,True,fort-2
+Satala,874684,legion_base,project_match_unreviewed,Satala,https://pleiades.stoa.org/places/874684,39.59791835,40.02789515,fort;fort-2,-30.0,640.0,True,fort
+Samosata,658587,legion_base,project_match_unreviewed,Samosata,https://pleiades.stoa.org/places/658587,38.530357,37.525756,settlement,-550.0,640.0,True,
+Deva,79420,legion_base,project_match_unreviewed,Deva,https://pleiades.stoa.org/places/79420,-2.8939425,53.1914685,fort-2,-30.0,640.0,True,fort-2
+Moguntiacum,109169,legion_base,project_match_unreviewed,Mogontiacum,https://pleiades.stoa.org/places/109169,8.273869,49.998912,settlement,-30.0,1453.0,True,
+Castra Vetera,108867,legion_base,project_match_unreviewed,Castra Vetera,https://pleiades.stoa.org/places/108867,6.46980705,51.644379,fort-2,-30.0,300.0,True,fort-2

@@ -1,0 +1,84 @@
+# Context datasets (legions, cities, roads, prices/inflation).
+# Fetched by `python -m romeco.cli fetch` into data/raw/context/<dataset>/<commit>/ (git-ignored);
+# checksums are written to config/datasets.lock.yaml (committed).
+# Access routes are restricted to what this environment can reach (GitHub). Entries with
+# route: manual must be downloaded by the researcher and dropped into data/raw/context/<dataset>/manual/.
+datasets:
+  pleiades:
+    source_id: SRC-PLEIADES-DATASETS
+    route: git
+    repo: https://github.com/isawnyu/pleiades.datasets
+    commit: 6df2361f61b13f0034aed21f5393c2de6121cf3d
+    rights_id: RGT-CCBY30-PLEIADES
+    files:
+      - data/gis/README.md
+      - data/gis/places.csv
+      - data/gis/place_types.csv
+      - data/gis/places_place_types.csv
+      - data/gis/location_points.csv
+      - data/gis/location_linestrings.csv
+      - data/gis/time_periods.csv
+      - data/gis/connections.csv
+      - data/gis/connection_types.csv
+    used_for: [cities, legions (forts/fortresses), roads (linestrings, connections), place identity]
+  awmc:
+    source_id: SRC-AWMC-GEODATA
+    route: git
+    repo: https://github.com/AWMC/geodata
+    commit: 7ecf8bccea2efe1e1e9df2daf6001942de73fb87
+    rights_id: RGT-ODBL-AWMC
+    files:
+      - README.md
+      - LICENSE.txt
+      - attribute_information.md
+      - Cultural-Data/roads/roads.geojson
+      - Cultural-Data/urban_areas/urban_areas.geojson
+      - Cultural-Data/political_shading/roman_empire_ce_117_extent/roman_empire_ce_117_extent.geojson
+      - Cultural-Data/political_shading/roman_empire_ce_200_extent/roman_empire_ce_200_extent.geojson
+      - Cultural-Data/political_shading/roman_empire_ce_200_provinces/roman_empire_ce_200_provinces.geojson
+    used_for: [roads (Barrington-derived), urban footprints, provincial boundaries c. 200 CE]
+  orbis_v2:
+    source_id: SRC-ORBIS-V2
+    route: git
+    repo: https://github.com/emeeks/orbis_v2
+    commit: 65881112a6e5246d0bf3a90ac22dad7a2728cc2d
+    rights_id: RGT-MIT-ORBISV2
+    files:
+      - README.md
+      - LICENSE
+      - sites.csv
+      - sites_extended.csv
+      - base_routes.geojson
+      - new_routes.geojson
+    used_for: [route network and modelled costs/times (model output, not observations)]
+  itinere:
+    source_id: SRC-ITINERE-2025
+    route: manual
+    landing: https://zenodo.org/records/17122148
+    doi: 10.5281/zenodo.17122148
+    rights_id: RGT-CCBY40-ITINERE
+    files: [itinere_roads.gpkg, "Data field description.docx", "Itiner-e bibliography.bib"]
+    approx_size_mb: 34
+    used_for: [roads (high-resolution, 2024 static version)]
+  hanson_cities:
+    source_id: SRC-HANSON-2016-DB
+    route: manual
+    landing: https://oxrep.web.ox.ac.uk/cities-database
+    doi: 10.5287/bodleian:eqapevAn8
+    rights_id: RGT-UNKNOWN
+    files: [hanson2016_citiesdatabase_oxrep.xlsx]
+    used_for: [cities (inhabited area, civic status, monuments, dates 100 BCE-300 CE)]
+  harper_prices:
+    source_id: SRC-HARPER-2016-DB
+    route: manual
+    landing: https://darmc.harvard.edu (Geodatabase of Prices, Rents, and Wages in Roman Egypt, AD 1-700)
+    rights_id: RGT-UNKNOWN
+    files: [Excel workbook as distributed by DARMC]
+    used_for: [inflation / price level in Roman Egypt (wheat, wages, rents, land)]
+  isis_silver:
+    source_id: SRC-PONTING-ETAL-2021-ISIS
+    route: manual
+    landing: https://doi.org/10.5286/ISIS.E.98003576
+    rights_id: RGT-CCBY40-ISIS
+    files: [as distributed; likely raw muon spectra rather than a coin table — check before downloading]
+    used_for: [inflation / debasement (denarius fineness)]

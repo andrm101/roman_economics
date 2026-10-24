@@ -1,0 +1,96 @@
+awmc:
+  commit: 7ecf8bccea2efe1e1e9df2daf6001942de73fb87
+  files:
+    Cultural-Data/political_shading/roman_empire_ce_117_extent/roman_empire_ce_117_extent.geojson:
+      bytes: 563590
+      sha256: 1ddd9ac15006e8b9ffd4d185d0302295c3d7c321e9bc8ae3fd627e12d128ba29
+    Cultural-Data/political_shading/roman_empire_ce_200_extent/roman_empire_ce_200_extent.geojson:
+      bytes: 566644
+      sha256: b1517aa96d43547925985069f8beefa761c361cad5986d35c7d607e86821527d
+    Cultural-Data/political_shading/roman_empire_ce_200_provinces/roman_empire_ce_200_provinces.geojson:
+      bytes: 226326
+      sha256: 62789827619f774997aa494c0f3b0b985e761b0308786e02bcc35e5644bab11b
+    Cultural-Data/roads/roads.geojson:
+      bytes: 5281885
+      sha256: d28e5a1675a59df0037a84e6a8dc5f6b8efc75dbbd74a76ace59dd8285604516
+    Cultural-Data/urban_areas/urban_areas.geojson:
+      bytes: 129039
+      sha256: 06bbcfa31f60cf2882afdcd86bb8bbf73320a88b16492042f9e60652368bc992
+    LICENSE.txt:
+      bytes: 25317
+      sha256: d9685b90fa7d223f5cb0e7f57d00d5b63de69638c9de0340be2e7cf4dc6ecab3
+    README.md:
+      bytes: 1551
+      sha256: 664ea309284efe79b8c9ed7db13018d0175e01d89588a90816f86bc4d9bd65fb
+    attribute_information.md:
+      bytes: 1680
+      sha256: d656b43ac2780bdbfa0d45c5e1436730a076e3a968aad8ae2982d3fdfe1f8fc7
+  repo: https://github.com/AWMC/geodata
+  route: git
+hanson_cities:
+  route: manual
+  status: manual_download_required
+harper_prices:
+  route: manual
+  status: manual_download_required
+isis_silver:
+  route: manual
+  status: manual_download_required
+itinere:
+  route: manual
+  status: manual_download_required
+orbis_v2:
+  commit: 65881112a6e5246d0bf3a90ac22dad7a2728cc2d
+  files:
+    LICENSE:
+      bytes: 1079
+      sha256: 36ebaece1eded4daf43020769cef53c55e09bfd5a3469055e3b317d4b024c0aa
+    README.md:
+      bytes: 949
+      sha256: 47e16fd70612c6c54f14b16f900689732e75c471d3874094e29c6df3b61feb36
+    base_routes.geojson:
+      bytes: 2541534
+      sha256: 67ad02e88f572e3422c637afa8d7446fbcbc99a151861eec210b7ca01fda9d2e
+    new_routes.geojson:
+      bytes: 1010723
+      sha256: 8d5e6b4f465909ac4a8ee56d4a9746c1676f6224d8f6be10bcdbcad970b32d73
+    sites.csv:
+      bytes: 27690
+      sha256: 99933b3bc83df0f11f448e2b887db2f146cb26873f85c8c76cc36009e0dead84
+    sites_extended.csv:
+      bytes: 35497
+      sha256: 3f80440d118dd391bc68673ec352a2d029da42a4dcfc04720442130f4c8d3817
+  repo: https://github.com/emeeks/orbis_v2
+  route: git
+pleiades:
+  commit: 6df2361f61b13f0034aed21f5393c2de6121cf3d
+  files:
+    data/gis/README.md:
+      bytes: 18514
+      sha256: 8a2de1089d80e0ac2f6d502bf30555881cc758de20ddcaafaec7a2917fc3b023
+    data/gis/connection_types.csv:
+      bytes: 6429
+      sha256: 995ee98c5e44f1e151470794bd9c4d5a3e144b29ee3351e719883a5069cdc58b
+    data/gis/connections.csv:
+      bytes: 2808736
+      sha256: bff050e33bc2788c5f1c737f12b938dd6c3a7ff793fb4aeca6118c43e025ebc3
+    data/gis/location_linestrings.csv:
+      bytes: 9839477
+      sha256: 68cf68af7690ed5b98877ba3e2fcff6b130ede3d7f98fe6cb0f31bd4edc68f20
+    data/gis/location_points.csv:
+      bytes: 9706562
+      sha256: 3ecbb29453740a0d3ad975a4f0307ad4ab8131e7ada2662d6e4e9b99a3aa97ce
+    data/gis/place_types.csv:
+      bytes: 58402
+      sha256: 9f1d1103dc4cdb2e7d2b252d8b30c82d3af118b0d4181279dd3ea9272f9586ea
+    data/gis/places.csv:
+      bytes: 16635438
+      sha256: 4209248f5b3f17a24cd178f5ff58b4b3f5d251171f82d7597e05a6bcc8f4690c
+    data/gis/places_place_types.csv:
+      bytes: 959643
+      sha256: 0972fa4787bc7843c976e45bb0bbb5c616d97d1a0763195ca4c2d86d027a0421
+    data/gis/time_periods.csv:
+      bytes: 40909
+      sha256: d1395f5f020f02de1deca003258c195227d69eb295e55044bc20bc82219da119
+  repo: https://github.com/isawnyu/pleiades.datasets
+  route: git

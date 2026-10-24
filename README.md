@@ -10,7 +10,7 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 
 | Path | Contents |
 |---|---|
-| `docs/` | Research design and model specifications |
+| `docs/` | Research design, context layer (legions, cities, roads, prices) |
 | `registers/` | Source, rights, documents, search log, hypotheses, contradictions, decisions, experiments, research log |
 | `config/` | `project.yaml` (scope, seed, paths) and `parameters.yaml` (parameter register with status and bounds) |
 | `data/curated/` | Reviewed evidence tables (readings, interpretations, anchors) with provenance columns |
@@ -25,12 +25,14 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 
 ```bash
 pip install -e ".[dev]"          # Python >= 3.11; versions pinned in pyproject.toml
-pytest                            # 52 tests
+pytest                            # 62 tests
 python -m romeco.cli audit        # Hermapollon readings x interpretations
 python -m romeco.cli e000         # M0 anchor-consistency experiment -> experiments/E000_*/outputs
 python -m romeco.cli cq           # build evidence DB (in memory) and run competency queries
 python -m romeco.cli extract-pvindob  # line-anchored numerals of P.Vindob. G 40822 from the DDbDP snapshot
 python -m romeco.cli mass         # E001: Hermapollon pepper mass under rival readings
+python -m romeco.cli fetch        # pinned context datasets (Pleiades, AWMC, ORBIS v2) -> data/raw/context
+python -m romeco.cli context      # legions / cities / roads / prices context tables -> data/derived/context
 ```
 
 ## Conventions

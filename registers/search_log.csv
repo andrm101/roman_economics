@@ -19,3 +19,12 @@ date,tool,query_or_url,purpose,results_used,notes
 2026-10-24,web_search,Wilson Bowman Trade Commerce State 2018 Red Sea chapters,literature map,SRC-WILSON-BOWMAN-2018,
 2026-10-24,web_search,Seland Ports and political power in the Periplus,literature map,,Open-access BAR monograph on Fulcrum; not yet registered
 2026-10-24,web_search (extended),Red Sea customs revenue estimate Hermapollon ships per year,prior revenue calculations,SRC-WILKINSON-2021,Thesis blocked to automated fetch
+2026-10-24,shell probe,zenodo/figshare/darmc/wikidata/itiner-e/dataverse/oxrep/pleiades/openalex/crossref/edh/trismegistos/nomisma,reachability,only GitHub reachable,
+2026-10-24,web_search,Itiner-e roads dataset Scientific Data 2025 licence,roads,SRC-ITINERE-2025,
+2026-10-24,web_search,Hanson urban geography cities dataset,cities,SRC-HANSON-2016-DB,
+2026-10-24,web_search,AWMC geodata roads Barrington licence,roads,SRC-AWMC-GEODATA,found via git ls-remote
+2026-10-24,web_search,Roman legions fortresses dataset GIS,legions,none usable,No open structured dataset found
+2026-10-24,web_search,denarius silver content debasement dataset Butcher Ponting,inflation,SRC-PONTING-ETAL-2021-ISIS,
+2026-10-24,web_search,Alexandrian tetradrachm silver content data,inflation,none usable,
+2026-10-24,web_fetch,en.wikipedia.org/wiki/List_of_Roman_legions,legions,SRC-WIKIPEDIA-LEGIONS,machine summary; provisional
+2026-10-24,git ls-remote,isawnyu/pleiades.datasets; AWMC/geodata; emeeks/orbis_v2; nomisma/data,acquisition,three fetched,

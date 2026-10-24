@@ -1,0 +1,5 @@
+assertion_id,quantity_concept,value_low,value_high,unit,claim_text,source
+CTX-PLEIADES-ED-MIL-W2,military_installations_active_W2_eastern_desert,58.0,94.0,places,Pleiades fort/station places in the Eastern Desert bbox whose dated locations overlap 100-200 CE (upper = + undated),SRC-PLEIADES-DATASETS
+CTX-AWMC-ED-ROAD-KM,road_length_eastern_desert_bbox,3010.0,3010.0,km,Sum of AWMC (Barrington-derived) road segment lengths touching the Eastern Desert bbox; undated,SRC-AWMC-GEODATA
+CTX-ORBIS-COPTOS-BERENIKE,route_length_coptos_berenike,379.5,379.5,km,"ORBIS v2 edge geometry. field_s=12.637 = km/30 on every road edge (tested), so its closeness to Pliny's 12 days is a speed assumption, not evidence",SRC-ORBIS-V2
+CTX-HERMAPOLLON-POSTBREAK-P,p_hermapollon_after_price_break,0.06,0.06,probability,uniform document date and uniform break date (integer years),SRC-HGV-TM27666; SRC-RATHBONE-2009
