@@ -59,3 +59,13 @@
   - All four pre-stated expectations held.
 - Correction D021: Morelli whole cargo 213–219 t (not 195 t).
 - K21 logged (Berenike supply 200–500 vs 2,000 loads/month).
+
+## 2026-10-24 — Session 7 (WP2 follow-up: looking for a traffic count)
+
+- Brun et al. (eds) 2018 (Collège de France, OpenEdition) read in the researcher's built-in browser (automated fetch is blocked by Anubis; not bypassed). From Reddé, Ast, Tomber:
+  - Didymoi cistern storage grew from 120 to >380 m³ (storage, not yield).
+  - Imports were assessed and stored at the ports by the paralemptes (supports E003's storage window).
+  - Cameldrivers were organised in dekaniai (24 dekanoi in O.Berenike 3).
+  - Traffic was controlled by passes.
+  - No traffic count.
+- HGV inventory (`romeco.ingest.hgv_inventory`, idp.data 41a1c87): 2,630 Eastern Desert documents. The trade-port archives are 1st-century; the W2 record is quarry and fort ostraca. Only 73 W2 documents are month-dated. D022: no documentary route to the H1a capacity criterion.

@@ -89,3 +89,12 @@ def test_rebuild_matches_committed_outputs(tmp_path, monkeypatch):
         a = pd.read_csv(tmp_path / f"{name}.csv")
         b = pd.read_csv(DER / f"{name}.csv")
         pd.testing.assert_frame_equal(a, b, check_dtype=False)
+
+
+def test_eastern_desert_inventory_supports_d022():
+    s = pd.read_csv(DER / "eastern_desert_documents_summary.csv").set_index("site")
+    assert s.documents.sum() > 2000
+    assert "Dios" not in s.index or s.loc["Dios", "documents"] < 50          # Diospolis (Thebes) excluded
+    assert s.loc["Berenike", "mid_in_100_200"] < 10                           # trade-port archive is 1st-century
+    assert s.loc["Myos Hormos", "mid_in_100_200"] == 0
+    assert s.month_precise_in_100_200.sum() < 0.1 * s.mid_in_100_200.sum()   # W2 seasonality not estimable

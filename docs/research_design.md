@@ -355,3 +355,9 @@ The grid has 288 cells: 2 readings × 2 weight talents × 3 loads (150/181/200 k
 1. Counts of camels or loads passing Coptos or the desert praesidia per month, e.g. the Coptos tariff (OGIS 674 = I. Portes 67) with any associated receipts, or O. Krokodilô / Myos Hormos road ostraca.
 2. Hydreuma water capacities from the excavation reports (Sidebotham; Cuvigny, *La route de Myos Hormos*).
 3. Camel registration totals for Upper Egypt.
+
+**Follow-up (D022): no open documentary traffic count exists for 100–200 CE.**
+- HGV lists 2,630 Eastern Desert documents (`data/derived/context/eastern_desert_documents_summary.csv`). Berenike's 523 and Myos Hormos's 73 are almost entirely 1st-century, and only 73 of the 1,421 W2 documents are month-dated.
+- Documents bound attested activity from below only, so they cannot reject H1a.
+- Ast (2018) documents assessment and storage of imports at the ports, which makes E003's storage window (W ≫ 36 d) the more plausible case.
+- The remaining discriminating evidence is physical capacity (well yields: Cuvigny et al. 2011, *Didymoi*), currently not accessible.

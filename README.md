@@ -25,7 +25,7 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 
 ```bash
 pip install -e ".[dev]"          # Python >= 3.11; versions pinned in pyproject.toml
-pytest                            # 76 tests (3 skip without the researcher-supplied files)
+pytest                            # 77 tests (3 skip without the researcher-supplied files)
 python -m romeco.cli audit        # Hermapollon readings x interpretations
 python -m romeco.cli e000         # M0 anchor-consistency experiment -> experiments/E000_*/outputs
 python -m romeco.cli cq           # build evidence DB (in memory) and run competency queries

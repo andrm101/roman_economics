@@ -36,3 +36,7 @@ date,tool,query_or_url,purpose,results_used,notes
 2026-10-24,attachment,Adams 2007 Land Transport in Roman Egypt (PDF supplied),camel loads; desert costs; supply,SRC-ADAMS-2007,pp. 36-45; 79-83; 208-210; 222-235; 288 read
 2026-10-24,attachment,de Soto et al. 2025 Scientific Data 12:1731 (PDF supplied),Itiner-e field definitions,SRC-ITINERE-PAPER-2025,Table 2; certainty categories; Egypt and Eastern Desert sections
 2026-10-24,WebFetch,github.com/papyri/idp.data,reporting channel for K12,none,Issues enabled; README recommends Papyrological Editor for single-document text fixes
+2026-10-24,WebSearch,Bülow-Jacobsen traffic on the road La route de Myos Hormos OpenEdition,desert traffic count,SRC-BRUN-ETAL-2018,found the 2018 Collège de France volume (not the 2003 IFAO volume); Bülow-Jacobsen 2013 seminar audio exists (not used)
+2026-10-24,WebFetch,books.openedition.org/cdf/5230,TOC,none,blocked by Anubis bot check (not bypassed)
+2026-10-24,built-in browser (researcher's desktop app),books.openedition.org/cdf/5248; 5232; 5251; 5235,traffic counts; water capacity,SRC-REDDE-2018; SRC-AST-2018; SRC-TOMBER-2018,no traffic count; Didymoi cistern storage; port storage; dekaniai
+2026-10-24,git (sparse clone),papyri/idp.data@41a1c87 HGV_meta_EpiDoc (68022 records),documentary basis for traffic/seasonality,SRC-IDP-DATA,2630 Eastern Desert documents; trade-port documents almost all 1st c.; 73 month-dated in 100-200 CE (58 Mons Claudianus)
