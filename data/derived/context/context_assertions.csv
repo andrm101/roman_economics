@@ -3,3 +3,8 @@ CTX-PLEIADES-ED-MIL-W2,military_installations_active_W2_eastern_desert,58.0,94.0
 CTX-AWMC-ED-ROAD-KM,road_length_eastern_desert_bbox,3010.0,3010.0,km,Sum of AWMC (Barrington-derived) road segment lengths touching the Eastern Desert bbox; undated,SRC-AWMC-GEODATA
 CTX-ORBIS-COPTOS-BERENIKE,route_length_coptos_berenike,379.5,379.5,km,"ORBIS v2 edge geometry. field_s=12.637 = km/30 on every road edge (tested), so its closeness to Pliny's 12 days is a speed assumption, not evidence",SRC-ORBIS-V2
 CTX-HERMAPOLLON-POSTBREAK-P,p_hermapollon_after_price_break,0.06,0.06,probability,uniform document date and uniform break date (integer years),SRC-HGV-TM27666; SRC-RATHBONE-2009
+CTX-GC-JULIOPOLIS-COPTOS,great_circle_juliopolis_coptos,646.0,646.0,km,Great-circle distance between Pleiades representative points; a strict lower bound for any route,SRC-PLEIADES-DATASETS
+CTX-ITINERE-COPTOS-BERENIKE,route_length_coptos_berenike,402.4,408.4,km,Shortest path on Itiner-e network (all dates / segments dated within W2); all segments 'Conjectured' (Desert Networks itineraries),SRC-ITINERE-2025
+CTX-ITINERE-COPTOS-MYOS,route_length_coptos_myos_hormos,182.1,182.8,km,Shortest path on Itiner-e network; c. half the length on 'Certain' segments,SRC-ITINERE-2025
+CTX-HARPER-BREAK,egypt_wheat_price_break_ratio,1.786,2.501,ratio,"Two-regime step fit to Harper 2016 sheet 2 (n=33); break located only to 160-187 (data gap); bootstrap 5-95% ratio. Shares sources with Rathbone: re-derivation, not independent.",SRC-HARPER-2016-DB
+CTX-HANSON-AEGYPTUS-W2,cities_aegyptus_W2,47.0,47.0,cities,Hanson 2016 cities in Aegyptus overlapping W2; 20 with an area estimate,SRC-HANSON-2016-DB

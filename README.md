@@ -25,7 +25,7 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 
 ```bash
 pip install -e ".[dev]"          # Python >= 3.11; versions pinned in pyproject.toml
-pytest                            # 62 tests
+pytest                            # 70 tests (3 skip without the researcher-supplied files)
 python -m romeco.cli audit        # Hermapollon readings x interpretations
 python -m romeco.cli e000         # M0 anchor-consistency experiment -> experiments/E000_*/outputs
 python -m romeco.cli cq           # build evidence DB (in memory) and run competency queries
@@ -33,6 +33,7 @@ python -m romeco.cli extract-pvindob  # line-anchored numerals of P.Vindob. G 40
 python -m romeco.cli mass         # E001: Hermapollon pepper mass under rival readings
 python -m romeco.cli fetch        # pinned context datasets (Pleiades, AWMC, ORBIS v2) -> data/raw/context
 python -m romeco.cli context      # legions / cities / roads / prices context tables -> data/derived/context
+                                  # (+ Itiner-e / Hanson / Harper if placed in data/raw/context/<name>/manual/)
 ```
 
 ## Conventions

@@ -1,0 +1,11 @@
+period,origin,destination,km,connected,snap_gap_a_km,snap_gap_b_km,certain_share,conjectured_share,dated_share,route_names
+all_dates,Coptos,Berenike,402.37612858560027,True,0.04525858896254584,0.13874334739670596,0.0,1.0,1.0,Coptos-Berenike; Coptos-Myos Hormos; Edfu Apollonopolis Magna-Berenike; Marsa Nakari-Berenike
+all_dates,Coptos,Myos Hormos,182.10840009865424,True,0.04525858896254584,0.06794752482675073,0.4785130922742321,0.5214869077257679,1.0,Coptos-Myos Hormos
+all_dates,Apollonopolis Magna,Berenike,338.60847972135815,True,0.046662636161267146,0.13874334739670596,0.0,1.0,1.0,Coptos-Berenike; Edfu Apollonopolis Magna-Berenike
+all_dates,Coptos,Klaudianon (Mons Claudianus),148.9330140777449,True,0.04525858896254584,0.13174367008284832,0.0,1.0000000000000002,0.8555497773691345,Coptos-Kaine; Kaine-Mons Claudianus
+all_dates,Kaine/Maximianopolis,Porphyrites (Mons Porphyrites),160.35231235420446,True,3.2947816648505133,5.2572934824624395,0.06045169391088628,0.9395483060891137,1.0,Kaine-Mons Claudianus; Kaine-Mons Porphyrites
+W2_100_200,Coptos,Berenike,408.35430086946496,True,0.04525858896254584,0.13874334739670596,0.0,1.0000000000000002,1.0,Coptos-Berenike; Coptos-Myos Hormos; Edfu Apollonopolis Magna-Berenike
+W2_100_200,Coptos,Myos Hormos,182.7537924921793,True,0.04525858896254584,0.06794752482675073,0.4768232301611427,0.5231767698388573,1.0,Coptos-Myos Hormos
+W2_100_200,Apollonopolis Magna,Berenike,355.7349654640959,True,0.046662636161267146,0.13874334739670596,0.0,1.0,1.0,Edfu Apollonopolis Magna-Berenike
+W2_100_200,Coptos,Klaudianon (Mons Claudianus),148.9330140777449,True,0.04525858896254584,0.13174367008284832,0.0,1.0000000000000002,0.8555497773691345,Coptos-Kaine; Kaine-Mons Claudianus
+W2_100_200,Kaine/Maximianopolis,Porphyrites (Mons Porphyrites),180.79912084600352,True,3.2947816648505133,5.2572934824624395,0.0,1.0000000000000002,1.0,Kaine-Mons Claudianus; Kaine-Mons Porphyrites

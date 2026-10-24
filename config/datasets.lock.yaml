@@ -28,17 +28,32 @@ awmc:
   repo: https://github.com/AWMC/geodata
   route: git
 hanson_cities:
+  files:
+    hanson2016_citiesdatabase_oxrep.xlsx:
+      bytes: 360677
+      sha256: 5b9fc0195c3b5f2df71d6380174974215280cafd3bf5fa463fbf96969b549b6c
   route: manual
-  status: manual_download_required
+  status: received 2026-10-24 from researcher (C:/Users/andre/Desktop/Sandbox/Roman
+    Econ System/Data)
 harper_prices:
+  files:
+    Harper 2016 Prices Wages and Rents for Roman Egypt, 1-700.xlsx:
+      bytes: 810025
+      sha256: 167a62be60e3e28bf116860cf7531b05f597e3ce2c35cf3e04a469ca7fefc34c
   route: manual
-  status: manual_download_required
+  status: received 2026-10-24 from researcher (C:/Users/andre/Desktop/Sandbox/Roman
+    Econ System/Data)
 isis_silver:
   route: manual
   status: manual_download_required
 itinere:
+  files:
+    itinere_roads.gpkg:
+      bytes: 33619968
+      sha256: 1b9470aaec696b0827e7aecad20badc74df2652ae8a62464baea4f07ae4855e7
   route: manual
-  status: manual_download_required
+  status: received 2026-10-24 from researcher (C:/Users/andre/Desktop/Sandbox/Roman
+    Econ System/Data)
 orbis_v2:
   commit: 65881112a6e5246d0bf3a90ac22dad7a2728cc2d
   files:

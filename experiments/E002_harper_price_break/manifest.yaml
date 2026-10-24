@@ -1,0 +1,13 @@
+id: E002_harper_price_break
+date: 2026-10-24
+question: Where and how large is the late-2nd-century Egyptian wheat price break, on Harper's database?
+role: context (deflator regime for W1/W2 and the Hermapollon); not a test of H1-H3
+data: {dataset: harper_prices, sha256: 167a62be60e3e28bf116860cf7531b05f597e3ce2c35cf3e04a469ca7fefc34c, sheet: "2"}
+model: log p = a + b*1[year > tau], tau in 140..220, window 1-275 CE
+variants: [all_dated, date_span_le_10y]
+uncertainty: nonparametric bootstrap, n_boot 1000, seed 20261024
+pre_registered_expectation: ratio in [1.33, 2.0] (Rathbone bands); break 160s-190s
+code: romeco.context.manual.harper_break_analysis
+outputs: outputs/break_results.json
+result: ratio c. 2.1 (boot 1.79-2.50); tau tied over the data gap 160-187
+limitations: shares papyri with Rathbone 2009 (not independent); n=33; date midpoints used; regional mix of nomes

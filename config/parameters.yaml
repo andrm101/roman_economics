@@ -118,15 +118,18 @@ parameters:
   route_nile_km:
     definition: Juliopolis-Coptos river distance
     unit: km
-    baseline: 457.32        # 309 mp x 1.48 (CR-LEN-ROM-001)
-    status: measured_input
-    evidence: [ANC-PLINY-NILE]
+    baseline: null          # Pliny's 309 mp (457 km) withdrawn: shorter than the great circle (D017, K17)
+    bounds: [646, null]
+    status: exploratory
+    evidence: [ANC-PLINY-NILE, CTX-GC-JULIOPOLIS-COPTOS]
+    note: "Lower bound = great-circle distance; the river route is longer. A sourced Nile distance is still needed."
   route_desert_km:
     definition: Coptos-Berenike road distance
     unit: km
     baseline: 380.36        # 257 mp x 1.48
+    bounds: [380, 409]
     status: measured_input
-    evidence: [ANC-PLINY-DESERT, MIL-ED-COPTOS-BERENIKE-KM, CTX-ORBIS-COPTOS-BERENIKE]
+    evidence: [ANC-PLINY-DESERT, MIL-ED-COPTOS-BERENIKE-KM, CTX-ORBIS-COPTOS-BERENIKE, CTX-ITINERE-COPTOS-BERENIKE]
     note: "Three sources agree (~380 km) but share lineage: ORBIS geometry and Nappo's figure are not independent of Pliny/surveys."
   # ---- context layer (legions, cities, roads, prices) — session 3 ----
   egypt_wheat_price_pre_break:
@@ -141,10 +144,10 @@ parameters:
     definition: Ratio of price levels after vs before the late-2nd-century break (160s-190s)
     unit: ratio
     baseline: 2
-    bounds: [1.33, 2.0]
+    bounds: [1.65, 2.5]
     status: external_estimate
-    evidence: [PL-EG-DOUBLING, PL-EG-WHEAT-W3]
-    note: "Median 16/9 = 1.78; 'doubling' per Rathbone. Mechanism (Antonine plague) disputed."
+    evidence: [PL-EG-DOUBLING, PL-EG-WHEAT-W3, CTX-HARPER-BREAK]
+    note: "Median 16/9 = 1.78; 'doubling' per Rathbone. E002 on Harper's data: step ratio c. 2.1 (bootstrap 1.79-2.50; 1.65-2.39 with tightly dated items), break located only to 160-187. Mechanism disputed."
   p_hermapollon_post_break:
     definition: Probability the Hermapollon valuation post-dates the price break
     unit: probability
@@ -183,3 +186,11 @@ parameters:
     bounds: [0.0, 0.01]
     status: external_estimate
     evidence: [PL-ROM-INFL-1-2C]
+  route_coptos_myos_hormos_km:
+    definition: Coptos-Myos Hormos road length
+    unit: km
+    baseline: 182
+    bounds: [170, 183]
+    status: external_estimate
+    evidence: [CTX-ITINERE-COPTOS-MYOS]
+    note: "Itiner-e shortest path c. 182 km (about half on 'Certain' segments); ORBIS geometry 170 km."

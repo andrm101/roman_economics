@@ -32,3 +32,11 @@
 - Built `romeco.context`: pilot gazetteer (45 places, all resolved), Eastern Desert military installations (99; 58 active 100–200 CE), Egypt settlements, AWMC road lengths, ORBIS pilot edges, urban footprints, legion bases (29/32 joined), price deflators.
 - Findings: ORBIS v2 road time = km/30 (not evidence; D013); ORBIS 'Nicopolis' identity trap (D014); W1 (70s on) and Hermapollon in one stable price band; P(Hermapollon after price break) ≈ 0.06 [assumption-dependent]; Hitchner vs Ponting fineness conflict (K15); III Cyrenaica location conflict (K16).
 - Tests: 62 passing.
+
+## 2026-10-24 — Session 4 (researcher-supplied datasets)
+
+- Connected the researcher's folder C:/Users/andre/Desktop/Sandbox/Roman Econ System/Data (granted). Received: Itiner-e roads gpkg, Hanson 2016 Cities DB xlsx, Harper 2016 prices/wages/rents xlsx. Checksums registered (config/datasets.lock.yaml).
+- Wrote `romeco.context.manual`: GeoPackage decoder (EPSG:3395 inverse ellipsoidal Mercator), Itiner-e road graph (networkx), Harper loaders and break analysis (E002), Hanson summaries.
+- Results: Itiner-e Coptos–Berenike 402–408 km (all 'Conjectured'; K18); Coptos–Myos Hormos c. 182 km. Harper wheat: doubling confirmed (ratio c. 2.1; boot 1.79–2.50) but break only located to 160–187. Hanson: 47 Aegyptus cities in W2 (20 with area; Alexandria 972 ha vs AWMC footprint 1,061 ha; Coptos no area).
+- Source-criticism: Pliny's Juliopolis–Coptos 309 mp is shorter than the great circle (646 km) → withdrawn as a distance (K17, D017).
+- Licence policy for unlicensed datasets: aggregates only (D016).

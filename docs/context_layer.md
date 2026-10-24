@@ -1,4 +1,4 @@
-# Context layer: legions, cities, roads, prices/inflation (v0.1, 2026-10-24)
+# Context layer: legions, cities, roads, prices/inflation (v0.2, 2026-10-24)
 
 Purpose: track four families of conditioning variables requested by the researcher. They enter the pilot as **constraints, confounders and deflators** for RQ1; they do not open a new research question (D012).
 
@@ -11,9 +11,9 @@ Claim tags: **[sourced]**, **[calculated]**, **[assumption]**. All derived table
 | Cities, forts, stations, roads (gazetteer) | Pleiades GIS tables (commit `6df2361`) | GitHub | fetched, 40 MB | CC BY 3.0 |
 | Roads, urban footprints, provinces | AWMC geodata (Barrington-derived; commit `7ecf8bc`) | GitHub | fetched, 7 MB | ODbL |
 | Route network (model) | ORBIS v2 sites + routes (commit `6588111`) | GitHub | fetched, 4 MB | MIT (code); data rights unclear |
-| Roads (high resolution) | Itiner-e static 2024, v1.3 (DOI 10.5281/zenodo.17122148) | Zenodo | **blocked here — manual download** | CC BY 4.0 |
-| Cities (area, status, monuments) | Hanson 2016 Cities Database (DOI 10.5287/bodleian:eqapevAn8) | OxREP | **blocked here — manual download** | not stated |
-| Prices / wages (Egypt) | Harper 2016 geodatabase | DARMC | **blocked here — manual download** | not stated |
+| Roads (high resolution) | Itiner-e static 2024, v1.3 (DOI 10.5281/zenodo.17122148) | researcher-supplied (sha256 `1b9470aa…`) | **read, 14,769 segments** | CC BY 4.0 |
+| Cities (area, status, monuments) | Hanson 2016 Cities Database (DOI 10.5287/bodleian:eqapevAn8) | researcher-supplied (sha256 `5b9fc019…`) | **read; aggregates only committed (D016)** | not stated |
+| Prices / wages (Egypt) | Harper 2016 DARMC xlsx (companion to Harper 2016, *JEH* 76: 803–39) | researcher-supplied (sha256 `167a62be…`) | **read; aggregates only committed (D016)** | not stated |
 | Coin fineness | Ponting et al. 2021 ISIS dataset (DOI 10.5286/ISIS.E.98003576) | ISIS | **blocked; probably raw spectra** | CC BY 4.0 |
 | Legions | No open structured dataset reachable. Provisional c. 150–165 table extracted from Wikipedia (machine summary) | web | scaffold only | CC BY-SA |
 
@@ -37,12 +37,15 @@ Plus curated anchors read directly in the two project books (`data/curated/conte
 ## 3. Cities
 
 - **Settlements.** Pleiades has 734 settlement/urban places in the Egypt box; 506–533 are dated active in the windows, 86 undated. These are gazetteer presence counts, not populations.
-- **Urban footprints.** AWMC gives 95 Barrington-derived footprints. Alexandria is 1,061 ha, against Rome's 1,317 ha **[calculated from polygons]**. Footprint is not inhabited area; Hanson's database is needed for that (manual download).
+- **Urban footprints.** AWMC gives 95 Barrington-derived footprints. Alexandria is 1,061 ha, against Rome's 1,317 ha **[calculated from polygons]**. Footprint is not inhabited area.
+- **Hanson 2016 [calculated from the database]:** 47 Aegyptus cities active in W2, 20 with an area estimate (sum 3,403 ha, median 139 ha). Alexandria 972 ha ("urban grid") — 9% below the AWMC footprint. Arsinoe 288, Oxyrhynchus 170, Hermopolis 155, Antinoopolis 138 ha. **Coptos has no area estimate**, so the Nile–desert transfer node cannot be sized from this source.
 - **Role in the pilot.** Size of the Alexandria demand/transit node (M1 demand scale); Coptos and the Red Sea ports as nodes in the gazetteer (`pilot_gazetteer.csv`, 45 places, all resolved).
 
 ## 4. Roads
 
 - **Coptos–Berenike length agrees across three sources:** Pliny 257 mp ≈ 380 km; Nappo "quasi 400 km" (p. 57); ORBIS geometry 379.5 km. They **share lineage**, so this is agreement, not confirmation.
+- **Itiner-e (network shortest path, snapped graph) [calculated]:** Coptos–Berenike **402–408 km**, all segments `Conjectured` (Desert Networks lineage); Coptos–Myos Hormos **c. 182 km** (ORBIS 170). A 6–7% gap with Pliny/ORBIS (K18); `route_desert_km` bounds widened to [380, 409].
+- **Pliny's Juliopolis–Coptos 309 mp (≈457 km) is physically impossible as a river distance:** the great-circle distance alone is 646 km [calculated]. Withdrawn as a parameter value (K17, D017); `route_nile_km` is now exploratory with lower bound 646.
 - **Finding: ORBIS v2 road "time" is not evidence.** On every road edge `field_s` = km ÷ 30.0 and `field_e` = 1.05 × `field_s` (tested). The 12.6 "days" for Coptos–Berenike, close to Pliny's 12, is a 30 km/day assumption (D013).
 - **AWMC roads:** 3,010 km of segments touch the Eastern Desert box. Nappo gives 2,000–2,200 km for the seven main desert roads (p. 55). The box also catches minor and Nile-edge roads, and AWMC roads are **undated**.
 - **ORBIS identity trap:** its "Nicopolis" is the Epirote city. Edges are now selected by geography, never by label (D014).
@@ -57,6 +60,8 @@ Plus curated anchors read directly in the two project books (`data/curated/conte
 - **Debasement path:** silver coinage about 1% fine c. 270; Aurelian's 274 reform, then a price surge (Nappo 184–185).
 - **Denarius fineness:** two inconsistent series in the same volume (K15). Hitchner (p. 282) gives 94 → 88% from Nero to Pius, then 78 / 74 / 55 / 51 / 45%. Ponting (p. 274) measures 80% in heart-metal after the 64 reform.
 
+**E002 re-derivation on Harper's database [calculated]:** 33 dated wheat prices, 1–275 CE. A two-regime step model gives ratio **c. 2.1** (bootstrap 5–95%: 1.79–2.50; 26 tightly dated items: 1.65–2.39) and reproduces the band medians 9 and 16 dr/art. The break is **only located to 160–187**: no observation falls in that interval, so every candidate τ in it fits equally. Harper and Rathbone draw on the same papyri, so this is a re-derivation, not independent confirmation.
+
 **Consequences for the pilot [calculated / assumption]:**
 - W1 (from the 70s) and the Hermapollon (126–175) fall in the **same stable price band**. Nominal comparisons between them need no deflator. Augustan–Neronian evidence before the 70s has no Egyptian price anchor here.
 - With uniform dating assumptions, the probability that the Hermapollon post-dates the break is **0.06**.
@@ -64,7 +69,8 @@ Plus curated anchors read directly in the two project books (`data/curated/conte
 
 ## 6. Gaps and next actions
 
-1. **Manual downloads (yours):** Itiner-e gpkg + field description (~34 MB); Hanson Cities Database xlsx; Harper price geodatabase. Put them in `data/raw/context/<dataset>/manual/` (or connect a folder and I will place them).
+1. **Done:** Itiner-e, Hanson, Harper received and integrated. Outstanding: Itiner-e field description docx (certainty/date field definitions); licences for Hanson and Harper before any row-level release.
+5. **Nile distance (K17):** find a sourced Juliopolis–Coptos river distance or a reading/unit explanation of Pliny's 309 mp.
 2. **Legion dispositions:** replace the Wikipedia scaffold with a scholarly list. The best primary anchor is the c. AD 165 inscription listing legions by province (ILS 2288), plus a modern disposition table.
 3. **Egypt garrison size:** needed before the pay-scale comparison means anything. Candidate sources are cited by Nappo (Daris 2000; Cuvigny; Bagnall 1986).
 4. **Tetradrachm fineness series** for Egypt (closed currency): not found in reachable open data.

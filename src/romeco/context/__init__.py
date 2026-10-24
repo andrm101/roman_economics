@@ -15,6 +15,7 @@ import json
 import math
 from pathlib import Path
 
+import numpy as np
 import pandas as pd
 import yaml
 
@@ -277,5 +278,87 @@ def build_all(verbose: bool = False) -> dict[str, Path]:
              value_low=regime["p_after_break"], value_high=regime["p_after_break"], unit="probability",
              claim_text=regime["assumption"], source="SRC-HGV-TM27666; SRC-RATHBONE-2009"),
     ])
+    derived = pd.concat([derived, build_manual(save, verbose)], ignore_index=True)
     save(derived, "context_assertions")
     return outputs
+
+
+def build_manual(save, verbose: bool = False) -> pd.DataFrame:
+    """Researcher-supplied datasets. Returns extra derived assertions (empty if files absent)."""
+    from romeco.context import manual as M
+
+    extra = []
+    gaz = pd.read_csv(OUT / "pilot_gazetteer.csv").set_index("name")
+    xy = lambda n: (gaz.loc[n, "representative_longitude"], gaz.loc[n, "representative_latitude"])  # noqa: E731
+
+    # Great-circle floor for the Nile leg (pure geometry; no dataset needed)
+    gc = haversine_km(*xy("Iuliopolis/Nikopolis"), *xy("Coptos"))
+    extra.append(dict(assertion_id="CTX-GC-JULIOPOLIS-COPTOS", quantity_concept="great_circle_juliopolis_coptos",
+                      value_low=round(gc, 1), value_high=round(gc, 1), unit="km",
+                      claim_text="Great-circle distance between Pleiades representative points; a strict lower bound for any route",
+                      source="SRC-PLEIADES-DATASETS"))
+
+    if M.available("itinere"):
+        M.verify("itinere")
+        seg = M.itinere_segments({"eastern_desert": EASTERN_DESERT_BBOX, "egypt_other": EGYPT_BBOX})
+        seg["dated"] = seg.lower_date.notna()
+        summ = seg.groupby(["region", "certainty", "dated"]).km.agg(segments="size", km="sum").reset_index()
+        save(summ, "itinere_roads_summary")
+        rows = []
+        pairs = [("Coptos", "Berenike"), ("Coptos", "Myos Hormos"), ("Apollonopolis Magna", "Berenike"),
+                 ("Coptos", "Klaudianon (Mons Claudianus)"), ("Kaine/Maximianopolis", "Porphyrites (Mons Porphyrites)")]
+        for label, per in (("all_dates", None), ("W2_100_200", _windows()["W2"])):
+            graph = M.itinere_graph(EGYPT_BBOX, period=tuple(per) if per else None)
+            for a, b in pairs:
+                r = M.route_km(graph, xy(a), xy(b))
+                rows.append(dict(period=label, origin=a, destination=b,
+                                 **{k: v for k, v in r.items() if k != "names"},
+                                 route_names="; ".join(r.get("names", []))))
+        routes = pd.DataFrame(rows)
+        save(routes, "itinere_pilot_routes")
+        cb = routes[(routes.origin == "Coptos") & (routes.destination == "Berenike")]
+        extra.append(dict(assertion_id="CTX-ITINERE-COPTOS-BERENIKE", quantity_concept="route_length_coptos_berenike",
+                          value_low=round(cb.km.min(), 1), value_high=round(cb.km.max(), 1), unit="km",
+                          claim_text="Shortest path on Itiner-e network (all dates / segments dated within W2); all segments 'Conjectured' (Desert Networks itineraries)",
+                          source="SRC-ITINERE-2025"))
+        cm = routes[(routes.origin == "Coptos") & (routes.destination == "Myos Hormos")]
+        extra.append(dict(assertion_id="CTX-ITINERE-COPTOS-MYOS", quantity_concept="route_length_coptos_myos_hormos",
+                          value_low=round(cm.km.min(), 1), value_high=round(cm.km.max(), 1), unit="km",
+                          claim_text="Shortest path on Itiner-e network; c. half the length on 'Certain' segments",
+                          source="SRC-ITINERE-2025"))
+
+    if M.available("harper_prices"):
+        M.verify("harper_prices")
+        seed = yaml.safe_load((ROOT / "config" / "project.yaml").read_text(encoding="utf-8"))["seeds"]["global"]
+        res = {"all_dated": M.harper_break_analysis(seed, n_boot=1000),
+               "date_span_le_10y": M.harper_break_analysis(seed, n_boot=1000, max_span=10)}
+        wheat = M.harper_wheat_1_3c()
+        w = wheat[wheat.Year_value.between(1, 275) & wheat.price_dr_art.notna()]
+        scan = M.break_scan(w.Year_value.to_numpy(float), np.log(w.price_dr_art.to_numpy(float)), range(100, 231))
+        tied = scan[scan.sse <= scan.sse.min() + 1e-12].tau
+        res["tied_tau_interval"] = [int(tied.min()), int(tied.max())]
+        outdir = ROOT / "experiments" / "E002_harper_price_break" / "outputs"
+        outdir.mkdir(parents=True, exist_ok=True)
+        (outdir / "break_results.json").write_text(json.dumps(res, indent=2), encoding="utf-8")
+        a = res["all_dated"]
+        extra.append(dict(assertion_id="CTX-HARPER-BREAK", quantity_concept="egypt_wheat_price_break_ratio",
+                          value_low=round(a["boot_ratio_p05_p50_p95"][0], 3), value_high=round(a["boot_ratio_p05_p50_p95"][2], 3),
+                          unit="ratio",
+                          claim_text=(f"Two-regime step fit to Harper 2016 sheet 2 (n={a['n_obs']}); break located only to "
+                                      f"{res['tied_tau_interval'][0]}-{res['tied_tau_interval'][1]} (data gap); bootstrap 5-95% ratio. "
+                                      "Shares sources with Rathbone: re-derivation, not independent."),
+                          source="SRC-HARPER-2016-DB"))
+
+    if M.available("hanson_cities"):
+        M.verify("hanson_cities")
+        summ, eg = M.hanson_city_summary(_windows())
+        save(summ, "hanson_city_summary")          # aggregates only (licence not stated)
+        priv = ROOT / "data" / "raw" / "context" / "hanson_cities" / "derived"
+        priv.mkdir(parents=True, exist_ok=True)
+        eg.to_csv(priv / "hanson_aegyptus_cities.csv", index=False)
+        w2 = summ[(summ.window == "W2") & (summ.province == "Aegyptus")].iloc[0]
+        extra.append(dict(assertion_id="CTX-HANSON-AEGYPTUS-W2", quantity_concept="cities_aegyptus_W2",
+                          value_low=int(w2.cities), value_high=int(w2.cities), unit="cities",
+                          claim_text=f"Hanson 2016 cities in Aegyptus overlapping W2; {int(w2.with_area)} with an area estimate",
+                          source="SRC-HANSON-2016-DB"))
+    return pd.DataFrame(extra)

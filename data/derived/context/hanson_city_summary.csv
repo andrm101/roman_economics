@@ -1,0 +1,5 @@
+window,province,cities,with_area,area_ha_sum,area_ha_median
+W1,ALL,1261,809,44236.0,32.0
+W1,Aegyptus,46,19,3265.0,140.0
+W2,ALL,1366,867,46167.0,31.0
+W2,Aegyptus,47,20,3403.0,139.0

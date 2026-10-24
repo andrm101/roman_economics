@@ -230,7 +230,8 @@ Expected outcome, stated now: with the current evidence M1 and M2 will be **obse
 | tax_mode | measured_input | 1 | In kind (quarter shares listed); 'money' kept open by De Romanis 2014 |
 | N | exploratory | Strabo | Augustan, one port, ambiguous |
 | O | measured_input | Pliny | Literary, moralising |
-| route_nile_km, route_desert_km | measured_input | Pliny | Numerals unchecked against critical edition |
+| route_nile_km | exploratory (lower bound 646 km) | Pliny withdrawn (K17) | Pliny's 309 mp is shorter than the great circle |
+| route_desert_km | measured_input [380, 409] | Pliny; ORBIS; Itiner-e | Sources share lineage (K18) |
 | λ, κ, c, p, camel_capacity_kg | exploratory | **0** | Drive almost all of the receipts range; λ is the key unidentified quantity |
 
 ### 7.5 Observation model (latent process → surviving traces)

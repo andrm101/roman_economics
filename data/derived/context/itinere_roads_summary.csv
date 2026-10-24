@@ -1,0 +1,17 @@
+region,certainty,dated,segments,km
+eastern_desert,Certain,False,2,99.05609832869317
+eastern_desert,Certain,True,3,106.53685105185693
+eastern_desert,Conjectured,False,48,1637.6778484030576
+eastern_desert,Conjectured,True,134,2958.351020123556
+eastern_desert,Hypothetical,False,7,578.2204885870642
+egypt_other,Certain,False,77,996.7106481584846
+egypt_other,Certain,True,13,126.61683848858334
+egypt_other,Conjectured,False,268,9051.97440416034
+egypt_other,Conjectured,True,22,525.8599408601916
+egypt_other,Hypothetical,False,75,5662.920109574722
+rest,Certain,False,857,6221.061198595291
+rest,Certain,True,88,627.4996070626188
+rest,Conjectured,False,12279,250929.40996151956
+rest,Conjectured,True,201,3393.1166716576213
+rest,Hypothetical,False,679,15848.601801766104
+rest,Hypothetical,True,16,197.46042147790618

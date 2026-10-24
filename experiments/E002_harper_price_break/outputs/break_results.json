@@ -1,0 +1,62 @@
+{
+  "all_dated": {
+    "n_obs": 33,
+    "max_span": null,
+    "best_tau": 160,
+    "best_ratio": 2.11145338896238,
+    "sse_break": 2.0082163863088236,
+    "sse_flat": 5.901291613967342,
+    "r2_gain": 0.6596988392243284,
+    "boot_tau_p05_p50_p95": [
+      140.0,
+      160.0,
+      160.0
+    ],
+    "boot_ratio_p05_p50_p95": [
+      1.7855676288099147,
+      2.1053422408163165,
+      2.500751214130383
+    ],
+    "n_70_169": 7,
+    "median_70_169": 9.0,
+    "share_70_169_within_6_12": 0.7142857142857143,
+    "n_190_259": 16,
+    "median_190_259": 16.0,
+    "share_190_259_within_12_20": 0.875,
+    "seed": 20261024,
+    "n_boot": 1000,
+    "caveat": "Harper's 1st-3rd c. wheat prices overlap Rathbone's sources (same papyri): a re-derivation, not independent validation."
+  },
+  "date_span_le_10y": {
+    "n_obs": 26,
+    "max_span": 10,
+    "best_tau": 160,
+    "best_ratio": 2.012199714365116,
+    "sse_break": 1.5132410528767832,
+    "sse_flat": 4.221108480096514,
+    "r2_gain": 0.64150623941269,
+    "boot_tau_p05_p50_p95": [
+      140.0,
+      160.0,
+      160.0
+    ],
+    "boot_ratio_p05_p50_p95": [
+      1.6516817102492334,
+      2.0082727578795065,
+      2.391875672085715
+    ],
+    "n_70_169": 5,
+    "median_70_169": 10.0,
+    "share_70_169_within_6_12": 0.8,
+    "n_190_259": 14,
+    "median_190_259": 16.2,
+    "share_190_259_within_12_20": 0.8571428571428571,
+    "seed": 20261024,
+    "n_boot": 1000,
+    "caveat": "Harper's 1st-3rd c. wheat prices overlap Rathbone's sources (same papyri): a re-derivation, not independent validation."
+  },
+  "tied_tau_interval": [
+    160,
+    187
+  ]
+}
