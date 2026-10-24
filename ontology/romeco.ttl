@@ -1,0 +1,133 @@
+@prefix rx:      <https://github.com/andrm101/roman_economics/ontology#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# Roman Economic Systems Lab: minimal ontology (WP9). Scope set by docs/competency_questions.md.
+# Reuses PROV-O (W3C Rec 2013-04-30) and SKOS (W3C Rec 2009-08-18) directly. CIDOC CRM 7.1.3,
+# CRMinf 1.2.1 and OWL-Time (CRD 2022-11-15) are aligned in ontology/ALIGNMENT.md, not imported.
+
+<https://github.com/andrm101/roman_economics/ontology> a owl:Ontology ;
+    owl:versionInfo "0.1.0" ;
+    dcterms:title "romeco minimal ontology" ;
+    dcterms:created "2026-10-24"^^xsd:date ;
+    rdfs:comment "Four products: corpus, evidence graph, economic system graph, model specification. Claims are addressable, attributed assertions; nothing is overwritten." .
+
+# ===================================================================== corpus
+rx:Source a owl:Class ; rdfs:subClassOf prov:Entity ;
+    rdfs:label "Source" ;
+    skos:scopeNote "A bibliographic entity: work, edition, chapter, article, dataset, web page. Distinct editions, translations and chapters are distinct Sources linked by rx:partOf / rx:editionOf / rx:translationOf." ;
+    skos:editorialNote "Identity: one row in registers/source_register.csv (source_id). Never merged across editions." .
+rx:FileItem a owl:Class ; rdfs:subClassOf prov:Entity ;
+    rdfs:label "File item" ;
+    skos:scopeNote "One acquired file copy of a Source, identified by its SHA-256 content hash." .
+rx:ExtractionCandidate a owl:Class ; rdfs:subClassOf prov:Entity ;
+    rdfs:label "Extraction candidate" ;
+    skos:scopeNote "Machine-proposed quantity or citation anchored to a page or locus of a FileItem. NOT a claim: it becomes evidence only when a human-reviewed rx:Claim is created from it (D024)." .
+
+# ===================================================================== evidence graph
+rx:AncientDocument a owl:Class ;
+    rdfs:label "Ancient document" ;
+    skos:scopeNote "An ancient object, text or archive (papyrus, ostracon, inscription, literary work). Not its edition." ;
+    skos:editorialNote "Identity: document_id; external identifiers (TM, series sigla) attached as rx:citationKey for matching." .
+rx:Claim a owl:Class ; rdfs:subClassOf prov:Entity ;
+    rdfs:label "Claim" ;
+    skos:scopeNote "An addressable assertion with its own attribution, origin, epistemic status and access route. Two scholars stating the same thing are two Claims." ;
+    skos:editorialNote "Identity: assertion_id. Record origin, epistemic status and review status are independent properties." ;
+    owl:disjointWith rx:ExtractionCandidate .
+rx:Reading a owl:Class ; rdfs:subClassOf rx:Claim ;
+    skos:scopeNote "A transcription of a locus of an AncientDocument by a named reader/edition." .
+rx:Anchor a owl:Class ; rdfs:subClassOf rx:Claim ;
+    skos:scopeNote "A sourced quantitative or categorical statement used as model evidence (literary statement, scholarly reconstruction, archaeological observation)." .
+rx:Interpretation a owl:Class ; rdfs:subClassOf rx:Claim ;
+    skos:scopeNote "A claim about what a reading or document means (e.g. 'the total is the three-quarter residual')." .
+rx:ProjectDerivation a owl:Class ; rdfs:subClassOf rx:Claim ;
+    skos:scopeNote "A value computed by project code from other claims and datasets (record origin project_derivation)." .
+rx:PlaceIdentification a owl:Class ; rdfs:subClassOf rx:Claim ;
+    skos:scopeNote "The claim that a name in a source denotes a given gazetteer place. Identifications can be wrong and are reviewable like any claim." .
+rx:Question a owl:Class ;
+    rdfs:label "Question (point of contention)" ;
+    skos:scopeNote "A contested question with competing positions (rx:hasPosition). Selection is a project decision (rx:selectedBy), not a fact about the past." .
+rx:Contradiction a owl:Class ;
+    skos:scopeNote "An entry of registers/contradiction_register.md (K-number): two claims in tension, with status and resolution route." .
+rx:Decision a owl:Class ;
+    skos:scopeNote "A logged project decision (D-number, registers/decision_log.md)." .
+
+# ===================================================================== economic system graph (minimal)
+rx:Place a owl:Class ;
+    skos:scopeNote "A place, identified by a Pleiades URI where one exists (rx:pleiades)." .
+rx:Unit a owl:Class ; rdfs:subClassOf skos:Concept ;
+    skos:scopeNote "A unit of measure or account as used in a source; local units are distinct concepts (no universal drachma)." .
+
+# ===================================================================== model specification
+rx:Parameter a owl:Class ; rdfs:subClassOf prov:Entity ;
+    skos:scopeNote "A model input from config/parameters.yaml, with status, bounds and evidence." .
+rx:ConversionRule a owl:Class ;
+    skos:scopeNote "A scoped unit relation from romeco.units.RULES (scope, source, status)." .
+rx:Derivation a owl:Class ; rdfs:subClassOf prov:Activity ;
+    skos:scopeNote "A computation by named project code that used claims, parameters and conversion rules and generated a value." .
+rx:Experiment a owl:Class ; rdfs:subClassOf prov:Activity ;
+    skos:scopeNote "A registered experiment (E-number) that used parameters." .
+
+# ===================================================================== controlled vocabularies
+rx:RecordOrigin a skos:ConceptScheme .
+rx:EpistemicStatus a skos:ConceptScheme .
+rx:ReviewStatus a skos:ConceptScheme .
+rx:ParameterStatus a skos:ConceptScheme .
+rx:UnitScheme a skos:ConceptScheme .
+
+# ===================================================================== properties
+rx:recordOrigin a owl:ObjectProperty ; rdfs:range skos:Concept ; skos:scopeNote "What kind of record a claim is (values in rx:RecordOrigin)." .
+rx:epistemicStatus a owl:ObjectProperty ; rdfs:range skos:Concept ; skos:scopeNote "How far the project trusts a claim (rx:EpistemicStatus). Not a truth value." .
+rx:reviewStatus a owl:ObjectProperty ; rdfs:range skos:Concept ; skos:scopeNote "How the project accessed the claim (rx:ReviewStatus). Not reliability." .
+rx:accessStatus a owl:DatatypeProperty ; rdfs:domain rx:Source .
+rx:attributedTo a owl:ObjectProperty ; rdfs:domain rx:Claim ; rdfs:range rx:Source ; skos:scopeNote "The scholarly work (or project) whose claim this is." .
+rx:reportedIn a owl:ObjectProperty ; rdfs:domain rx:Claim ; rdfs:range rx:Source ; skos:scopeNote "The source through which the project accessed the claim (may differ from attributedTo)." .
+rx:aboutDocument a owl:ObjectProperty ; rdfs:domain rx:Claim ; rdfs:range rx:AncientDocument .
+rx:aboutPlace a owl:ObjectProperty ; rdfs:range rx:Place .
+rx:locus a owl:DatatypeProperty .
+rx:page a owl:DatatypeProperty ; skos:scopeNote "Modern page, only if verified." .
+rx:quantityConcept a owl:DatatypeProperty .
+rx:valueLow a owl:DatatypeProperty ; rdfs:range xsd:double .
+rx:valueHigh a owl:DatatypeProperty ; rdfs:range xsd:double .
+rx:unit a owl:ObjectProperty ; rdfs:range rx:Unit .
+rx:claimText a owl:DatatypeProperty .
+rx:dependsOn a owl:ObjectProperty ; rdfs:subPropertyOf prov:wasDerivedFrom ; rdfs:domain rx:Claim .
+rx:derivedFrom a owl:ObjectProperty ; rdfs:subPropertyOf prov:wasDerivedFrom ; rdfs:domain rx:Parameter ; rdfs:range rx:Claim ;
+    skos:scopeNote "Support actually used by the parameter (selected positions only)." .
+rx:considered a owl:ObjectProperty ; rdfs:domain rx:Parameter ; rdfs:range rx:Claim ;
+    skos:scopeNote "Alternatives weighed for the parameter (rival or rejected positions) that do not support its value." .
+rx:hasPosition a owl:ObjectProperty ; rdfs:domain rx:Question ; rdfs:range rx:Claim .
+rx:selectedPosition a owl:ObjectProperty ; rdfs:subPropertyOf rx:hasPosition .
+rx:selectedBy a owl:ObjectProperty ; rdfs:domain rx:Question ; rdfs:range rx:Decision .
+rx:questionStatus a owl:DatatypeProperty ; skos:scopeNote "open | resolved_working (selection made, rivals kept)." .
+rx:identifiesName a owl:DatatypeProperty ; rdfs:domain rx:PlaceIdentification .
+rx:identifiedAs a owl:ObjectProperty ; rdfs:domain rx:PlaceIdentification ; rdfs:range rx:Place .
+rx:pleiades a owl:ObjectProperty ; rdfs:domain rx:Place .
+rx:citationKey a owl:DatatypeProperty ; rdfs:domain rx:AncientDocument ; skos:scopeNote "Normalised siglum or locus prefix (e.g. sb:18:13167, plin.nh) used to match extraction candidates." .
+rx:usedRule a owl:ObjectProperty ; rdfs:subPropertyOf prov:used ; rdfs:range rx:ConversionRule .
+rx:code a owl:DatatypeProperty ; rdfs:domain prov:Activity .
+rx:scope a owl:DatatypeProperty ; rdfs:domain rx:ConversionRule .
+rx:factor a owl:DatatypeProperty ; rdfs:domain rx:ConversionRule .
+rx:fromUnit a owl:ObjectProperty ; rdfs:domain rx:ConversionRule ; rdfs:range rx:Unit .
+rx:toUnit a owl:ObjectProperty ; rdfs:domain rx:ConversionRule ; rdfs:range rx:Unit .
+rx:parameterStatus a owl:ObjectProperty ; rdfs:domain rx:Parameter .
+rx:baseline a owl:DatatypeProperty ; rdfs:domain rx:Parameter .
+rx:boundLow a owl:DatatypeProperty ; rdfs:domain rx:Parameter .
+rx:boundHigh a owl:DatatypeProperty ; rdfs:domain rx:Parameter .
+rx:copyOf a owl:ObjectProperty ; rdfs:domain rx:FileItem ; rdfs:range rx:Source .
+rx:sha256 a owl:DatatypeProperty ; rdfs:domain rx:FileItem .
+rx:partOf a owl:ObjectProperty ; rdfs:domain rx:Source ; rdfs:range rx:Source .
+rx:describes a owl:ObjectProperty ; rdfs:domain rx:Source ; rdfs:range rx:Source .
+rx:sourceDerivedFrom a owl:ObjectProperty ; rdfs:domain rx:Source ; rdfs:range rx:Source .
+rx:candidateFrom a owl:ObjectProperty ; rdfs:domain rx:ExtractionCandidate ; rdfs:range rx:FileItem .
+rx:candidateKind a owl:DatatypeProperty ; rdfs:domain rx:ExtractionCandidate .
+rx:anchorRef a owl:DatatypeProperty ; rdfs:domain rx:ExtractionCandidate ; skos:scopeNote "Page, page range or locus within the FileItem." .
+rx:normKey a owl:DatatypeProperty ; rdfs:domain rx:ExtractionCandidate .
+rx:extractorVersion a owl:DatatypeProperty ; rdfs:domain rx:ExtractionCandidate .
+rx:possiblyBearsOn a owl:ObjectProperty ; rdfs:domain rx:ExtractionCandidate ;
+    skos:scopeNote "Unreviewed match of a candidate to a Claim or AncientDocument (same unit and value range, or same citation key). A review lead, not support." .
+rx:contradictionStatus a owl:DatatypeProperty ; rdfs:domain rx:Contradiction .

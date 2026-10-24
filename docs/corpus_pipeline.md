@@ -1,4 +1,4 @@
-# Corpus pipeline (WP4), v0.2 — 2026-10-25
+# Corpus pipeline (WP4), v0.2 — 2026-10-24
 
 **Status: pilot implemented and benchmarked.** The WP4 acceptance test (error rates by stratum; every claim anchored) is met **provisionally**: the gold set was annotated by the assistant that wrote the extractors and awaits the researcher's review (`benchmark/gold_review_sheet.csv`).
 

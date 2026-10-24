@@ -225,13 +225,26 @@ def cmd_benchmark() -> None:
         print(name, [(s["stratum"], s["q_recall"], s["c_recall"]) for s in r["strata"]])
 
 
+def cmd_graph() -> None:
+    """WP9: build the RDF evidence graph (core.ttl committed; full.ttl with candidates is regenerated), validate with SHACL."""
+    from pyshacl import validate
+    from rdflib import Graph
+    from romeco.semantic import build as SB
+    sh = Graph().parse(SB.ROOT / "ontology" / "shapes.ttl"); ont = Graph().parse(SB.ROOT / "ontology" / "romeco.ttl")
+    for wc in (False, True):
+        out, n = SB.write(with_candidates=wc)
+        ok, _, txt = validate(Graph().parse(out), shacl_graph=sh, ont_graph=ont, inference="rdfs", allow_warnings=True)
+        warn = txt.count("Severity: sh:Warning")
+        print(f"{out.name}: {n} triples; SHACL conforms={ok}; warnings={warn}")
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput", "corpus", "benchmark"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput", "corpus", "benchmark", "graph"])
     args = ap.parse_args(argv)
     {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
      "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass,
-     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput, "corpus": cmd_corpus, "benchmark": cmd_benchmark}[args.command]()
+     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput, "corpus": cmd_corpus, "benchmark": cmd_benchmark, "graph": cmd_graph}[args.command]()
 
 
 if __name__ == "__main__":

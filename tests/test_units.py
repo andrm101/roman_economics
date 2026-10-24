@@ -37,4 +37,4 @@ def test_unknown_rule_raises():
 
 def test_every_rule_has_source_and_status():
     for r in RULES.values():
-        assert r.source_id and r.status in {"documented_in_source", "scholarly_convention", "project_assumption"}
+        assert r.source_id and r.status in {"documented_in_source", "scholarly_convention", "project_assumption", "modern_definition"}

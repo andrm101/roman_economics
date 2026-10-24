@@ -17,6 +17,8 @@ dependencies = [
     "networkx==3.5",
     "lxml==6.1.3",
     "rapidfuzz==3.14.1",
+    "rdflib==7.1.4",
+    "pyshacl==0.30.1",
 ]
 # External CLI tools used by romeco.corpus (versions recorded in each parse manifest):
 #   poppler-utils pdftotext/pdftoppm 24.02.0; tesseract 5.3.4 with tessdata_fast @87416418
@@ -33,3 +35,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
+filterwarnings = ["ignore::DeprecationWarning:pyparsing.*", "ignore::DeprecationWarning:rdflib.*"]

@@ -1,4 +1,4 @@
-# WP4.6 extraction benchmark: protocol (registered 2026-10-25, before annotation)
+# WP4.6 extraction benchmark: protocol (registered 2026-10-24, before annotation)
 
 **Purpose.** Characterise extraction error by stratum (WP4 acceptance test). This is a measurement of the *pipeline*, not of the historical evidence.
 

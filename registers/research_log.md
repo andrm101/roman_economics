@@ -70,7 +70,7 @@
   - No traffic count.
 - HGV inventory (`romeco.ingest.hgv_inventory`, idp.data 41a1c87): 2,630 Eastern Desert documents. The trade-port archives are 1st-century; the W2 record is quarry and fort ostraca. Only 73 W2 documents are month-dated. D022: no documentary route to the H1a capacity criterion.
 
-## 2026-10-25 — Session 8 (WP4 corpus pilot)
+## 2026-10-24 — Session 8 (WP4 corpus pilot)
 
 - **Built `romeco.corpus`.** Registry (8 independent states, rights gate), resumable content-addressed acquisition (13 items; OpenEdition logged as blocked), parsing over 5 routes with page, page-range or locus anchors, rule-based extractors (v0.1 → v0.2), offline citation-chaining discovery, and CSL-JSON/BibTeX export. CLI: `corpus`, `benchmark`.
 - **Corpus outputs.**
@@ -86,3 +86,14 @@
   - Periplus list-syntax and footnote-bleed citation errors (v0.3 backlog).
   - Bowman & Wilson chapter openers are unnumbered, so pages there are anchored as ranges.
 - **Decisions:** D023–D025. WP4 acceptance is provisional pending review of `benchmark/gold_review_sheet.csv`.
+
+## 2026-10-24 — Session 9 (WP9 semantic foundation)
+
+- Competency questions CQ6–CQ11 registered with golden answers before the graph existed (`docs/competency_questions.md`).
+- Minimal ontology (`ontology/romeco.ttl`, 0.1.0) reusing PROV-O and SKOS. Alignment to CIDOC CRM 7.1.3, CRMinf 1.2.1 and OWL-Time documented, not imported (D026).
+- SHACL shapes for claims, parameters, questions, candidates, place identifications, derivations, file items and rules.
+- Curated `questions.csv` (8 points of contention), `derivations.csv` (9 derivations, 3 experiments) and `document_keys.csv` (14 documents).
+- New conversion rule CR-WT-MOD-001 (avoirdupois lb → kg, exact) and status `modern_definition`.
+- Builder `romeco.semantic.build` and CLI `graph`. The DuckDB store stays canonical (D027). Support vs considered is split by question selection (D028). Candidates link only via `possiblyBearsOn` (D029).
+- Acceptance: 17 tests (round trip, rivals, SHACL positive + 5 negatives, CQ6–CQ11). All CQ answers matched the pre-registered expectations after two query fixes: subclass typing without inference, and editions excluded from CQ11 citation counts. Suite: 128 passed.
+- Date correction D030.

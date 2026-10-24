@@ -1,0 +1,13 @@
+# CQ8 What loses support if claim ?excluded is dropped? Parameters (direct support or via a derivation, also through
+# claims that depend on it) and the experiments that use those parameters.
+PREFIX rx: <https://github.com/andrm101/roman_economics/ontology#>
+PREFIX rxv: <https://github.com/andrm101/roman_economics/vocab/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?param ?experiment WHERE {
+  { ?param rx:derivedFrom ?excluded . }
+  UNION { ?param rx:derivedFrom ?c . ?c rx:dependsOn+ ?excluded . }
+  UNION { ?d prov:used ?excluded ; prov:generated ?param . ?param a rx:Parameter . }
+  OPTIONAL { ?experiment a rx:Experiment ; prov:used ?param . }
+}

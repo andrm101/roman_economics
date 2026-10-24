@@ -1,0 +1,12 @@
+# CQ11 How many modern works (sources of parsed items) cite each ancient document?
+PREFIX rx: <https://github.com/andrm101/roman_economics/ontology#>
+PREFIX rxv: <https://github.com/andrm101/roman_economics/vocab/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?doc (COUNT(DISTINCT ?source) AS ?nWorks) (COUNT(DISTINCT ?cand) AS ?nCitations)
+       (GROUP_CONCAT(DISTINCT STR(?source); separator=" ") AS ?works) WHERE {
+  ?cand a rx:ExtractionCandidate ; rx:candidateKind "ancient_cite" ; rx:possiblyBearsOn ?doc ; rx:candidateFrom ?item .
+  ?doc a rx:AncientDocument . ?item rx:copyOf ?source .
+  FILTER NOT EXISTS { ?source rx:sourceKind "edition" }   # an edition of the text is not a modern citation of it
+} GROUP BY ?doc ORDER BY DESC(?nWorks)

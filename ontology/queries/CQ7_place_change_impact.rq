@@ -1,0 +1,11 @@
+# CQ7 Which claims and parameters need review if the identification of ?place changes?
+PREFIX rx: <https://github.com/andrm101/roman_economics/ontology#>
+PREFIX rxv: <https://github.com/andrm101/roman_economics/vocab/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT DISTINCT ?identification ?name ?claim ?param WHERE {
+  OPTIONAL { ?identification rx:identifiedAs ?place ; rx:identifiesName ?name . }
+  { ?claim rx:aboutPlace ?place . } UNION { ?act prov:used ?place ; prov:generated ?claim . ?claim rx:recordOrigin ?o . }
+  OPTIONAL { { ?param rx:derivedFrom ?claim . } UNION { ?d prov:used ?claim ; prov:generated ?param . ?param a rx:Parameter . } }
+}

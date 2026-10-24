@@ -1,0 +1,12 @@
+# CQ10 Unreviewed extraction candidates that may bear on claim ?claim (review leads, not support).
+PREFIX rx: <https://github.com/andrm101/roman_economics/ontology#>
+PREFIX rxv: <https://github.com/andrm101/roman_economics/vocab/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?cand ?item ?source ?anchor ?page ?lo ?unit WHERE {
+  ?cand rx:possiblyBearsOn ?claim ; a rx:ExtractionCandidate ; rx:candidateFrom ?item ; rx:anchorRef ?anchor ;
+        rx:valueLow ?lo ; rx:candidateUnit ?unit .
+  ?item rx:copyOf ?source .
+  OPTIONAL { ?cand rx:printedPage ?page . }
+}

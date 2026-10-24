@@ -19,6 +19,8 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 | `src/romeco/` | `units` (scoped conversion rules), `evidence_db`, `ingest.epidoc` (EpiDoc reader), `m0` (Hermapollon audit, papyrus arithmetic, voyage accounting, fiscal bounds), `cli` |
 | `src/romeco/corpus/` | WP4 corpus pipeline: registry, acquisition, parsing, extraction, discovery, export, benchmark |
 | `registers/corpus/` | File copies (items), relations, pipeline states, acquisition log, parse manifest, discovery candidates |
+| `ontology/` | WP9 minimal ontology, SHACL shapes, standards alignment, SPARQL competency queries |
+| `src/romeco/semantic/` | WP9 graph builder (DuckDB store → RDF) and query runner |
 | `benchmark/` | WP4.6 extraction benchmark: protocol, samples, gold, results, gold review sheet |
 | `tests/` | Unit, accounting-identity, reproduction and schema tests |
 | `experiments/` | Pre-registered manifests and run outputs |
@@ -36,6 +38,7 @@ python -m romeco.cli extract-pvindob  # line-anchored numerals of P.Vindob. G 40
 python -m romeco.cli mass         # E001: Hermapollon pepper mass under rival readings
 python -m romeco.cli throughput   # E003: desert throughput required by H1a (WP2)
 python -m romeco.cli corpus       # WP4: acquire -> parse -> extract -> discover -> export
+python -m romeco.cli graph        # WP9: build core/full RDF graphs and validate with SHACL
 python -m romeco.cli fetch        # pinned context datasets (Pleiades, AWMC, ORBIS v2) -> data/raw/context
 python -m romeco.cli context      # legions / cities / roads / prices context tables -> data/derived/context
                                   # (+ Itiner-e / Hanson / Harper if placed in data/raw/context/<name>/manual/)

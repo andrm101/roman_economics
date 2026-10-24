@@ -1,0 +1,15 @@
+document_id,citation_key,match,note
+DOC-PVINDOB-G40822,sb:18:13167,exact,SB XVIII 13167
+DOC-PVINDOB-G40822,pvindobg:40822,exact,P.Vindob. G 40822
+DOC-STRABO-GEOG,strabo:,prefix,any locus
+DOC-PLINY-NH,plin.nh:,prefix,any locus
+DOC-PME,pme:,prefix,Periplus Maris Erythraei
+DOC-OGIS-674,ogis:674,exact,Coptos tariff
+DOC-OGIS-674,iportes:67,exact,= OGIS 674
+DOC-OPETR-NIKANOR,opetr:,prefix,O.Petr. (Nikanor archive); O.Petr.Mus. not included
+DOC-ED-DIOCL,ed.diocl:,prefix,Price Edict
+DOC-BGU-3-921,bgu:3:921,exact,
+DOC-BGU-3-697,bgu:3:697,exact,
+DOC-P-LOND-2-328,plond:2:328,exact,
+DOC-CIL-6-3492,cil:6:3492,exact,
+DOC-CIL-6-3492,ils:2288,exact,= CIL VI 3492

@@ -267,11 +267,12 @@ Next:
 | **WP1 (substantially done)** | **Hermapollon documentary audit.** Pull idp.data; extract the SB XVIII 13167 EpiDoc; verify the total reading(s) and the six item quantities; read De Romanis 2020 on the verso; resolve INT-HERM-03 against Nappo | Every assertion feeding `A_H` has review_status ∈ {inspected, human_reviewed}; CQ2 empty for `A_H`; item residuals explained or documented with page references. **Status:** readings inspected; nard/ivory/schidai exact; INT-HERM-03 rejected; open: INT-HERM-02 and pepper/tax-mode interpretations (machine summary only) need direct reading of De Romanis 2014/2020 or your review |
 | WP2 | Desert-throughput test (Adams 2007; O.Berenike; Coptos tariff; Nikanor) | `camel_capacity_kg` and a return-window capacity become `external_estimate` with loci; H1a either rejected or retained under stated bounds |
 | WP3 | Novelty audit (Brughmans & Wilson 2022; De Romanis 2020; Wilkinson 2021; Cobb 2018; Evers 2017; Copeland 2022) | Comparison table; contribution statement C1 revised or replaced |
-| WP4 ◐ | Corpus pilot: discovery + permitted acquisition + parser benchmark on 20 stratified documents | Extraction error rates by stratum; every claim anchored to page/locus — **met provisionally 2026-10-25** (E004; gold pending researcher review; see docs/corpus_pipeline.md) |
+| WP4 ◐ | Corpus pilot: discovery + permitted acquisition + parser benchmark on 20 stratified documents | Extraction error rates by stratum; every claim anchored to page/locus — **met provisionally 2026-10-24** (E004; gold pending researcher review; see docs/corpus_pipeline.md) |
 | WP5 | M1 specification + implementation | Comparative statics reproduce M0 bounds as a special case |
 | WP6 | M2 (gated by WP5 + an identified target) | Limiting-case convergence test; ablation table |
 | WP7 | Synthetic-data framework | Origin labels survive joins/exports (tests); recovery experiments documented as software validation |
 | WP8 | Paper-style account | Third party can trace every number to code, parameters, assertions and sources |
+| WP9 ✅ | Semantic foundation (appended; the brief's 'Semantic foundation' milestone): minimal ontology, assertion graph, SHACL shapes, competency queries | Provenance and competing interpretations survive ingestion and querying: lossless round trip, rivals survive, SHACL positive + 5 negative cases, CQ6–CQ11 golden answers (`tests/test_semantic.py`) — **met 2026-10-24** |
 
 **Decision with the largest effect on validity:** treating λ (how typical the Hermapollon was) as unidentified and testing it through desert throughput, rather than assuming λ ≈ 1. **Decisions that can safely wait:** graph database, ABM framework, full CIDOC CRM mapping, cloud infrastructure.
 
@@ -362,7 +363,7 @@ The grid has 288 cells: 2 readings × 2 weight talents × 3 loads (150/181/200 k
 - Ast (2018) documents assessment and storage of imports at the ports, which makes E003's storage window (W ≫ 36 d) the more plausible case.
 - The remaining discriminating evidence is physical capacity (well yields: Cuvigny et al. 2011, *Didymoi*), currently not accessible.
 
-## 12. WP4 result: corpus pilot (2026-10-25)
+## 12. WP4 result: corpus pilot (2026-10-24)
 
 The pipeline (`romeco.corpus`, `docs/corpus_pipeline.md`) acquires, parses, anchors, extracts and discovers over 13 items in 5 parse routes.
 
@@ -381,4 +382,22 @@ The pipeline (`romeco.corpus`, `docs/corpus_pipeline.md`) acquires, parses, anch
 - Pliny's numerals must come from the printed edition (K22).
 - Discovery already gives a usable literature map: 58 works shared across the four documents.
 
-**Acceptance** is provisional until the researcher reviews the 149-row gold sheet. **Next:** the semantic foundation (minimal ontology and assertion graph), which can now ingest anchored candidates without promoting them to evidence.
+**Acceptance** is provisional until the researcher reviews the 149-row gold sheet. **Next:** the semantic foundation (minimal ontology and assertion graph), which can now ingest anchored candidates without promoting them to evidence. Done: see §13.
+
+
+## 13. WP9 result: semantic foundation (2026-10-24)
+
+`ontology/romeco.ttl` (v0.1.0), `ontology/shapes.ttl`, `ontology/queries/CQ6–CQ11`, builder `romeco.semantic.build`, CLI `romeco graph`. See `docs/semantic_foundation.md`.
+
+| Product | Content |
+|---|---|
+| Core graph (`core.ttl`, committed) | 3,046 triples: 98 claims (5 readings, 8 interpretations, 76 anchors, 9 project derivations), 45 place identifications, 8 questions, 33 parameters, 10 conversion rules, 9 derivations, 3 experiments |
+| Full graph (`full.ttl`, regenerated) | + 6,007 extraction candidates, 220 unreviewed `possiblyBearsOn` links |
+| SHACL | Conforms; 4 warnings, all correct: `pepper_price_dr_per_mina` (2), `egypt_legions_W2`, `tax_mode` rest partly on machine-summary claims |
+
+**What the graph answers that the tables did not** [calculated]:
+- CQ8: dropping INT-HERM-01 removes the support of `A_H` and hence E000 and E003. Every fiscal and throughput result is conditional on one interpretation of one papyrus.
+- CQ11: P.Vindob. G 40822 is cited in all three parsed modern works. Strabo and Pliny likewise. Three modern works citing it are one observation, not three.
+- CQ10: Pliny's 257 mp for Coptos–Berenike is found as a candidate in Adams 2007 (p. 39) and Mayhoff 6.103. These are a review lead, not independent support: Adams reports Pliny.
+
+**Limitations.** Q-HERM-SCOPE's INT-HERM-01 and -02 are compatible readings (both "three-quarters"), so the question records a scholarly framing difference, not a contradiction. Place identifications are generated from the crosswalk with uniform `uncertain` status; per-identification review is not yet done. The `possiblyBearsOn` matcher is value-and-unit only and will miss rounded or converted figures. Time is kept as integer bounds (OWL-Time deferred, D026).

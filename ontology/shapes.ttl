@@ -1,0 +1,93 @@
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix rx:   <https://github.com/andrm101/roman_economics/ontology#> .
+@prefix rxv:  <https://github.com/andrm101/roman_economics/vocab/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# WP9.3 validation constraints. Run with pyshacl, inference "rdfs", ontology as ont_graph.
+
+# --------------------------------------------------------------- claims: provenance and status
+rx:ClaimShape a sh:NodeShape ;
+    sh:targetClass rx:Claim ;
+    sh:property [ sh:path rx:recordOrigin ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( rxv:origin-transcribed_reading rxv:origin-literary_statement rxv:origin-archaeological_observation
+                rxv:origin-scholarly_reconstruction rxv:origin-project_derivation ) ;
+        sh:message "A claim needs exactly one evidence record origin; synthetic/simulated records cannot be claims." ] ;
+    sh:property [ sh:path rx:epistemicStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( rxv:epistemic-accepted_working rxv:epistemic-uncertain rxv:epistemic-disputed rxv:epistemic-unresolved
+                rxv:epistemic-rhetorical rxv:epistemic-superseded rxv:epistemic-rejected ) ] ;
+    sh:property [ sh:path rx:reviewStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( rxv:review-inspected rxv:review-inspected_in_secondary rxv:review-machine_summary_only
+                rxv:review-cited_only rxv:review-human_reviewed ) ] ;
+    sh:or ( [ sh:path rx:attributedTo ; sh:minCount 1 ] [ sh:path rx:reportedIn ; sh:minCount 1 ] ) ;
+    sh:message "Every claim must be attributed to, or reported in, a source." .
+
+# --------------------------------------------------------------- parameters: support must be evidence
+rx:ParameterShape a sh:NodeShape ;
+    sh:targetClass rx:Parameter ;
+    sh:property [ sh:path rx:parameterStatus ; sh:minCount 1 ; sh:maxCount 1 ;
+        sh:in ( rxv:param-measured_input rxv:param-external_estimate rxv:param-calibrated rxv:param-exploratory ) ] ;
+    sh:property [ sh:path rx:derivedFrom ; sh:class rx:Claim ;
+        sh:message "Parameter support must be a Claim (never an ExtractionCandidate)." ] ;
+    sh:property [ sh:path rx:considered ; sh:class rx:Claim ] .
+
+rx:NonExploratoryParameterShape a sh:NodeShape ;
+    sh:targetClass rx:Parameter ;
+    sh:or ( [ sh:path rx:parameterStatus ; sh:hasValue rxv:param-exploratory ]
+            [ sh:path rx:derivedFrom ; sh:minCount 1 ] ) ;
+    sh:message "Measured, external or calibrated parameters need at least one supporting claim." .
+
+rx:MachineSummarySupportShape a sh:NodeShape ;
+    sh:targetClass rx:Parameter ;
+    sh:severity sh:Warning ;
+    sh:sparql [ a sh:SPARQLConstraint ;
+        sh:message "Parameter rests (partly) on a claim read only through a machine summary." ;
+        sh:prefixes rx:prefixes ;
+        sh:select """SELECT $this ?value WHERE { $this rx:derivedFrom ?value . ?value rx:reviewStatus rxv:review-machine_summary_only . }""" ] .
+
+rx:prefixes sh:declare [ sh:prefix "rx" ; sh:namespace "https://github.com/andrm101/roman_economics/ontology#"^^xsd:anyURI ] ,
+                       [ sh:prefix "rxv" ; sh:namespace "https://github.com/andrm101/roman_economics/vocab/"^^xsd:anyURI ] .
+
+# --------------------------------------------------------------- questions: rivals stay visible
+rx:QuestionShape a sh:NodeShape ;
+    sh:targetClass rx:Question ;
+    sh:property [ sh:path rx:hasPosition ; sh:minCount 2 ; sh:class rx:Claim ;
+        sh:message "A question needs at least two positions (otherwise it is not contested)." ] ;
+    sh:property [ sh:path rx:selectedPosition ; sh:maxCount 1 ] ;
+    sh:property [ sh:path rx:questionStatus ; sh:minCount 1 ; sh:maxCount 1 ; sh:in ( "open" "resolved_working" ) ] ;
+    sh:or ( [ sh:path rx:questionStatus ; sh:hasValue "open" ]
+            [ sh:and ( [ sh:path rx:selectedPosition ; sh:minCount 1 ] [ sh:path rx:selectedBy ; sh:minCount 1 ] ) ] ) ;
+    sh:message "A resolved question needs one selected position and the decision that selected it." .
+
+# --------------------------------------------------------------- extraction candidates are not evidence
+rx:CandidateShape a sh:NodeShape ;
+    sh:targetClass rx:ExtractionCandidate ;
+    sh:property [ sh:path rx:candidateFrom ; sh:minCount 1 ; sh:maxCount 1 ; sh:class rx:FileItem ] ;
+    sh:property [ sh:path rx:anchorRef ; sh:minCount 1 ] ;
+    sh:property [ sh:path rx:extractorVersion ; sh:minCount 1 ] ;
+    sh:property [ sh:path rx:epistemicStatus ; sh:maxCount 0 ;
+        sh:message "A candidate carries no epistemic status: it has not been reviewed." ] ;
+    sh:not [ sh:class rx:Claim ] .
+
+# --------------------------------------------------------------- other records
+rx:PlaceIdentificationShape a sh:NodeShape ;
+    sh:targetClass rx:PlaceIdentification ;
+    sh:property [ sh:path rx:identifiesName ; sh:minCount 1 ] ;
+    sh:property [ sh:path rx:identifiedAs ; sh:minCount 1 ; sh:maxCount 1 ; sh:class rx:Place ] .
+
+rx:DerivationShape a sh:NodeShape ;
+    sh:targetClass rx:Derivation ;
+    sh:property [ sh:path rx:code ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:generated ; sh:minCount 1 ] ;
+    sh:property [ sh:path prov:used ; sh:minCount 1 ] .
+
+rx:FileItemShape a sh:NodeShape ;
+    sh:targetClass rx:FileItem ;
+    sh:property [ sh:path rx:sha256 ; sh:minCount 1 ; sh:maxCount 1 ; sh:pattern "^[0-9a-f]{64}$" ] ;
+    sh:property [ sh:path rx:copyOf ; sh:minCount 1 ; sh:maxCount 1 ; sh:class rx:Source ] .
+
+rx:ConversionRuleShape a sh:NodeShape ;
+    sh:targetClass rx:ConversionRule ;
+    sh:property [ sh:path rx:scope ; sh:minCount 1 ] ;
+    sh:property [ sh:path rx:factor ; sh:minCount 1 ; sh:maxCount 1 ] .

@@ -1,0 +1,3480 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rx: <https://github.com/andrm101/roman_economics/ontology#> .
+@prefix rxd: <https://github.com/andrm101/roman_economics/id/> .
+@prefix rxv: <https://github.com/andrm101/roman_economics/vocab/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rxd: rx:graphVersion "0.1.0" .
+
+<https://github.com/andrm101/roman_economics/id/activity/E000_m0_anchor_consistency> a rx:Experiment ;
+    prov:used <https://github.com/andrm101/roman_economics/id/param/A_H>,
+        <https://github.com/andrm101/roman_economics/id/param/N>,
+        <https://github.com/andrm101/roman_economics/id/param/O>,
+        <https://github.com/andrm101/roman_economics/id/param/c>,
+        <https://github.com/andrm101/roman_economics/id/param/kappa>,
+        <https://github.com/andrm101/roman_economics/id/param/lam>,
+        <https://github.com/andrm101/roman_economics/id/param/p>,
+        <https://github.com/andrm101/roman_economics/id/param/tau> ;
+    rx:code "romeco.m0.fiscal" .
+
+<https://github.com/andrm101/roman_economics/id/activity/E001_cargo_mass_readings> a rx:Experiment ;
+    prov:used <https://github.com/andrm101/roman_economics/id/param/merchant_talent_litrai>,
+        <https://github.com/andrm101/roman_economics/id/param/pepper_price_dr_per_mina> ;
+    rx:code "romeco.cli cmd_mass" .
+
+<https://github.com/andrm101/roman_economics/id/activity/E003_desert_throughput> a rx:Experiment ;
+    prov:used <https://github.com/andrm101/roman_economics/id/param/A_H>,
+        <https://github.com/andrm101/roman_economics/id/param/camel_capacity_kg>,
+        <https://github.com/andrm101/roman_economics/id/param/camel_fodder_art_per_year>,
+        <https://github.com/andrm101/roman_economics/id/param/camel_turnaround_days>,
+        <https://github.com/andrm101/roman_economics/id/param/desert_days_coptos_berenike>,
+        <https://github.com/andrm101/roman_economics/id/param/desert_days_coptos_myos_hormos>,
+        <https://github.com/andrm101/roman_economics/id/param/desert_freight_dr_per_camel_trip>,
+        <https://github.com/andrm101/roman_economics/id/param/merchant_talent_litrai>,
+        <https://github.com/andrm101/roman_economics/id/param/pepper_price_dr_per_mina>,
+        <https://github.com/andrm101/roman_economics/id/param/return_window_days>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-WT-ROM-001> ;
+    rx:code "romeco.m0.throughput" ;
+    rx:usedRule <https://github.com/andrm101/roman_economics/id/rule/CR-WT-ROM-001> .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-ARABARCH-IVORY> a rx:Anchor ;
+    dcterms:identifier "ANC-ARABARCH-IVORY" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:claimText "NOT a statutory rate: ratio of the surplus taken beyond the exact quarter (11 3/4 minae) to the listed three-quarter ivory (78 T 54 3/4 min) = 0.248%. Ratio first stated by Nappo 2018: 89." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "P.Vindob. G 40822 verso col. ii ll. 11-12" ;
+    rx:page "v col. ii ll. 4; 11-14" ;
+    rx:quantityConcept "levy_rate_arabarchs_ivory" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction> ;
+    rx:valueHigh 2.5e-03 ;
+    rx:valueLow 2.5e-03 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-ARABARCH-SCHIDAI> a rx:Anchor ;
+    dcterms:identifier "ANC-ARABARCH-SCHIDAI" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:claimText "NOT a statutory rate: surplus 22 3/4 minae over listed 13 T 9 3/4 min = 2.88%. Ratio first stated by Nappo 2018: 89." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "P.Vindob. G 40822 verso col. ii ll. 11-12" ;
+    rx:page "v col. ii ll. 16; 22-24" ;
+    rx:quantityConcept "levy_rate_arabarchs_schidai" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction> ;
+    rx:valueHigh 2.88e-02 ;
+    rx:valueLow 2.88e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-BERENIKE-PORT-STORAGE> a rx:Anchor ;
+    dcterms:identifier "ANC-BERENIKE-PORT-STORAGE" ;
+    rx:claimText "Paralemptes assessed imports at Myos Hormos and Berenike, responsible for 'their storage and later delivery'; spice magazine at Berenike. Supports the E003 storage window (W > arrival spread)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Berenike inscriptions AD 49 and 112 (paralemptes)" ;
+    rx:page "§17-19" ;
+    rx:quantityConcept "import_storage_at_port" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-AST-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> ;
+    rx:valueHigh 1e+00 ;
+    rx:valueLow 1e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-COPTOS-TARIFF-DATE> a rx:Anchor ;
+    dcterms:identifier "ANC-COPTOS-TARIFF-DATE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-OGIS-674> ;
+    rx:claimText "Rescript of prefect Mettius Rufus dated 10 May 90 CE; tolls on persons, animals, vehicles (apostolion, pittakion)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "OGIS II 674 (= SB V 8904)" ;
+    rx:page "91" ;
+    rx:quantityConcept "date_coptos_tariff" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/year_CE> ;
+    rx:valueHigh 9e+01 ;
+    rx:valueLow 9e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-DEKANIA-ORG> a rx:Anchor ;
+    dcterms:identifier "ANC-DEKANIA-ORG" ;
+    rx:claimText "Cameldrivers organised in dekaniai under a dekanos (O.Did. pp. 57-67); 24 dekanoi in the water archive. Lower bound on organisation, not traffic; archive date/circumstance unclear" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "O.Berenike 3 (water archive, c. 175 ostraca)" ;
+    rx:page "§3; §25" ;
+    rx:quantityConcept "cameldriver_organisation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-AST-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/dekanoi_attested> ;
+    rx:valueHigh 2.4e+01 ;
+    rx:valueLow 2.4e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-DIDYMOI-CISTERNS> a rx:Anchor ;
+    dcterms:identifier "ANC-DIDYMOI-CISTERNS" ;
+    rx:claimText "Storage grew from 120 m3 to >380 m3 through rebuilds (Cuvigny et al. 2011: 20-24). Storage, not well yield: not a throughput capacity. Cisterns also at Krokodilô, Dios, Xeron; not at Maximianon or Phalakron" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:page "§9" ;
+    rx:quantityConcept "cistern_storage_didymoi" ;
+    rx:recordOrigin rxv:origin-archaeological_observation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-REDDE-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/m3> ;
+    rx:valueHigh 3.8e+02 ;
+    rx:valueLow 1.2e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-DR-PEPPER-WHOLE> a rx:Anchor ;
+    dcterms:identifier "ANC-DR-PEPPER-WHOLE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:claimText "De Romanis reading (lost myriad, 6 dr/mina). Rival Morelli reading implies a quarter of this mass (INT-HERM-04/05; E001)." ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "P.Vindob. G 40822 verso (reconstruction)" ;
+    rx:page "85" ;
+    rx:quantityConcept "pepper_whole_cargo_weight" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2012> ;
+    rx:reviewStatus rxv:review-machine_summary_only ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/talent_weight_tetarte_official> ;
+    rx:valueHigh 1.774498e+04 ;
+    rx:valueLow 1.774498e+04 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-EXIT-DUTY> a rx:Anchor ;
+    dcterms:identifier "ANC-EXIT-DUTY" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> ;
+    rx:claimText "Rival reading: 25% on exit as well (Harrauer and Sijpesteijn 1985: 140)" ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Strabo 17.1.13 (interpretation)" ;
+    rx:page "89" ;
+    rx:quantityConcept "provincial_exit_duty_rate" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction> ;
+    rx:valueHigh 2.5e-02 ;
+    rx:valueLow 2.5e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-HERM-ADAMS-HS7M> a rx:Anchor ;
+    dcterms:identifier "ANC-HERM-ADAMS-HS7M" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:claimText "'almost 1155 talents, almost HS 7 million' = whole-base reading (INT-HERM-03, rejected). Ivory+fabric c. 92 talents = 8692 lbs -> 15-20 camels (pp.230-231). K19" ;
+    rx:epistemicStatus rxv:epistemic-superseded ;
+    rx:locus "P.Vindob. G 40822 verso" ;
+    rx:page "229" ;
+    rx:quantityConcept "hermapollon_total_value" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius_notional> ;
+    rx:valueHigh 7e+06 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-LEUKE-KOME-RATE> a rx:Anchor ;
+    dcterms:identifier "ANC-LEUKE-KOME-RATE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PME> ;
+    rx:claimText "Nabataean port; jurisdiction of collector debated (Nappo 98ff.)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Periplus Maris Erythraei 19" ;
+    rx:page "86 n. 322" ;
+    rx:quantityConcept "import_duty_rate_leuke_kome" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction> ;
+    rx:valueHigh 2.5e-01 ;
+    rx:valueLow 2.5e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-NIKANOR-BERENIKE> a rx:Anchor ;
+    dcterms:identifier "ANC-NIKANOR-BERENIKE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-OPETR-NIKANOR> ;
+    rx:claimText "One family's camel business; 6 BCE-62 CE; Nappo argues not usable as trade-volume evidence" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "O.Petr. 220-304 (Nikanor archive)" ;
+    rx:page "46" ;
+    rx:quantityConcept "nikanor_texts_naming_berenike" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/texts> ;
+    rx:valueHigh 3e+01 ;
+    rx:valueLow 2.9e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-NIKANOR-HERD> a rx:Anchor ;
+    dcterms:identifier "ANC-NIKANOR-HERD" ;
+    rx:claimText "Adams' estimate; 2 Koptos-Myos Hormos round trips/month -> c. 360 artabas/month; largest attested Fayum herd 26 (p.223 n.8)" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "O. Petr. (Nikanor archive)" ;
+    rx:page "82; 222-223" ;
+    rx:quantityConcept "camels_per_transport_firm" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/camels> ;
+    rx:valueHigh 3e+01 ;
+    rx:valueLow 3e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-NIKANOR-MYOS> a rx:Anchor ;
+    dcterms:identifier "ANC-NIKANOR-MYOS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-OPETR-NIKANOR> ;
+    rx:claimText "Ratio reverses after c. 40 CE in favour of Myos Hormos (Nappo 47-48)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "O.Petr. 220-304 (Nikanor archive)" ;
+    rx:page "46" ;
+    rx:quantityConcept "nikanor_texts_naming_myos_hormos" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/texts> ;
+    rx:valueHigh 2.9e+01 ;
+    rx:valueLow 2.9e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PEPPER-SITE-PATTERN> a rx:Anchor ;
+    dcterms:identifier "ANC-PEPPER-SITE-PATTERN" ;
+    rx:claimText "Pepper abundant at Berenike, rare at Mons Claudianus (2 peppercorns), absent on the Coptos roads; consumption, not transit: archaeobotanical presence does not track transit volume (observation-model caveat)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:page "§32; §37" ;
+    rx:quantityConcept "pepper_archaeobotanical_presence" ;
+    rx:recordOrigin rxv:origin-archaeological_observation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-TOMBER-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-MARKUP> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-MARKUP" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'centiplicato' is rhetorical; not usable as a parameter value, only as an upper-bound narrative claim" ;
+    rx:epistemicStatus rxv:epistemic-rhetorical ;
+    rx:locus "Pliny NH 6.101" ;
+    rx:page "13; 43-44" ;
+    rx:quantityConcept "resale_multiple" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/ratio> ;
+    rx:valueHigh 1e+02 ;
+    rx:valueLow 1e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-NILE-DAYS> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-NILE-DAYS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'qui cursus etesiis flantibus peragitur XII diebus' (Mayhoff)" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Pliny NH 6.102" ;
+    rx:quantityConcept "duration_juliopolis_coptos" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/days> ;
+    rx:valueHigh 1.2e+01 ;
+    rx:valueLow 1.2e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-ROUTE-PASS-CONTROL> a rx:Anchor ;
+    dcterms:identifier "ANC-ROUTE-PASS-CONTROL" ;
+    rx:claimText "Traffic controlled for tax and policing by passes 'at least in some areas'; Tomber §33: selling before destination forbidden" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "O.Claud. I 48-83; O.Berenike passes" ;
+    rx:page "§1" ;
+    rx:quantityConcept "traffic_control_laissez_passer" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-REDDE-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> ;
+    rx:valueHigh 1e+00 ;
+    rx:valueLow 1e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-STATE-CARAVAN-BERENIKE> a rx:Anchor ;
+    dcterms:identifier "ANC-STATE-CARAVAN-BERENIKE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-P-LOND-2-328> ;
+    rx:claimText "AD 163: camel requisitioned for imperial caravans from Berenike" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "P. Lond. II 328" ;
+    rx:page "234 n.49" ;
+    rx:quantityConcept "state_caravan_berenike" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> ;
+    rx:valueHigh 1e+00 ;
+    rx:valueLow 1e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-AURELIAN-274> a rx:Anchor ;
+    dcterms:identifier "CF-AURELIAN-274" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "First increase in fineness in fifty years" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Aurelian reform" ;
+    rx:page "185" ;
+    rx:quantityConcept "silver coinage (Aurelianic)" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 5e-02 ;
+    rx:valueLow 4e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-CARACALLA> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-CARACALLA" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Caracalla" ;
+    rx:page "282" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 5.1e-01 ;
+    rx:valueLow 5.1e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-COMMODUS> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-COMMODUS" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "late Commodus" ;
+    rx:page "282" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 7.4e-01 ;
+    rx:valueLow 7.4e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-ELAG-SEVALEX> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-ELAG-SEVALEX" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:claimText "'about 45%'" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Elagabalus and Severus Alexander" ;
+    rx:page "282" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 4.5e-01 ;
+    rx:valueLow 4.5e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-MARCUS> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-MARCUS" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Marcus Aurelius" ;
+    rx:page "282" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 7.8e-01 ;
+    rx:valueLow 7.8e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-NERO-60> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-NERO-60" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:claimText "0.5-1.5% copper added; one issue only" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "corona civica issues" ;
+    rx:page "274" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-archaeological_observation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 9.95e-01 ;
+    rx:valueLow 9.85e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-NERO-64> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-NERO-64" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:claimText "Disguised by blanching; corrects Walker's 93.5%. Last Neronian issue 90%." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Neronian reform" ;
+    rx:page "274" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-archaeological_observation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 8e-01 ;
+    rx:valueLow 8e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-NERO-PIUS> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-NERO-PIUS" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:claimText "'fell slightly from 94 to 88%'. Conflicts with Ponting 2009: 274 heart-metal 80% after the 64 reform (K15)." ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Nero to Antoninus Pius" ;
+    rx:page "282" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 9.4e-01 ;
+    rx:valueLow 8.8e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-SEPT> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-SEPT" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009>,
+        <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:claimText "Hitchner 55%; Ponting 'reduced to 50%' by Severus' reign" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Septimius Severus" ;
+    rx:page "282; 277" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 5.5e-01 ;
+    rx:valueLow 5e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-DEN-VESP> a rx:Anchor ;
+    dcterms:identifier "CF-DEN-VESP" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:claimText "'very provisional results'" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Vespasian" ;
+    rx:page "274-275" ;
+    rx:quantityConcept "denarius" ;
+    rx:recordOrigin rxv:origin-archaeological_observation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 8e-01 ;
+    rx:valueLow 8e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CF-SILVER-C270> a rx:Anchor ;
+    dcterms:identifier "CF-SILVER-C270" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "'appena l'1%'" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "c. 270" ;
+    rx:page "184" ;
+    rx:quantityConcept "silver coinage (antoninianus)" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_silver> ;
+    rx:valueHigh 1e-02 ;
+    rx:valueLow 1e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-AWMC-ED-ROAD-KM> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-AWMC-ED-ROAD-KM" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Sum of AWMC (Barrington-derived) road segment lengths touching the Eastern Desert bbox; undated" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "road_length_eastern_desert_bbox" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-AWMC-GEODATA> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 3.01e+03 ;
+    rx:valueLow 3.01e+03 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-HANSON-AEGYPTUS-W2> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-HANSON-AEGYPTUS-W2" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Hanson 2016 cities in Aegyptus overlapping W2; 20 with an area estimate" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "cities_aegyptus_W2" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HANSON-2016-DB> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/cities> ;
+    rx:valueHigh 4.7e+01 ;
+    rx:valueLow 4.7e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-ED-ROADS-KM> a rx:Anchor ;
+    dcterms:identifier "MIL-ED-ROADS-KM" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Total length of the seven main roads (Nappo n. 197)" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Eastern Desert road network" ;
+    rx:page "55" ;
+    rx:quantityConcept "road_network_length" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 2.2e+03 ;
+    rx:valueLow 2e+03 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-ALAE-STRABO> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-ALAE-STRABO" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:claimText "PAS-STRABO-17.1.12" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus" ;
+    rx:page "17.1.12" ;
+    rx:quantityConcept "alae_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/alae> ;
+    rx:valueHigh 3e+00 ;
+    rx:valueLow 3e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-AUX-STRABO> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-AUX-STRABO" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:claimText "PAS-STRABO-17.1.12. Unit strengths not stated." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus" ;
+    rx:page "17.1.12" ;
+    rx:quantityConcept "auxiliary_cohorts_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/cohorts> ;
+    rx:valueHigh 9e+00 ;
+    rx:valueLow 9e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-FARASAN-VEX> a rx:Anchor ;
+    dcterms:identifier "MIL-FARASAN-VEX" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Inscription dated by Pius' titulature (10 Dec 143 - 9 Dec 144)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Farasan islands" ;
+    rx:page "78-80" ;
+    rx:quantityConcept "vexillation_presence" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-MYOS-GARRISON> a rx:Anchor ;
+    dcterms:identifier "MIL-MYOS-GARRISON" ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/786069> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "From documents found at the site (Nappo n. 184-185: Bagnall 1986). No military structure identified in excavation." ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Myos Hormos" ;
+    rx:page "53" ;
+    rx:quantityConcept "garrison_size" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/soldiers> ;
+    rx:valueHigh 1e+02 ;
+    rx:valueLow 5e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Aelana_Aila-746700> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/746700> ;
+    rx:identifiesName "Aelana/Aila" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Alexandria-727070> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/727070> ;
+    rx:identifiesName "Alexandria" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Apollonopolis_Magna-785974> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/785974> ;
+    rx:identifiesName "Apollonopolis Magna" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Apollonos__Hydreuma_-785976> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/785976> ;
+    rx:identifiesName "Apollonos (Hydreuma)" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Apulum-206927> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/206927> ;
+    rx:identifiesName "Apulum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Aquincum-197131> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/197131> ;
+    rx:identifiesName "Aquincum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Argentorate-108754> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/108754> ;
+    rx:identifiesName "Argentorate" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Berenike-785986> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/785986> ;
+    rx:identifiesName "Berenike" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Bonna-108818> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/108818> ;
+    rx:identifiesName "Bonna" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Bostra-678073> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/678073> ;
+    rx:identifiesName "Bostra" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Brigetio-197180> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/197180> ;
+    rx:identifiesName "Brigetio" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Caparcotna-678266> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/678266> ;
+    rx:identifiesName "Caparcotna" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Carnuntum-128376> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/128376> ;
+    rx:identifiesName "Carnuntum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Castra_Legionis-236512> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/236512> ;
+    rx:identifiesName "Castra Legionis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Castra_Regina-118929> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/118929> ;
+    rx:identifiesName "Castra Regina" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Castra_Vetera-108867> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/108867> ;
+    rx:identifiesName "Castra Vetera" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Coptos-786010> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786010> ;
+    rx:identifiesName "Coptos" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Deva-79420> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/79420> ;
+    rx:identifiesName "Deva" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Didymoi-786015> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786015> ;
+    rx:identifiesName "Didymoi" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Durostorum-216800> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/216800> ;
+    rx:identifiesName "Durostorum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Eburacum-89175> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/89175> ;
+    rx:identifiesName "Eburacum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Hierosolyma-687928> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/687928> ;
+    rx:identifiesName "Hierosolyma" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Isca_Augusta-79532> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/79532> ;
+    rx:identifiesName "Isca Augusta" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Iuliopolis_Nikopolis-727131> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/727131> ;
+    rx:identifiesName "Iuliopolis/Nikopolis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Kaine_Maximianopolis-786047> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786047> ;
+    rx:identifiesName "Kaine/Maximianopolis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Klaudianon__Mons_Claudianus_-766375> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/766375> ;
+    rx:identifiesName "Klaudianon (Mons Claudianus)" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Krokodilo-786054> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786054> ;
+    rx:identifiesName "Krokodilo" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Lambaesis-334570> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/334570> ;
+    rx:identifiesName "Lambaesis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Maximianon-786064> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786064> ;
+    rx:identifiesName "Maximianon" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Melitene-629040> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/629040> ;
+    rx:identifiesName "Melitene" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Moguntiacum-109169> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/109169> ;
+    rx:identifiesName "Moguntiacum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Muziris-50146> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/50146> ;
+    rx:identifiesName "Muziris" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Myos_Hormos-786069> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786069> ;
+    rx:identifiesName "Myos Hormos" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Nicopolis-727131> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/727131> ;
+    rx:identifiesName "Nicopolis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Novae-197413> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/197413> ;
+    rx:identifiesName "Novae" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Novum_Hydreuma-786076> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/786076> ;
+    rx:identifiesName "Novum Hydreuma" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Porphyrites__Mons_Porphyrites_-766391> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/766391> ;
+    rx:identifiesName "Porphyrites (Mons Porphyrites)" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Raphanea-668350> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/668350> ;
+    rx:identifiesName "Raphanea" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Samosata-658587> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/658587> ;
+    rx:identifiesName "Samosata" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Satala-874684> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/874684> ;
+    rx:identifiesName "Satala" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Singidunum-207443> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/207443> ;
+    rx:identifiesName "Singidunum" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Troesmis-217025> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/217025> ;
+    rx:identifiesName "Troesmis" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Viminacium-207549> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/207549> ;
+    rx:identifiesName "Viminacium" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Vindobona-128537> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/128537> ;
+    rx:identifiesName "Vindobona" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PID-Zeugma-658636> a rx:PlaceIdentification ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:identifiedAs <https://github.com/andrm101/roman_economics/id/place/658636> ;
+    rx:identifiesName "Zeugma" ;
+    rx:matchStatus "project_match_unreviewed" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ANTIOCH-WHEAT-93> a rx:Anchor ;
+    dcterms:identifier "PL-ANTIOCH-WHEAT-93" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "Comparator outside the pilot region; transfer assumption required" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "AE 1925.126b" ;
+    rx:page "304 (Table 15.1 item 8)" ;
+    rx:quantityConcept "wheat_price_normal" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius_per_modius> ;
+    rx:valueHigh 2.25e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ARMY-PAY-AUG-84> a rx:Anchor ;
+    dcterms:identifier "PL-ARMY-PAY-AUG-84" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "literary/papyri" ;
+    rx:page "311 (Table 15.2)" ;
+    rx:quantityConcept "legionary_pay_gross" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius_per_year> ;
+    rx:valueHigh 9e+02 ;
+    rx:valueLow 9e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-DIOC-WHEAT-301> a rx:Anchor ;
+    dcterms:identifier "PL-DIOC-WHEAT-301" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "Outside window; maximum not market price" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Edict on Maximum Prices 1.1a" ;
+    rx:page "305 (Table 15.1 item 12)" ;
+    rx:quantityConcept "wheat_maximum_price" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/denarius_per_modius_castrensis> ;
+    rx:valueHigh 1e+02 ;
+    rx:valueLow 1e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-EG-WAGE-CRAFT-W1> a rx:Anchor ;
+    dcterms:identifier "PL-EG-WAGE-CRAFT-W1" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "47 dr/month + 1 artaba wheat + wine = c. 720 dr/yr gross = 2 dr/day, 'the common rate at that time for private craftsmen in the Nile valley'." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "ostraka (Mons Claudianus)" ;
+    rx:page "312-313" ;
+    rx:quantityConcept "daily_wage_craftsman" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_day> ;
+    rx:valueHigh 2e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ROM-INFL-150-300> a rx:Anchor ;
+    dcterms:identifier "PL-ROM-INFL-150-300" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Temin 2013: 77-78 as reported by Nappo; averages over the 274 surge" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Duncan-Jones 1982 data" ;
+    rx:page "185" ;
+    rx:quantityConcept "average_annual_inflation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_per_year> ;
+    rx:valueHigh 4e-02 ;
+    rx:valueLow 4e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ROM-STABLE-190-274> a rx:Anchor ;
+    dcterms:identifier "PL-ROM-STABLE-190-274" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Stable bands 70s-160s and 190s-274 (Rathbone 2007: 713); surge after Aurelian's 274 reform" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "papyri; inscriptions" ;
+    rx:page "184-185" ;
+    rx:quantityConcept "price_stability_regime" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-CIL-6-3492> a rx:AncientDocument ;
+    rdfs:label "CIL VI 3492" ;
+    rx:citationKey "cil:6:3492",
+        "ils:2288" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-011c690837e0> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "011c690837e035376c8e12ce0d63e06c92f97bb688d44c8c4d96b193a65b6523" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-113b3df1fa7e> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "113b3df1fa7efe9fbb337fac01aec07cee474ca533386c1b6f3332fd34251c37" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-167a62be60e3> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016-DB> ;
+    rx:mediaType "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ;
+    rx:sha256 "167a62be60e3e28bf116860cf7531b05f597e3ce2c35cf3e04a469ca7fefc34c" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-1b9470aaec69> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> ;
+    rx:mediaType "application/geopackage+sqlite3" ;
+    rx:sha256 "1b9470aaec696b0827e7aecad20badc74df2652ae8a62464baea4f07ae4855e7" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-2cbb3f2fc033> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "2cbb3f2fc0337d82649258b8d3ea00169970e4ea8d7b89b4b84363f8bfd282dd" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-39d38d5e371d> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "39d38d5e371d62a16003f89d97770918b784bc5f107ce6e90527574159e0d9ad" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-42b504ee3db5> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-PAPER-2025> ;
+    rx:mediaType "application/pdf" ;
+    rx:sha256 "42b504ee3db539631b21978518fc55e5974d8fec6f2da911bf8c36e9e38cdc24" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-5b9fc0195c3b> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-HANSON-2016-DB> ;
+    rx:mediaType "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ;
+    rx:sha256 "5b9fc0195c3b5f2df71d6380174974215280cafd3bf5fa463fbf96969b549b6c" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-68c25790bd89> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:mediaType "application/pdf" ;
+    rx:sha256 "68c25790bd89bd6f91a8a5dc8bef097751b7d7ab1fa6f5417192bd37640ecbb1" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-9bd4f8a520b7> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "9bd4f8a520b71002a3a0a18c8823ba225c9ab82af83b8caf086d7b3732468d34" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-a08b3dc527d0> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-TACITUS-ANN> ;
+    rx:mediaType "application/tei+xml" ;
+    rx:sha256 "a08b3dc527d04d6f86e43af32d5f8d8c9fa3ab19763bf96426c55528b53e6860" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-ba94811dd041> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:mediaType "text/plain" ;
+    rx:sha256 "ba94811dd0412847a87030f43ea364c0d890297f295e2d9757095886bc8b4380" .
+
+<https://github.com/andrm101/roman_economics/id/item/ITM-f872a6df674d> a rx:FileItem ;
+    rx:copyOf <https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> ;
+    rx:mediaType "text/plain" ;
+    rx:sha256 "f872a6df674dee0dfe0eb7256611c18167addc03dcb38d1cd1beb4147fde0e17" .
+
+<https://github.com/andrm101/roman_economics/id/param/annual_inflation_1_2c> a rx:Parameter ;
+    dcterms:identifier "annual_inflation_1_2c" ;
+    rx:boundHigh 1e-02 ;
+    rx:boundLow 0e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/PL-ROM-INFL-1-2C> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/berenike_supply_camel_loads_month> a rx:Parameter ;
+    dcterms:identifier "berenike_supply_camel_loads_month" ;
+    rx:baseline 2e+03 ;
+    rx:boundHigh 2e+03 ;
+    rx:boundLow 2e+03 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-RUFFING-BERENIKE-LOADS> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/camel_load_artabas> a rx:Parameter ;
+    dcterms:identifier "camel_load_artabas" ;
+    rx:baseline 6e+00 ;
+    rx:boundHigh 6e+00 ;
+    rx:boundLow 4e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-CUSTOMS> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/ed_military_installations_W2> a rx:Parameter ;
+    dcterms:identifier "ed_military_installations_W2" ;
+    rx:boundHigh 9.4e+01 ;
+    rx:boundLow 5.8e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/CTX-PLEIADES-ED-MIL-W2> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/egypt_legions_W1> a rx:Parameter ;
+    dcterms:identifier "egypt_legions_W1" ;
+    rx:baseline 2e+00 ;
+    rx:boundHigh 2e+00 ;
+    rx:boundLow 2e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-JOS-66>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-JOS-70>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-STRABO>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-TAC-23> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/param/egypt_legions_W2> a rx:Parameter ;
+    dcterms:identifier "egypt_legions_W2" ;
+    rx:baseline 1e+00 ;
+    rx:boundHigh 2e+00 ;
+    rx:boundLow 1e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-DIO-229>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-III-CYR-ARABIA>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-PIUS>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEGIO-II-TRAIANA> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/egypt_price_break_ratio> a rx:Parameter ;
+    dcterms:identifier "egypt_price_break_ratio" ;
+    rx:baseline 2e+00 ;
+    rx:boundHigh 2.5e+00 ;
+    rx:boundLow 1.65e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/CTX-HARPER-BREAK>,
+        <https://github.com/andrm101/roman_economics/id/claim/PL-EG-DOUBLING>,
+        <https://github.com/andrm101/roman_economics/id/claim/PL-EG-WHEAT-W3> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/egypt_wheat_price_pre_break> a rx:Parameter ;
+    dcterms:identifier "egypt_wheat_price_pre_break" ;
+    rx:baseline 9e+00 ;
+    rx:boundHigh 1.2e+01 ;
+    rx:boundLow 6e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/PL-EG-WHEAT-W1> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/legionary_pay_HS> a rx:Parameter ;
+    dcterms:identifier "legionary_pay_HS" ;
+    rx:baseline 1.2e+03 ;
+    rx:boundHigh 1.2e+03 ;
+    rx:boundLow 1.2e+03 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/PL-ARMY-PAY-85-193> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/mons_claudianus_supply_loads_month> a rx:Parameter ;
+    dcterms:identifier "mons_claudianus_supply_loads_month" ;
+    rx:baseline 1.5e+02 ;
+    rx:boundHigh 1.5e+02 ;
+    rx:boundLow 1.2e+02 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-CUSTOMS>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-MONS-CLAUD-SUPPLY> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/p_hermapollon_post_break> a rx:Parameter ;
+    dcterms:identifier "p_hermapollon_post_break" ;
+    rx:baseline 6e-02 ;
+    rx:boundHigh 3e-01 ;
+    rx:boundLow 0e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/CTX-HERMAPOLLON-POSTBREAK-P> ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/praesidium_garrison> a rx:Parameter ;
+    dcterms:identifier "praesidium_garrison" ;
+    rx:baseline 2.3e+01 ;
+    rx:boundHigh 2.4e+01 ;
+    rx:boundLow 2.2e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/MIL-PRAESIDIA-SIZE> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/route_coptos_myos_hormos_km> a rx:Parameter ;
+    dcterms:identifier "route_coptos_myos_hormos_km" ;
+    rx:baseline 1.82e+02 ;
+    rx:boundHigh 1.83e+02 ;
+    rx:boundLow 1.7e+02 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-MYOS> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/tax_mode> a rx:Parameter ;
+    dcterms:identifier "tax_mode" ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/INT-TET-03>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-BERENIKE-SUPPLY> a rx:Question ;
+    rdfs:label "How many camel loads per month did Berenike's supply need?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/ANC-BERENIKE-CAMELS>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-RUFFING-BERENIKE-LOADS> ;
+    rx:questionStatus "open" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K21> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-DESERT-KM> a rx:Question ;
+    rdfs:label "What is the Coptos-Berenike road length?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT>,
+        <https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-BERENIKE> ;
+    rx:questionStatus "open" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K18> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-HERM-PEPPER> a rx:Question ;
+    rdfs:label "At what price was the pepper valued (6 or 24 dr per mina)?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-04>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-05> ;
+    rx:questionStatus "open" .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-HERM-SCOPE> a rx:Question ;
+    rdfs:label "What does the stated total measure: three-quarter residual or whole taxable base?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-01>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-02>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-03> ;
+    rx:questionStatus "resolved_working" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K2> ;
+    rx:selectedBy <https://github.com/andrm101/roman_economics/id/decision/D008>,
+        <https://github.com/andrm101/roman_economics/id/decision/D009> ;
+    rx:selectedPosition <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-01> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-HERM-TOTAL> a rx:Question ;
+    rdfs:label "Which reading of the Hermapollon total (P.Vindob. G 40822 v col. ii l. 29)?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:questionStatus "resolved_working" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K1> ;
+    rx:selectedBy <https://github.com/andrm101/roman_economics/id/decision/D008> ;
+    rx:selectedPosition <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-LEG-III-CYR> a rx:Question ;
+    rdfs:label "Where was legio III Cyrenaica in 100-200 CE?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/MIL-COPTOS-LEGIO-III>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-III-CYR-ARABIA> ;
+    rx:questionStatus "resolved_working" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K16> ;
+    rx:selectedBy <https://github.com/andrm101/roman_economics/id/decision/D018> ;
+    rx:selectedPosition <https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-III-CYR-ARABIA> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-ROUTE-NILE> a rx:Question ;
+    rdfs:label "What is the Juliopolis-Coptos river distance?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-NILE>,
+        <https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> ;
+    rx:questionStatus "resolved_working" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K17> ;
+    rx:selectedBy <https://github.com/andrm101/roman_economics/id/decision/D017> ;
+    rx:selectedPosition <https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> .
+
+<https://github.com/andrm101/roman_economics/id/question/Q-TET-LEVY> a rx:Question ;
+    rdfs:label "Was the 25% duty levied once (Alexandria) or twice (Red Sea port and Alexandria)?" ;
+    rx:hasPosition <https://github.com/andrm101/roman_economics/id/claim/INT-TET-01>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-TET-02> ;
+    rx:questionStatus "open" ;
+    rx:recordedAs <https://github.com/andrm101/roman_economics/id/contradiction/K10> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-002> a rx:ConversionRule ;
+    dcterms:identifier "CR-MON-EG-002" ;
+    rx:factor 6e+00 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "P.Vindob. G 40822 verso only" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/obol_EG> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-EG-002> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-EG-002" ;
+    rx:factor 9.75e+01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/talent_weight_ivory_recalc> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "P.Vindob. G 40822 verso, ivory recalculation" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/libra_roman> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-EG-003> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-EG-003" ;
+    rx:factor 9.766e+01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/talent_weight_pepper_recalc> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "P.Vindob. G 40822 verso, pepper recalculation" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/libra_roman> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-GEN-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-GEN-001" ;
+    rx:factor 6e+01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/talent_weight_any> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "Generic Greek weight subdivision" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/mina> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-BAGNALL-ETAL-2000> a rx:Source ;
+    dcterms:creator "R. S. Bagnall; C. Helms; A. M. F. W. Verhoogt" ;
+    dcterms:date "2000" ;
+    dcterms:identifier "SRC-BAGNALL-ETAL-2000" ;
+    dcterms:title "Documents from Berenike I: Greek Ostraka from the 1996-1998 Seasons" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-BAGNALL-ETAL-2005> a rx:Source ;
+    dcterms:creator "R. S. Bagnall; C. Helms; A. M. F. W. Verhoogt" ;
+    dcterms:date "2005" ;
+    dcterms:identifier "SRC-BAGNALL-ETAL-2005" ;
+    dcterms:title "Documents from Berenike II: Texts from the 1999-2001 Seasons" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-BRUGHMANS-WILSON-2022> a rx:Source ;
+    dcterms:creator "Tom Brughmans; Andrew Wilson (eds.)" ;
+    dcterms:date "2022" ;
+    dcterms:identifier "SRC-BRUGHMANS-WILSON-2022" ;
+    dcterms:title "Simulating Roman Economies: Theories, Methods, and Computational Models" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-CARRIGNON-ETAL-2020> a rx:Source ;
+    dcterms:creator "Simon Carrignon; Tom Brughmans; Iza Romanowska" ;
+    dcterms:date "2020" ;
+    dcterms:identifier "SRC-CARRIGNON-ETAL-2020" ;
+    dcterms:title "Tableware trade in the Roman East: Exploring cultural and economic transmission with agent-based modelling and approximate Bayesian computation" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-CASSON-1989> a rx:Source ;
+    dcterms:creator "Lionel Casson" ;
+    dcterms:date "1989" ;
+    dcterms:identifier "SRC-CASSON-1989" ;
+    dcterms:title "The Periplus Maris Erythraei: Text, Translation and Commentary" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-COBB-2015A> a rx:Source ;
+    dcterms:creator "Matthew Cobb" ;
+    dcterms:date "2015" ;
+    dcterms:identifier "SRC-COBB-2015A" ;
+    dcterms:title "The chronology of Roman trade in the Indian Ocean from Augustus to early third century CE" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-COBB-2015B> a rx:Source ;
+    dcterms:creator "Matthew Cobb" ;
+    dcterms:date "2015" ;
+    dcterms:identifier "SRC-COBB-2015B" ;
+    dcterms:title "Balancing the Trade: Roman Cargo Shipments to India" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-COBB-2018> a rx:Source ;
+    dcterms:creator "Matthew Cobb" ;
+    dcterms:identifier "SRC-COBB-2018" ;
+    dcterms:title "Rome and the Indian Ocean Trade from Augustus to the Early Third Century CE" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-COPELAND-2022> a rx:Source ;
+    dcterms:creator "Conrad Copeland" ;
+    dcterms:date "2022" ;
+    dcterms:identifier "SRC-COPELAND-2022" ;
+    dcterms:title "Riding the Monsoon: Geography and Iron Age Trade in the Indian Ocean" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "working_paper" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2020> a rx:Source ;
+    dcterms:creator "Federico De Romanis" ;
+    dcterms:date "2020" ;
+    dcterms:identifier "SRC-DEROMANIS-2020" ;
+    dcterms:title "The Indo-Roman Pepper Trade and the Muziris Papyrus" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-EVERS-2017> a rx:Source ;
+    dcterms:creator "Kasper Grønlund Evers" ;
+    dcterms:date "2017" ;
+    dcterms:identifier "SRC-EVERS-2017" ;
+    dcterms:title "Worlds Apart Trading Together: The Organisation of Long-Distance Trade between Rome and India in Antiquity" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-GAL-ETAL-2023> a rx:Source ;
+    dcterms:creator "David Gal; Hadas Saaroni; Deborah Cvikel" ;
+    dcterms:date "2023" ;
+    dcterms:identifier "SRC-GAL-ETAL-2023" ;
+    dcterms:title "Mappings of Potential Sailing Mobility during Antiquity: Research Data (v4)" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HANSON-2016> a rx:Source ;
+    dcterms:creator "J. W. Hanson" ;
+    dcterms:date "2016" ;
+    dcterms:identifier "SRC-HANSON-2016" ;
+    dcterms:title "An Urban Geography of the Roman World, 100 B.C. to A.D. 300" ;
+    rx:accessStatus "cited_only" ;
+    rx:describes <https://github.com/andrm101/roman_economics/id/source/SRC-HANSON-2016-DB> ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016> a rx:Source ;
+    dcterms:creator "Kyle Harper" ;
+    dcterms:date "2016" ;
+    dcterms:identifier "SRC-HARPER-2016" ;
+    dcterms:title "People, Plagues, and Prices in the Roman World: The Evidence from Egypt" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:describes <https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016-DB> ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-IDP-DATA> a rx:Source ;
+    dcterms:creator "Papyri.info / Integrating Digital Papyrology" ;
+    dcterms:identifier "SRC-IDP-DATA" ;
+    dcterms:title "idp.data repository (DDbDP; HGV; APIS)" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-MORELLI-READING> a rx:Source ;
+    dcterms:creator "(Morelli)" ;
+    dcterms:identifier "SRC-MORELLI-READING" ;
+    dcterms:title "Revised reading of verso col. ii l. 29" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "reading" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-OBERENIKE-4> a rx:Source ;
+    dcterms:identifier "SRC-OBERENIKE-4" ;
+    dcterms:title "O.Berenike 4. Ostraka from the Port of Berenike" ;
+    rx:accessStatus "unavailable" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-ORBIS> a rx:Source ;
+    dcterms:creator "Walter Scheidel; Elijah Meeks et al." ;
+    dcterms:identifier "SRC-ORBIS" ;
+    dcterms:title "ORBIS: The Stanford Geospatial Network Model of the Roman World" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PEACOCK-BLUE-2006> a rx:Source ;
+    dcterms:creator "David Peacock; Lucy Blue" ;
+    dcterms:date "2006" ;
+    dcterms:identifier "SRC-PEACOCK-BLUE-2006" ;
+    dcterms:title "Myos Hormos - Quseir al-Qadim: Roman and Islamic Ports on the Red Sea. Survey and Excavations 1999-2003" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PLEIADES> a rx:Source ;
+    dcterms:creator "Pleiades" ;
+    dcterms:identifier "SRC-PLEIADES" ;
+    dcterms:title "Pleiades gazetteer of ancient places" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-ETAL-2021-ISIS> a rx:Source ;
+    dcterms:creator "M. Ponting; K. Ishida; K. Butcher; B. Hampshire; D. Paul; A. Hillier" ;
+    dcterms:date "2021" ;
+    dcterms:identifier "SRC-PONTING-ETAL-2021-ISIS" ;
+    dcterms:title "Debasement of Roman Silver coinage" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-RUFFING-NIKANOR> a rx:Source ;
+    dcterms:creator "K. Ruffing" ;
+    dcterms:identifier "SRC-RUFFING-NIKANOR" ;
+    dcterms:title "Das Nikanor-Archiv" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-SELAND-2013> a rx:Source ;
+    dcterms:creator "Eivind Heldaas Seland" ;
+    dcterms:date "2013" ;
+    dcterms:identifier "SRC-SELAND-2013" ;
+    dcterms:title "Networks and Social Cohesion in Ancient Indian Ocean Trade: Geography, Ethnicity, Religion" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-SIDEBOTHAM-2011> a rx:Source ;
+    dcterms:creator "Steven E. Sidebotham" ;
+    dcterms:date "2011" ;
+    dcterms:identifier "SRC-SIDEBOTHAM-2011" ;
+    dcterms:title "Berenike and the Ancient Maritime Spice Route" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-SMITHSONIAN-2024> a rx:Source ;
+    dcterms:date "2024" ;
+    dcterms:identifier "SRC-SMITHSONIAN-2024" ;
+    dcterms:title "Hidden ancient Egyptian port reveals ... (Berenike)" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "web_page" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-TOMBER-2008> a rx:Source ;
+    dcterms:creator "Roberta Tomber" ;
+    dcterms:date "2008" ;
+    dcterms:identifier "SRC-TOMBER-2008" ;
+    dcterms:title "Indo-Roman Trade" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-WIKIPEDIA-LEGIONS> a rx:Source ;
+    dcterms:creator "Wikipedia contributors" ;
+    dcterms:date "2026" ;
+    dcterms:identifier "SRC-WIKIPEDIA-LEGIONS" ;
+    dcterms:title "List of Roman legions" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "web_page" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-WILKINSON-2021> a rx:Source ;
+    dcterms:creator "Troy Wilkinson" ;
+    dcterms:date "2021" ;
+    dcterms:identifier "SRC-WILKINSON-2021" ;
+    dcterms:title "The Indian Ocean Trade and the Roman State" ;
+    rx:accessStatus "unavailable" ;
+    rx:sourceKind "thesis" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-WILSON-BOWMAN-2018> a rx:Source ;
+    dcterms:creator "Andrew Wilson; Alan Bowman (eds.)" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-WILSON-BOWMAN-2018" ;
+    dcterms:title "Trade, Commerce, and the State in the Roman World" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "work" .
+
+rxv:epistemic-unresolved a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "unresolved" .
+
+rxv:origin-simulated a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "simulated" .
+
+rxv:origin-synthetic a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "synthetic" .
+
+rxv:param-calibrated a skos:Concept ;
+    skos:inScheme rx:ParameterStatus ;
+    skos:prefLabel "calibrated" .
+
+rxv:review-cited_only a skos:Concept ;
+    skos:inScheme rx:ReviewStatus ;
+    skos:prefLabel "cited_only" .
+
+rxv:review-human_reviewed a skos:Concept ;
+    skos:inScheme rx:ReviewStatus ;
+    skos:prefLabel "human_reviewed" .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-A_H> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/param/A_H> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-01>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI>,
+        <https://github.com/andrm101/roman_economics/id/param/tau>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-001>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-003> ;
+    rx:code "romeco.m0.hermapollon.derive; ValuationScenario.in_sestertii" ;
+    rx:usedRule <https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-001>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-003> .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-CAMEL-KG> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/param/camel_capacity_kg> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-ADAMS>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-EDICT>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-WT-MOD-001>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-WT-ROM-001> ;
+    rx:code "docs/research_design.md (hand calculation recorded in parameters.yaml)" ;
+    rx:usedRule <https://github.com/andrm101/roman_economics/id/rule/CR-WT-MOD-001>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-WT-ROM-001> .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-DESERT-KM> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/param/route_desert_km> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-LEN-ROM-001> ;
+    rx:code "config/parameters.yaml baseline (257 x 1.48)" ;
+    rx:usedRule <https://github.com/andrm101/roman_economics/id/rule/CR-LEN-ROM-001> .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-GC-JULIOPOLIS-COPTOS> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/place/727131>,
+        <https://github.com/andrm101/roman_economics/id/place/786010>,
+        <https://github.com/andrm101/roman_economics/id/source/SRC-PLEIADES-DATASETS> ;
+    rx:code "romeco.context.build_manual (haversine on Pleiades points)" .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-HARPER-BREAK> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/claim/CTX-HARPER-BREAK> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016-DB> ;
+    rx:code "romeco.context.manual.harper_break_analysis" .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-ITINERE-CB> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-BERENIKE> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/place/785986>,
+        <https://github.com/andrm101/roman_economics/id/place/786010>,
+        <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> ;
+    rx:code "romeco.context.manual.route_km" .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-MERCHANT-TALENT> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/param/merchant_talent_litrai> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/rule/CR-WT-EG-001> ;
+    rx:code "romeco.m0.pvindob_arithmetic.merchant_talent_interval" ;
+    rx:usedRule <https://github.com/andrm101/roman_economics/id/rule/CR-WT-EG-001> .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-NILE-LB> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/param/route_nile_km> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> ;
+    rx:code "config/parameters.yaml lower bound" .
+
+<https://github.com/andrm101/roman_economics/id/activity/DRV-ORBIS-CB> a rx:Derivation ;
+    prov:generated <https://github.com/andrm101/roman_economics/id/claim/CTX-ORBIS-COPTOS-BERENIKE> ;
+    prov:used <https://github.com/andrm101/roman_economics/id/place/785986>,
+        <https://github.com/andrm101/roman_economics/id/place/786010>,
+        <https://github.com/andrm101/roman_economics/id/source/SRC-ORBIS-V2> ;
+    rx:code "romeco.context.build_orbis_pilot_edges" .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-ALUM-FREIGHT-RATE> a rx:Anchor ;
+    dcterms:identifier "ANC-ALUM-FREIGHT-RATE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-BGU-3-697> ;
+    rx:claimText "7 dr 3 ob (6 obols/dr assumed) per talent-weight; Western Desert, AD 145; Adams: c. 45 dr per 6-talent camel load" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "BGU III 697" ;
+    rx:page "231 n.41" ;
+    rx:quantityConcept "desert_freight_rate" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_talent_weight> ;
+    rx:valueHigh 7.5e+00 ;
+    rx:valueLow 7.5e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-BERENIKE-CAMELS> a rx:Anchor ;
+    dcterms:identifier "ANC-BERENIKE-CAMELS" ;
+    rx:claimText "Underlying calculation by another author not inspected; supply of the port not trade volume" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "modern calculation" ;
+    rx:page "58-59 n. 223" ;
+    rx:quantityConcept "camel_loads_needed_per_month_berenike" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/camel_loads_per_month> ;
+    rx:valueHigh 5e+02 ;
+    rx:valueLow 2e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-FODDER> a rx:Anchor ;
+    dcterms:identifier "ANC-CAMEL-FODDER" ;
+    rx:claimText "Adams: c. 150 camels 'would have consumed at least 5400 artabas of barley in one year' -> 36 art/camel/yr [calculated]; grazing could reduce it" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:page "210" ;
+    rx:quantityConcept "camel_fodder_barley" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/artaba_per_camel_year> ;
+    rx:valueHigh 3.6e+01 ;
+    rx:valueLow 3.6e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-HIRE-RATE> a rx:Anchor ;
+    dcterms:identifier "ANC-CAMEL-HIRE-RATE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-BGU-3-921> ;
+    rx:claimText "Highest of several rates in the text; mid-2nd c.; animal type/work not specified in Adams' summary" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "BGU III 921" ;
+    rx:page "231 n.40" ;
+    rx:quantityConcept "camel_hire_rate" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_day> ;
+    rx:valueHigh 4e+00 ;
+    rx:valueLow 4e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-COPTOS-MYOS-KM> a rx:Anchor ;
+    dcterms:identifier "ANC-COPTOS-MYOS-KM" ;
+    rx:claimText "Modern measurement; Strabo 17.1.45: 6-7 days; Adams: 5 days at 30 km/day" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:page "37; 45" ;
+    rx:quantityConcept "route_coptos_myos_hormos" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 1.74e+02 ;
+    rx:valueLow 1.73e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-MONS-CLAUD-SUPPLY> a rx:Anchor ;
+    dcterms:identifier "ANC-MONS-CLAUD-SUPPLY" ;
+    rx:claimText "c. 900 persons x 1 artaba/month = 150 camel loads/month; 120 km from the Nile, 10-day round trip; fodder c. 5400 art barley/yr for 150 camels (p.210)" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:page "209" ;
+    rx:quantityConcept "wheat_requirement_mons_claudianus" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/artaba_per_month> ;
+    rx:valueHigh 9e+02 ;
+    rx:valueLow 9e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DEPART-EGYPT> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-DEPART-EGYPT" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'navigare incipiunt aestate media ante canis ortum aut ab exortu protinus'; c. 30 days to Ocelis or Cane, then 40 days to Muziris" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Pliny NH 6.104" ;
+    rx:quantityConcept "departure_from_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-OUTFLOW-EAST> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-OUTFLOW-EAST" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'minimaque computatione'; covers three regions; Nappo flags dubious precision" ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Pliny NH 12.84" ;
+    rx:page "13" ;
+    rx:quantityConcept "annual_outflow_india_seres_arabia" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius> ;
+    rx:valueLow 1e+08 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-OUTFLOW-INDIA> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-OUTFLOW-INDIA" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'nullo anno minus'; moralising context; unclear whether purchase cost, bullion export or total expenditure" ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Pliny NH 6.101" ;
+    rx:page "43-44" ;
+    rx:quantityConcept "annual_outflow_to_india" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius> ;
+    rx:valueLow 5e+07 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-RETURN-WINDOW> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-RETURN-WINDOW" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'ex India renavigant mense Aegyptio Tybi incipiente, nostro Decembri, aut utique Mechiris Aegyptii intra diem sextum, quod fit intra idus Ianuarias nostras'. Tybi 1 to Mechir 6 = 36 days [calculated, 30-day Egyptian months]; Pliny's Roman equivalences are internally inconsistent (Mechir 6 is not before the Ides of January). Voyage duration home not stated" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Pliny NH 6.106" ;
+    rx:quantityConcept "departure_from_india_window" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/days_after_Tybi_1> ;
+    rx:valueHigh 3.6e+01 ;
+    rx:valueLow 0e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-STRABO-MYOS-DAYS> a rx:Anchor ;
+    dcterms:identifier "ANC-STRABO-MYOS-DAYS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> ;
+    rx:claimText "Quoted in Loeb translation by Adams" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Strabo 17.1.45" ;
+    rx:page "37" ;
+    rx:quantityConcept "duration_coptos_myos_hormos" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/days> ;
+    rx:valueHigh 7e+00 ;
+    rx:valueLow 6e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-STRABO-SHIPS> a rx:Anchor ;
+    dcterms:identifier "ANC-STRABO-SHIPS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> ;
+    rx:claimText "Annual total vs. ships departing at the time of Strabo's visit is ambiguous (Nappo n. 136); one port only; Augustan date (Gallus prefecture)" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Strabo 2.5.12" ;
+    rx:page "40-41 n. 136" ;
+    rx:quantityConcept "ships_sailing_myos_hormos_to_india" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/ships> ;
+    rx:valueHigh 1.2e+02 ;
+    rx:valueLow 1.2e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-TETARTE-RATE> a rx:Anchor ;
+    dcterms:identifier "ANC-TETARTE-RATE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:claimText "Rate implied by the tax name and confirmed by the quarter shares listed in verso col. i; removed in kind (plus surplus)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "P.Vindob. G 40822 recto col. ii l. 8" ;
+    rx:page "r col. ii l. 8; v col. i ll. 4-13" ;
+    rx:quantityConcept "import_duty_rate_alexandria" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction> ;
+    rx:valueHigh 2.5e-01 ;
+    rx:valueLow 2.5e-01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-HERMAPOLLON-POSTBREAK-P> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-HERMAPOLLON-POSTBREAK-P" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "uniform document date and uniform break date (integer years)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "p_hermapollon_after_price_break" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HGV-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/probability> ;
+    rx:valueHigh 6e-02 ;
+    rx:valueLow 6e-02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-MYOS> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-ITINERE-COPTOS-MYOS" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Shortest path on Itiner-e network; c. half the length on 'Certain' segments" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "route_length_coptos_myos_hormos" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 1.828e+02 ;
+    rx:valueLow 1.821e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-PLEIADES-ED-MIL-W2> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-PLEIADES-ED-MIL-W2" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Pleiades fort/station places in the Eastern Desert bbox whose dated locations overlap 100-200 CE (upper = + undated)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "military_installations_active_W2_eastern_desert" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLEIADES-DATASETS> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/places> ;
+    rx:valueHigh 9.4e+01 ;
+    rx:valueLow 5.8e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-TET-03> a rx:Interpretation ;
+    dcterms:identifier "INT-TET-03" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2000> ;
+    rx:claimText "Tetarte removed in kind; arabarchs took a small surplus beyond the exact quarter (whole tusks), which is valued separately in the merchant's account" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "DOC-PVINDOB-G40822 verso col. i and col. ii ll. 11-14; 22-24" ;
+    rx:page "introduction; schidai section" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2014> ;
+    rx:reviewStatus rxv:review-machine_summary_only .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-COPTOS-LEGIO-III> a rx:Anchor ;
+    dcterms:identifier "MIL-COPTOS-LEGIO-III" ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/786010> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Nappo p.55: Augustus placed III Cyrenaica at Coptos; legionary seat until Caracalla. Contradicted by Nappo's own pp.80-81 n.305 (III Cyrenaica replaced VI Ferrata in Arabia before 139), by Dio 55.23 (III Cyrenaica in Arabia, Dio's day; machine summary) and by Josephus BJ 2.387/2.494/6.238 (both Egyptian legions at Alexandria AD 66-70). Not used for W2 (K16 resolved, D018)." ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Coptos" ;
+    rx:page "55" ;
+    rx:quantityConcept "legion_seat" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-ED-COPTOS-BERENIKE-KM> a rx:Anchor ;
+    dcterms:identifier "MIL-ED-COPTOS-BERENIKE-KM" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "'quasi 400 km'; used mainly 1st-7th c. (ceramics). Pliny: 257 mp (c. 380 km at 1.48 km/mp)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Coptos-Berenike road" ;
+    rx:page "57" ;
+    rx:quantityConcept "road_length" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 4e+02 ;
+    rx:valueLow 3.8e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-DIO-229> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-DIO-229" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-DIO-CARY> ;
+    rx:claimText "Read via lexundria.com machine summary; verbatim Cary text not obtained. Count 1 = no other legion assigned to Egypt in Dio's list." ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Aegyptus" ;
+    rx:page "55.24" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DIO-CARY> ;
+    rx:reviewStatus rxv:review-machine_summary_only ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 1e+00 ;
+    rx:valueLow 1e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-JOS-66> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-JOS-66" ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/727070> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> ;
+    rx:claimText "PAS-JOS-BJ-2.387 (speech, rhetorical frame but factual aside); PAS-JOS-BJ-2.494 (narrative)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Alexandria" ;
+    rx:page "BJ 2.387; 2.494" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 2e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-JOS-70> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-JOS-70" ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/727070> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> ;
+    rx:claimText "PAS-JOS-BJ-6.238; Fronto Haterius praefectus castrorum." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Alexandria (detachments at Jerusalem)" ;
+    rx:page "BJ 6.238" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 2e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-PIUS> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-PIUS" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "'A partire da Antonino Pio ... l'unica legione di base in questa provincia' (citing Daris 2000). Interval = Pius' reign; later continuation per Dio 55.24 (machine summary)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus" ;
+    rx:page "80" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 1e+00 ;
+    rx:valueLow 1e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-STRABO> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-STRABO" ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/727070> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:claimText "PAS-STRABO-17.1.12: three legions, one in the city, the rest in the chora; 17.1.30 one at Babylon. Date of the arrangement described: Augustan (Strabo in Egypt c. 25-20 BCE); interval is the composition window." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus (one legion at Alexandria)" ;
+    rx:page "17.1.12; 17.1.30" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 3e+00 ;
+    rx:valueLow 3e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-TAC-23> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-TAC-23" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TACITUS-ANN> ;
+    rx:claimText "PAS-TAC-ANN-4.5 'parique numero Aegyptus' (= two). Empire total in the passage: 25." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus" ;
+    rx:page "Ann. 4.5" ;
+    rx:quantityConcept "legion_count_egypt" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-TACITUS-ANN> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/legions> ;
+    rx:valueHigh 2e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEGIO-II-TRAIANA> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEGIO-II-TRAIANA" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Created c. 100 CE; in Egypt by 128; sole legion of the province from Antoninus Pius (Nappo p.80). Base not stated in inspected sources (Wikipedia-derived Nicopolis seat removed, D018)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Aegyptus (province)" ;
+    rx:page "80" ;
+    rx:quantityConcept "legion_seat" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-PRAESIDIA-SIZE> a rx:Anchor ;
+    dcterms:identifier "MIL-PRAESIDIA-SIZE" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "'mediamente 22-24 uomini' (Nappo n. 214, Cuvigny not inspected). Escort vs surveillance role debated (p. 57)." ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Eastern Desert praesidia" ;
+    rx:page "57" ;
+    rx:quantityConcept "detachment_size" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/soldiers_per_praesidium> ;
+    rx:valueHigh 2.4e+01 ;
+    rx:valueLow 2.2e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ARMY-PAY-85-193> a rx:Anchor ;
+    dcterms:identifier "PL-ARMY-PAY-85-193" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "Infantry; deductions for rations, boots, hay leave c. 65% net. Augustus-84: HS 900; c. 214: HS 3,600 (uncertain)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "literary/papyri" ;
+    rx:page "311 (Table 15.2)" ;
+    rx:quantityConcept "legionary_pay_gross" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/sestertius_per_year> ;
+    rx:valueHigh 1.2e+03 ;
+    rx:valueLow 1.2e+03 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-EG-DOUBLING> a rx:Anchor ;
+    dcterms:identifier "PL-EG-DOUBLING" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "'At some stage between the AD 160s and 190s' prices and wages doubled; Rathbone links it to the Antonine plague; he notes not everyone is convinced. Nappo 2018: 184 notes the mechanism is not explained." ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "papyri" ;
+    rx:page "305-306" ;
+    rx:quantityConcept "price_break_doubling" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/ratio> ;
+    rx:valueHigh 2e+00 ;
+    rx:valueLow 2e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-EG-WHEAT-W1> a rx:Anchor ;
+    dcterms:identifier "PL-EG-WHEAT-W1" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "Seasonal and inter-annual band; median 9 dr/art = HS 2/mod (Rathbone's conversion)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "papyri (Rathbone 1997 compilation)" ;
+    rx:page "304 (Table 15.1 item 10)" ;
+    rx:quantityConcept "wheat_farmgate_price" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_artaba> ;
+    rx:valueHigh 1.2e+01 ;
+    rx:valueLow 6e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-EG-WHEAT-W3> a rx:Anchor ;
+    dcterms:identifier "PL-EG-WHEAT-W3" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:claimText "Second stable band after the doubling" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "papyri (Rathbone 1997 compilation)" ;
+    rx:page "305 (Table 15.1 item 11)" ;
+    rx:quantityConcept "wheat_farmgate_price" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_artaba> ;
+    rx:valueHigh 2e+01 ;
+    rx:valueLow 1.2e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/PL-ROM-INFL-1-2C> a rx:Anchor ;
+    dcterms:identifier "PL-ROM-INFL-1-2C" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "'inferiore all'1%' citing Rathbone 1997; 2007; Scheidel 2009. Upper bound, not a point estimate." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "synthesis" ;
+    rx:page "183" ;
+    rx:quantityConcept "average_annual_inflation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/fraction_per_year> ;
+    rx:valueHigh 1e-02 ;
+    rx:valueLow 1e-02 .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K1> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K10> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K16> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K17> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K18> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K2> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/contradiction/K21> a rx:Contradiction .
+
+<https://github.com/andrm101/roman_economics/id/decision/D009> a rx:Decision .
+
+<https://github.com/andrm101/roman_economics/id/decision/D017> a rx:Decision .
+
+<https://github.com/andrm101/roman_economics/id/decision/D018> a rx:Decision .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-BGU-3-697> a rx:AncientDocument ;
+    rdfs:label "BGU III 697" ;
+    rx:citationKey "bgu:3:697" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-BGU-3-921> a rx:AncientDocument ;
+    rdfs:label "BGU III 921" ;
+    rx:citationKey "bgu:3:921" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-ED-DIOCL> a rx:AncientDocument ;
+    rdfs:label "Edictum Diocletiani de pretiis" ;
+    rx:citationKey "ed.diocl:" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-OGIS-674> a rx:AncientDocument ;
+    rdfs:label "OGIS II 674 (Coptos tariff)" ;
+    rx:citationKey "iportes:67",
+        "ogis:674" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-P-CUSTOMS> a rx:AncientDocument ;
+    rdfs:label "Fayum customs-house receipts (P. Customs corpus)" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-P-LOND-2-328> a rx:AncientDocument ;
+    rdfs:label "P. Lond. II 328" ;
+    rx:citationKey "plond:2:328" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-PME> a rx:AncientDocument ;
+    rdfs:label "Periplus Maris Erythraei" ;
+    rx:citationKey "pme:" .
+
+<https://github.com/andrm101/roman_economics/id/param/N> a rx:Parameter ;
+    dcterms:identifier "N" ;
+    rx:boundHigh 1.2e+02 ;
+    rx:boundLow 1e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-STRABO-SHIPS> ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/O> a rx:Parameter ;
+    dcterms:identifier "O" ;
+    rx:baseline 5e+07 ;
+    rx:boundHigh 1e+08 ;
+    rx:boundLow 5e+07 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-OUTFLOW-EAST>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-OUTFLOW-INDIA> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/param/c> a rx:Parameter ;
+    dcterms:identifier "c" ;
+    rx:baseline 5e-01 ;
+    rx:boundHigh 1.5e+00 ;
+    rx:boundLow 2e-01 ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/camel_fodder_art_per_year> a rx:Parameter ;
+    dcterms:identifier "camel_fodder_art_per_year" ;
+    rx:baseline 3.6e+01 ;
+    rx:boundHigh 3.6e+01 ;
+    rx:boundLow 3.6e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-FODDER> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/camel_turnaround_days> a rx:Parameter ;
+    dcterms:identifier "camel_turnaround_days" ;
+    rx:boundHigh 4e+00 ;
+    rx:boundLow 0e+00 ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/desert_days_coptos_berenike> a rx:Parameter ;
+    dcterms:identifier "desert_days_coptos_berenike" ;
+    rx:baseline 1.2e+01 ;
+    rx:boundHigh 1.4e+01 ;
+    rx:boundLow 1.2e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT-DAYS>,
+        <https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-BERENIKE> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/desert_days_coptos_myos_hormos> a rx:Parameter ;
+    dcterms:identifier "desert_days_coptos_myos_hormos" ;
+    rx:baseline 6e+00 ;
+    rx:boundHigh 7e+00 ;
+    rx:boundLow 5e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-COPTOS-MYOS-KM>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-STRABO-MYOS-DAYS> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/desert_freight_dr_per_camel_trip> a rx:Parameter ;
+    dcterms:identifier "desert_freight_dr_per_camel_trip" ;
+    rx:boundLow 4.5e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-ALUM-FREIGHT-RATE>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-HIRE-RATE>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT-DAYS> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/kappa> a rx:Parameter ;
+    dcterms:identifier "kappa" ;
+    rx:boundHigh 1e+00 ;
+    rx:boundLow 7e-01 ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/lam> a rx:Parameter ;
+    dcterms:identifier "lam" ;
+    rx:boundHigh 1.5e+00 ;
+    rx:boundLow 1e-01 ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/p> a rx:Parameter ;
+    dcterms:identifier "p" ;
+    rx:baseline 5e-02 ;
+    rx:boundHigh 1.5e-01 ;
+    rx:boundLow 1e-02 ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/return_window_days> a rx:Parameter ;
+    dcterms:identifier "return_window_days" ;
+    rx:boundHigh 3.65e+02 ;
+    rx:boundLow 3.6e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DEPART-EGYPT>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-RETURN-WINDOW> ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/param/route_desert_km> a rx:Parameter ;
+    dcterms:identifier "route_desert_km" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-DESERT-KM> ;
+    rx:baseline 3.8036e+02 ;
+    rx:boundHigh 4.09e+02 ;
+    rx:boundLow 3.8e+02 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT>,
+        <https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-BERENIKE>,
+        <https://github.com/andrm101/roman_economics/id/claim/CTX-ORBIS-COPTOS-BERENIKE>,
+        <https://github.com/andrm101/roman_economics/id/claim/MIL-ED-COPTOS-BERENIKE-KM> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/param/route_nile_km> a rx:Parameter ;
+    dcterms:identifier "route_nile_km" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-NILE-LB> ;
+    rx:boundLow 6.46e+02 ;
+    rx:considered <https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-NILE> ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> ;
+    rx:parameterStatus rxv:param-exploratory .
+
+<https://github.com/andrm101/roman_economics/id/place/108754> a rx:Place ;
+    rdfs:label "Argentorate" ;
+    rx:pleiades <https://pleiades.stoa.org/places/108754> .
+
+<https://github.com/andrm101/roman_economics/id/place/108818> a rx:Place ;
+    rdfs:label "Bonna" ;
+    rx:pleiades <https://pleiades.stoa.org/places/108818> .
+
+<https://github.com/andrm101/roman_economics/id/place/108867> a rx:Place ;
+    rdfs:label "Castra Vetera" ;
+    rx:pleiades <https://pleiades.stoa.org/places/108867> .
+
+<https://github.com/andrm101/roman_economics/id/place/109169> a rx:Place ;
+    rdfs:label "Moguntiacum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/109169> .
+
+<https://github.com/andrm101/roman_economics/id/place/118929> a rx:Place ;
+    rdfs:label "Castra Regina" ;
+    rx:pleiades <https://pleiades.stoa.org/places/118929> .
+
+<https://github.com/andrm101/roman_economics/id/place/128376> a rx:Place ;
+    rdfs:label "Carnuntum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/128376> .
+
+<https://github.com/andrm101/roman_economics/id/place/128537> a rx:Place ;
+    rdfs:label "Vindobona" ;
+    rx:pleiades <https://pleiades.stoa.org/places/128537> .
+
+<https://github.com/andrm101/roman_economics/id/place/197131> a rx:Place ;
+    rdfs:label "Aquincum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/197131> .
+
+<https://github.com/andrm101/roman_economics/id/place/197180> a rx:Place ;
+    rdfs:label "Brigetio" ;
+    rx:pleiades <https://pleiades.stoa.org/places/197180> .
+
+<https://github.com/andrm101/roman_economics/id/place/197413> a rx:Place ;
+    rdfs:label "Novae" ;
+    rx:pleiades <https://pleiades.stoa.org/places/197413> .
+
+<https://github.com/andrm101/roman_economics/id/place/206927> a rx:Place ;
+    rdfs:label "Apulum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/206927> .
+
+<https://github.com/andrm101/roman_economics/id/place/207443> a rx:Place ;
+    rdfs:label "Singidunum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/207443> .
+
+<https://github.com/andrm101/roman_economics/id/place/207549> a rx:Place ;
+    rdfs:label "Viminacium" ;
+    rx:pleiades <https://pleiades.stoa.org/places/207549> .
+
+<https://github.com/andrm101/roman_economics/id/place/216800> a rx:Place ;
+    rdfs:label "Durostorum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/216800> .
+
+<https://github.com/andrm101/roman_economics/id/place/217025> a rx:Place ;
+    rdfs:label "Troesmis" ;
+    rx:pleiades <https://pleiades.stoa.org/places/217025> .
+
+<https://github.com/andrm101/roman_economics/id/place/236512> a rx:Place ;
+    rdfs:label "Castra Legionis" ;
+    rx:pleiades <https://pleiades.stoa.org/places/236512> .
+
+<https://github.com/andrm101/roman_economics/id/place/334570> a rx:Place ;
+    rdfs:label "Lambaesis" ;
+    rx:pleiades <https://pleiades.stoa.org/places/334570> .
+
+<https://github.com/andrm101/roman_economics/id/place/50146> a rx:Place ;
+    rdfs:label "Muziris" ;
+    rx:pleiades <https://pleiades.stoa.org/places/50146> .
+
+<https://github.com/andrm101/roman_economics/id/place/629040> a rx:Place ;
+    rdfs:label "Melitene" ;
+    rx:pleiades <https://pleiades.stoa.org/places/629040> .
+
+<https://github.com/andrm101/roman_economics/id/place/658587> a rx:Place ;
+    rdfs:label "Samosata" ;
+    rx:pleiades <https://pleiades.stoa.org/places/658587> .
+
+<https://github.com/andrm101/roman_economics/id/place/658636> a rx:Place ;
+    rdfs:label "Zeugma" ;
+    rx:pleiades <https://pleiades.stoa.org/places/658636> .
+
+<https://github.com/andrm101/roman_economics/id/place/668350> a rx:Place ;
+    rdfs:label "Raphanea" ;
+    rx:pleiades <https://pleiades.stoa.org/places/668350> .
+
+<https://github.com/andrm101/roman_economics/id/place/678073> a rx:Place ;
+    rdfs:label "Bostra" ;
+    rx:pleiades <https://pleiades.stoa.org/places/678073> .
+
+<https://github.com/andrm101/roman_economics/id/place/678266> a rx:Place ;
+    rdfs:label "Caparcotna" ;
+    rx:pleiades <https://pleiades.stoa.org/places/678266> .
+
+<https://github.com/andrm101/roman_economics/id/place/687928> a rx:Place ;
+    rdfs:label "Hierosolyma" ;
+    rx:pleiades <https://pleiades.stoa.org/places/687928> .
+
+<https://github.com/andrm101/roman_economics/id/place/746700> a rx:Place ;
+    rdfs:label "Aelana/Aila" ;
+    rx:pleiades <https://pleiades.stoa.org/places/746700> .
+
+<https://github.com/andrm101/roman_economics/id/place/766375> a rx:Place ;
+    rdfs:label "Klaudianon (Mons Claudianus)" ;
+    rx:pleiades <https://pleiades.stoa.org/places/766375> .
+
+<https://github.com/andrm101/roman_economics/id/place/766391> a rx:Place ;
+    rdfs:label "Porphyrites (Mons Porphyrites)" ;
+    rx:pleiades <https://pleiades.stoa.org/places/766391> .
+
+<https://github.com/andrm101/roman_economics/id/place/785974> a rx:Place ;
+    rdfs:label "Apollonopolis Magna" ;
+    rx:pleiades <https://pleiades.stoa.org/places/785974> .
+
+<https://github.com/andrm101/roman_economics/id/place/785976> a rx:Place ;
+    rdfs:label "Apollonos (Hydreuma)" ;
+    rx:pleiades <https://pleiades.stoa.org/places/785976> .
+
+<https://github.com/andrm101/roman_economics/id/place/786015> a rx:Place ;
+    rdfs:label "Didymoi" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786015> .
+
+<https://github.com/andrm101/roman_economics/id/place/786047> a rx:Place ;
+    rdfs:label "Kaine/Maximianopolis" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786047> .
+
+<https://github.com/andrm101/roman_economics/id/place/786054> a rx:Place ;
+    rdfs:label "Krokodilo" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786054> .
+
+<https://github.com/andrm101/roman_economics/id/place/786064> a rx:Place ;
+    rdfs:label "Maximianon" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786064> .
+
+<https://github.com/andrm101/roman_economics/id/place/786076> a rx:Place ;
+    rdfs:label "Novum Hydreuma" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786076> .
+
+<https://github.com/andrm101/roman_economics/id/place/79420> a rx:Place ;
+    rdfs:label "Deva" ;
+    rx:pleiades <https://pleiades.stoa.org/places/79420> .
+
+<https://github.com/andrm101/roman_economics/id/place/79532> a rx:Place ;
+    rdfs:label "Isca Augusta" ;
+    rx:pleiades <https://pleiades.stoa.org/places/79532> .
+
+<https://github.com/andrm101/roman_economics/id/place/874684> a rx:Place ;
+    rdfs:label "Satala" ;
+    rx:pleiades <https://pleiades.stoa.org/places/874684> .
+
+<https://github.com/andrm101/roman_economics/id/place/89175> a rx:Place ;
+    rdfs:label "Eburacum" ;
+    rx:pleiades <https://pleiades.stoa.org/places/89175> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-AWMC-GEODATA> a rx:Source ;
+    dcterms:creator "Ancient World Mapping Center (R. Horne; G. Moss et al.)" ;
+    dcterms:date "2024" ;
+    dcterms:identifier "SRC-AWMC-GEODATA" ;
+    dcterms:title "AWMC geodata (roads, urban areas, political shading)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HGV-TM27666> a rx:Source ;
+    dcterms:creator "Heidelberger Gesamtverzeichnis" ;
+    dcterms:identifier "SRC-HGV-TM27666" ;
+    dcterms:title "HGV metadata for TM 27666" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "file_copy" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-PAPER-2025> a rx:Source ;
+    dcterms:creator "Pau de Soto; Adam Pažout; Tom Brughmans; et al. (20 authors)" ;
+    dcterms:date "2025" ;
+    dcterms:identifier "SRC-ITINERE-PAPER-2025" ;
+    dcterms:title "Itiner-e: A high-resolution dataset of roads of the Roman Empire" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:describes <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-REDON-MANIERE-2022> a rx:Source ;
+    dcterms:creator "B. Redon; L. Manière" ;
+    dcterms:date "2022" ;
+    dcterms:identifier "SRC-REDON-MANIERE-2022" ;
+    dcterms:title "Desert Networks itineraries (e.g. DN_ITI005-007, DN_ITI011)" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-TOMBER-2018> a rx:Source ;
+    dcterms:creator "Roberta Tomber" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-TOMBER-2018" ;
+    dcterms:title "Quarries, Ports and Praesidia: Supply and Exchange in the Eastern Desert" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BRUN-ETAL-2018> ;
+    rx:sourceKind "chapter" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-WILSON-2009> a rx:Source ;
+    dcterms:creator "Andrew Wilson" ;
+    dcterms:date "2009" ;
+    dcterms:identifier "SRC-WILSON-2009" ;
+    dcterms:title "Approaches to Quantifying Roman Trade" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> ;
+    rx:sourceKind "chapter" .
+
+<https://github.com/andrm101/roman_economics/id/unit/alae> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "alae" .
+
+<https://github.com/andrm101/roman_economics/id/unit/artaba> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "artaba" .
+
+<https://github.com/andrm101/roman_economics/id/unit/artaba_per_camel_year> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "artaba_per_camel_year" .
+
+<https://github.com/andrm101/roman_economics/id/unit/artaba_per_month> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "artaba_per_month" .
+
+<https://github.com/andrm101/roman_economics/id/unit/camel> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "camel" .
+
+<https://github.com/andrm101/roman_economics/id/unit/camels> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/camel> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "camels" .
+
+<https://github.com/andrm101/roman_economics/id/unit/cities> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "cities" .
+
+<https://github.com/andrm101/roman_economics/id/unit/cohorts> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "cohorts" .
+
+<https://github.com/andrm101/roman_economics/id/unit/day> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "day" .
+
+<https://github.com/andrm101/roman_economics/id/unit/days_after_Tybi_1> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "days_after_Tybi_1" .
+
+<https://github.com/andrm101/roman_economics/id/unit/dekanoi_attested> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "dekanoi_attested" .
+
+<https://github.com/andrm101/roman_economics/id/unit/denarius_per_modius_castrensis> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "denarius_per_modius_castrensis" .
+
+<https://github.com/andrm101/roman_economics/id/unit/drachma> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "drachma" .
+
+<https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_talent_weight> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "drachma_EG_per_talent_weight" .
+
+<https://github.com/andrm101/roman_economics/id/unit/lb> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "lb" .
+
+<https://github.com/andrm101/roman_economics/id/unit/legion> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "legion" .
+
+<https://github.com/andrm101/roman_economics/id/unit/m3> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "m3" .
+
+<https://github.com/andrm101/roman_economics/id/unit/mile_roman> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "mile_roman" .
+
+<https://github.com/andrm101/roman_economics/id/unit/mina> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "mina" .
+
+<https://github.com/andrm101/roman_economics/id/unit/obol_EG> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "obol_EG" .
+
+<https://github.com/andrm101/roman_economics/id/unit/places> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "places" .
+
+<https://github.com/andrm101/roman_economics/id/unit/probability> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "probability" .
+
+<https://github.com/andrm101/roman_economics/id/unit/sestertius_per_modius> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "sestertius_per_modius" .
+
+<https://github.com/andrm101/roman_economics/id/unit/ship> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "ship" .
+
+<https://github.com/andrm101/roman_economics/id/unit/ships> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/ship> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "ships" .
+
+<https://github.com/andrm101/roman_economics/id/unit/soldier> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "soldier" .
+
+<https://github.com/andrm101/roman_economics/id/unit/soldiers> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/soldier> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "soldiers" .
+
+<https://github.com/andrm101/roman_economics/id/unit/soldiers_per_praesidium> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "soldiers_per_praesidium" .
+
+<https://github.com/andrm101/roman_economics/id/unit/talent_money_EG> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "talent_money_EG" .
+
+<https://github.com/andrm101/roman_economics/id/unit/talent_weight_any> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "talent_weight_any" .
+
+<https://github.com/andrm101/roman_economics/id/unit/talent_weight_ivory_recalc> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "talent_weight_ivory_recalc" .
+
+<https://github.com/andrm101/roman_economics/id/unit/talent_weight_pepper_recalc> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "talent_weight_pepper_recalc" .
+
+<https://github.com/andrm101/roman_economics/id/unit/year_CE> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "year_CE" .
+
+rxv:epistemic-rejected a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "rejected" .
+
+rxv:epistemic-rhetorical a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "rhetorical" .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-ADAMS> a rx:Anchor ;
+    dcterms:identifier "ANC-CAMEL-LOAD-ADAMS" ;
+    rx:claimText "6 artabas x 'a little over 60 lbs' (artaba weight after Rathbone); modern camel-corps limits 150-200 kg (n.51)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:page "80" ;
+    rx:quantityConcept "camel_load_weight" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/lb_avoirdupois> ;
+    rx:valueHigh 4.3e+02 ;
+    rx:valueLow 4e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-EDICT> a rx:Anchor ;
+    dcterms:identifier "ANC-CAMEL-LOAD-EDICT" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-ED-DIOCL> ;
+    rx:claimText "AD 301, normative tariff basis; Adams equates to c. 430 lbs" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Ed. Diocl. 17.4" ;
+    rx:page "80" ;
+    rx:quantityConcept "camel_load_weight" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/libra_roman> ;
+    rx:valueHigh 6e+02 ;
+    rx:valueLow 6e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT-DAYS> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-DESERT-DAYS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "'totum a Copto Berenicen iter duodecimo die conficitur'; most of it by night because of the heat" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Pliny NH 6.103" ;
+    rx:quantityConcept "duration_coptos_berenike" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/days> ;
+    rx:valueHigh 1.2e+01 ;
+    rx:valueLow 1.2e+01 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-NILE> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-NILE" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "Mayhoff: CCCVIIII (309); variant CCCIII (303) in E, s, p and older editions. Both < 646 km great circle (K17). Iuliopolis 2 mp from Alexandria; 12 days with Etesian winds" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Pliny NH 6.102" ;
+    rx:quantityConcept "route_juliopolis_coptos" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/mille_passus> ;
+    rx:valueHigh 3.09e+02 ;
+    rx:valueLow 3.09e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-RUFFING-BERENIKE-LOADS> a rx:Anchor ;
+    dcterms:identifier "ANC-RUFFING-BERENIKE-LOADS" ;
+    rx:claimText "Ruffing, 'Das Nikanor-Archiv' 4-7, via Adams; derivation not inspected" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:page "225 n.21; 288" ;
+    rx:quantityConcept "camel_loads_supply_berenike" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/camel_loads_per_month> ;
+    rx:valueHigh 2e+03 ;
+    rx:valueLow 2e+03 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-HARPER-BREAK> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-HARPER-BREAK" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-HARPER-BREAK> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Two-regime step fit to Harper 2016 sheet 2 (n=33); break located only to 160-187 (data gap); bootstrap 5-95% ratio. Shares sources with Rathbone: re-derivation, not independent." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "egypt_wheat_price_break_ratio" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016-DB> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/ratio> ;
+    rx:valueHigh 2.501e+00 ;
+    rx:valueLow 1.786e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-ORBIS-COPTOS-BERENIKE> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-ORBIS-COPTOS-BERENIKE" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-ORBIS-CB> ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/785986>,
+        <https://github.com/andrm101/roman_economics/id/place/786010> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "ORBIS v2 edge geometry. field_s=12.637 = km/30 on every road edge (tested), so its closeness to Pliny's 12 days is a speed assumption, not evidence" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "route_length_coptos_berenike" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ORBIS-V2> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 3.795e+02 ;
+    rx:valueLow 3.795e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-HERM-02> a rx:Interpretation ;
+    dcterms:identifier "INT-HERM-02" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2012> ;
+    rx:claimText "Stated total represents three-quarters of the items shipped on the Hermapollon" ;
+    rx:dependsOn <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "DOC-PVINDOB-G40822 verso col. ii l. 29" ;
+    rx:page "77" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2012> ;
+    rx:reviewStatus rxv:review-machine_summary_only .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-HERM-03> a rx:Interpretation ;
+    dcterms:identifier "INT-HERM-03" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "The timai computed on the verso are the taxable base (imponibile) on which the duty is computed" ;
+    rx:dependsOn <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:epistemicStatus rxv:epistemic-rejected ;
+    rx:locus "DOC-PVINDOB-G40822 verso" ;
+    rx:page "87-88" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-HERM-04> a rx:Interpretation ;
+    dcterms:identifier "INT-HERM-04" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> ;
+    rx:claimText "Pepper valued at 24 dr per mina; three-quarter pepper weight c. 3,2-3,3 thousand talents (no lost myriad)" ;
+    rx:dependsOn <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "DOC-PVINDOB-G40822 verso col. i ll. 20-21; 25-26" ;
+    rx:page "introduction; n. 38" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2014> ;
+    rx:reviewStatus rxv:review-machine_summary_only .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-HERM-05> a rx:Interpretation ;
+    dcterms:identifier "INT-HERM-05" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2012> ;
+    rx:claimText "Pepper valued at 6 dr per mina; a myriad is lost in the lacuna (three-quarter pepper c. 13,3 thousand talents)" ;
+    rx:dependsOn <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "DOC-PVINDOB-G40822 verso col. i ll. 20-21; 25-26" ;
+    rx:page "introduction; n. 38" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2014> ;
+    rx:reviewStatus rxv:review-machine_summary_only .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-TET-01> a rx:Interpretation ;
+    dcterms:identifier "INT-TET-01" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HARRAUER-SIJPESTEIJN-1985> ;
+    rx:claimText "25% levied twice: on entry at a Red Sea port and on exit at Alexandria" ;
+    rx:epistemicStatus rxv:epistemic-disputed ;
+    rx:locus "Strabo 17.1.13 (tele diplasia)" ;
+    rx:page "88 n. 333" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-TET-02> a rx:Interpretation ;
+    dcterms:identifier "INT-TET-02" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "Single 25% tetarte at Alexandria = eisagogika; exagogika = ordinary provincial exit duty of 2.5%" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Strabo 17.1.13 (tele diplasia)" ;
+    rx:page "88-89" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/decision/D008> a rx:Decision .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-OPETR-NIKANOR> a rx:AncientDocument ;
+    rdfs:label "Nikanor archive" ;
+    rx:citationKey "opetr:" .
+
+<https://github.com/andrm101/roman_economics/id/param/camel_capacity_kg> a rx:Parameter ;
+    dcterms:identifier "camel_capacity_kg" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-CAMEL-KG> ;
+    rx:baseline 1.81e+02 ;
+    rx:boundHigh 2e+02 ;
+    rx:boundLow 1.5e+02 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-ADAMS>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-CUSTOMS>,
+        <https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-EDICT> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/pepper_price_dr_per_mina> a rx:Parameter ;
+    dcterms:identifier "pepper_price_dr_per_mina" ;
+    rx:boundHigh 2.4e+01 ;
+    rx:boundLow 6e+00 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-04>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-05>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART> ;
+    rx:parameterStatus rxv:param-external_estimate .
+
+<https://github.com/andrm101/roman_economics/id/param/tau> a rx:Parameter ;
+    dcterms:identifier "tau" ;
+    rx:baseline 2.5e-01 ;
+    rx:boundHigh 2.5e-01 ;
+    rx:boundLow 2.5e-01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/ANC-TETARTE-RATE>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-TET-01>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-TET-02> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/place/786069> a rx:Place ;
+    rdfs:label "Myos Hormos" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786069> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-LEN-ROM-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-LEN-ROM-001" ;
+    rx:factor 1.48e+00 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/mille_passus> ;
+    rx:ruleStatus "project_assumption" ;
+    rx:scope "Roman mile, conventional modern value" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/km> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-MON-EG-001" ;
+    rx:factor 6e+03 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/talent_money_EG> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "Roman Egypt, Greek documentary accounting, 1st-2nd c. CE" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-MON-EG-003> a rx:ConversionRule ;
+    dcterms:identifier "CR-MON-EG-003" ;
+    rx:factor 1e+00 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "Roman Egypt, Julio-Claudian to Antonine; nominal tariffing only" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/sestertius_notional> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-EG-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-EG-001" ;
+    rx:factor 9.5e+01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/talent_weight_tetarte_official> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "P.Vindob. G 40822 verso, quarter-tax valuation" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/libra_roman> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-MOD-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-MOD-001" ;
+    rx:factor 4.535924e-01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/lb_avoirdupois> ;
+    rx:ruleStatus "modern_definition" ;
+    rx:scope "modern international avoirdupois pound (to convert modern authors' 'lbs')" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/kg> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-AST-2018> a rx:Source ;
+    dcterms:creator "Rodney Ast" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-AST-2018" ;
+    dcterms:title "Berenike in Light of Inscriptions, Ostraca, and Papyri" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BRUN-ETAL-2018> ;
+    rx:sourceKind "chapter" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-DIO-CARY> a rx:Source ;
+    dcterms:creator "Cassius Dio; E. Cary (trans.)" ;
+    dcterms:identifier "SRC-DIO-CARY" ;
+    dcterms:title "Roman History (Loeb, Cary translation)" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HARRAUER-SIJPESTEIJN-1985> a rx:Source ;
+    dcterms:creator "Hermann Harrauer; Pieter J. Sijpesteijn" ;
+    dcterms:date "1985" ;
+    dcterms:identifier "SRC-HARRAUER-SIJPESTEIJN-1985" ;
+    dcterms:title "Ein neues Dokument zu Roms Indienhandel, P. Vindob. G 40.822" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-ORBIS-V2> a rx:Source ;
+    dcterms:creator "Elijah Meeks (ORBIS v2, D3 version of ORBIS by Scheidel and Meeks)" ;
+    dcterms:date "2013" ;
+    dcterms:identifier "SRC-ORBIS-V2" ;
+    dcterms:title "orbis_v2 sites and routes" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2000> a rx:Source ;
+    dcterms:creator "Dominic Rathbone" ;
+    dcterms:date "2000" ;
+    dcterms:identifier "SRC-RATHBONE-2000" ;
+    dcterms:title "The 'Muziris' papyrus (SB XVIII 13167): financing Roman trade with India" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-REDDE-2018> a rx:Source ;
+    dcterms:creator "Michel Reddé" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-REDDE-2018" ;
+    dcterms:title "The Fortlets of the Eastern Desert of Egypt" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BRUN-ETAL-2018> ;
+    rx:sourceKind "chapter" .
+
+<https://github.com/andrm101/roman_economics/id/unit/camel_loads_per_month> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "camel_loads_per_month" .
+
+<https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_artaba> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "drachma_EG_per_artaba" .
+
+<https://github.com/andrm101/roman_economics/id/unit/drachma_EG_per_day> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "drachma_EG_per_day" .
+
+<https://github.com/andrm101/roman_economics/id/unit/fraction_per_year> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "fraction_per_year" .
+
+<https://github.com/andrm101/roman_economics/id/unit/kg> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "kg" .
+
+<https://github.com/andrm101/roman_economics/id/unit/lb_avoirdupois> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/lb> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "lb_avoirdupois" .
+
+<https://github.com/andrm101/roman_economics/id/unit/sestertius> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "sestertius" .
+
+<https://github.com/andrm101/roman_economics/id/unit/sestertius_notional> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "sestertius_notional" .
+
+<https://github.com/andrm101/roman_economics/id/unit/sestertius_per_year> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "sestertius_per_year" .
+
+<https://github.com/andrm101/roman_economics/id/unit/talent_weight_tetarte_official> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "talent_weight_tetarte_official" .
+
+<https://github.com/andrm101/roman_economics/id/unit/texts> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "texts" .
+
+rxv:epistemic-superseded a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "superseded" .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-CAMEL-LOAD-CUSTOMS> a rx:Anchor ;
+    dcterms:identifier "ANC-CAMEL-LOAD-CUSTOMS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-P-CUSTOMS> ;
+    rx:claimText "Modal load (94.28% of camel wheat loads); Fayum/Western Desert routes, not the Eastern Desert; foal 4 artabas" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Fayum customs receipts (Habermann statistics)" ;
+    rx:page "79-80" ;
+    rx:quantityConcept "camel_load_wheat" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/artaba> ;
+    rx:valueHigh 6e+00 ;
+    rx:valueLow 6e+00 .
+
+<https://github.com/andrm101/roman_economics/id/claim/ANC-PLINY-DESERT> a rx:Anchor ;
+    dcterms:identifier "ANC-PLINY-DESERT" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> ;
+    rx:claimText "Mayhoff: CCLVII (257); variants CCLVIII (258), CCLIIII (254). Stations: Hydreuma 32 (var. 22), ? 85, Apollinis 184, Novum 236 mp from Coptos" ;
+    rx:epistemicStatus rxv:epistemic-uncertain ;
+    rx:locus "Pliny NH 6.102-103" ;
+    rx:quantityConcept "route_coptos_berenike" ;
+    rx:recordOrigin rxv:origin-literary_statement ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/mille_passus> ;
+    rx:valueHigh 2.57e+02 ;
+    rx:valueLow 2.57e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/MIL-EG-LEG-III-CYR-ARABIA> a rx:Anchor ;
+    dcterms:identifier "MIL-EG-LEG-III-CYR-ARABIA" ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:claimText "terminus ante quem 139 per Nappo (citing Keppie 1986; Cotton 2000). Corroborated for Dio's day by Dio 55.23 (machine summary)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "Arabia" ;
+    rx:page "80-81 n.305" ;
+    rx:quantityConcept "legion_transfer" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/categorical> .
+
+<https://github.com/andrm101/roman_economics/id/param/A_H> a rx:Parameter ;
+    dcterms:identifier "A_H" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-A_H> ;
+    rx:baseline 9.215803e+06 ;
+    rx:boundHigh 9.235803e+06 ;
+    rx:boundLow 9.215803e+06 ;
+    rx:considered <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-02>,
+        <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-03>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985> ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/INT-HERM-01>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/param/merchant_talent_litrai> a rx:Parameter ;
+    dcterms:identifier "merchant_talent_litrai" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-MERCHANT-TALENT> ;
+    rx:baseline 9.75e+01 ;
+    rx:boundHigh 9.751e+01 ;
+    rx:boundLow 9.74967e+01 ;
+    rx:derivedFrom <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS> ;
+    rx:parameterStatus rxv:param-measured_input .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-BRUN-ETAL-2018> a rx:Source ;
+    dcterms:creator "J.-P. Brun; T. Faucher; B. Redon; et al. (eds)" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-BRUN-ETAL-2018" ;
+    dcterms:title "The Eastern Desert of Egypt during the Greco-Roman Period: Archaeological Reports" ;
+    rx:accessStatus "metadata_only" ;
+    rx:sourceKind "edited_volume" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2014> a rx:Source ;
+    dcterms:creator "Federico De Romanis" ;
+    dcterms:date "2014" ;
+    dcterms:identifier "SRC-DEROMANIS-2014" ;
+    dcterms:title "Ivory from Muziris" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HANSON-2016-DB> a rx:Source ;
+    dcterms:creator "J. W. Hanson" ;
+    dcterms:date "2016" ;
+    dcterms:identifier "SRC-HANSON-2016-DB" ;
+    dcterms:title "Cities Database, Version 1.0 (OxREP databases)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PLEIADES-DATASETS> a rx:Source ;
+    dcterms:creator "Pleiades (ISAW/NYU)" ;
+    dcterms:date "2026" ;
+    dcterms:identifier "SRC-PLEIADES-DATASETS" ;
+    dcterms:title "pleiades.datasets GIS tables (places, place types, locations, connections, time periods)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-TACITUS-ANN> a rx:Source ;
+    dcterms:creator "Tacitus; C. D. Fisher (ed.); A. J. Church & W. J. Brodribb (trans.)" ;
+    dcterms:identifier "SRC-TACITUS-ANN" ;
+    dcterms:title "Annales" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/unit/days> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/day> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "days" .
+
+<https://github.com/andrm101/roman_economics/id/unit/mille_passus> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/mile_roman> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "mille_passus" .
+
+<https://github.com/andrm101/roman_economics/id/unit/ratio> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "ratio" .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-ITINERE-COPTOS-BERENIKE> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-ITINERE-COPTOS-BERENIKE" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-ITINERE-CB> ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/785986>,
+        <https://github.com/andrm101/roman_economics/id/place/786010> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Shortest path on Itiner-e network (all dates / segments dated within W2); all segments 'Conjectured' (Desert Networks itineraries)" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "route_length_coptos_berenike" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 4.084e+02 ;
+    rx:valueLow 4.024e+02 .
+
+<https://github.com/andrm101/roman_economics/id/claim/INT-HERM-01> a rx:Interpretation ;
+    dcterms:identifier "INT-HERM-01" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2000> ;
+    rx:claimText "Stated total is the valuation of the three-quarters of the cargo left after the quarter-tax (tetarte); whole-cargo valuation = total x 4/3" ;
+    rx:dependsOn <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985>,
+        <https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "DOC-PVINDOB-G40822 verso col. ii l. 29" ;
+    rx:page "217 n. 6" ;
+    rx:quantityConcept "interpretation" ;
+    rx:recordOrigin rxv:origin-scholarly_reconstruction ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-WILSON-2009> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary .
+
+<https://github.com/andrm101/roman_economics/id/place/727070> a rx:Place ;
+    rdfs:label "Alexandria" ;
+    rx:pleiades <https://pleiades.stoa.org/places/727070> .
+
+<https://github.com/andrm101/roman_economics/id/place/727131> a rx:Place ;
+    rdfs:label "Iuliopolis/Nikopolis",
+        "Nicopolis" ;
+    rx:pleiades <https://pleiades.stoa.org/places/727131> .
+
+<https://github.com/andrm101/roman_economics/id/rule/CR-WT-ROM-001> a rx:ConversionRule ;
+    dcterms:identifier "CR-WT-ROM-001" ;
+    rx:factor 3.228e-01 ;
+    rx:fromUnit <https://github.com/andrm101/roman_economics/id/unit/libra_roman> ;
+    rx:ruleStatus "scholarly_convention" ;
+    rx:scope "Roman pound, modern metrological estimate" ;
+    rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/kg> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2012> a rx:Source ;
+    dcterms:creator "Federico De Romanis" ;
+    dcterms:date "2012" ;
+    dcterms:identifier "SRC-DEROMANIS-2012" ;
+    dcterms:title "Playing Sudoku on the Verso of the 'Muziris Papyrus': Pepper, Malabathron and Tortoise Shell in the Cargo of the Hermapollon" ;
+    rx:accessStatus "machine_summary_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HARPER-2016-DB> a rx:Source ;
+    dcterms:creator "Kyle Harper; Elizabeth Knapp (contributor)" ;
+    dcterms:date "2016" ;
+    dcterms:identifier "SRC-HARPER-2016-DB" ;
+    dcterms:title "Database of Prices, Wages, and Rents for Roman Egypt from the First through Seventh Centuries AD (DARMC Scholarly Data Series 2016-5)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/claim/CTX-GC-JULIOPOLIS-COPTOS> a rx:ProjectDerivation ;
+    dcterms:identifier "CTX-GC-JULIOPOLIS-COPTOS" ;
+    prov:wasGeneratedBy <https://github.com/andrm101/roman_economics/id/activity/DRV-GC-JULIOPOLIS-COPTOS> ;
+    rx:aboutPlace <https://github.com/andrm101/roman_economics/id/place/727131>,
+        <https://github.com/andrm101/roman_economics/id/place/786010> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/PROJECT> ;
+    rx:claimText "Great-circle distance between Pleiades representative points; a strict lower bound for any route" ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:quantityConcept "great_circle_juliopolis_coptos" ;
+    rx:recordOrigin rxv:origin-project_derivation ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-PLEIADES-DATASETS> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/km> ;
+    rx:valueHigh 6.46e+02 ;
+    rx:valueLow 6.46e+02 .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-STRABO-GEOG> a rx:AncientDocument ;
+    rdfs:label "Strabo Geographica" ;
+    rx:citationKey "strabo:" .
+
+<https://github.com/andrm101/roman_economics/id/place/785986> a rx:Place ;
+    rdfs:label "Berenike" ;
+    rx:pleiades <https://pleiades.stoa.org/places/785986> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> a rx:Source ;
+    dcterms:creator "Alan Bowman; Andrew Wilson (eds.)" ;
+    dcterms:date "2009" ;
+    dcterms:identifier "SRC-BOWMAN-WILSON-2009" ;
+    dcterms:title "Quantifying the Roman Economy: Methods and Problems" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-ITINERE-2025> a rx:Source ;
+    dcterms:creator "P. de Soto; A. Pažout; T. Brughmans et al. (20 authors)" ;
+    dcterms:date "2025" ;
+    dcterms:identifier "SRC-ITINERE-2025" ;
+    dcterms:title "A High-Resolution Dataset of Roads of the Roman Empire: Itiner-e static version 2024 (v1.3)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceDerivedFrom <https://github.com/andrm101/roman_economics/id/source/SRC-REDON-MANIERE-2022> ;
+    rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-JOSEPHUS-BJ> a rx:Source ;
+    dcterms:creator "Josephus; B. Niese (ed.); W. Whiston (trans.)" ;
+    dcterms:identifier "SRC-JOSEPHUS-BJ" ;
+    dcterms:title "Bellum Iudaicum / The Wars of the Jews" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> a rx:Source ;
+    dcterms:creator "(Morelli, F. - attribution via De Romanis 2012; 2014; not verified on the title page)" ;
+    dcterms:date "2011" ;
+    dcterms:identifier "SRC-TYCHE-2011" ;
+    dcterms:title "Dal Mar Rosso ad Alessandria. Il verso (ma anche il recto) del 'papiro di Muziris' (SB XVIII 13167)" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/unit/fraction> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "fraction" .
+
+<https://github.com/andrm101/roman_economics/id/unit/libra_roman> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "libra_roman" .
+
+rxv:origin-archaeological_observation a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "archaeological_observation" .
+
+<https://github.com/andrm101/roman_economics/id/claim/RD-HERM-PEPPER-PART> a rx:Reading ;
+    dcterms:identifier "RD-HERM-PEPPER-PART" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> ;
+    rx:claimText "Preserved value; the corresponding weight (col. i ll. 20-21: 'Γτη, 'Γσιε) depends on whether a myriad is lost in the lacuna (Morelli 3,308/3,215 T vs De Romanis 13,308/12,862 T)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "verso col. i ll. 25-26" ;
+    rx:page "v col. i ll. 25-26" ;
+    rx:quantityConcept "pepper_value_first_part" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> ;
+    rx:valueHigh 4.630632e+06 ;
+    rx:valueLow 4.630632e+06 .
+
+<https://github.com/andrm101/roman_economics/id/unit/drachma_EG> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/drachma> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "drachma_EG" .
+
+<https://github.com/andrm101/roman_economics/id/unit/legions> a rx:Unit ;
+    skos:exactMatch <https://github.com/andrm101/roman_economics/id/unit/legion> ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "legions" .
+
+rxv:review-machine_summary_only a skos:Concept ;
+    skos:inScheme rx:ReviewStatus ;
+    skos:prefLabel "machine_summary_only" .
+
+<https://github.com/andrm101/roman_economics/id/claim/RD-HERM-L27-THREE-PARTS> a rx:Reading ;
+    dcterms:identifier "RD-HERM-L27-THREE-PARTS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> ;
+    rx:claimText "Text: 'ἐπὶ τὸ αὐτὸ τιμῆς μερῶν γ τῶν ἐκπεπλευκότων ἐν τῷ Ἑρμαπόλλωνι πλοίῳ φορτίων' = total value of THREE parts of the cargoes shipped on the Hermapollon. DDbDP encodes the numeral γ with value='6' (encoding issue, K12)." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "verso col. ii ll. 27-29" ;
+    rx:page "v col. ii l. 27" ;
+    rx:quantityConcept "scope_of_stated_total" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-HS1985> a rx:Reading ;
+    dcterms:identifier "RD-HERM-TOTAL-HS1985" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-HARRAUER-SIJPESTEIJN-1985> ;
+    rx:claimText "Editio princeps reading as reported by Nappo; the editio princeps itself was not inspected. Wilson 2009: 217 n. 6 (via Rathbone 2000: 48) uses HS 6,926,852 = same reading. Superseded by the Tyche 26 (2011) principal edition (DDbDP)." ;
+    rx:epistemicStatus rxv:epistemic-superseded ;
+    rx:locus "verso col. ii l. 29" ;
+    rx:page "88 n. 332" ;
+    rx:quantityConcept "stated_total_valuation_timai" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> ;
+    rx:reviewStatus rxv:review-inspected_in_secondary ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> ;
+    rx:valueHigh 6.926852e+06 ;
+    rx:valueLow 6.926852e+06 .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PLINY-NH-MAYHOFF> a rx:Source ;
+    dcterms:creator "Pliny the Elder; K. Mayhoff (ed.)" ;
+    dcterms:identifier "SRC-PLINY-NH-MAYHOFF" ;
+    dcterms:title "Naturalis Historia (Teubner text with apparatus)" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-PONTING-2009> a rx:Source ;
+    dcterms:creator "Matthew Ponting" ;
+    dcterms:date "2009" ;
+    dcterms:identifier "SRC-PONTING-2009" ;
+    dcterms:title "Roman Silver Coinage: Mints, Metallurgy, and Production" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> ;
+    rx:sourceKind "chapter" .
+
+rxv:param-measured_input a skos:Concept ;
+    skos:inScheme rx:ParameterStatus ;
+    skos:prefLabel "measured_input" .
+
+<https://github.com/andrm101/roman_economics/id/place/786010> a rx:Place ;
+    rdfs:label "Coptos" ;
+    rx:pleiades <https://pleiades.stoa.org/places/786010> .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> a rx:Source ;
+    dcterms:creator "Duke Databank of Documentary Papyri" ;
+    dcterms:identifier "SRC-DDBDP-TM27666" ;
+    dcterms:title "SB XVIII 13167 (P.Vindob. G 40822): DDbDP EpiDoc text" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "file_copy" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-STRABO-GEOG> a rx:Source ;
+    dcterms:creator "Strabo; A. Meineke (ed.); H. C. Hamilton & W. Falconer (trans.)" ;
+    dcterms:date "1877" ;
+    dcterms:identifier "SRC-STRABO-GEOG" ;
+    dcterms:title "Strabonis Geographica (Greek) with Hamilton-Falconer English translation" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "edition" .
+
+<https://github.com/andrm101/roman_economics/id/claim/RD-HERM-COLI-QUARTERS> a rx:Reading ;
+    dcterms:identifier "RD-HERM-COLI-QUARTERS" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> ;
+    rx:claimText "Col. i lists whole quantities and the quarter removed: nard 20 boxes (context supplied); ivory 105 T 13 min whole, quarter 26 T 18 1/4, taken 26 T 30; schidai 17 T 33 whole, quarter 4 T 23 1/4, taken 4 T 46. Reproduced exactly by romeco.m0.pvindob_arithmetic." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "verso col. i ll. 4-13" ;
+    rx:page "v col. i ll. 4-13" ;
+    rx:quantityConcept "tetarte_shares_listed" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected .
+
+<https://github.com/andrm101/roman_economics/id/claim/RD-HERM-TOTAL-MORELLI> a rx:Reading ;
+    dcterms:identifier "RD-HERM-TOTAL-MORELLI" ;
+    rx:aboutDocument <https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> ;
+    rx:attributedTo <https://github.com/andrm101/roman_economics/id/source/SRC-TYCHE-2011> ;
+    rx:claimText "Reading of the current principal edition (Tyche 26, 2011) as encoded in DDbDP TM 27666 ('Αρνα / 'Εωνβ). Followed by De Romanis 2012: 77. Also equals the exact sum of De Romanis's six item values." ;
+    rx:epistemicStatus rxv:epistemic-accepted_working ;
+    rx:locus "verso col. ii l. 29" ;
+    rx:page "v col. ii l. 29" ;
+    rx:quantityConcept "stated_total_valuation_timai" ;
+    rx:recordOrigin rxv:origin-transcribed_reading ;
+    rx:reportedIn <https://github.com/andrm101/roman_economics/id/source/SRC-DDBDP-TM27666> ;
+    rx:reviewStatus rxv:review-inspected ;
+    rx:unit <https://github.com/andrm101/roman_economics/id/unit/drachma_EG> ;
+    rx:valueHigh 6.911852e+06 ;
+    rx:valueLow 6.911852e+06 .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-PLINY-NH> a rx:AncientDocument ;
+    rdfs:label "Pliny the Elder Naturalis Historia" ;
+    rx:citationKey "plin.nh:" .
+
+<https://github.com/andrm101/roman_economics/id/unit/km> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "km" .
+
+rxv:param-exploratory a skos:Concept ;
+    skos:inScheme rx:ParameterStatus ;
+    skos:prefLabel "exploratory" .
+
+<https://github.com/andrm101/roman_economics/id/unit/categorical> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "categorical" .
+
+rxv:epistemic-disputed a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "disputed" .
+
+<https://github.com/andrm101/roman_economics/id/unit/fraction_silver> a rx:Unit ;
+    skos:inScheme rx:UnitScheme ;
+    skos:prefLabel "fraction_silver" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-HITCHNER-2009> a rx:Source ;
+    dcterms:creator "Bruce Hitchner" ;
+    dcterms:date "2009" ;
+    dcterms:identifier "SRC-HITCHNER-2009" ;
+    dcterms:title "Coinage and Metal Supply" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> ;
+    rx:sourceKind "chapter" .
+
+rxv:origin-transcribed_reading a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "transcribed_reading" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-ADAMS-2007> a rx:Source ;
+    dcterms:creator "Colin Adams" ;
+    dcterms:date "2007" ;
+    dcterms:identifier "SRC-ADAMS-2007" ;
+    dcterms:title "Land Transport in Roman Egypt: A Study of Economics and Administration in a Roman Province" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "work" .
+
+<https://github.com/andrm101/roman_economics/id/doc/DOC-PVINDOB-G40822> a rx:AncientDocument ;
+    rdfs:label "P.Vindob. G 40822" ;
+    rx:citationKey "pvindobg:40822",
+        "sb:18:13167" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-RATHBONE-2009> a rx:Source ;
+    dcterms:creator "Dominic Rathbone" ;
+    dcterms:date "2009" ;
+    dcterms:identifier "SRC-RATHBONE-2009" ;
+    dcterms:title "Earnings and Costs: Living Standards and the Roman Economy" ;
+    rx:accessStatus "inspected_partial" ;
+    rx:partOf <https://github.com/andrm101/roman_economics/id/source/SRC-BOWMAN-WILSON-2009> ;
+    rx:sourceKind "chapter" .
+
+rxv:param-external_estimate a skos:Concept ;
+    skos:inScheme rx:ParameterStatus ;
+    skos:prefLabel "external_estimate" .
+
+rxv:origin-literary_statement a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "literary_statement" .
+
+rxv:review-inspected_in_secondary a skos:Concept ;
+    skos:inScheme rx:ReviewStatus ;
+    skos:prefLabel "inspected_in_secondary" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-NAPPO-2018> a rx:Source ;
+    dcterms:creator "Dario Nappo" ;
+    dcterms:date "2018" ;
+    dcterms:identifier "SRC-NAPPO-2018" ;
+    dcterms:title "I porti romani nel Mar Rosso da Augusto al Tardoantico" ;
+    rx:accessStatus "inspected_full_text" ;
+    rx:sourceKind "work" .
+
+rxv:origin-scholarly_reconstruction a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "scholarly_reconstruction" .
+
+<https://github.com/andrm101/roman_economics/id/source/PROJECT> a rx:Source ;
+    dcterms:title "romeco project derivation (code in this repository)" ;
+    rx:accessStatus "inspected_full_text" .
+
+rxv:origin-project_derivation a skos:Concept ;
+    skos:inScheme rx:RecordOrigin ;
+    skos:prefLabel "project_derivation" .
+
+rxv:epistemic-accepted_working a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "accepted_working" .
+
+rxv:epistemic-uncertain a skos:Concept ;
+    skos:inScheme rx:EpistemicStatus ;
+    skos:prefLabel "uncertain" .
+
+rxv:review-inspected a skos:Concept ;
+    skos:inScheme rx:ReviewStatus ;
+    skos:prefLabel "inspected" .
+

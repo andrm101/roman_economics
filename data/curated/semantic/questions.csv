@@ -1,0 +1,9 @@
+question_id,text,positions,selected,selected_by,status,contradiction_id,note
+Q-HERM-TOTAL,"Which reading of the Hermapollon total (P.Vindob. G 40822 v col. ii l. 29)?",RD-HERM-TOTAL-MORELLI; RD-HERM-TOTAL-HS1985,RD-HERM-TOTAL-MORELLI,D008,resolved_working,K1,principal edition (Tyche 26 2011) vs editio princeps
+Q-HERM-SCOPE,"What does the stated total measure: three-quarter residual or whole taxable base?",INT-HERM-01; INT-HERM-02; INT-HERM-03,INT-HERM-01,D008; D009,resolved_working,K2,INT-HERM-03 rejected (D009); INT-HERM-02 compatible variant kept
+Q-HERM-PEPPER,"At what price was the pepper valued (6 or 24 dr per mina)?",INT-HERM-04; INT-HERM-05,,,open,,mass scenario (D011): both kept as scenarios
+Q-TET-LEVY,"Was the 25% duty levied once (Alexandria) or twice (Red Sea port and Alexandria)?",INT-TET-01; INT-TET-02,,,open,K10,tau baseline 0.25 with double_tetarte scenario; no selecting decision
+Q-LEG-III-CYR,"Where was legio III Cyrenaica in 100-200 CE?",MIL-COPTOS-LEGIO-III; MIL-EG-LEG-III-CYR-ARABIA,MIL-EG-LEG-III-CYR-ARABIA,D018,resolved_working,K16,Nappo p.55 disputed by Nappo pp.80-81 n.305 and Dio
+Q-ROUTE-NILE,"What is the Juliopolis-Coptos river distance?",ANC-PLINY-NILE; CTX-GC-JULIOPOLIS-COPTOS,CTX-GC-JULIOPOLIS-COPTOS,D017,resolved_working,K17,Pliny 309 mp withdrawn; great circle used as lower bound only
+Q-DESERT-KM,"What is the Coptos-Berenike road length?",ANC-PLINY-DESERT; CTX-ITINERE-COPTOS-BERENIKE,,,open,K18,both kept as bounds [380 409]
+Q-BERENIKE-SUPPLY,"How many camel loads per month did Berenike's supply need?",ANC-BERENIKE-CAMELS; ANC-RUFFING-BERENIKE-LOADS,,,open,K21,neither derivation inspected

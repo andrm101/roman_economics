@@ -1,0 +1,13 @@
+derivation_id,kind,generated,code,used_claims,used_params,used_rules,used_places,used_sources,note
+DRV-A_H,derivation,A_H,romeco.m0.hermapollon.derive; ValuationScenario.in_sestertii,RD-HERM-TOTAL-MORELLI; RD-HERM-L27-THREE-PARTS; INT-HERM-01,tau,CR-MON-EG-001; CR-MON-EG-003,,,gross = stated/(1-tau); drachma -> sestertius nominal 1:1
+DRV-MERCHANT-TALENT,derivation,merchant_talent_litrai,romeco.m0.pvindob_arithmetic.merchant_talent_interval,RD-HERM-COLI-QUARTERS,,CR-WT-EG-001,,,talent pinned by the document's own truncations
+DRV-CAMEL-KG,derivation,camel_capacity_kg,docs/research_design.md (hand calculation recorded in parameters.yaml),ANC-CAMEL-LOAD-ADAMS; ANC-CAMEL-LOAD-EDICT,,CR-WT-MOD-001; CR-WT-ROM-001,,,400 lb x 0.45359237 = 181 kg; 600 Roman lb x 0.3228 = 193.7 kg
+DRV-DESERT-KM,derivation,route_desert_km,config/parameters.yaml baseline (257 x 1.48),ANC-PLINY-DESERT,,CR-LEN-ROM-001,,,
+DRV-GC-JULIOPOLIS-COPTOS,derivation,CTX-GC-JULIOPOLIS-COPTOS,romeco.context.build_manual (haversine on Pleiades points),,,,727131; 786010,SRC-PLEIADES-DATASETS,
+DRV-NILE-LB,derivation,route_nile_km,config/parameters.yaml lower bound,CTX-GC-JULIOPOLIS-COPTOS,,,,,lower bound only
+DRV-ITINERE-CB,derivation,CTX-ITINERE-COPTOS-BERENIKE,romeco.context.manual.route_km,,,,786010; 785986,SRC-ITINERE-2025,
+DRV-ORBIS-CB,derivation,CTX-ORBIS-COPTOS-BERENIKE,romeco.context.build_orbis_pilot_edges,,,,786010; 785986,SRC-ORBIS-V2,
+DRV-HARPER-BREAK,derivation,CTX-HARPER-BREAK,romeco.context.manual.harper_break_analysis,,,,,SRC-HARPER-2016-DB,E002
+E000_m0_anchor_consistency,experiment,,romeco.m0.fiscal,,A_H; tau; N; lam; kappa; O; c; p,,,,fiscal bounds
+E001_cargo_mass_readings,experiment,,romeco.cli cmd_mass,,pepper_price_dr_per_mina; merchant_talent_litrai,,,,
+E003_desert_throughput,experiment,,romeco.m0.throughput,,A_H; camel_capacity_kg; desert_days_coptos_berenike; desert_days_coptos_myos_hormos; return_window_days; camel_turnaround_days; desert_freight_dr_per_camel_trip; camel_fodder_art_per_year; pepper_price_dr_per_mina; merchant_talent_litrai,CR-WT-ROM-001,,,

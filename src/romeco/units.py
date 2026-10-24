@@ -24,7 +24,7 @@ class ConversionRule:
     scope: str
     source_id: str
     locus: str
-    status: str  # documented_in_source | scholarly_convention | project_assumption
+    status: str  # documented_in_source | scholarly_convention | project_assumption | modern_definition (exact by statute)
     note: str = ""
 
 
@@ -99,6 +99,13 @@ RULES: dict[str, ConversionRule] = {
             source_id="PROJECT", locus="-",
             status="project_assumption",
             note="c. 1.48 km; used only for order-of-magnitude route lengths.",
+        ),
+        ConversionRule(
+            "CR-WT-MOD-001", "lb_avoirdupois", "kg", Fraction(45359237, 100000000),
+            scope="modern international avoirdupois pound (to convert modern authors' 'lbs')",
+            source_id="PROJECT", locus="-",
+            status="modern_definition",
+            note="Exact by definition (international yard and pound, 1959). Used for Adams 2007: 80 '400 lbs'.",
         ),
     ]
 }
