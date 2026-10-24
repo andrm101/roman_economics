@@ -1,0 +1,97 @@
+{
+  "n_lambda_H1a": 120,
+  "whole_mass_t_by_reading": {
+    "DeRomanis_6": [
+      608.0,
+      624.0
+    ],
+    "Morelli_24": [
+      213.5,
+      219.1
+    ]
+  },
+  "load_ratio_DeRomanis_over_Morelli": 2.847,
+  "loads_per_season_range": {
+    "DeRomanis_6": [
+      364788,
+      499183
+    ],
+    "Morelli_24": [
+      128116,
+      175317
+    ]
+  },
+  "camels_required_range": {
+    "DeRomanis_6|W36": [
+      101330,
+      443718
+    ],
+    "DeRomanis_6|W120": [
+      30399,
+      133116
+    ],
+    "DeRomanis_6|W365": [
+      9994,
+      43764
+    ],
+    "Morelli_24|W36": [
+      35588,
+      155837
+    ],
+    "Morelli_24|W120": [
+      10676,
+      46751
+    ],
+    "Morelli_24|W365": [
+      3510,
+      15370
+    ]
+  },
+  "x_Ruffing_range": {
+    "DeRomanis_6|W36": [
+      152.0,
+      208.0
+    ],
+    "DeRomanis_6|W120": [
+      45.6,
+      62.4
+    ],
+    "DeRomanis_6|W365": [
+      15.0,
+      20.5
+    ],
+    "Morelli_24|W36": [
+      53.4,
+      73.0
+    ],
+    "Morelli_24|W120": [
+      16.0,
+      21.9
+    ],
+    "Morelli_24|W365": [
+      5.3,
+      7.2
+    ]
+  },
+  "freight_share_min_range": [
+    0.0052,
+    0.0203
+  ],
+  "window_basis": {
+    "36": "Pliny NH 6.106 departure spread (Tybi 1 - Mechir 6) [calculated]",
+    "120": "until outbound preparation [assumption]",
+    "365": "full port storage [upper bound]"
+  },
+  "comparators": {
+    "Berenike_supply_Nappo_low": 200,
+    "Berenike_supply_Nappo_high": 500,
+    "Berenike_supply_Ruffing": 2000,
+    "MonsClaudianus_wheat": 150
+  },
+  "verdict": "descriptive only: pre-registered capacity criterion not evaluable (D020); neither H1a nor H1b rejected",
+  "flags": [
+    "Morelli reading keeps De Romanis's malabathron reconstruction (cross-reading assumption)",
+    "masses exclude nard and unweighed goods (lower bounds)",
+    "mass assumed to scale with lambda (A1)"
+  ]
+}

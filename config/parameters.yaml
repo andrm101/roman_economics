@@ -116,13 +116,13 @@ parameters:
     evidence: [ANC-CAMEL-LOAD-CUSTOMS, ANC-CAMEL-LOAD-ADAMS, ANC-CAMEL-LOAD-EDICT]
     note: "Modal Fayum customs load 6 artabas (~400 lb); Edict 17.4 600 Roman lb = 193.7 kg (CR-WT-ROM-001; AD 301, transfer assumption). Bounds = modern camel-corps limits 150-200 kg (Adams n.51). Fayum loads are for shorter routes; desert loads may be lower."
   route_nile_km:
-    definition: Juliopolis-Coptos river distance
+    definition: Juliopolis-Coptos river distance (Pliny's Iuliopolis lies 2 mp from Alexandria)
     unit: km
     baseline: null          # Pliny's 309 mp (457 km) withdrawn: shorter than the great circle (D017, K17)
     bounds: [646, null]
     status: exploratory
     evidence: [ANC-PLINY-NILE, CTX-GC-JULIOPOLIS-COPTOS]
-    note: "Lower bound = great-circle distance; the river route is longer. A sourced Nile distance is still needed."
+    note: "Lower bound = great-circle distance; the river route is longer. Mayhoff's text reads CCCVIIII (var. CCCIII): the error is in the transmitted text, not in Nappo's quotation (K17). A sourced Nile distance is still needed."
   route_desert_km:
     definition: Coptos-Berenike road distance
     unit: km
@@ -251,3 +251,36 @@ parameters:
     status: external_estimate
     evidence: [ANC-MONS-CLAUD-SUPPLY, ANC-CAMEL-LOAD-CUSTOMS]
     note: "Adams 209: c. 900 persons x 1 artaba/month / 6 artabas per load; Hadrianic minimum 730 personnel gives ~122 [calculated]. Wheat only (wine, oil, fodder excluded); different road (Kainopolis)."
+  # ---- session 6: WP2 / E003 inputs ----
+  desert_days_coptos_myos_hormos:
+    definition: Caravan transit time Coptos-Myos Hormos
+    unit: days
+    baseline: 6
+    bounds: [5, 7]
+    status: external_estimate
+    evidence: [ANC-STRABO-MYOS-DAYS, ANC-COPTOS-MYOS-KM]
+    note: "Strabo 17.1.45: 6-7 days; Adams 45: 5 days at ~30 km/day for 174 km."
+  return_window_days:
+    definition: Period over which a season's inbound cargo must cross the desert
+    unit: days
+    baseline: null
+    bounds: [36, 365]
+    scenarios: {arrival_spread: 36, until_outbound: 120, full_storage: 365}
+    status: exploratory
+    evidence: [ANC-PLINY-RETURN-WINDOW, ANC-PLINY-DEPART-EGYPT]
+    note: "36 = Pliny's spread of departure dates from India (Tybi 1 - Mechir 6) [calculated]; 120 [assumption]; 365 = goods stored at the port and moved year-round. Dominant uncertainty in E003 (factor ~10)."
+  camel_turnaround_days:
+    definition: Days at the termini per camel cycle (loading, rest)
+    unit: days
+    baseline: null
+    bounds: [0, 4]
+    status: exploratory
+    evidence: []
+  camel_fodder_art_per_year:
+    definition: Barley consumed per working camel per year
+    unit: artaba_per_year
+    baseline: 36
+    bounds: [36, 36]
+    status: external_estimate
+    evidence: [ANC-CAMEL-FODDER]
+    note: "Adams 210: a stated minimum for stall-fed working camels; grazing could reduce it (not quantified)."

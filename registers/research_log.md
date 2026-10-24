@@ -47,3 +47,15 @@
 - **Adams 2007 inspected (PDF supplied).** Camel load 6 artabas ≈ 400 lb (pp. 79–80) → camel_capacity_kg 181 [150, 200], now evidence-backed. Hire 4 dr/day (BGU III 921) and Western Desert freight 7.5 dr/talent (BGU III 697) give ≥45–48 dr per camel for Coptos–Berenike (p. 231; lower end). Supply confounders: Berenike c. 2,000 loads/month (Ruffing via Adams), Mons Claudianus c. 150 wheat loads/month (p. 209). Adams uses the superseded HS 7 m cargo value (K19).
 - **Itiner-e paper inspected.** Eastern Desert roads are Desert Networks least-cost paths calibrated on modern caravan itineraries: the 402–408 km is a model output, not a survey length. Haversine route length matches the dataset's Shape_Leng (402.4 vs 402.1 km). The supplied gpkg declares EPSG:3395 (the paper describes EPSG:4326 for the main release).
 - **K12.** Still present upstream (idp.data 41a1c87). Report drafted in docs/upstream_reports/; GitHub API access was refused in-session, so the researcher must file it. Proceeding with overrides (D019).
+
+## 2026-10-24 — Session 6 (WP2: desert throughput, E003)
+
+- Pliny NH 6.101–106 read in Mayhoff's text (Perseus TEI) with apparatus. Nile leg CCCVIIII, var. CCCIII: K17 is a transmitted-text problem. Desert stations and 257 mp (var. 258/254). Departure from India Tybi 1 – Mechir 6 (36-day spread). Pliny anchors upgraded from inspected_in_secondary to inspected.
+- No sourced camel stock, water capacity or traffic count exists in the corpus (Adams, Nappo, Pliny searched). The WP2 criterion is not evaluable (D020). E003 was re-registered before running as descriptive partial identification.
+- E003 results [calculated]:
+  - H1a (N*lambda = 120) needs 128k–499k loads per season, and 3.5k–444k camels in continuous service depending on window, terminal and reading.
+  - Monthly traffic is 5–208× Ruffing's Berenike supply estimate.
+  - The desert freight lower bound is 0.5–2% of cargo value: desert cost does not bind for high-value cargo, but physical scale might.
+  - All four pre-stated expectations held.
+- Correction D021: Morelli whole cargo 213–219 t (not 195 t).
+- K21 logged (Berenike supply 200–500 vs 2,000 loads/month).

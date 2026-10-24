@@ -162,13 +162,45 @@ def cmd_context() -> None:
     build_all(verbose=True)
 
 
+def cmd_throughput() -> dict:
+    """E003: desert throughput required by H1a (descriptive; D020)."""
+    import json
+    from romeco.m0 import throughput as T
+    out = ROOT / "experiments" / "E003_desert_throughput" / "outputs"
+    out.mkdir(parents=True, exist_ok=True)
+    g = T.grid()
+    s = T.summary(g)
+    fr = pd.concat([T.lambda_at_supply_scale(g, c) for c in ("Berenike_supply_Nappo_high", "Berenike_supply_Ruffing")])
+    g.to_csv(out / "grid.csv", index=False)
+    s.to_csv(out / "summary.csv", index=False)
+    fr.to_csv(out / "frontier.csv", index=False)
+    mass = {rd: [round(T.whole_mass_t(rd, tl), 1) for tl in T.GRID["talent_litrai"]] for rd in T.GRID["reading"]}
+    res = dict(
+        n_lambda_H1a=T.H1A_N_LAMBDA, whole_mass_t_by_reading=mass,
+        load_ratio_DeRomanis_over_Morelli=round(T.whole_mass_t("DeRomanis_6") / T.whole_mass_t("Morelli_24"), 3),
+        loads_per_season_range={rd: [round(g[g.reading == rd].loads_per_season.min()), round(g[g.reading == rd].loads_per_season.max())] for rd in T.GRID["reading"]},
+        camels_required_range={f"{rd}|W{w}": [round(d.camels_required.min()), round(d.camels_required.max())]
+                               for (rd, w), d in g.groupby(["reading", "window_days"])},
+        x_Ruffing_range={f"{rd}|W{w}": [round(d.x_Berenike_supply_Ruffing.min(), 1), round(d.x_Berenike_supply_Ruffing.max(), 1)]
+                         for (rd, w), d in g.groupby(["reading", "window_days"])},
+        freight_share_min_range=[round(g.freight_share_min.min(), 4), round(g.freight_share_min.max(), 4)],
+        window_basis=T.WINDOW_BASIS, comparators=T.COMPARATORS,
+        verdict="descriptive only: pre-registered capacity criterion not evaluable (D020); neither H1a nor H1b rejected",
+        flags=["Morelli reading keeps De Romanis's malabathron reconstruction (cross-reading assumption)",
+               "masses exclude nard and unweighed goods (lower bounds)", "mass assumed to scale with lambda (A1)"],
+    )
+    (out / "summary.json").write_text(json.dumps(res, indent=2))
+    print(json.dumps(res, indent=2))
+    return res
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput"])
     args = ap.parse_args(argv)
     {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
      "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass,
-     "fetch": cmd_fetch, "context": cmd_context}[args.command]()
+     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput}[args.command]()
 
 
 if __name__ == "__main__":

@@ -18,7 +18,7 @@ This narrows the provisional first question (information/credit frictions vs. a 
 - Choosing between the two transcribed readings of the total moves gross value by 0.22 %. Choosing between interpretations (residual three-quarters vs. whole taxable base) moves it by exactly 25 % **[calculated]**. Interpretation dominates reading uncertainty.
 - Combining Strabo's 120 ships, the Hermapollon and Pliny's ≥ HS 50 million outflow bounds annual quarter-tax receipts only to an envelope of **c. HS 14 million to HS 416 million** (factor ≈ 29) across the registered parameter bounds **[calculated]**. The naive "120 Hermapollons" product, HS 277 million, is one point inside it.
 - Structural result: the **lower** bound equals τ·κ_min·M_min·O. It is pinned by Pliny's outflow and the cost structure, and the Hermapollon cancels out. The Hermapollon enters only the **upper** bound, through an unsupported assumption about how typical it was (λ) **[calculated]**.
-- A physical test can discriminate. Under De Romanis's reading the Hermapollon's weighed cargo is c. 468 t as valuated, c. 624 t whole, or c. 3,100 camel loads at an exploratory 200 kg per load; under Morelli's reading it is c. 195 t (c. 960 loads) — see §9 and D011. "120 Hermapollon-size cargoes per season" implies c. 374,000 desert camel loads per season. A modern estimate of Berenike's own supply traffic is 200–500 loads per month (Nappo 2018: 58–59) **[calculated / sourced / assumption]**. Desert throughput is therefore the most promising discriminating evidence (WP2).
+- A physical test can discriminate. Under De Romanis's reading the Hermapollon's weighed cargo is c. 468 t as valuated, c. 624 t whole, or c. 3,100 camel loads at an exploratory 200 kg per load; under Morelli's reading it is c. 213–219 t (c. 1,100 loads at 200 kg; corrected from 'c. 195 t', D021) — see §9 and D011. "120 Hermapollon-size cargoes per season" implies c. 374,000 desert camel loads per season. A modern estimate of Berenike's own supply traffic is 200–500 loads per month (Nappo 2018: 58–59) **[calculated / sourced / assumption]**. Desert throughput is therefore the most promising discriminating evidence (WP2).
 
 ---
 
@@ -53,7 +53,7 @@ The following are explicitly **not** contributions: choosing a new region, build
 - Residual-vs-whole-base interpretation changes gross value by exactly 25 %.
 - The drachma↔HS step is a nominal 1:1 convention (CR-MON-EG-003), so it cannot create a factor of 3.
 - **Residual value ÷ quarter-tax = 0.75/0.25 = 3 exactly** (6,926,852 / 2,308,951 = 3.000). A synthesis that compared the residual cargo value with the state's take as if both were "cargo valuations" would show a spurious threefold disagreement. This is a hypothesis about the missing document, not a finding.
-- **Stronger candidate (WP1):** the two published readings of the pepper entry (Morelli 24 dr/mina vs De Romanis 6 dr/mina plus a lost myriad) leave cargo *value* unchanged but change whole weighed cargo *mass* by ≈3.2× (c. 195 t vs c. 625 t) **[calculated; malabathron term approximate]**. A synthesis reporting this as a 'valuation' disagreement would misstate a mass disagreement.
+- **Stronger candidate (WP1):** the two published readings of the pepper entry (Morelli 24 dr/mina vs De Romanis 6 dr/mina plus a lost myriad) leave cargo *value* unchanged but change whole weighed cargo *mass* by ≈2.85× (c. 219 t vs c. 624 t; D021) **[calculated; malabathron term approximate]**. A synthesis reporting this as a 'valuation' disagreement would misstate a mass disagreement.
 
 ### 2.2 Evidence inventory for the pilot (inspected vs. cited)
 
@@ -300,7 +300,7 @@ Next:
 
 - The valuation procedure, reproduced exactly for ivory and schidai: remove the surplus, convert at 95 litrai per talent, truncate to whole litrai (7,478; 1,214), re-express in the merchants' talent, truncate to whole minae (76 T 41; 12 T 27), price (100 and 70 dr/mina), add the surplus. Every intermediate figure in v ii 4–26 matches.
 - The merchants' talent (lost in the lacuna at v ii 9) is pinned by the two truncations to **(97.497, 97.510] litrai**, which includes the 97.5 used by De Romanis.
-- Pepper: the value 771 T 4,632 dr (v i 25–26) is preserved. At Morelli's 24 dr/mina it gives exactly 3,215 T 43 min, the numeral at v i 21; at De Romanis's 6 dr/mina (with a myriad lost in the lacuna) it gives four times as much. E001: whole pepper c. **135 t vs c. 540 t**; whole weighed cargo c. 195 t vs c. 625 t **[calculated; malabathron term approximate]**.
+- Pepper: the value 771 T 4,632 dr (v i 25–26) is preserved. At Morelli's 24 dr/mina it gives exactly 3,215 T 43 min, the numeral at v i 21; at De Romanis's 6 dr/mina (with a myriad lost in the lacuna) it gives four times as much. E001: whole pepper c. **135 t vs c. 540 t**; whole weighed cargo c. 213–219 t vs c. 608–624 t **[calculated; D021 correction; malabathron reconstruction kept across readings]**.
 
 **Consequences.** Fiscal bounds (E000) are unaffected, because they depend on value, which both readings share. The desert-throughput test (WP2) must be run under both readings (D011). Two DDbDP encoding issues were found and are overridden in code (K12). Reporting them upstream requires your papyri.info account and is your call.
 
@@ -315,3 +315,43 @@ Legions, cities, roads and prices/inflation are now tracked as conditioning vari
 - W1 (from the 70s) and the Hermapollon fall in the same stable Egyptian price band. Nominal comparisons between them need no deflator.
 - Garrison and quarry supply traffic is the main confounder for the WP2 desert-throughput test. The praesidia network is mapped (58 installations active in 100–200 CE per Pleiades).
 - ORBIS v2 road "time" is a constant-speed transform of length and is not evidence of travel time (D013).
+
+
+---
+
+## 11. WP2 result: desert throughput (E003, 2026-10-24)
+
+**Status.** Executed as descriptive partial identification. The pre-registered rejection criterion is **not evaluable** (D020): no inspected source gives the Eastern Desert's camel stock, hydreuma water capacity or a traffic count. Manifest: `experiments/E003_desert_throughput/manifest.yaml`, written before running.
+
+**Model [calculated].** For N·λ Hermapollon-equivalents, with M the whole weighed cargo:
+
+- loads per season: S = N·λ·M / load
+- camels in continuous service: C = S·RT / W
+- RT = 2 × one-way days + turnaround
+- W = the window over which a season's inbound cargo must cross the desert
+
+The grid has 288 cells: 2 readings × 2 weight talents × 3 loads (150/181/200 kg) × 2 terminals × 2 transit times × 2 turnarounds × 3 windows (36 d from Pliny's departure spread; 120 d assumed; 365 d with full port storage).
+
+| Reading | Whole cargo (t) | Loads/ship | H1a loads/season (N·λ = 120) | Camels (W = 36 / 120 / 365 d) | × Ruffing's 2,000 loads/month |
+|---|---|---|---|---|---|
+| De Romanis (6 dr/mina) | 608–624 | 3,040–4,160 | 365k–499k | 101k–444k / 30k–133k / 10k–44k | 152–208 / 46–62 / 15–21 |
+| Morelli (24 dr/mina) | 213–219 | 1,070–1,460 | 128k–175k | 36k–156k / 11k–47k / 3.5k–15k | 53–73 / 16–22 / 5.3–7.2 |
+
+**Readings of the result.**
+
+1. **The two hypotheses imply desert traffic one to two orders of magnitude apart.** Traffic at the highest sourced scale of Berenike's supply (2,000 loads/month) moves only 0.6–23 Hermapollon-equivalents per season. So any sourced count of desert traffic or camels would discriminate H1a from H1b. This is the most valuable missing evidence.
+2. **Under H1a the desert is cheap but large.** Freight at Adams's lower bound is 0.5–2% of cargo value. The constraint is physical scale (camels, drivers, water, fodder), not cost.
+3. **The return window dominates uncertainty (×10).** Whether goods were stored at the ports and moved year-round matters more than the pepper reading (×2.85) or the camel load (×1.33).
+4. **Myos Hormos halves the camel requirement relative to Berenike**, but not the monthly traffic. Strabo's 120 ships are reported for Myos Hormos.
+
+**Limitations.**
+- Mass is assumed to scale with value (A1). Smaller ventures carrying bulkier goods would need more loads.
+- Outbound traffic is assumed to ride on the return legs (A2).
+- Masses exclude nard and unweighed goods.
+- The Morelli case keeps De Romanis's malabathron reconstruction.
+- The comparators are scholarly estimates whose derivations are not inspected, and they disagree by 4–10× (K21).
+
+**Evidence that would make the criterion evaluable (priority order).**
+1. Counts of camels or loads passing Coptos or the desert praesidia per month, e.g. the Coptos tariff (OGIS 674 = I. Portes 67) with any associated receipts, or O. Krokodilô / Myos Hormos road ostraca.
+2. Hydreuma water capacities from the excavation reports (Sidebotham; Cuvigny, *La route de Myos Hormos*).
+3. Camel registration totals for Upper Egypt.

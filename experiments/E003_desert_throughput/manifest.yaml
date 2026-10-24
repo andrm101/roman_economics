@@ -1,0 +1,43 @@
+id: E003_desert_throughput
+date_registered: 2026-10-24          # written before any E003 computation was run
+question: RQ1, H1a vs H1b. What desert traffic and camel stock would a Hermapollon-typical fleet require, and how does it compare with sourced desert-traffic scales?
+deviation_from_preregistration: >
+  The registered criterion (reject H1a if sourced desert capacity over the return window < required loads)
+  is NOT evaluable: no inspected source gives a camel stock, water capacity of the hydreumata, or a traffic count
+  for the Eastern Desert (Adams 2007, Nappo 2018 and Pliny NH 6.102-106 checked). E003 therefore reports the required
+  scale (partial identification) and its ratio to sourced scale anchors. It cannot reject either hypothesis. Logged as D020.
+model: |
+  M  = whole weighed cargo of one Hermapollon-equivalent (t), by pepper reading (D011) and weight talent
+  L  = M / camel_load                                  loads per ship
+  S  = N * lambda * L                                  loads per season (A1: cargo mass scales with value, lambda)
+  RT = 2 * one_way_days + turnaround_days              camel cycle (return leg carries outbound/supply goods: A2)
+  C  = S * RT / W                                      camels in continuous service during window W
+  m  = S * 30 / W                                      loads per 30 days during W
+  freight_share = L * freight_per_load / A_H           lower bound on desert freight as a share of whole-cargo value
+  capacity_per_1000 = 1000 * W / (RT * L)              Hermapollon-equivalents per season per 1,000 camels
+grid:
+  reading: [DeRomanis_6, Morelli_24]
+  talent_litrai: [95, 97.5]
+  camel_load_kg: [150, 181, 200]
+  terminal: {Berenike: [12, 14], MyosHormos: [5, 7]}   # one-way days
+  turnaround_days: [0, 4]                              # exploratory
+  window_days: [36, 120, 365]                          # 36 [calculated: Pliny 6.106 departure spread Tybi 1 - Mechir 6]; 120 [assumption]; 365 [upper bound, full port storage]
+  N_lambda: H1a = 120 (Strabo 2.5.12 x lambda 1); frontier reported for all N*lambda
+comparators (sourced scale anchors, not capacities):
+  - ANC-BERENIKE-CAMELS 200-500 loads/month (Nappo 2018: 58-59 n.223)
+  - ANC-RUFFING-BERENIKE-LOADS 2000 loads/month (Ruffing via Adams 2007: 225)
+  - ANC-MONS-CLAUD-SUPPLY 150 loads/month (Adams 2007: 209)
+  - ANC-NIKANOR-HERD 30 camels per firm (Adams 2007: 82)
+expected_patterns (stated before running):
+  - Under both readings H1a requires monthly desert loads well above all port-supply anchors during W=36 or 120
+  - The De Romanis/Morelli load ratio is about 2.8-3.2 (mass ratio)
+  - Desert freight lower bound is a small share (<5%) of cargo value under both readings
+  - A W=365 storage scenario reduces the required stock by about 10x relative to W=36
+decision_rule: none (descriptive; no hypothesis can be rejected). Report ratios; name the evidence that would make the criterion evaluable.
+assumptions:
+  A1: cargo mass per ship scales with lambda (same value density as the Hermapollon); smaller ventures with bulkier goods would need MORE loads
+  A2: camels return loaded with outbound goods/supplies (no extra camels for the outbound flow); outbound traffic would add load
+  A3: weighed items only (nard, unweighed goods excluded) -> M is a lower bound for the cargo listed
+  A4: the verso lists the ship's cargoes ('the cargoes shipped on the Hermapollon', v ii 27-28); whether that is the whole cargo aboard is not established
+outputs: [outputs/grid.csv, outputs/summary.csv, outputs/frontier.csv, outputs/summary.json]
+code: romeco.m0.throughput; run: python -m romeco.cli throughput
