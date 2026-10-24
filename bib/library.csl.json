@@ -1,0 +1,1325 @@
+[
+ {
+  "id": "SRC-NAPPO-2018",
+  "type": "book",
+  "title": "I porti romani nel Mar Rosso da Augusto al Tardoantico",
+  "author": [
+   {
+    "family": "Nappo",
+    "given": "Dario"
+   }
+  ],
+  "container-title": "Clio. Saggi di scienze storiche, archeologiche e storico-artistiche 20 (FedOAPress, Napoli)",
+  "language": "it",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "ISBN": "978-88-6887-034-8",
+  "DOI": "10.6093/978-88-6887-034-8",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-BOWMAN-WILSON-2009",
+  "type": "book",
+  "title": "Quantifying the Roman Economy: Methods and Problems",
+  "author": [
+   {
+    "family": "Bowman",
+    "given": "Alan"
+   },
+   {
+    "family": "Wilson",
+    "given": "Andrew"
+   }
+  ],
+  "container-title": "Oxford Studies on the Roman Economy (Oxford University Press)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "ISBN": "978-0-19-956259-6",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-WILSON-2009",
+  "type": "chapter",
+  "title": "Approaches to Quantifying Roman Trade",
+  "author": [
+   {
+    "family": "Wilson",
+    "given": "Andrew"
+   }
+  ],
+  "container-title": "SRC-BOWMAN-WILSON-2009 pp. 213-249",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-RATHBONE-2009",
+  "type": "chapter",
+  "title": "Earnings and Costs: Living Standards and the Roman Economy",
+  "author": [
+   {
+    "family": "Rathbone",
+    "given": "Dominic"
+   }
+  ],
+  "container-title": "SRC-BOWMAN-WILSON-2009 pp. 299-326 (ch. 15)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-DEROMANIS-2012",
+  "type": "article-journal",
+  "title": "Playing Sudoku on the Verso of the 'Muziris Papyrus': Pepper, Malabathron and Tortoise Shell in the Cargo of the Hermapollon",
+  "author": [
+   {
+    "family": "De Romanis",
+    "given": "Federico"
+   }
+  ],
+  "container-title": "Journal of Ancient Indian History 27: 75-101",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "https://www.ancientportsantiques.com/wp-content/uploads/Documents/PLACES/IndOc-Gulf/MuzirisPapyrus-Romanis2012.pdf",
+  "issued": {
+   "date-parts": [
+    [
+     2012
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-DEROMANIS-2020",
+  "type": "book",
+  "title": "The Indo-Roman Pepper Trade and the Muziris Papyrus",
+  "author": [
+   {
+    "family": "De Romanis",
+    "given": "Federico"
+   }
+  ],
+  "container-title": "Oxford Studies on the Roman Economy (Oxford University Press)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "DOI": "10.1093/oso/9780198842347.001.0001",
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HARRAUER-SIJPESTEIJN-1985",
+  "type": "article-journal",
+  "title": "Ein neues Dokument zu Roms Indienhandel, P. Vindob. G 40.822",
+  "author": [
+   {
+    "family": "Harrauer",
+    "given": "Hermann"
+   },
+   {
+    "family": "Sijpesteijn",
+    "given": "Pieter J."
+   }
+  ],
+  "container-title": "Anzeiger der Österreichischen Akademie der Wissenschaften, Phil.-Hist. Klasse 122: 124-155",
+  "language": "de",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     1985
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-MORELLI-READING",
+  "type": "document",
+  "title": "Revised reading of verso col. ii l. 29",
+  "author": [
+   {
+    "literal": "(Morelli)"
+   }
+  ],
+  "note": "access_status=cited_only; romeco source register"
+ },
+ {
+  "id": "SRC-RATHBONE-2000",
+  "type": "article-journal",
+  "title": "The 'Muziris' papyrus (SB XVIII 13167): financing Roman trade with India",
+  "author": [
+   {
+    "family": "Rathbone",
+    "given": "Dominic"
+   }
+  ],
+  "container-title": "Bulletin de la Société Archéologique d'Alexandrie 46: 35-50",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2000
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-CASSON-1989",
+  "type": "book",
+  "title": "The Periplus Maris Erythraei: Text, Translation and Commentary",
+  "author": [
+   {
+    "family": "Casson",
+    "given": "Lionel"
+   }
+  ],
+  "container-title": "Princeton University Press",
+  "language": "en; grc",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     1989
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-BAGNALL-ETAL-2000",
+  "type": "book",
+  "title": "Documents from Berenike I: Greek Ostraka from the 1996-1998 Seasons",
+  "author": [
+   {
+    "family": "Bagnall",
+    "given": "R. S."
+   },
+   {
+    "family": "Helms",
+    "given": "C."
+   },
+   {
+    "family": "Verhoogt",
+    "given": "A. M. F. W."
+   }
+  ],
+  "container-title": "Bruxelles",
+  "language": "grc; en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2000
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-BAGNALL-ETAL-2005",
+  "type": "book",
+  "title": "Documents from Berenike II: Texts from the 1999-2001 Seasons",
+  "author": [
+   {
+    "family": "Bagnall",
+    "given": "R. S."
+   },
+   {
+    "family": "Helms",
+    "given": "C."
+   },
+   {
+    "family": "Verhoogt",
+    "given": "A. M. F. W."
+   }
+  ],
+  "container-title": "Bruxelles",
+  "language": "grc; en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2005
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-OBERENIKE-4",
+  "type": "book",
+  "title": "O.Berenike 4. Ostraka from the Port of Berenike",
+  "container-title": "Propylaeum / Pylon (Heidelberg)",
+  "note": "access_status=unavailable; romeco source register",
+  "URL": "https://journals.ub.uni-heidelberg.de/index.php/pylon/article/view/89358"
+ },
+ {
+  "id": "SRC-COBB-2015A",
+  "type": "article-journal",
+  "title": "The chronology of Roman trade in the Indian Ocean from Augustus to early third century CE",
+  "author": [
+   {
+    "family": "Cobb",
+    "given": "Matthew"
+   }
+  ],
+  "container-title": "Journal of the Economic and Social History of the Orient 58: 362-418",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-COBB-2015B",
+  "type": "article-journal",
+  "title": "Balancing the Trade: Roman Cargo Shipments to India",
+  "author": [
+   {
+    "family": "Cobb",
+    "given": "Matthew"
+   }
+  ],
+  "container-title": "Oxford Journal of Archaeology 34(2): 185-203",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2015
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-COBB-2018",
+  "type": "book",
+  "title": "Rome and the Indian Ocean Trade from Augustus to the Early Third Century CE",
+  "author": [
+   {
+    "family": "Cobb",
+    "given": "Matthew"
+   }
+  ],
+  "container-title": "Mnemosyne Supplements 418 (Brill)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register"
+ },
+ {
+  "id": "SRC-EVERS-2017",
+  "type": "book",
+  "title": "Worlds Apart Trading Together: The Organisation of Long-Distance Trade between Rome and India in Antiquity",
+  "author": [
+   {
+    "family": "Evers",
+    "given": "Kasper Grønlund"
+   }
+  ],
+  "container-title": "Archaeopress (Oxford)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "ISBN": "9781784917425",
+  "issued": {
+   "date-parts": [
+    [
+     2017
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-ADAMS-2007",
+  "type": "book",
+  "title": "Land Transport in Roman Egypt: A Study of Economics and Administration in a Roman Province",
+  "author": [
+   {
+    "family": "Adams",
+    "given": "Colin"
+   }
+  ],
+  "container-title": "Oxford Classical Monographs (Oxford University Press)",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "ISBN": "978-0-19-920397-0",
+  "issued": {
+   "date-parts": [
+    [
+     2007
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-SELAND-2013",
+  "type": "article-journal",
+  "title": "Networks and Social Cohesion in Ancient Indian Ocean Trade: Geography, Ethnicity, Religion",
+  "author": [
+   {
+    "family": "Seland",
+    "given": "Eivind Heldaas"
+   }
+  ],
+  "container-title": "Journal of Global History 8(3): 373-390",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-PEACOCK-BLUE-2006",
+  "type": "book",
+  "title": "Myos Hormos - Quseir al-Qadim: Roman and Islamic Ports on the Red Sea. Survey and Excavations 1999-2003",
+  "author": [
+   {
+    "family": "Peacock",
+    "given": "David"
+   },
+   {
+    "family": "Blue",
+    "given": "Lucy"
+   }
+  ],
+  "container-title": "Oxford",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2006
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-SIDEBOTHAM-2011",
+  "type": "book",
+  "title": "Berenike and the Ancient Maritime Spice Route",
+  "author": [
+   {
+    "family": "Sidebotham",
+    "given": "Steven E."
+   }
+  ],
+  "container-title": "University of California Press",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-TOMBER-2008",
+  "type": "book",
+  "title": "Indo-Roman Trade",
+  "author": [
+   {
+    "family": "Tomber",
+    "given": "Roberta"
+   }
+  ],
+  "container-title": "London",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2008
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-WILSON-BOWMAN-2018",
+  "type": "book",
+  "title": "Trade, Commerce, and the State in the Roman World",
+  "author": [
+   {
+    "family": "Wilson",
+    "given": "Andrew"
+   },
+   {
+    "family": "Bowman",
+    "given": "Alan"
+   }
+  ],
+  "container-title": "Oxford Studies on the Roman Economy (Oxford University Press)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "ISBN": "9780198790662",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-BRUGHMANS-WILSON-2022",
+  "type": "book",
+  "title": "Simulating Roman Economies: Theories, Methods, and Computational Models",
+  "author": [
+   {
+    "family": "Brughmans",
+    "given": "Tom"
+   },
+   {
+    "family": "Wilson",
+    "given": "Andrew"
+   }
+  ],
+  "container-title": "Oxford Studies on the Roman Economy (Oxford University Press)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "ISBN": "9780192857828",
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-CARRIGNON-ETAL-2020",
+  "type": "article-journal",
+  "title": "Tableware trade in the Roman East: Exploring cultural and economic transmission with agent-based modelling and approximate Bayesian computation",
+  "author": [
+   {
+    "family": "Carrignon",
+    "given": "Simon"
+   },
+   {
+    "family": "Brughmans",
+    "given": "Tom"
+   },
+   {
+    "family": "Romanowska",
+    "given": "Iza"
+   }
+  ],
+  "container-title": "PLoS ONE 15(11): e0240414",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "DOI": "10.1371/journal.pone.0240414",
+  "issued": {
+   "date-parts": [
+    [
+     2020
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HARPER-2016",
+  "type": "article-journal",
+  "title": "People, Plagues, and Prices in the Roman World: The Evidence from Egypt",
+  "author": [
+   {
+    "family": "Harper",
+    "given": "Kyle"
+   }
+  ],
+  "container-title": "Journal of Economic History 76: 803-39",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-COPELAND-2022",
+  "type": "report",
+  "title": "Riding the Monsoon: Geography and Iron Age Trade in the Indian Ocean",
+  "author": [
+   {
+    "family": "Copeland",
+    "given": "Conrad"
+   }
+  ],
+  "container-title": "working paper (VoxEU-hosted PDF)",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "https://voxeu.org/system/files/2023-02/Copeland_RTM_2022_08_06.pdf",
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-GAL-ETAL-2023",
+  "type": "dataset",
+  "title": "Mappings of Potential Sailing Mobility during Antiquity: Research Data (v4)",
+  "author": [
+   {
+    "family": "Gal",
+    "given": "David"
+   },
+   {
+    "family": "Saaroni",
+    "given": "Hadas"
+   },
+   {
+    "family": "Cvikel",
+    "given": "Deborah"
+   }
+  ],
+  "container-title": "Mendeley Data",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "DOI": "10.17632/hzbg2wyjxb.4",
+  "issued": {
+   "date-parts": [
+    [
+     2023
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-PLEIADES",
+  "type": "dataset",
+  "title": "Pleiades gazetteer of ancient places",
+  "author": [
+   {
+    "literal": "Pleiades"
+   }
+  ],
+  "container-title": "ISAW/NYU",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "URL": "https://pleiades.stoa.org/downloads"
+ },
+ {
+  "id": "SRC-IDP-DATA",
+  "type": "dataset",
+  "title": "idp.data repository (DDbDP; HGV; APIS)",
+  "author": [
+   {
+    "family": "Papyrology",
+    "given": "Papyri.info / Integrating Digital"
+   }
+  ],
+  "container-title": "GitHub papyri/idp.data",
+  "language": "en; grc",
+  "note": "access_status=metadata_only; romeco source register",
+  "URL": "https://github.com/papyri/idp.data"
+ },
+ {
+  "id": "SRC-ORBIS",
+  "type": "dataset",
+  "title": "ORBIS: The Stanford Geospatial Network Model of the Roman World",
+  "author": [
+   {
+    "family": "Scheidel",
+    "given": "Walter"
+   },
+   {
+    "family": "al.",
+    "given": "Elijah Meeks et"
+   }
+  ],
+  "container-title": "Stanford",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "URL": "https://orbis.stanford.edu/"
+ },
+ {
+  "id": "SRC-SMITHSONIAN-2024",
+  "type": "webpage",
+  "title": "Hidden ancient Egyptian port reveals ... (Berenike)",
+  "container-title": "Smithsonian Magazine July/August 2024",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "https://www.smithsonianmag.com/history/hidden-ancient-egyptian-port-reveals-180984485/",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-WILKINSON-2021",
+  "type": "thesis",
+  "title": "The Indian Ocean Trade and the Roman State",
+  "author": [
+   {
+    "family": "Wilkinson",
+    "given": "Troy"
+   }
+  ],
+  "container-title": "UWTSD repository",
+  "language": "en",
+  "note": "access_status=unavailable; romeco source register",
+  "URL": "https://repository.uwtsd.ac.uk/id/eprint/1704/",
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-DDBDP-TM27666",
+  "type": "document",
+  "title": "SB XVIII 13167 (P.Vindob. G 40822): DDbDP EpiDoc text",
+  "author": [
+   {
+    "family": "Papyri",
+    "given": "Duke Databank of Documentary"
+   }
+  ],
+  "container-title": "papyri.info / idp.data",
+  "language": "grc",
+  "note": "access_status=inspected_full_text; romeco source register"
+ },
+ {
+  "id": "SRC-HGV-TM27666",
+  "type": "document",
+  "title": "HGV metadata for TM 27666",
+  "author": [
+   {
+    "family": "Gesamtverzeichnis",
+    "given": "Heidelberger"
+   }
+  ],
+  "container-title": "papyri.info / idp.data",
+  "language": "de",
+  "note": "access_status=inspected_full_text; romeco source register"
+ },
+ {
+  "id": "SRC-TYCHE-2011",
+  "type": "book",
+  "title": "Dal Mar Rosso ad Alessandria. Il verso (ma anche il recto) del 'papiro di Muziris' (SB XVIII 13167)",
+  "author": [
+   {
+    "family": "De Romanis 2012",
+    "given": "(Morelli, F. - attribution via"
+   },
+   {
+    "literal": "2014"
+   },
+   {
+    "family": "page)",
+    "given": "not verified on the title"
+   }
+  ],
+  "container-title": "Tyche 26: 199-233",
+  "language": "it",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2011
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-DEROMANIS-2014",
+  "type": "article-journal",
+  "title": "Ivory from Muziris",
+  "author": [
+   {
+    "family": "De Romanis",
+    "given": "Federico"
+   }
+  ],
+  "container-title": "ISAW Papers 8",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "http://dlib.nyu.edu/awdl/isaw/isaw-papers/8/",
+  "issued": {
+   "date-parts": [
+    [
+     2014
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-PLEIADES-DATASETS",
+  "type": "dataset",
+  "title": "pleiades.datasets GIS tables (places, place types, locations, connections, time periods)",
+  "author": [
+   {
+    "family": "(ISAW/NYU)",
+    "given": "Pleiades"
+   }
+  ],
+  "container-title": "GitHub isawnyu/pleiades.datasets",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-AWMC-GEODATA",
+  "type": "dataset",
+  "title": "AWMC geodata (roads, urban areas, political shading)",
+  "author": [
+   {
+    "family": "Horne",
+    "given": "Ancient World Mapping Center (R."
+   },
+   {
+    "family": "al.)",
+    "given": "G. Moss et"
+   }
+  ],
+  "container-title": "GitHub AWMC/geodata",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2024
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-ORBIS-V2",
+  "type": "dataset",
+  "title": "orbis_v2 sites and routes",
+  "author": [
+   {
+    "family": "Meeks)",
+    "given": "Elijah Meeks (ORBIS v2, D3 version of ORBIS by Scheidel and"
+   }
+  ],
+  "container-title": "GitHub emeeks/orbis_v2",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2013
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-ITINERE-2025",
+  "type": "dataset",
+  "title": "A High-Resolution Dataset of Roads of the Roman Empire: Itiner-e static version 2024 (v1.3)",
+  "author": [
+   {
+    "family": "de Soto",
+    "given": "P."
+   },
+   {
+    "family": "Pažout",
+    "given": "A."
+   },
+   {
+    "family": "authors)",
+    "given": "T. Brughmans et al. (20"
+   }
+  ],
+  "container-title": "Zenodo",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "DOI": "10.5281/zenodo.17122148",
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-ITINERE-PAPER-2025",
+  "type": "article-journal",
+  "title": "Itiner-e: A high-resolution dataset of roads of the Roman Empire",
+  "author": [
+   {
+    "family": "de Soto",
+    "given": "Pau"
+   },
+   {
+    "family": "Pažout",
+    "given": "Adam"
+   },
+   {
+    "family": "Brughmans",
+    "given": "Tom"
+   }
+  ],
+  "container-title": "Scientific Data 12: 1731",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "DOI": "10.1038/s41597-025-06140-z",
+  "issued": {
+   "date-parts": [
+    [
+     2025
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HANSON-2016-DB",
+  "type": "dataset",
+  "title": "Cities Database, Version 1.0 (OxREP databases)",
+  "author": [
+   {
+    "family": "Hanson",
+    "given": "J. W."
+   }
+  ],
+  "container-title": "Oxford Roman Economy Project",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "DOI": "10.5287/bodleian:eqapevAn8",
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HANSON-2016",
+  "type": "book",
+  "title": "An Urban Geography of the Roman World, 100 B.C. to A.D. 300",
+  "author": [
+   {
+    "family": "Hanson",
+    "given": "J. W."
+   }
+  ],
+  "container-title": "Archaeopress (Oxford)",
+  "language": "en",
+  "note": "access_status=cited_only; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HARPER-2016-DB",
+  "type": "dataset",
+  "title": "Database of Prices, Wages, and Rents for Roman Egypt from the First through Seventh Centuries AD (DARMC Scholarly Data Series 2016-5)",
+  "author": [
+   {
+    "family": "Harper",
+    "given": "Kyle"
+   },
+   {
+    "family": "(contributor)",
+    "given": "Elizabeth Knapp"
+   }
+  ],
+  "container-title": "DARMC",
+  "language": "en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2016
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-PONTING-ETAL-2021-ISIS",
+  "type": "dataset",
+  "title": "Debasement of Roman Silver coinage",
+  "author": [
+   {
+    "family": "Ponting",
+    "given": "M."
+   },
+   {
+    "family": "Ishida",
+    "given": "K."
+   },
+   {
+    "family": "Butcher",
+    "given": "K."
+   },
+   {
+    "family": "Hampshire",
+    "given": "B."
+   },
+   {
+    "family": "Paul",
+    "given": "D."
+   },
+   {
+    "family": "Hillier",
+    "given": "A."
+   }
+  ],
+  "container-title": "ISIS Neutron and Muon Source",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "DOI": "10.5286/ISIS.E.98003576",
+  "issued": {
+   "date-parts": [
+    [
+     2021
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-WIKIPEDIA-LEGIONS",
+  "type": "webpage",
+  "title": "List of Roman legions",
+  "container-title": "English Wikipedia",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "https://en.wikipedia.org/wiki/List_of_Roman_legions",
+  "issued": {
+   "date-parts": [
+    [
+     2026
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-HITCHNER-2009",
+  "type": "chapter",
+  "title": "Coinage and Metal Supply",
+  "author": [
+   {
+    "family": "Hitchner",
+    "given": "Bruce"
+   }
+  ],
+  "container-title": "SRC-BOWMAN-WILSON-2009 pp. 281-286 (ch. 13)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-PONTING-2009",
+  "type": "chapter",
+  "title": "Roman Silver Coinage: Mints, Metallurgy, and Production",
+  "author": [
+   {
+    "family": "Ponting",
+    "given": "Matthew"
+   }
+  ],
+  "container-title": "SRC-BOWMAN-WILSON-2009 pp. 269-280 (ch. 12)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     2009
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-REDON-MANIERE-2022",
+  "type": "dataset",
+  "title": "Desert Networks itineraries (e.g. DN_ITI005-007, DN_ITI011)",
+  "author": [
+   {
+    "family": "Redon",
+    "given": "B."
+   },
+   {
+    "family": "Manière",
+    "given": "L."
+   }
+  ],
+  "container-title": "desertnetworks.huma-num.fr",
+  "note": "access_status=cited_only; romeco source register",
+  "URL": "https://desertnetworks.huma-num.fr/itineraries/DN_ITI005",
+  "issued": {
+   "date-parts": [
+    [
+     2022
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-STRABO-GEOG",
+  "type": "book",
+  "title": "Strabonis Geographica (Greek) with Hamilton-Falconer English translation",
+  "author": [
+   {
+    "literal": "Strabo"
+   },
+   {
+    "family": "Meineke",
+    "given": "A."
+   },
+   {
+    "family": "Falconer",
+    "given": "H. C. Hamilton & W."
+   }
+  ],
+  "container-title": "Perseus Digital Library TEI (tlg0099.tlg001.perseus-grc2; -eng4)",
+  "language": "grc; en",
+  "note": "access_status=inspected_full_text; romeco source register",
+  "issued": {
+   "date-parts": [
+    [
+     1877
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-TACITUS-ANN",
+  "type": "book",
+  "title": "Annales",
+  "author": [
+   {
+    "literal": "Tacitus"
+   },
+   {
+    "family": "Fisher",
+    "given": "C. D."
+   },
+   {
+    "family": "Brodribb",
+    "given": "A. J. Church & W. J."
+   }
+  ],
+  "container-title": "Perseus Digital Library TEI (phi1351.phi005.perseus-lat1; -eng1)",
+  "language": "la; en",
+  "note": "access_status=inspected_full_text; romeco source register"
+ },
+ {
+  "id": "SRC-JOSEPHUS-BJ",
+  "type": "book",
+  "title": "Bellum Iudaicum / The Wars of the Jews",
+  "author": [
+   {
+    "literal": "Josephus"
+   },
+   {
+    "family": "Niese",
+    "given": "B."
+   },
+   {
+    "family": "Whiston",
+    "given": "W."
+   }
+  ],
+  "container-title": "Perseus Digital Library TEI (tlg0526.tlg004.perseus-grc2; -eng2)",
+  "language": "grc; en",
+  "note": "access_status=inspected_full_text; romeco source register"
+ },
+ {
+  "id": "SRC-DIO-CARY",
+  "type": "book",
+  "title": "Roman History (Loeb, Cary translation)",
+  "author": [
+   {
+    "family": "Dio",
+    "given": "Cassius"
+   },
+   {
+    "family": "Cary",
+    "given": "E."
+   }
+  ],
+  "container-title": "lexundria.com",
+  "language": "en",
+  "note": "access_status=machine_summary_only; romeco source register",
+  "URL": "https://lexundria.com/dio/55.23/cy"
+ },
+ {
+  "id": "SRC-RUFFING-NIKANOR",
+  "type": "article-journal",
+  "title": "Das Nikanor-Archiv",
+  "author": [
+   {
+    "family": "Ruffing",
+    "given": "K."
+   }
+  ],
+  "language": "de",
+  "note": "access_status=cited_only; romeco source register"
+ },
+ {
+  "id": "SRC-PLINY-NH-MAYHOFF",
+  "type": "book",
+  "title": "Naturalis Historia (Teubner text with apparatus)",
+  "author": [
+   {
+    "family": "Elder",
+    "given": "Pliny the"
+   },
+   {
+    "family": "Mayhoff",
+    "given": "K."
+   }
+  ],
+  "container-title": "Perseus Digital Library TEI phi0978.phi001.perseus-lat2",
+  "language": "la",
+  "note": "access_status=inspected_full_text; romeco source register"
+ },
+ {
+  "id": "SRC-BRUN-ETAL-2018",
+  "type": "book",
+  "title": "The Eastern Desert of Egypt during the Greco-Roman Period: Archaeological Reports",
+  "author": [
+   {
+    "family": "Brun",
+    "given": "J.-P."
+   },
+   {
+    "family": "Faucher",
+    "given": "T."
+   },
+   {
+    "family": "Redon",
+    "given": "B."
+   }
+  ],
+  "container-title": "Collège de France (OpenEdition Books)",
+  "language": "en",
+  "note": "access_status=metadata_only; romeco source register",
+  "DOI": "10.4000/books.cdf.5230",
+  "ISBN": "978-2-7226-0488-9",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-REDDE-2018",
+  "type": "chapter",
+  "title": "The Fortlets of the Eastern Desert of Egypt",
+  "author": [
+   {
+    "family": "Reddé",
+    "given": "Michel"
+   }
+  ],
+  "container-title": "J.-P. Brun, T. Faucher, B. Redon, S. Sidebotham (eds), The Eastern Desert of Egypt during the Greco-Roman Period: Archaeological Reports (Collège de France, 2018)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "URL": "https://books.openedition.org/cdf/5248",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-AST-2018",
+  "type": "chapter",
+  "title": "Berenike in Light of Inscriptions, Ostraca, and Papyri",
+  "author": [
+   {
+    "family": "Ast",
+    "given": "Rodney"
+   }
+  ],
+  "container-title": "J.-P. Brun, T. Faucher, B. Redon, S. Sidebotham (eds), The Eastern Desert of Egypt during the Greco-Roman Period: Archaeological Reports (Collège de France, 2018)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "URL": "https://books.openedition.org/cdf/5232",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ },
+ {
+  "id": "SRC-TOMBER-2018",
+  "type": "chapter",
+  "title": "Quarries, Ports and Praesidia: Supply and Exchange in the Eastern Desert",
+  "author": [
+   {
+    "family": "Tomber",
+    "given": "Roberta"
+   }
+  ],
+  "container-title": "J.-P. Brun, T. Faucher, B. Redon, S. Sidebotham (eds), The Eastern Desert of Egypt during the Greco-Roman Period: Archaeological Reports (Collège de France, 2018)",
+  "language": "en",
+  "note": "access_status=inspected_partial; romeco source register",
+  "URL": "https://books.openedition.org/cdf/5251",
+  "issued": {
+   "date-parts": [
+    [
+     2018
+    ]
+   ]
+  }
+ }
+]

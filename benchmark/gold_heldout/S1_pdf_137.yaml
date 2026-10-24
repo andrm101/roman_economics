@@ -1,0 +1,17 @@
+stratum: S1
+unit_key: pdf:137
+source_id: SRC-ADAMS-2007
+annotated_from: page image
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: 122
+quantities:
+- raw: 10 silver talents
+  unit: talent
+  value_low: 10.0
+  value_high: 10.0
+  numeral_form: digits
+  note: adjective between numeral and unit
+ancient_cites:
+- norm_key: poxy:19:2228
+  raw: P. Oxy. XIX 2228

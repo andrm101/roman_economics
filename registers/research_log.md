@@ -69,3 +69,20 @@
   - Traffic was controlled by passes.
   - No traffic count.
 - HGV inventory (`romeco.ingest.hgv_inventory`, idp.data 41a1c87): 2,630 Eastern Desert documents. The trade-port archives are 1st-century; the W2 record is quarry and fort ostraca. Only 73 W2 documents are month-dated. D022: no documentary route to the H1a capacity criterion.
+
+## 2026-10-25 — Session 8 (WP4 corpus pilot)
+
+- **Built `romeco.corpus`.** Registry (8 independent states, rights gate), resumable content-addressed acquisition (13 items; OpenEdition logged as blocked), parsing over 5 routes with page, page-range or locus anchors, rule-based extractors (v0.1 → v0.2), offline citation-chaining discovery, and CSL-JSON/BibTeX export. CLI: `corpus`, `benchmark`.
+- **Corpus outputs.**
+  - 6,007 extraction candidates; 2,837 from all-rights-reserved sources carry no text.
+  - 1,737 bibliography entries → 1,560 candidate works, 58 cited by ≥2 documents.
+  - In-text citations resolve against the document's own bibliography at 85% (Nappo) and 81% (Bowman & Wilson).
+- **Benchmark (E004).**
+  - Protocol registered before annotation; development sample of 42 units and held-out sample of 28 (disjoint, drawn after freezing v0.2).
+  - Held-out: quantity recall 0.54, citation recall 0.48; page labels 15/15 on image-checked pages.
+  - One gold error was found in adjudication: the extractor was right.
+- **Findings.**
+  - Overline and frame encoding defects in Perseus Mayhoff (K22).
+  - Periplus list-syntax and footnote-bleed citation errors (v0.3 backlog).
+  - Bowman & Wilson chapter openers are unnumbered, so pages there are anchored as ranges.
+- **Decisions:** D023–D025. WP4 acceptance is provisional pending review of `benchmark/gold_review_sheet.csv`.

@@ -1,0 +1,15 @@
+stratum: S6
+unit_key: '6.144'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: TEI text (Mayhoff) incl. markup check
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: II p.
+  unit: mile_roman
+  value_low: 2.0
+  value_high: 2.0
+  numeral_form: roman
+ancient_cites: []
+notes: '''DC'', ''CXXXV'': bare numerals, unit (milia passuum) implied: excluded by
+  guideline.'

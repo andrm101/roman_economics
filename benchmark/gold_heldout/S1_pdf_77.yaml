@@ -1,0 +1,36 @@
+stratum: S1
+unit_key: pdf:77
+source_id: SRC-ADAMS-2007
+annotated_from: page image
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: 62
+quantities:
+- raw: 10 silver talents
+  unit: talent
+  value_low: 10.0
+  value_high: 10.0
+  numeral_form: digits
+  note: adjective between numeral and unit
+- raw: 33 talents
+  unit: talent
+  value_low: 33.0
+  value_high: 33.0
+  numeral_form: digits
+- raw: 500 denarii
+  unit: denarius
+  value_low: 500.0
+  value_high: 500.0
+  numeral_form: digits
+ancient_cites:
+- norm_key: poxy:16:1919
+  raw: P. Oxy. XVI 1919
+- norm_key: poxy:16:1919
+  raw: '''P. Oxy. XVI 1919 and mule-breeding'' (article title)'
+- norm_key: poxy:19:2228
+  raw: P. Oxy. XIX 2228
+- norm_key: ppanopbeatty:2
+  raw: P. Panop. Beatty 2. 292–304
+- norm_key: pmichinv:418
+  raw: P. Mich. Inv. 418 Verso
+notes: '''four mules'', ''2800 animals'': not lexicon units.'

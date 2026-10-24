@@ -1,0 +1,29 @@
+stratum: S3
+unit_key: pdf:54
+source_id: SRC-ADAMS-2007
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 39
+quantities:
+- raw: 7 Roman miles
+  unit: mile_roman
+  value_low: 7.0
+  value_high: 7.0
+  numeral_form: digits
+- raw: 257 Roman miles
+  unit: mile_roman
+  value_low: 257.0
+  value_high: 257.0
+  numeral_form: digits
+- raw: 257 Roman miles in Pliny
+  unit: mile_roman
+  value_low: 257.0
+  value_high: 257.0
+  numeral_form: digits
+ancient_cites:
+- norm_key: plin.nh:6.26.102
+  raw: Pliny, NH 6. 26. 102–3
+- norm_key: opetr:245
+  raw: O. Petr. 245
+notes: '''258 in the Antonine Itinerary'' has no attached unit (excluded); ''2000
+  individuals'' unit not in lexicon (excluded).'

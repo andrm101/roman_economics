@@ -267,7 +267,7 @@ Next:
 | **WP1 (substantially done)** | **Hermapollon documentary audit.** Pull idp.data; extract the SB XVIII 13167 EpiDoc; verify the total reading(s) and the six item quantities; read De Romanis 2020 on the verso; resolve INT-HERM-03 against Nappo | Every assertion feeding `A_H` has review_status ∈ {inspected, human_reviewed}; CQ2 empty for `A_H`; item residuals explained or documented with page references. **Status:** readings inspected; nard/ivory/schidai exact; INT-HERM-03 rejected; open: INT-HERM-02 and pepper/tax-mode interpretations (machine summary only) need direct reading of De Romanis 2014/2020 or your review |
 | WP2 | Desert-throughput test (Adams 2007; O.Berenike; Coptos tariff; Nikanor) | `camel_capacity_kg` and a return-window capacity become `external_estimate` with loci; H1a either rejected or retained under stated bounds |
 | WP3 | Novelty audit (Brughmans & Wilson 2022; De Romanis 2020; Wilkinson 2021; Cobb 2018; Evers 2017; Copeland 2022) | Comparison table; contribution statement C1 revised or replaced |
-| WP4 | Corpus pilot: discovery + permitted acquisition + parser benchmark on 20 stratified documents | Extraction error rates by stratum; every claim anchored to page/locus |
+| WP4 ◐ | Corpus pilot: discovery + permitted acquisition + parser benchmark on 20 stratified documents | Extraction error rates by stratum; every claim anchored to page/locus — **met provisionally 2026-10-25** (E004; gold pending researcher review; see docs/corpus_pipeline.md) |
 | WP5 | M1 specification + implementation | Comparative statics reproduce M0 bounds as a special case |
 | WP6 | M2 (gated by WP5 + an identified target) | Limiting-case convergence test; ablation table |
 | WP7 | Synthetic-data framework | Origin labels survive joins/exports (tests); recovery experiments documented as software validation |
@@ -361,3 +361,24 @@ The grid has 288 cells: 2 readings × 2 weight talents × 3 loads (150/181/200 k
 - Documents bound attested activity from below only, so they cannot reject H1a.
 - Ast (2018) documents assessment and storage of imports at the ports, which makes E003's storage window (W ≫ 36 d) the more plausible case.
 - The remaining discriminating evidence is physical capacity (well yields: Cuvigny et al. 2011, *Didymoi*), currently not accessible.
+
+## 12. WP4 result: corpus pilot (2026-10-25)
+
+The pipeline (`romeco.corpus`, `docs/corpus_pipeline.md`) acquires, parses, anchors, extracts and discovers over 13 items in 5 parse routes.
+
+**Held-out benchmark, v0.2 frozen (E004):**
+
+| Measure | Value | 95% CI | n gold |
+|---|---|---|---|
+| Quantity precision | 0.78 | 0.45–0.94 | |
+| Quantity recall | 0.54 | 0.29–0.77 | 13 |
+| Citation precision | 0.85 | 0.58–0.96 | |
+| Citation recall | 0.48 | 0.29–0.67 | 23 |
+| Page labels | 15/15 correct | | image-checked |
+
+**Consequences (D024):**
+- Extractions are review candidates only.
+- Pliny's numerals must come from the printed edition (K22).
+- Discovery already gives a usable literature map: 58 works shared across the four documents.
+
+**Acceptance** is provisional until the researcher reviews the 149-row gold sheet. **Next:** the semantic foundation (minimal ontology and assertion graph), which can now ingest anchored candidates without promoting them to evidence.

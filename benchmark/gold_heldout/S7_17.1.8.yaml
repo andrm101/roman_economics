@@ -1,0 +1,20 @@
+stratum: S7
+unit_key: 17.1.8
+source_id: SRC-STRABO-GEOG
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities:
+- raw: about thirty stadia
+  unit: stade
+  value_low: 30.0
+  value_high: 30.0
+  numeral_form: word
+- raw: seven or eight stadia
+  unit: stade
+  value_low: 7.0
+  value_high: 8.0
+  numeral_form: word
+ancient_cites: []
+notes: '''a plethrum'' not in lexicon.'

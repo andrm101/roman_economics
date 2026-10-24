@@ -1,0 +1,26 @@
+stratum: S2
+unit_key: pdf:14
+source_id: SRC-ITINERE-PAPER-2025
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 14
+quantities:
+- raw: 1 000 Km
+  unit: km
+  value_low: 1000.0
+  value_high: 1000.0
+  numeral_form: digits
+  note: scale bar fig 5a
+- raw: 1 000 Km
+  unit: km
+  value_low: 1000.0
+  value_high: 1000.0
+  numeral_form: digits
+  note: scale bar fig 5c
+- raw: 299,171.31 km
+  unit: km
+  value_low: 299171.31
+  value_high: 299171.31
+  numeral_form: digits
+ancient_cites: []
+notes: 'm, km2, m/km2, vertices: outside lexicon.'

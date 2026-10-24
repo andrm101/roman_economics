@@ -1,0 +1,24 @@
+stratum: S4
+unit_key: unit:25
+source_id: SRC-NAPPO-2018
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites:
+- norm_key: pme:21
+  raw: PME, 21, 24 (two chapters)
+- norm_key: pme:24
+  raw: PME, 21, 24
+- norm_key: pme:27
+  raw: 27-28 (Kanê)
+- norm_key: pme:32
+  raw: 32 (Moscha Limen)
+- norm_key: strabo:16.4.23
+  raw: Strab. , XVI, 4, 23
+- norm_key: pme:19
+  raw: PME, 19
+- norm_key: plin.nh:6.144
+  raw: Plin. , Nat. Hist. , VI, 144
+notes: 'PME is cited by chapter: ''21, 24'' are two chapters, not 21.24.'

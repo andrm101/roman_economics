@@ -1,0 +1,53 @@
+stratum: S7
+unit_key: 17.1.2
+source_id: SRC-STRABO-GEOG
+annotated_from: TEI text (Hamilton-Falconer translation)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: 1000 stadia
+  unit: stade
+  value_low: 1000.0
+  value_high: 1000.0
+  numeral_form: digits
+- raw: about 2700 stadia
+  unit: stade
+  value_low: 2700.0
+  value_high: 2700.0
+  numeral_form: digits
+- raw: about 3700 stadia
+  unit: stade
+  value_low: 3700.0
+  value_high: 3700.0
+  numeral_form: digits
+- raw: 5300 stadia
+  unit: stade
+  value_low: 5300.0
+  value_high: 5300.0
+  numeral_form: digits
+- raw: 1200 stadia
+  unit: stade
+  value_low: 1200.0
+  value_high: 1200.0
+  numeral_form: digits
+- raw: 5300 stadia more
+  unit: stade
+  value_low: 5300.0
+  value_high: 5300.0
+  numeral_form: digits
+- raw: 700 stadia
+  unit: stade
+  value_low: 700.0
+  value_high: 700.0
+  numeral_form: digits
+- raw: ten or twelve days’ journey
+  unit: day
+  value_low: 10.0
+  value_high: 12.0
+  numeral_form: word
+- raw: 1300 stadia
+  unit: stade
+  value_low: 1300.0
+  value_high: 1300.0
+  numeral_form: digits
+ancient_cites: []

@@ -1,0 +1,25 @@
+stratum: S2
+unit_key: pdf:3
+source_id: SRC-ITINERE-PAPER-2025
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 3
+quantities:
+- raw: 1 000 Km
+  unit: km
+  value_low: 1000.0
+  value_high: 1000.0
+  numeral_form: digits
+  note: map scale bar
+- raw: 188,554.7 km
+  unit: km
+  value_low: 188554.7
+  value_high: 188554.7
+  numeral_form: digits
+- raw: 299,273.3 km
+  unit: km
+  value_low: 299273.3
+  value_high: 299273.3
+  numeral_form: digits
+ancient_cites: []
+notes: '''8,388 milestones'': unit not in lexicon.'

@@ -1,0 +1,14 @@
+stratum: S8
+unit_key: '2.387'
+annotated_from: TEI text (Greek)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+source_id: SRC-JOSEPHUS-BJ
+quantities:
+- raw: δύο ... τάγματα
+  unit: legion
+  value_low: 2.0
+  value_high: 2.0
+  numeral_form: word
+ancient_cites: []
+notes: Greek number word; extractor v0.1 has no Greek numeral handling.

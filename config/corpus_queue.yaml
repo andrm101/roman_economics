@@ -1,0 +1,102 @@
+# WP4 acquisition queue (romeco.corpus.acquire). One entry per file copy.
+# Strata (for the WP4.6 benchmark): doc_type x language x parse_route.
+# Paths under /mnt/user-data are files supplied in this session (attachments / Project documents);
+# they are not reproducible elsewhere: re-supply the file and re-run (the sha256 identifies it).
+items:
+  # --- born-digital PDFs (text layer; OCR route tested by rasterising) ---
+  - source_id: SRC-ADAMS-2007
+    locator: {type: file, path: "/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/a2cd697b-1792843207929_Land_Transport_in_Roman_Egypt_pdf.pdf"}
+    media_type: application/pdf
+    language: en
+    doc_type: monograph
+    parse_route: pdf_text_layer
+    note: supplied by researcher (chat attachment)
+  - source_id: SRC-ITINERE-PAPER-2025
+    locator: {type: file, path: "/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/effe8b02-1792843041860_s41597-025-06140-z.pdf"}
+    media_type: application/pdf
+    language: en
+    doc_type: journal_article
+    parse_route: pdf_text_layer
+    note: supplied by researcher (chat attachment)
+  # --- flattened text (no page boundaries; pages recovered from printed folios) ---
+  - source_id: SRC-NAPPO-2018
+    locator: {type: file, path: "/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0cbfaee7-6d7a-4d9e-9ff3-8e5f7486177c.txt"}
+    media_type: text/plain
+    ext: .txt
+    language: it
+    doc_type: monograph
+    parse_route: flattened_text
+    note: "claude.ai Project document 'Roman Trade Economics_Red Sea + Far East.pdf' (text extraction; original PDF not available in the workspace)"
+  - source_id: SRC-BOWMAN-WILSON-2009
+    locator: {type: file, path: "/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0c7d9dab-6c51-4daf-b40b-976aa332c811.txt"}
+    media_type: text/plain
+    ext: .txt
+    language: en
+    doc_type: edited_volume
+    parse_route: flattened_text
+    note: "claude.ai Project document 'Quantifying the Roman Economy_ Methods and Problems.pdf' (text extraction)"
+  # --- structured XML editions (TEI / EpiDoc) ---
+  - source_id: SRC-PLINY-NH-MAYHOFF
+    locator: {type: git, repo: "https://github.com/PerseusDL/canonical-latinLit", commit: 0700a6b7e010707367502a83e08e99ebbbb3666c, path: data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml}
+    media_type: application/tei+xml
+    language: la
+    doc_type: critical_edition
+    parse_route: tei_cts
+  - source_id: SRC-STRABO-GEOG
+    locator: {type: git, repo: "https://github.com/PerseusDL/canonical-greekLit", commit: 0189b9c8d8d1f148133f2f0af309b4ee90ea4332, path: data/tlg0099/tlg001/tlg0099.tlg001.perseus-grc2.xml}
+    media_type: application/tei+xml
+    language: grc
+    doc_type: critical_edition
+    parse_route: tei_cts
+  - source_id: SRC-STRABO-GEOG
+    locator: {type: git, repo: "https://github.com/PerseusDL/canonical-greekLit", commit: 0189b9c8d8d1f148133f2f0af309b4ee90ea4332, path: data/tlg0099/tlg001/tlg0099.tlg001.perseus-eng4.xml}
+    media_type: application/tei+xml
+    language: en
+    doc_type: translation
+    parse_route: tei_cts
+    note: Hamilton-Falconer translation (same source record as the Greek; see relations.csv)
+  - source_id: SRC-JOSEPHUS-BJ
+    locator: {type: git, repo: "https://github.com/PerseusDL/canonical-greekLit", commit: 0189b9c8d8d1f148133f2f0af309b4ee90ea4332, path: data/tlg0526/tlg004/tlg0526.tlg004.perseus-grc2.xml}
+    media_type: application/tei+xml
+    language: grc
+    doc_type: critical_edition
+    parse_route: tei_cts
+  - source_id: SRC-TACITUS-ANN
+    locator: {type: git, repo: "https://github.com/PerseusDL/canonical-latinLit", commit: 0700a6b7e010707367502a83e08e99ebbbb3666c, path: data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml}
+    media_type: application/tei+xml
+    language: la
+    doc_type: critical_edition
+    parse_route: tei_milestone
+  - source_id: SRC-DDBDP-TM27666
+    locator: {type: git, repo: "https://github.com/papyri/idp.data", commit: f03d0f371306deacd0bc302010f2c6a2e7b1d1da, path: DDbDP/27/27666.xml}
+    media_type: application/tei+xml
+    language: grc
+    doc_type: documentary_edition
+    parse_route: epidoc
+  # --- tabular datasets (parsed by romeco.context.manual, not by the text pipeline) ---
+  - source_id: SRC-HARPER-2016-DB
+    locator: {type: file, path: "data/raw/context/harper_prices/manual/Harper 2016 Prices Wages and Rents for Roman Egypt, 1-700.xlsx"}
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    language: en
+    doc_type: dataset_table
+    parse_route: table
+  - source_id: SRC-HANSON-2016-DB
+    locator: {type: file, path: "data/raw/context/hanson_cities/manual/hanson2016_citiesdatabase_oxrep.xlsx"}
+    media_type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    language: en
+    doc_type: dataset_table
+    parse_route: table
+  - source_id: SRC-ITINERE-2025
+    locator: {type: file, path: "data/raw/context/itinere/manual/itinere_roads.gpkg"}
+    media_type: application/geopackage+sqlite3
+    language: en
+    doc_type: dataset_gis
+    parse_route: gis
+  # --- recorded but not fetchable from here (documented access limitation) ---
+  - source_id: SRC-BRUN-ETAL-2018
+    locator: {type: http, url: "https://books.openedition.org/cdf/5230"}
+    media_type: text/html
+    language: en
+    doc_type: edited_volume
+    parse_route: html
+    note: OpenEdition blocks automated fetch (Anubis); chapters read in the researcher's browser only

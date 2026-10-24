@@ -1,0 +1,17 @@
+stratum: S4
+unit_key: unit:108
+source_id: SRC-NAPPO-2018
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites:
+- norm_key: euseb.onom:6.17
+  raw: Euseb., Onom., E. Klosterman, 6, 17-21 (edition page/lines)
+- norm_key: procop.bp:1.19.3
+  raw: Procop., Bell. Pers., I, 19, 3-4
+- norm_key: procop.bp:1.19.19
+  raw: I, 19, 19
+- norm_key: procop.bp:1.19.23
+  raw: Procop., Bell. Pers., I, 19, 23-26

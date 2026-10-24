@@ -1,0 +1,277 @@
+{
+  "extractor_version": "0.2.0",
+  "parser_version": "0.2.0",
+  "seed": 20261025,
+  "pooled": {
+    "scope": "all strata except S3 (S3 re-scores the S1 pages via OCR)",
+    "q_precision": 1.0,
+    "q_precision_ci": [
+      0.924,
+      1.0
+    ],
+    "q_recall": 1.0,
+    "q_recall_ci": [
+      0.924,
+      1.0
+    ],
+    "gold_quantities": 47,
+    "c_precision": 1.0,
+    "c_precision_ci": [
+      0.839,
+      1.0
+    ],
+    "c_recall": 1.0,
+    "c_recall_ci": [
+      0.839,
+      1.0
+    ],
+    "gold_cites": 20,
+    "page_label_acc": 1.0,
+    "page_n": 9
+  },
+  "gold_status": "assistant_annotated_pending_human_review",
+  "strata": [
+    {
+      "stratum": "S1",
+      "units": 6,
+      "gold_quantities": 17,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.816,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.816,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 12,
+      "c_precision": 1.0,
+      "c_recall": 1.0,
+      "c_f1": 1.0,
+      "c_recall_ci": [
+        0.757,
+        1.0
+      ],
+      "page_label_acc": 1.0,
+      "page_n": 6,
+      "ocr_mean_conf": null,
+      "indicative_only": false
+    },
+    {
+      "stratum": "S2",
+      "units": 3,
+      "gold_quantities": 6,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.61,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.61,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 0,
+      "c_precision": null,
+      "c_recall": null,
+      "c_f1": null,
+      "c_recall_ci": [
+        null,
+        null
+      ],
+      "page_label_acc": 1.0,
+      "page_n": 3,
+      "ocr_mean_conf": null,
+      "indicative_only": true
+    },
+    {
+      "stratum": "S3",
+      "units": 6,
+      "gold_quantities": 17,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.816,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.816,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 12,
+      "c_precision": 1.0,
+      "c_recall": 0.833,
+      "c_f1": 0.909,
+      "c_recall_ci": [
+        0.552,
+        0.953
+      ],
+      "page_label_acc": 1.0,
+      "page_n": 6,
+      "ocr_mean_conf": 95.2,
+      "indicative_only": false
+    },
+    {
+      "stratum": "S4",
+      "units": 5,
+      "gold_quantities": 2,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.342,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.342,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 5,
+      "c_precision": 1.0,
+      "c_recall": 1.0,
+      "c_f1": 1.0,
+      "c_recall_ci": [
+        0.566,
+        1.0
+      ],
+      "page_label_acc": null,
+      "page_n": 0,
+      "ocr_mean_conf": null,
+      "indicative_only": true
+    },
+    {
+      "stratum": "S5",
+      "units": 5,
+      "gold_quantities": 6,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.61,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.61,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 3,
+      "c_precision": 1.0,
+      "c_recall": 1.0,
+      "c_f1": 1.0,
+      "c_recall_ci": [
+        0.438,
+        1.0
+      ],
+      "page_label_acc": null,
+      "page_n": 0,
+      "ocr_mean_conf": null,
+      "indicative_only": true
+    },
+    {
+      "stratum": "S6",
+      "units": 9,
+      "gold_quantities": 5,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.566,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.566,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 0,
+      "gold_cites": 0,
+      "c_precision": null,
+      "c_recall": null,
+      "c_f1": null,
+      "c_recall_ci": [
+        null,
+        null
+      ],
+      "page_label_acc": null,
+      "page_n": 0,
+      "ocr_mean_conf": null,
+      "indicative_only": true
+    },
+    {
+      "stratum": "S7",
+      "units": 5,
+      "gold_quantities": 10,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.722,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.722,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 2,
+      "gold_cites": 0,
+      "c_precision": null,
+      "c_recall": null,
+      "c_f1": null,
+      "c_recall_ci": [
+        null,
+        null
+      ],
+      "page_label_acc": null,
+      "page_n": 0,
+      "ocr_mean_conf": null,
+      "indicative_only": false
+    },
+    {
+      "stratum": "S8",
+      "units": 3,
+      "gold_quantities": 1,
+      "q_precision": 1.0,
+      "q_recall": 1.0,
+      "q_f1": 1.0,
+      "q_recall_ci": [
+        0.207,
+        1.0
+      ],
+      "q_precision_ci": [
+        0.207,
+        1.0
+      ],
+      "q_lenient_recall": 1.0,
+      "gold_word_numerals": 1,
+      "gold_cites": 0,
+      "c_precision": null,
+      "c_recall": null,
+      "c_f1": null,
+      "c_recall_ci": [
+        null,
+        null
+      ],
+      "page_label_acc": null,
+      "page_n": 0,
+      "ocr_mean_conf": null,
+      "indicative_only": true
+    }
+  ],
+  "sample_file": "sample.csv",
+  "gold_dir": "gold"
+}

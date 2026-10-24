@@ -1,0 +1,15 @@
+stratum: S4
+unit_key: unit:15
+source_id: SRC-NAPPO-2018
+annotated_from: flattened text (no page image)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities: []
+ancient_cites:
+- norm_key: ppetrie:2:40
+  raw: P.Petrie II, 40
+- norm_key: wchr:452
+  raw: Chrest. W. 452
+- norm_key: ptol.geog:4.5.15
+  raw: Ptolem. , Geog. , IV, 5, 15
+notes: '''O.Ber. I.'' has no document number (excluded).'

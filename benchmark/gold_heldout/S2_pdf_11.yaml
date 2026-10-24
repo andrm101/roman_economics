@@ -1,0 +1,9 @@
+stratum: S2
+unit_key: pdf:11
+source_id: SRC-ITINERE-PAPER-2025
+annotated_from: page image
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: 11
+quantities: []
+ancient_cites: []

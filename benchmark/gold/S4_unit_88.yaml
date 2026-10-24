@@ -1,0 +1,13 @@
+stratum: S4
+unit_key: unit:88
+source_id: SRC-NAPPO-2018
+annotated_from: flattened text (no page image)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities: []
+ancient_cites:
+- norm_key: pme:19
+  raw: (Periplus 19)
+- norm_key: strabo:16.4.23
+  raw: Strab . , XVI, 4, 23
+notes: 'Greek quotation of PME 19: no numerals.'

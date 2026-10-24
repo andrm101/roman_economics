@@ -1,0 +1,24 @@
+stratum: S1
+unit_key: pdf:87
+source_id: SRC-ADAMS-2007
+annotated_from: page image
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: 72
+quantities:
+- raw: 50 camels
+  unit: camel
+  value_low: 50.0
+  value_high: 50.0
+  numeral_form: digits
+ancient_cites:
+- norm_key: pmich:11:620
+  raw: P. Mich. XI 620 (n.5)
+- norm_key: plond:1:131
+  raw: P. Lond. I 131 recto
+- norm_key: pmich:11:620
+  raw: P. Mich. XI 620 (n.7)
+- norm_key: pupsfrid:10
+  raw: P. Ups. Frid. 10
+- norm_key: bgu:3:921
+  raw: BGU III 921

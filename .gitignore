@@ -11,3 +11,5 @@ __pycache__/
 .pytest_cache/
 .venv/
 experiments/*/outputs/*.parquet
+# Parsed full text of corpus items (may be non-redistributable; rebuilt by romeco.corpus)
+data/interim/

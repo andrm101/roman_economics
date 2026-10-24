@@ -1,0 +1,11 @@
+stratum: S1
+unit_key: pdf:212
+source_id: SRC-ADAMS-2007
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 197
+quantities: []
+ancient_cites:
+- norm_key: sb:5:8036
+  raw: SB V 8036
+notes: Journal volume/page references excluded.

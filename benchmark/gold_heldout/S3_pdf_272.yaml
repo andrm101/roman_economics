@@ -1,0 +1,12 @@
+stratum: S3
+unit_key: pdf:272
+source_id: SRC-ADAMS-2007
+annotated_from: page image
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: 257
+quantities: []
+ancient_cites:
+- norm_key: sb:6:9150
+  raw: SB VI 9150
+notes: '''for a period of one year'': years not in lexicon.'

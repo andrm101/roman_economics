@@ -1,0 +1,43 @@
+stratum: S5
+unit_key: unit:294
+source_id: SRC-BOWMAN-WILSON-2009
+annotated_from: flattened text (no page image)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: 182 kg
+  unit: kg
+  value_low: 182.0
+  value_high: 182.0
+  numeral_form: digits
+- raw: 26 kg
+  unit: kg
+  value_low: 26.0
+  value_high: 26.0
+  numeral_form: digits
+- raw: 5.2 kg
+  unit: kg
+  value_low: 5.2
+  value_high: 5.2
+  numeral_form: digits
+  note: butter
+- raw: 5.2 kg
+  unit: kg
+  value_low: 5.2
+  value_high: 5.2
+  numeral_form: digits
+  note: cheese
+- raw: 2.6 kg
+  unit: kg
+  value_low: 2.6
+  value_high: 2.6
+  numeral_form: digits
+  note: soap
+- raw: 2.6 kg
+  unit: kg
+  value_low: 2.6
+  value_high: 2.6
+  numeral_form: digits
+  note: candles
+ancient_cites: []
+notes: Table 16.1; l, m, M BTU outside lexicon.

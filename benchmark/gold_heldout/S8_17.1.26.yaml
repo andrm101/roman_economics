@@ -1,0 +1,10 @@
+stratum: S8
+unit_key: 17.1.26
+source_id: SRC-STRABO-GEOG
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites: []
+notes: 'πηχῶν ἑκατὸν: cubits not in lexicon.'

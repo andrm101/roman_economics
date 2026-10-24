@@ -1,0 +1,11 @@
+item_id,source_id,route,quantity,ancient_cite,modern_cite
+ITM-68c25790bd89,SRC-ADAMS-2007,pdf_text_layer,430,918,26
+ITM-42b504ee3db5,SRC-ITINERE-PAPER-2025,pdf_text_layer,28,0,16
+ITM-ba94811dd041,SRC-NAPPO-2018,flattened_text,101,193,935
+ITM-f872a6df674d,SRC-BOWMAN-WILSON-2009,flattened_text,482,51,930
+ITM-113b3df1fa7e,SRC-PLINY-NH-MAYHOFF,tei_cts,242,1,0
+ITM-9bd4f8a520b7,SRC-STRABO-GEOG,tei_cts,156,1,0
+ITM-2cbb3f2fc033,SRC-STRABO-GEOG,tei_cts,1447,0,1
+ITM-011c690837e0,SRC-JOSEPHUS-BJ,tei_cts,49,0,0
+ITM-a08b3dc527d0,SRC-TACITUS-ANN,tei_milestone,0,0,0
+ITM-39d38d5e371d,SRC-DDBDP-TM27666,epidoc,0,0,0

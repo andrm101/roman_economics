@@ -1,0 +1,55 @@
+stratum: S1
+unit_key: pdf:245
+source_id: SRC-ADAMS-2007
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 230
+quantities:
+- raw: 12 talents-weight
+  unit: talent
+  value_low: 12.0
+  value_high: 12.0
+  numeral_form: digits
+- raw: 528 775 drachmas
+  unit: drachma
+  value_low: 528775.0
+  value_high: 528775.0
+  numeral_form: digits
+- raw: HS 90 million
+  unit: sestertius
+  value_low: 90000000.0
+  value_high: 90000000.0
+  numeral_form: digits
+- raw: c.HS 1400 million
+  unit: sestertius
+  value_low: 1400000000.0
+  value_high: 1400000000.0
+  numeral_form: digits
+- raw: HS 9000 million
+  unit: sestertius
+  value_low: 9000000000.0
+  value_high: 9000000000.0
+  numeral_form: digits
+- raw: 92 talents
+  unit: talent
+  value_low: 92.0
+  value_high: 92.0
+  numeral_form: digits
+- raw: 8692 lbs
+  unit: lb
+  value_low: 8692.0
+  value_high: 8692.0
+  numeral_form: digits
+- raw: between 15 and 20 camels
+  unit: camel
+  value_low: 15.0
+  value_high: 20.0
+  numeral_form: digits
+ancient_cites:
+- norm_key: plin.nh:6.101
+  raw: Pliny, NH 6. 101
+- norm_key: strabo:2.5.12
+  raw: Strabo 2. 5. 12
+- norm_key: strabo:17.1.13
+  raw: and 17. 1. 13 (author implied)
+notes: '''about 92 talents, or 8692 lbs'' gives two quantities.'

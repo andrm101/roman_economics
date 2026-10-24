@@ -1,0 +1,19 @@
+stratum: S4
+unit_key: unit:114
+source_id: SRC-NAPPO-2018
+annotated_from: flattened text (no page image)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: (10%)
+  unit: percent
+  value_low: 10.0
+  value_high: 10.0
+  numeral_form: digits
+- raw: 12,5%
+  unit: percent
+  value_low: 12.5
+  value_high: 12.5
+  numeral_form: digits
+ancient_cites: []
+notes: '''1/8'' fraction without unit excluded; Malchus cited without locus.'

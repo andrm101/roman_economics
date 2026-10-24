@@ -13,7 +13,13 @@ dependencies = [
     "pyyaml==6.0.3",
     "numpy==2.5.3",
     "pandas==3.0.5",
+    "openpyxl==3.1.5",
+    "networkx==3.5",
+    "lxml==6.1.3",
+    "rapidfuzz==3.14.1",
 ]
+# External CLI tools used by romeco.corpus (versions recorded in each parse manifest):
+#   poppler-utils pdftotext/pdftoppm 24.02.0; tesseract 5.3.4 with tessdata_fast @87416418
 
 [project.optional-dependencies]
 dev = ["pytest==9.1.1"]

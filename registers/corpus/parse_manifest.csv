@@ -1,0 +1,14 @@
+item_id,source_id,route,status,units,parser_version,stats
+ITM-68c25790bd89,SRC-ADAMS-2007,pdf_text_layer,parsed,346,0.2.0,"{""offset"": -15, ""offset_support"": 307, ""pages_with_folio"": 322, ""detected"": 307, ""contradicting"": 15}"
+ITM-42b504ee3db5,SRC-ITINERE-PAPER-2025,pdf_text_layer,parsed,25,0.2.0,"{""offset"": 0, ""offset_support"": 24, ""pages_with_folio"": 25, ""detected"": 24, ""contradicting"": 1}"
+ITM-ba94811dd041,SRC-NAPPO-2018,flattened_text,parsed,205,0.2.0,"{""folio_position"": ""closes"", ""folios_in_chain"": 205, ""toc_entries"": 42, ""toc_located"": 16, ""toc_within_range"": 14, ""toc_exact"": 14, ""toc_within_rate"": 0.875, ""toc_exact_rate"": 0.875, ""alt_position_within"": 0, ""units_with_page_range"": 5, ""page_range"": [5, 218]}"
+ITM-f872a6df674d,SRC-BOWMAN-WILSON-2009,flattened_text,parsed,309,0.2.0,"{""folio_position"": ""closes"", ""folios_in_chain"": 309, ""toc_entries"": 77, ""toc_located"": 8, ""toc_within_range"": 5, ""toc_exact"": 1, ""toc_within_rate"": 0.625, ""toc_exact_rate"": 0.125, ""alt_position_within"": 4, ""units_with_page_range"": 27, ""page_range"": [1, 356]}"
+ITM-113b3df1fa7e,SRC-PLINY-NH-MAYHOFF,tei_cts,parsed,7272,0.2.0,"{""units"": 7272, ""with_apparatus"": 7247, ""with_print_page"": 7272}"
+ITM-9bd4f8a520b7,SRC-STRABO-GEOG,tei_cts,parsed,1580,0.2.0,"{""units"": 1580, ""with_apparatus"": 355, ""with_print_page"": 1580}"
+ITM-2cbb3f2fc033,SRC-STRABO-GEOG,tei_cts,parsed,1612,0.2.0,"{""units"": 1612, ""with_apparatus"": 1279, ""with_print_page"": 1612}"
+ITM-011c690837e0,SRC-JOSEPHUS-BJ,tei_cts,parsed,4001,0.2.0,"{""units"": 4001, ""with_apparatus"": 0, ""with_print_page"": 0}"
+ITM-a08b3dc527d0,SRC-TACITUS-ANN,tei_milestone,parsed,721,0.2.0,"{""units"": 721, ""with_apparatus"": 0, ""with_print_page"": 0}"
+ITM-39d38d5e371d,SRC-DDBDP-TM27666,epidoc,parsed,86,0.2.0,"{""units"": 86}"
+ITM-167a62be60e3,SRC-HARPER-2016-DB,table,not_text_parsed_elsewhere,0,0.2.0,
+ITM-5b9fc0195c3b,SRC-HANSON-2016-DB,table,not_text_parsed_elsewhere,0,0.2.0,
+ITM-1b9470aaec69,SRC-ITINERE-2025,gis,not_text_parsed_elsewhere,0,0.2.0,

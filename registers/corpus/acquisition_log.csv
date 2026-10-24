@@ -1,0 +1,43 @@
+timestamp,source_id,locator,outcome,detail
+2026-10-24T22:52:16+00:00,SRC-ADAMS-2007,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/a2cd697b-1792843207929_Land_Transport_in_Roman_Egypt_pdf.pdf,acquired,68c25790bd89
+2026-10-24T22:52:17+00:00,SRC-ITINERE-PAPER-2025,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/effe8b02-1792843041860_s41597-025-06140-z.pdf,acquired,42b504ee3db5
+2026-10-24T22:52:17+00:00,SRC-NAPPO-2018,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0cbfaee7-6d7a-4d9e-9ff3-8e5f7486177c.txt,acquired,ba94811dd041
+2026-10-24T22:52:17+00:00,SRC-BOWMAN-WILSON-2009,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0c7d9dab-6c51-4daf-b40b-976aa332c811.txt,acquired,f872a6df674d
+2026-10-24T22:52:18+00:00,SRC-PLINY-NH-MAYHOFF,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml,acquired,113b3df1fa7e
+2026-10-24T22:52:20+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-grc2.xml,acquired,9bd4f8a520b7
+2026-10-24T22:52:20+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-eng4.xml,acquired,2cbb3f2fc033
+2026-10-24T22:52:21+00:00,SRC-JOSEPHUS-BJ,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0526/tlg004/tlg0526.tlg004.perseus-grc2.xml,acquired,011c690837e0
+2026-10-24T22:52:21+00:00,SRC-TACITUS-ANN,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml,acquired,a08b3dc527d0
+2026-10-24T22:53:13+00:00,SRC-DDBDP-TM27666,git:https://github.com/papyri/idp.data@f03d0f371306:DDbDP/27/27666.xml,acquired,39d38d5e371d
+2026-10-24T22:53:13+00:00,SRC-HARPER-2016-DB,"file:data/raw/context/harper_prices/manual/Harper 2016 Prices Wages and Rents for Roman Egypt, 1-700.xlsx",acquired,167a62be60e3
+2026-10-24T22:53:13+00:00,SRC-HANSON-2016-DB,file:data/raw/context/hanson_cities/manual/hanson2016_citiesdatabase_oxrep.xlsx,acquired,5b9fc0195c3b
+2026-10-24T22:53:15+00:00,SRC-ITINERE-2025,file:data/raw/context/itinere/manual/itinere_roads.gpkg,acquired,1b9470aaec69
+2026-10-24T22:53:15+00:00,SRC-BRUN-ETAL-2018,http:https://books.openedition.org/cdf/5230,blocked_by_environment,http locators are not fetched from this environment (allow-list); supply the file
+2026-10-24T22:53:15+00:00,SRC-ADAMS-2007,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/a2cd697b-1792843207929_Land_Transport_in_Roman_Egypt_pdf.pdf,skipped_unchanged,68c25790bd89
+2026-10-24T22:53:15+00:00,SRC-ITINERE-PAPER-2025,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/effe8b02-1792843041860_s41597-025-06140-z.pdf,skipped_unchanged,42b504ee3db5
+2026-10-24T22:53:15+00:00,SRC-NAPPO-2018,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0cbfaee7-6d7a-4d9e-9ff3-8e5f7486177c.txt,skipped_unchanged,ba94811dd041
+2026-10-24T22:53:15+00:00,SRC-BOWMAN-WILSON-2009,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0c7d9dab-6c51-4daf-b40b-976aa332c811.txt,skipped_unchanged,f872a6df674d
+2026-10-24T22:53:15+00:00,SRC-PLINY-NH-MAYHOFF,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml,skipped_unchanged,113b3df1fa7e
+2026-10-24T22:53:15+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-grc2.xml,skipped_unchanged,9bd4f8a520b7
+2026-10-24T22:53:15+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-eng4.xml,skipped_unchanged,2cbb3f2fc033
+2026-10-24T22:53:15+00:00,SRC-JOSEPHUS-BJ,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0526/tlg004/tlg0526.tlg004.perseus-grc2.xml,skipped_unchanged,011c690837e0
+2026-10-24T22:53:15+00:00,SRC-TACITUS-ANN,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml,skipped_unchanged,a08b3dc527d0
+2026-10-24T22:53:15+00:00,SRC-DDBDP-TM27666,git:https://github.com/papyri/idp.data@f03d0f371306:DDbDP/27/27666.xml,skipped_unchanged,39d38d5e371d
+2026-10-24T22:53:15+00:00,SRC-HARPER-2016-DB,"file:data/raw/context/harper_prices/manual/Harper 2016 Prices Wages and Rents for Roman Egypt, 1-700.xlsx",skipped_unchanged,167a62be60e3
+2026-10-24T22:53:15+00:00,SRC-HANSON-2016-DB,file:data/raw/context/hanson_cities/manual/hanson2016_citiesdatabase_oxrep.xlsx,skipped_unchanged,5b9fc0195c3b
+2026-10-24T22:53:15+00:00,SRC-ITINERE-2025,file:data/raw/context/itinere/manual/itinere_roads.gpkg,skipped_unchanged,1b9470aaec69
+2026-10-24T22:53:15+00:00,SRC-BRUN-ETAL-2018,http:https://books.openedition.org/cdf/5230,blocked_by_environment,http locators are not fetched from this environment (allow-list); supply the file
+2026-10-24T23:12:19+00:00,SRC-ADAMS-2007,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/a2cd697b-1792843207929_Land_Transport_in_Roman_Egypt_pdf.pdf,skipped_unchanged,68c25790bd89
+2026-10-24T23:12:19+00:00,SRC-ITINERE-PAPER-2025,file:/mnt/user-data/attachments/3fdc2033-99da-502a-8909-4820e2e65a91/effe8b02-1792843041860_s41597-025-06140-z.pdf,skipped_unchanged,42b504ee3db5
+2026-10-24T23:12:19+00:00,SRC-NAPPO-2018,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0cbfaee7-6d7a-4d9e-9ff3-8e5f7486177c.txt,skipped_unchanged,ba94811dd041
+2026-10-24T23:12:19+00:00,SRC-BOWMAN-WILSON-2009,file:/mnt/user-data/project-docs/3fdc2033-99da-502a-8909-4820e2e65a91/project-doc-0c7d9dab-6c51-4daf-b40b-976aa332c811.txt,skipped_unchanged,f872a6df674d
+2026-10-24T23:12:19+00:00,SRC-PLINY-NH-MAYHOFF,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml,skipped_unchanged,113b3df1fa7e
+2026-10-24T23:12:19+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-grc2.xml,skipped_unchanged,9bd4f8a520b7
+2026-10-24T23:12:19+00:00,SRC-STRABO-GEOG,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0099/tlg001/tlg0099.tlg001.perseus-eng4.xml,skipped_unchanged,2cbb3f2fc033
+2026-10-24T23:12:19+00:00,SRC-JOSEPHUS-BJ,git:https://github.com/PerseusDL/canonical-greekLit@0189b9c8d8d1:data/tlg0526/tlg004/tlg0526.tlg004.perseus-grc2.xml,skipped_unchanged,011c690837e0
+2026-10-24T23:12:19+00:00,SRC-TACITUS-ANN,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi1351/phi005/phi1351.phi005.perseus-lat1.xml,skipped_unchanged,a08b3dc527d0
+2026-10-24T23:12:19+00:00,SRC-DDBDP-TM27666,git:https://github.com/papyri/idp.data@f03d0f371306:DDbDP/27/27666.xml,skipped_unchanged,39d38d5e371d
+2026-10-24T23:12:19+00:00,SRC-HARPER-2016-DB,"file:data/raw/context/harper_prices/manual/Harper 2016 Prices Wages and Rents for Roman Egypt, 1-700.xlsx",skipped_unchanged,167a62be60e3
+2026-10-24T23:12:19+00:00,SRC-HANSON-2016-DB,file:data/raw/context/hanson_cities/manual/hanson2016_citiesdatabase_oxrep.xlsx,skipped_unchanged,5b9fc0195c3b
+2026-10-24T23:12:19+00:00,SRC-ITINERE-2025,file:data/raw/context/itinere/manual/itinere_roads.gpkg,skipped_unchanged,1b9470aaec69
+2026-10-24T23:12:19+00:00,SRC-BRUN-ETAL-2018,http:https://books.openedition.org/cdf/5230,blocked_by_environment,http locators are not fetched from this environment (allow-list); supply the file

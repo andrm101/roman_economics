@@ -1,0 +1,17 @@
+stratum: S6
+unit_key: '6.165'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities:
+- raw: ‾XXXVII‾. D p.
+  unit: mile_roman
+  value_low: 37.5
+  value_high: 37.5
+  numeral_form: roman
+  note: 37,500 passus
+ancient_cites: []
+notes: '''‾LXII‾. D intervallo'' and ''pedum C'', ''XXX'' have no lexicon unit attached
+  (excluded).'

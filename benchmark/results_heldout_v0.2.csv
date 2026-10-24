@@ -1,0 +1,9 @@
+stratum,units,gold_quantities,q_precision,q_recall,q_f1,q_recall_ci,q_precision_ci,q_lenient_recall,gold_word_numerals,gold_cites,c_precision,c_recall,c_f1,c_recall_ci,page_label_acc,page_n,ocr_mean_conf,indicative_only
+S1,4,5,1.0,0.6,0.75,"(0.231, 0.882)","(0.438, 1.0)",0.6,0,12,1.0,0.75,0.857,"(0.468, 0.911)",1.0,4,,False
+S2,2,0,,,,"(None, None)","(None, None)",,0,0,,,,"(None, None)",1.0,2,,True
+S3,4,5,1.0,0.6,0.75,"(0.231, 0.882)","(0.438, 1.0)",0.6,0,12,1.0,0.5,0.667,"(0.254, 0.746)",1.0,4,93.8,False
+S4,4,0,,,,"(None, None)","(None, None)",,0,11,0.5,0.182,0.267,"(0.051, 0.477)",,0,,False
+S5,4,0,,,,"(None, None)","(None, None)",,0,0,,,,"(None, None)",,0,,True
+S6,5,5,0.333,0.2,0.25,"(0.036, 0.624)","(0.061, 0.792)",0.2,1,0,,,,"(None, None)",,0,,True
+S7,3,3,1.0,1.0,1.0,"(0.438, 1.0)","(0.438, 1.0)",1.0,3,0,,,,"(None, None)",,0,,True
+S8,2,0,,,,"(None, None)","(None, None)",,0,0,,,,"(None, None)",,0,,True

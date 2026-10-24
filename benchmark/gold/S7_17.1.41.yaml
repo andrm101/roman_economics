@@ -1,0 +1,13 @@
+stratum: S7
+unit_key: 17.1.41
+source_id: SRC-STRABO-GEOG
+annotated_from: TEI text (Hamilton-Falconer translation)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: sixty stadia
+  unit: stade
+  value_low: 60.0
+  value_high: 60.0
+  numeral_form: word
+ancient_cites: []

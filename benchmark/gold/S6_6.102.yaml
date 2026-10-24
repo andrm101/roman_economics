@@ -1,0 +1,28 @@
+stratum: S6
+unit_key: '6.102'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: TEI text (Mayhoff) incl. markup check
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities:
+- raw: MMp.
+  unit: mile_roman
+  value_low: 2.0
+  value_high: 2.0
+  numeral_form: roman
+  note: MM passus = 2 Roman miles (no overline)
+- raw: CCCVIIII p.
+  unit: mile_roman
+  value_low: 309.0
+  value_high: 309.0
+  numeral_form: roman
+  note: 'overlined in Mayhoff: 309 milia passuum'
+- raw: XII diebus
+  unit: day
+  value_low: 12.0
+  value_high: 12.0
+  numeral_form: roman
+ancient_cites: []
+notes: Overline markup is lost in text extraction, so passus vs milia passuum cannot
+  be distinguished by the extractor (parser defect). Station distances are bare numerals
+  (excluded).

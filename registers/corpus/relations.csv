@@ -1,0 +1,12 @@
+subject_id,relation,object_id,note
+SRC-WILSON-2009,part_of,SRC-BOWMAN-WILSON-2009,pp. 213-249
+SRC-RATHBONE-2009,part_of,SRC-BOWMAN-WILSON-2009,pp. 299-326 (ch. 15)
+SRC-HITCHNER-2009,part_of,SRC-BOWMAN-WILSON-2009,pp. 281-286 (ch. 13)
+SRC-PONTING-2009,part_of,SRC-BOWMAN-WILSON-2009,pp. 269-280 (ch. 12)
+SRC-REDDE-2018,part_of,SRC-BRUN-ETAL-2018,OpenEdition chapter
+SRC-AST-2018,part_of,SRC-BRUN-ETAL-2018,OpenEdition chapter
+SRC-TOMBER-2018,part_of,SRC-BRUN-ETAL-2018,OpenEdition chapter
+SRC-ITINERE-PAPER-2025,describes,SRC-ITINERE-2025,Data Descriptor for the Zenodo dataset
+SRC-HARPER-2016,describes,SRC-HARPER-2016-DB,article accompanying the DARMC database
+SRC-HANSON-2016,describes,SRC-HANSON-2016-DB,monograph accompanying the cities database
+SRC-ITINERE-2025,derived_from,SRC-REDON-MANIERE-2022,Eastern Desert segments adapted from ERC Desert Networks (de Soto et al. 2025: 8)

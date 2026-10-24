@@ -1,0 +1,21 @@
+stratum: S6
+unit_key: '6.86'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities:
+- raw: ‾CCCLXXV‾ p.
+  unit: mile_roman
+  value_low: 375.0
+  value_high: 375.0
+  numeral_form: roman
+- raw: quinque stadiorum
+  unit: stade
+  value_low: 5.0
+  value_high: 5.0
+  numeral_form: word
+ancient_cites: []
+notes: '''XV amplissimo'' (stadia implied) excluded; ''quadridui navigatione'' (compound)
+  excluded.'

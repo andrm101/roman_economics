@@ -1,0 +1,9 @@
+stratum: S5
+unit_key: unit:54
+source_id: SRC-BOWMAN-WILSON-2009
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites: []

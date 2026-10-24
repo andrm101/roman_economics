@@ -1,0 +1,54 @@
+stratum: S3
+unit_key: pdf:118
+source_id: SRC-ADAMS-2007
+annotated_from: page image (Read tool render)
+review_status: assistant_annotated_pending_human_review
+printed_page: 103
+quantities:
+- raw: 3 drachmas
+  unit: drachma
+  value_low: 3.0
+  value_high: 3.0
+  numeral_form: digits
+- raw: 4 obols daily
+  unit: obol
+  value_low: 4.0
+  value_high: 4.0
+  numeral_form: digits
+  note: corrected in adjudication (annotator misread 'obols' as 'drachmas'; page image
+    re-checked)
+- raw: about 20 drachmas
+  unit: drachma
+  value_low: 20.0
+  value_high: 20.0
+  numeral_form: digits
+- raw: 14 obols
+  unit: obol
+  value_low: 14.0
+  value_high: 14.0
+  numeral_form: digits
+- raw: 12 obols
+  unit: obol
+  value_low: 12.0
+  value_high: 12.0
+  numeral_form: digits
+- raw: 4 drachmas
+  unit: drachma
+  value_low: 4.0
+  value_high: 4.0
+  numeral_form: digits
+  note: AD 215 rate
+ancient_cites:
+- norm_key: pkron:2
+  raw: P. Kron. 2
+- norm_key: poxy:59:3995
+  raw: P. Oxy. LIX 3995
+- norm_key: bgu:3:912
+  raw: BGU III 912
+- norm_key: psi:6:688
+  raw: PSI VI 688 R.
+- norm_key: poxy:7:1049
+  raw: P. Oxy. VII 1049
+- norm_key: bgu:2:362
+  raw: BGU II 362
+notes: donkeys/animals are not lexicon units (excluded).

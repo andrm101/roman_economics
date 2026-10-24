@@ -1,0 +1,15 @@
+stratum: S5
+unit_key: unit:40
+source_id: SRC-BOWMAN-WILSON-2009
+annotated_from: flattened text (no page image)
+review_status: assistant_annotated_pending_human_review
+printed_page: null
+quantities: []
+ancient_cites:
+- norm_key: gaius.inst:1.32c
+  raw: Gaius, Inst. 1.32c
+- norm_key: dig:50.5.3
+  raw: Dig. 50.5.3
+- norm_key: cil:8:24953
+  raw: CIL 8.24953
+notes: Chart values and n=14,246 excluded.

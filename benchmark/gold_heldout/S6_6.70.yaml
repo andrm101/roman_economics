@@ -1,0 +1,10 @@
+stratum: S6
+unit_key: '6.70'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites: []
+notes: '''|‾XXI‾| interesse'': no unit attached.'

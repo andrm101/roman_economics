@@ -1,0 +1,18 @@
+stratum: S6
+unit_key: '6.27'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities:
+- raw: ‾XIII‾ p.
+  unit: mile_roman
+  value_low: 1300.0
+  value_high: 1300.0
+  numeral_form: roman
+  note: 'READING-DEPENDENT: framed in print? 1,300 miles assumed (Rackham); TEI shows
+    overline only. Verify'
+ancient_cites: []
+notes: '''quinquagiens centena milia'' (Latin number words, unit implied) excluded;
+  CXX strategiae (no unit).'

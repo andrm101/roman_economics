@@ -1,0 +1,17 @@
+stratum: S6
+unit_key: '6.156'
+source_id: SRC-PLINY-NH-MAYHOFF
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities:
+- raw: ‾XLVII‾.‾LXV‾ p.
+  unit: mile_roman
+  value_low: 4765.0
+  value_high: 4765.0
+  numeral_form: roman
+  note: 'READING-DEPENDENT: first numeral framed (x100,000 passus) in print; frame
+    bars lost in TEI. Verify against Mayhoff/Rackham'
+ancient_cites: []
+notes: Juba's '|‾XL‾|' has no attached unit (excluded).

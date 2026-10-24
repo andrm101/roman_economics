@@ -194,13 +194,44 @@ def cmd_throughput() -> dict:
     return res
 
 
+def cmd_corpus() -> dict:
+    """WP4 pipeline: acquire -> parse -> extract -> discover -> export (resumable; see docs/corpus_pipeline.md)."""
+    import collections
+    from romeco.corpus import acquire, discover, export, extract, parse, registry
+    rep = acquire.run()
+    print("acquire:", dict(collections.Counter(r["outcome"] for r in rep)))
+    rows = parse.parse_all()
+    print("parse:", dict(collections.Counter(r["status"] for r in rows)))
+    print("extract:", extract.extract_all())
+    d = discover.discover()
+    print("discover:", {k: v for k, v in d.items() if k != "per_doc"})
+    print("export:", export.export())
+    probs = registry.validate()
+    print("registry problems:", probs or "none")
+    return d
+
+
+def cmd_benchmark() -> None:
+    """WP4.6: score the extractor on the development and held-out samples (needs OCR language data)."""
+    import os
+    from pathlib import Path
+    from romeco.corpus import benchmark as B
+    td = Path(os.environ.get("ROMECO_TESSDATA", "tessdata"))
+    from romeco.corpus import extract as E
+    v = E.EXTRACTOR_VERSION.rsplit(".", 1)[0]
+    for name, kw in (("dev", dict(suffix=f"_v{v}_dev")),
+                     ("heldout", dict(sample_file="sample_heldout.csv", gold_dir="gold_heldout", suffix=f"_heldout_v{v}"))):
+        r = B.score(tessdata=td, **kw)
+        print(name, [(s["stratum"], s["q_recall"], s["c_recall"]) for s in r["strata"]])
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput", "corpus", "benchmark"])
     args = ap.parse_args(argv)
     {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
      "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass,
-     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput}[args.command]()
+     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput, "corpus": cmd_corpus, "benchmark": cmd_benchmark}[args.command]()
 
 
 if __name__ == "__main__":

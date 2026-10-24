@@ -1,0 +1,10 @@
+stratum: S4
+unit_key: unit:4
+source_id: SRC-NAPPO-2018
+annotated_from: text
+review_status: assistant_annotated_pending_human_review
+split: heldout
+printed_page: null
+quantities: []
+ancient_cites: []
+notes: '''quasi 20 anni'': years not in lexicon.'
