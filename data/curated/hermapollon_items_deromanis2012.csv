@@ -1,0 +1,7 @@
+item_id,commodity,qty_talents,qty_minae,qty_containers,price_dr,price_basis,reported_value_talents,reported_value_drachmas,reported_value_obols,price_status,review_status,note
+HI-01,gangetic_nard,,,60,4500,per_container,45,0,0,read_in_papyrus,machine_summary_only,One of three items surviving on verso col. ii
+HI-02,ivory_sound,78,54.75,,100,per_mina,76,5275,0,read_in_papyrus,machine_summary_only,"Fraction of minae may be mis-extracted (summary flagged '54 %')"
+HI-03,schidai,13,9.75,,70,per_mina,8,5882,3,read_in_papyrus,machine_summary_only,Interpretation of schidai disputed (ivory trimmings per De Romanis 2017; Rathbone 2000: 45)
+HI-04,pepper,13241,46.5,,6,per_mina,772,5377.5,0,reconstructed,machine_summary_only,Col. I ll. 25-26 gives 771 T 4632 dr as first part of the valuation (De Romanis p. 85)
+HI-05,malabathron,1863,5.75,,12,per_mina,223,3429,0,reconstructed,machine_summary_only,
+HI-06,tortoise_shell,51,21,,48,per_mina,24,3888,0,author_proposal,machine_summary_only,Price proposed from Diocletian's Edict (outside period); alternative 78 dr/mina in n. 49

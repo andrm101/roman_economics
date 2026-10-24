@@ -1,0 +1,21 @@
+date,tool,query_or_url,purpose,results_used,notes
+2026-10-24,project_docs,Nappo 2018 full text (grep: Muziris; tetarte; 120 navi; Nikanor; Coptos),feasibility audit,SRC-NAPPO-2018,Read pp. 13; 40-48; 58-59; 86-92
+2026-10-24,project_docs,Bowman & Wilson 2009 (grep: Muziris; Red Sea; Berenike; Pliny),feasibility audit,SRC-WILSON-2009; SRC-RATHBONE-2009,Read pp. 216-217; 316-318
+2026-10-24,web_fetch,ancientportsantiques.com MuzirisPapyrus-Romanis2012.pdf,verify unit table and total reading,SRC-DEROMANIS-2012,Machine summary only
+2026-10-24,web_search,Brughmans Wilson Simulating Roman Economies Oxford 2022 MERCURY,novelty baseline,SRC-BRUGHMANS-WILSON-2022,
+2026-10-24,web_search,De Romanis The Indo-Roman Pepper Trade and the Muziris Papyrus 2020,current reading of verso,SRC-DEROMANIS-2020,
+2026-10-24,web_search,Berenike excavation Sidebotham Zych recent findings 2024,archaeological context,SRC-SMITHSONIAN-2024,
+2026-10-24,web_search,Cobb Rome and the Indian Ocean Trade,chronology,SRC-COBB-2018,
+2026-10-24,web_search,agent-based model Roman Red Sea Indian Ocean trade monsoon simulation,novelty check,none directly relevant,No Red Sea ABM found in first page of results (not exhaustive)
+2026-10-24,web_search,computational model Indian Ocean trade antiquity monsoon sailing simulation,novelty check,SRC-COPELAND-2022; SRC-GAL-ETAL-2023,
+2026-10-24,web_search,Pleiades gazetteer downloads license,structured data,SRC-PLEIADES,
+2026-10-24,web_fetch,github.com/papyri/idp.data,structured data licence,SRC-IDP-DATA,
+2026-10-24,web_search,ORBIS data download license,structured data,SRC-ORBIS,Licence not established
+2026-10-24,web_search,O.Berenike customs passes volumes,documentary data,SRC-OBERENIKE-4,Landing page blocked by bot protection
+2026-10-24,web_search,Evers Worlds Apart Trading 2017,literature map,SRC-EVERS-2017,
+2026-10-24,web_search,Carrignon Brughmans Romanowska tableware ABC PLOS ONE 2020,method precedent,SRC-CARRIGNON-ETAL-2020,
+2026-10-24,web_search,Roman Egypt prices wages database Harper 2016,price data,SRC-HARPER-2016,
+2026-10-24,web_search,Roman coin hoards India database third century,observation-bias comparator,SRC-COBB-2015A,Not pursued further this session
+2026-10-24,web_search,Wilson Bowman Trade Commerce State 2018 Red Sea chapters,literature map,SRC-WILSON-BOWMAN-2018,
+2026-10-24,web_search,Seland Ports and political power in the Periplus,literature map,,Open-access BAR monograph on Fulcrum; not yet registered
+2026-10-24,web_search (extended),Red Sea customs revenue estimate Hermapollon ships per year,prior revenue calculations,SRC-WILKINSON-2021,Thesis blocked to automated fetch

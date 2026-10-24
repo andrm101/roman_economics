@@ -1,0 +1,104 @@
+# Parameter register (M0). One entry per parameter.
+# status vocabulary:
+#   measured_input        - read from a document (still subject to reading uncertainty)
+#   external_estimate     - a modern scholar's reconstruction or calculation
+#   calibrated            - fitted by this project (none yet)
+#   exploratory           - unsupported choice; bounds are for sensitivity only
+# evidence refers to anchor IDs (data/curated/anchors.csv), readings or interpretations.
+version: 0.1.0
+parameters:
+  tau:
+    symbol: "τ"
+    definition: Alexandrian import duty (tetarte) as a share of assessed value
+    unit: fraction
+    baseline: 0.25
+    bounds: [0.25, 0.25]
+    scenarios: {double_tetarte: 0.4375}   # 1-(0.75*0.75): rival INT-TET-01 if both legs were levied on the same base
+    status: measured_input
+    evidence: [ANC-TETARTE-RATE, INT-TET-02, INT-TET-01]
+  A_H:
+    symbol: "A_H"
+    definition: Gross assessed value of the Hermapollon cargo (whole cargo, before tetarte)
+    unit: sestertius_notional
+    baseline: 9235803        # RD-HERM-TOTAL-HS1985 under INT-HERM-01
+    bounds: [6911852, 9235803]
+    alternatives:
+      HS1985_residual: 9235803
+      MORELLI_residual: 9215803
+      HS1985_whole_base: 6926852
+      MORELLI_whole_base: 6911852
+    status: measured_input
+    evidence: [RD-HERM-TOTAL-HS1985, RD-HERM-TOTAL-MORELLI, INT-HERM-01, INT-HERM-02, INT-HERM-03]
+    note: "Derived by project code (romeco.m0.hermapollon); depends on a single document."
+  N:
+    symbol: "N"
+    definition: India-bound sailings from Egyptian Red Sea ports per year
+    unit: ships_per_year
+    baseline: null
+    bounds: [10, 120]
+    status: exploratory
+    evidence: [ANC-STRABO-SHIPS]
+    note: "Strabo's 120 is Augustan, one port, ambiguous (annual vs at-visit), and need not all be India-bound. Lower bound is an exploratory floor."
+  lam:
+    symbol: "λ"
+    definition: Mean gross assessed value per sailing relative to the Hermapollon
+    unit: ratio
+    baseline: null
+    bounds: [0.1, 1.5]
+    status: exploratory
+    evidence: []
+    note: "No evidence on the size distribution of cargoes; the Hermapollon may be atypically large. Key unidentified parameter."
+  kappa:
+    symbol: "κ"
+    definition: Share of tetarte liability actually collected
+    unit: fraction
+    baseline: null
+    bounds: [0.7, 1.0]
+    status: exploratory
+    evidence: []
+  O:
+    symbol: "O"
+    definition: Annual outflow to India in nominal HS
+    unit: sestertius_notional
+    baseline: 50000000
+    bounds: [50000000, 100000000]
+    status: measured_input
+    evidence: [ANC-PLINY-OUTFLOW-INDIA, ANC-PLINY-OUTFLOW-EAST]
+    note: "Literary, moralising; object (bullion vs purchase cost) unclear. Upper value covers India+Seres+Arabia."
+  c:
+    symbol: "c"
+    definition: Non-purchase venture costs (ship, transport, fees, interest) as share of Indian purchase cost
+    unit: ratio
+    baseline: 0.5
+    bounds: [0.2, 1.5]
+    status: exploratory
+    evidence: []
+    note: "To be replaced by an itemised cost build-up (camel, Nile, ship) once Adams 2007 and the O.Berenike/Nikanor material are inspected."
+  p:
+    symbol: "p"
+    definition: Probability of losing ship and cargo on one round trip
+    unit: probability
+    baseline: 0.05
+    bounds: [0.01, 0.15]
+    status: exploratory
+    evidence: []
+  camel_capacity_kg:
+    definition: Payload of one camel load on the Coptos-Berenike route
+    unit: kg
+    baseline: 200
+    bounds: [150, 250]
+    status: exploratory
+    evidence: []
+    note: "Placeholder; candidate source Adams 2007 (cited_only)."
+  route_nile_km:
+    definition: Juliopolis-Coptos river distance
+    unit: km
+    baseline: 457.32        # 309 mp x 1.48 (CR-LEN-ROM-001)
+    status: measured_input
+    evidence: [ANC-PLINY-NILE]
+  route_desert_km:
+    definition: Coptos-Berenike road distance
+    unit: km
+    baseline: 380.36        # 257 mp x 1.48
+    status: measured_input
+    evidence: [ANC-PLINY-DESERT]

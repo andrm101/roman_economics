@@ -1,0 +1,18 @@
+# Single configuration block for the pilot. Change scope here, not in code.
+project: roman-economic-systems-lab
+pilot:
+  id: P1-EGYPT-REDSEA-INDIA
+  region: "Alexandria - Nile - Coptos - Berenike/Myos Hormos - Red Sea - Muziris (Malabar coast)"
+  period_ce: [50, 200]          # provisional; resolution set by evidence (see docs/research_design.md s.4)
+  temporal_resolution: "sailing season (one India round trip per ship per year)"
+  status: provisional_pending_feasibility_review
+seeds:
+  global: 20261024              # every stochastic routine derives from this
+paths:
+  curated: data/curated
+  raw: data/raw                 # git-ignored
+  registers: registers
+  schema: schema
+  evidence_db: build/evidence.duckdb   # derived artefact, never committed
+  experiments: experiments
+money_of_account: drachma_EG    # nominal; HS conversion only via CR-MON-EG-003

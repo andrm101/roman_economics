@@ -1,0 +1,26 @@
+{
+  "experiment": "E000_m0_anchor_consistency",
+  "run_date": "2026-10-24",
+  "romeco_version": "0.1.0",
+  "parameters_sha256": "f1e67adb7f8f47ae4ec99cf4c9a955899a22f41ff25e7d3b48897e85eacf2231",
+  "stochastic": false,
+  "python": "3.13.17",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "record_origin_of_outputs": "project_derivation (conditional calculation; not historical estimates)",
+  "headline": {
+    "naive_receipts_HS": 277074090.0,
+    "naive_implied_multiple_vs_50M": 22.1659272,
+    "baseline_bounds": {
+      "feasible": true,
+      "m_min": 2.105263157894737,
+      "hermapollon_equivalents_min": 11.397293542828583,
+      "hermapollon_equivalents_max": 180.0,
+      "receipts_min_HS": 18421052.63157895,
+      "receipts_max_HS": 415611135.0,
+      "ratio_max_over_min": 22.561747328571425
+    },
+    "envelope_receipts_min_HS": 14141414.14141414,
+    "envelope_receipts_max_HS": 415611135.0
+  }
+}

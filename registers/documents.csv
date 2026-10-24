@@ -1,0 +1,7 @@
+document_id,designation,aliases,kind,date_low_ce,date_high_ce,place,accessed_via,edition_inspected,notes
+DOC-PVINDOB-G40822,P.Vindob. G 40822,SB XVIII 13167; 'Muziris papyrus',papyrus (two related texts: recto loan contract; verso cargo valuation),100,199,Egypt (Alexandria context),SRC-NAPPO-2018; SRC-DEROMANIS-2012; SRC-WILSON-2009,no,"Mid-2nd c. CE per Nappo (II secolo). Recto: loan for a Muziris voyage, agents at Alexandria, Coptos, a Red Sea port. Verso: valuation of Hermapollon cargo."
+DOC-STRABO-GEOG,Strabo Geographica,,literary text,-7,23,,SRC-NAPPO-2018,no,Loci used: 2.5.12; 17.1.13; 17.1.45
+DOC-PLINY-NH,Pliny the Elder Naturalis Historia,,literary text,77,79,,SRC-NAPPO-2018,no,Loci used: 6.101-104; 12.84; edition not identified by Nappo for Latin text
+DOC-PME,Periplus Maris Erythraei,,literary text (practical guide),40,70,,SRC-NAPPO-2018,no,Date range is a working assumption; see Casson 1989
+DOC-OGIS-674,OGIS II 674 (Coptos tariff),SB V 8904,inscription,90,90,Coptos,SRC-NAPPO-2018,no,Dated 10 May 90 CE
+DOC-OPETR-NIKANOR,Nikanor archive,O.Petr. 220-304; O.Brüss.Berl. 7; O.Bodl. II 1969-1971,ostraka archive,-6,62,Coptos,SRC-NAPPO-2018,no,64 texts securely in the archive (Nappo 45-46)

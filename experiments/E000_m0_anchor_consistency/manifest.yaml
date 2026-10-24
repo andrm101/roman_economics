@@ -1,0 +1,18 @@
+# Pre-registration for E000 (written before the run on 2026-10-24).
+experiment: E000_m0_anchor_consistency
+question: RQ1
+purpose: >
+  Determine how tightly the anchors usually combined in the literature
+  (Strabo's 120 ships, the Hermapollon valuation, Pliny's >= HS 50 m outflow)
+  jointly constrain annual tetarte receipts under M0.
+model: romeco.m0.fiscal (deterministic; no random draws)
+inputs: config/parameters.yaml
+targets_used: []                       # no fitting in E000
+evidence_reserved_for_evaluation:
+  - desert-throughput capacity (camel numbers, loads, caravan sizes)
+  - O.Berenike outbound-pass seasonality
+expected_patterns: >
+  Wide envelope; receipts not pinned within an order of magnitude;
+  lower bound driven by Pliny's O and the cost structure, upper bound by N and lambda.
+outputs_record_origin: project_derivation
+run: python -m romeco.cli e000

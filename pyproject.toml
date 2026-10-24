@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "romeco"
+version = "0.1.0"
+description = "Roman Economic Systems Lab: evidence registers, provenance-aware schema, and M0 feasibility model for the Roman Egypt–Red Sea–India pilot"
+requires-python = ">=3.11"
+# Pinned to the versions the test suite was run against (2026-10-24).
+dependencies = [
+    "duckdb==2.0.0",
+    "pyyaml==6.0.3",
+    "numpy==2.5.3",
+    "pandas==3.0.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1"]
+
+[project.scripts]
+romeco = "romeco.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
