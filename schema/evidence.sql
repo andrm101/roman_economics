@@ -17,7 +17,7 @@ CREATE TYPE IF NOT EXISTS record_origin AS ENUM (
   'scholarly_reconstruction', 'project_derivation', 'synthetic', 'simulated');
 
 CREATE TYPE IF NOT EXISTS epistemic_status AS ENUM (
-  'accepted_working', 'uncertain', 'disputed', 'unresolved', 'rhetorical', 'rejected');
+  'accepted_working', 'uncertain', 'disputed', 'unresolved', 'rhetorical', 'superseded', 'rejected');
 
 CREATE TYPE IF NOT EXISTS review_status AS ENUM (
   'inspected', 'inspected_in_secondary', 'machine_summary_only', 'cited_only', 'human_reviewed');

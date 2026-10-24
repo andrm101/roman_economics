@@ -44,16 +44,15 @@ def test_item_sum_equals_morelli_total_exactly():
     assert H.reported_items_sum_dr() == H.load_total_readings()["RD-HERM-TOTAL-MORELLI"].total_dr
 
 
-@pytest.mark.parametrize("commodity", ["gangetic_nard", "malabathron", "tortoise_shell"])
+@pytest.mark.parametrize("commodity", ["gangetic_nard", "ivory_sound", "schidai", "malabathron", "tortoise_shell"])
 def test_items_recompute_exactly(commodity):
     c = next(c for c in H.item_checks() if c.commodity == commodity)
     assert c.residual_dr == 0
 
 
-@pytest.mark.parametrize("commodity", ["ivory_sound", "schidai", "pepper"])
-def test_items_with_talent_adjustment_have_small_documented_residuals(commodity):
-    # Non-zero residuals are expected until the fractions are checked on the page image.
-    c = next(c for c in H.item_checks() if c.commodity == commodity)
+def test_pepper_reconstruction_has_small_documented_residual():
+    # Pepper is lacunose; the official/recalculation talent factor is approximate.
+    c = next(c for c in H.item_checks() if c.commodity == "pepper")
     assert abs(c.residual_dr / c.reported_dr) < Fraction(5, 10000)
 
 

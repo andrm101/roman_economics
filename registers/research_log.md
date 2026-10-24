@@ -11,3 +11,15 @@
 - Corrected an initial misstatement: the O.Berenike passes concern **exports** from Berenike and are mostly 1st c. CE.
 - Blocked: O.Berenike 4 landing page (bot protection), Wilkinson 2021 thesis (robots). Both need manual retrieval.
 - Next: WP1 (Hermapollon documentary audit against EpiDoc + De Romanis 2020).
+
+## 2026-10-24 — Session 2 (WP1: Hermapollon documentary audit)
+
+- Partial clone of papyri/idp.data (commit f03d0f3…); located SB XVIII 13167 = TM 27666 (DDbDP/27/27666.xml; HGV28/27666.xml). Snapshot committed with checksums (CC BY 3.0).
+- Wrote `romeco.ingest.epidoc` (line-anchored text + encoded numerals) and generated `data/curated/pvindob_g40822_numerals.csv` (91 numerals, 86 lines).
+- Inspected readings: total 1,151 T 5,852 dr (v ii 29); 'value of three parts' (v ii 27); quarter shares listed in v col. i. HGV date: mid-2nd c. (126–175, low precision).
+- Reproduced the papyrus's own procedure exactly for nard, ivory and schidai (surcharge, litrai truncation, merchants' talent, truncation to minae). Lost merchants' talent identified from rounding: (97.497, 97.510] litrai.
+- 'Arabarch rates' (0.25 %, 2.88 %) are ratios of surplus quantities, not statutory rates (K14).
+- Pepper: value preserved; price disputed (6 vs 24 dr/mina, De Romanis 2014 via machine summary). Morelli's price reproduces the DDbDP numeral at v i 21 exactly. Pepper mass ×4; whole weighed cargo c. 625 t vs c. 195 t (≈×3.2) — the most likely source of the brief's 'threefold disagreement' (K3).
+- Two DDbDP encoding issues logged (K12); code overrides them and tests will flag upstream fixes.
+- WP1 acceptance: primary readings now `inspected`; 4 interpretive assertions remain `machine_summary_only` (De Romanis 2012/2014). Blocked: shell access to ISAW Papers 8 (allowlist). Needs direct reading or researcher review before WP1 can be closed.
+- E000 rerun with rejected interpretation excluded: baseline receipts HS 18.4 m–414.7 m; envelope unchanged (HS 14.1 m–415.6 m). E001 added (pepper mass scenarios).

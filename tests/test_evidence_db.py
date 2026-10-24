@@ -15,7 +15,7 @@ def test_no_dangling_parameter_evidence(con):
 
 def test_cq1_params_depending_on_muziris_papyrus(con):
     df = run_query(con, "CQ1_params_depending_on_document", doc="DOC-PVINDOB-G40822")
-    assert set(df.param_id) == {"A_H", "tau"}
+    assert set(df.param_id) == {"A_H", "tau", "merchant_talent_litrai", "pepper_price_dr_per_mina", "tax_mode"}
 
 
 def test_cq3_flags_single_document_parameters(con):
@@ -32,7 +32,9 @@ def test_synthetic_records_cannot_enter_evidence_tables(con):
 
 def test_unverified_access_is_visible(con):
     df = run_query(con, "CQ2_params_resting_on_unverified_access")
-    assert "RD-HERM-TOTAL-MORELLI" in set(df.assertion_id)
+    ids = set(df.assertion_id)
+    assert "INT-HERM-02" in ids                       # De Romanis 2012, machine summary only
+    assert "RD-HERM-TOTAL-MORELLI" not in ids         # now inspected in the DDbDP text (WP1)
 
 
 def test_every_source_has_known_rights(con):

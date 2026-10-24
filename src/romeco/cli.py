@@ -50,7 +50,10 @@ def cmd_e000(write: bool = True) -> dict:
     N_vals = np.array([10, 20, 40, 60, 80, 100, 120])
     lam_vals = np.round(np.linspace(*params["lam"]["bounds"], 15), 3)
     kap_vals = np.array(params["kappa"]["bounds"])
+    rejected = set(params["A_H"].get("rejected_alternatives", []))
     for a_name, A_H in params["A_H"]["alternatives"].items():
+        if a_name in rejected:
+            continue
         for O in params["O"]["bounds"]:
             for c in params["c"]["bounds"] + [params["c"]["baseline"]]:
                 for p in params["p"]["bounds"] + [params["p"]["baseline"]]:
@@ -103,11 +106,54 @@ def cmd_cq() -> None:
             print(run_query(con, name, doc="DOC-PVINDOB-G40822").to_string(index=False))
 
 
+IDP_COMMIT = "f03d0f371306deacd0bc302010f2c6a2e7b1d1da"
+PVINDOB_EPIDOC = ROOT / "data" / "raw" / "idp_data" / IDP_COMMIT / "DDbDP" / "27" / "27666.xml"
+
+
+def cmd_extract_pvindob() -> Path:
+    """Line-anchored numerals of P.Vindob. G 40822 from the DDbDP snapshot (generated, never hand-typed)."""
+    from romeco.ingest.epidoc import read_lines, sha256
+    lines = read_lines(PVINDOB_EPIDOC)
+    digest = sha256(PVINDOB_EPIDOC)
+    out = ROOT / "data" / "curated" / "pvindob_g40822_numerals.csv"
+    rows = []
+    for ln in lines:
+        for i, nm in enumerate(ln.numerals, 1):
+            rows.append(dict(document_id="DOC-PVINDOB-G40822", textpart=ln.textpart, column=ln.column,
+                             line=ln.n, numeral_index=i, encoded_value=nm.value or "", glyphs=nm.glyphs.strip(),
+                             unclear=nm.unclear, supplied=nm.supplied, line_text=ln.text,
+                             source_id="SRC-DDBDP-TM27666", idp_commit=IDP_COMMIT, file_sha256=digest,
+                             record_origin="transcribed_reading", review_status="inspected"))
+    pd.DataFrame(rows).to_csv(out, index=False)
+    print(f"wrote {len(rows)} numerals from {len(lines)} lines -> {out.relative_to(ROOT)}")
+    return out
+
+
+def cmd_mass() -> pd.DataFrame:
+    """E001: Hermapollon cargo mass under the rival pepper readings (deterministic)."""
+    from romeco.m0 import pvindob_arithmetic as P
+    rows = []
+    for name, price in P.PEPPER_PRICE_SCENARIOS.items():
+        t = P.pepper_valued_merchant_talents(price)
+        kg = float(P.merchant_talents_to_kg(t))
+        rows.append(dict(pepper_scenario=name, price_dr_per_mina=float(price),
+                         pepper_valued_merchant_talents=float(t), pepper_valued_t=kg / 1000,
+                         pepper_whole_approx_t=kg / 1000 * 4 / 3,
+                         camel_loads_whole_pepper_at_200kg=kg * 4 / 3 / 200))
+    df = pd.DataFrame(rows)
+    outdir = ROOT / "experiments" / "E001_cargo_mass_readings" / "outputs"
+    outdir.mkdir(parents=True, exist_ok=True)
+    df.to_csv(outdir / "pepper_mass_scenarios.csv", index=False)
+    print(df.round(1).to_string(index=False))
+    return df
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass"])
     args = ap.parse_args(argv)
-    {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq}[args.command]()
+    {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
+     "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass}[args.command]()
 
 
 if __name__ == "__main__":

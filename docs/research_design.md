@@ -1,6 +1,6 @@
 # Research Design v0.1 — Pilot P1: Roman Egypt, the Red Sea and India (c. 50–200 CE)
 
-*Status: proposal + implemented baseline. Date: 2026-10-24. Author of record: Andrei Manoloiu; drafted with Claude.*
+*Status: proposal + implemented baseline; WP1 substantially done (see §9). Date: 2026-10-24. Author of record: Andrei Manoloiu; drafted with Claude.*
 
 Claim tags: **[sourced]** = traceable to a registered source and locus; **[calculated]** = produced by code in this repo (reproducible with `python -m romeco.cli …`); **[assumption]** = a project choice or exploratory bound. "Inspected" always means the text was read; machine summaries and abstracts are labelled as such (see `registers/source_register.csv`, column `access_status`).
 
@@ -14,11 +14,11 @@ This narrows the provisional first question (information/credit frictions vs. a 
 
 **First results already in the repo (conditional, not historical estimates):**
 
-- The canonical Hermapollon figures (Wilson 2009: 217 n. 6, after Rathbone) reproduce exactly: residual HS 6,926,852 → gross HS 9,235,803 → quarter-tax HS 2,308,951 **[calculated]**.
+- The canonical Hermapollon figures (Wilson 2009: 217 n. 6, after Rathbone) reproduce exactly: residual HS 6,926,852 → gross HS 9,235,803 → quarter-tax HS 2,308,951 **[calculated]**. After WP1 the baseline uses the principal-edition reading 1,151 T 5,852 dr → gross HS 9,215,803 (D008).
 - Choosing between the two transcribed readings of the total moves gross value by 0.22 %. Choosing between interpretations (residual three-quarters vs. whole taxable base) moves it by exactly 25 % **[calculated]**. Interpretation dominates reading uncertainty.
 - Combining Strabo's 120 ships, the Hermapollon and Pliny's ≥ HS 50 million outflow bounds annual quarter-tax receipts only to an envelope of **c. HS 14 million to HS 416 million** (factor ≈ 29) across the registered parameter bounds **[calculated]**. The naive "120 Hermapollons" product, HS 277 million, is one point inside it.
 - Structural result: the **lower** bound equals τ·κ_min·M_min·O. It is pinned by Pliny's outflow and the cost structure, and the Hermapollon cancels out. The Hermapollon enters only the **upper** bound, through an unsupported assumption about how typical it was (λ) **[calculated]**.
-- A physical test can discriminate. The Hermapollon's weighed cargo is c. 468 t as valuated, c. 624 t whole, or c. 3,100 camel loads at an exploratory 200 kg per load. "120 Hermapollon-size cargoes per season" implies c. 374,000 desert camel loads per season. A modern estimate of Berenike's own supply traffic is 200–500 loads per month (Nappo 2018: 58–59) **[calculated / sourced / assumption]**. Desert throughput is therefore the most promising discriminating evidence (WP2).
+- A physical test can discriminate. Under De Romanis's reading the Hermapollon's weighed cargo is c. 468 t as valuated, c. 624 t whole, or c. 3,100 camel loads at an exploratory 200 kg per load; under Morelli's reading it is c. 195 t (c. 960 loads) — see §9 and D011. "120 Hermapollon-size cargoes per season" implies c. 374,000 desert camel loads per season. A modern estimate of Berenike's own supply traffic is 200–500 loads per month (Nappo 2018: 58–59) **[calculated / sourced / assumption]**. Desert throughput is therefore the most promising discriminating evidence (WP2).
 
 ---
 
@@ -53,6 +53,7 @@ The following are explicitly **not** contributions: choosing a new region, build
 - Residual-vs-whole-base interpretation changes gross value by exactly 25 %.
 - The drachma↔HS step is a nominal 1:1 convention (CR-MON-EG-003), so it cannot create a factor of 3.
 - **Residual value ÷ quarter-tax = 0.75/0.25 = 3 exactly** (6,926,852 / 2,308,951 = 3.000). A synthesis that compared the residual cargo value with the state's take as if both were "cargo valuations" would show a spurious threefold disagreement. This is a hypothesis about the missing document, not a finding.
+- **Stronger candidate (WP1):** the two published readings of the pepper entry (Morelli 24 dr/mina vs De Romanis 6 dr/mina plus a lost myriad) leave cargo *value* unchanged but change whole weighed cargo *mass* by ≈3.2× (c. 195 t vs c. 625 t) **[calculated; malabathron term approximate]**. A synthesis reporting this as a 'valuation' disagreement would misstate a mass disagreement.
 
 ### 2.2 Evidence inventory for the pilot (inspected vs. cited)
 
@@ -223,7 +224,10 @@ Expected outcome, stated now: with the current evidence M1 and M2 will be **obse
 | Parameter | Status | Primary documents | Comment |
 |---|---|---|---|
 | τ | measured_input | P.Vindob. G 40822; Strabo | Rival "double tetarte" kept as a scenario (0.4375) |
-| A_H | measured_input | **1** (P.Vindob. G 40822) | 4 variants (2 readings × 2 interpretations) |
+| A_H | measured_input | **1** (P.Vindob. G 40822) | Baseline HS 9,215,803 (principal edition, three-quarters scope read in the text); 1985 reading as sensitivity; whole-base variants rejected (D009) |
+| merchant_talent_litrai | measured_input | 1 | Identified from the papyrus's rounding: (97.497, 97.510] |
+| pepper_price_dr_per_mina | external_estimate | 1 | 6 vs 24: changes mass ×4, value unchanged |
+| tax_mode | measured_input | 1 | In kind (quarter shares listed); 'money' kept open by De Romanis 2014 |
 | N | exploratory | Strabo | Augustan, one port, ambiguous |
 | O | measured_input | Pliny | Literary, moralising |
 | route_nile_km, route_desert_km | measured_input | Pliny | Numerals unchecked against critical edition |
@@ -257,7 +261,7 @@ Next:
 | WP | Content | Acceptance test |
 |---|---|---|
 | WP0 ✅ | Repo, registers, schema, M0, E000 | `pytest` green; CQ1–CQ5 run; E000 manifest written |
-| **WP1 (next, first executable)** | **Hermapollon documentary audit.** Pull idp.data; extract the SB XVIII 13167 EpiDoc; verify the total reading(s) and the six item quantities; read De Romanis 2020 on the verso; resolve INT-HERM-03 against Nappo | Every assertion feeding `A_H` has review_status ∈ {inspected, human_reviewed}; CQ2 empty for `A_H`; item residuals explained or documented with page references |
+| **WP1 (substantially done)** | **Hermapollon documentary audit.** Pull idp.data; extract the SB XVIII 13167 EpiDoc; verify the total reading(s) and the six item quantities; read De Romanis 2020 on the verso; resolve INT-HERM-03 against Nappo | Every assertion feeding `A_H` has review_status ∈ {inspected, human_reviewed}; CQ2 empty for `A_H`; item residuals explained or documented with page references. **Status:** readings inspected; nard/ivory/schidai exact; INT-HERM-03 rejected; open: INT-HERM-02 and pepper/tax-mode interpretations (machine summary only) need direct reading of De Romanis 2014/2020 or your review |
 | WP2 | Desert-throughput test (Adams 2007; O.Berenike; Coptos tariff; Nikanor) | `camel_capacity_kg` and a return-window capacity become `external_estimate` with loci; H1a either rejected or retained under stated bounds |
 | WP3 | Novelty audit (Brughmans & Wilson 2022; De Romanis 2020; Wilkinson 2021; Cobb 2018; Evers 2017; Copeland 2022) | Comparison table; contribution statement C1 revised or replaced |
 | WP4 | Corpus pilot: discovery + permitted acquisition + parser benchmark on 20 stratified documents | Extraction error rates by stratum; every claim anchored to page/locus |
@@ -275,3 +279,26 @@ Next:
 - **Assumptions:** nominal dr = HS; De Romanis's metrology (95-lb official talent; 322.8 g pound); all exploratory bounds listed in `config/parameters.yaml`.
 - **Limitations:** De Romanis 2012 was read through a machine summary, not directly. Ancient texts were accessed only through Nappo's quotations. Novelty against the 2018–2022 literature is unverified. E000 is a bounds calculation, not an estimate.
 - **Single most useful next step:** WP1. Verify the Hermapollon inputs against the EpiDoc text and De Romanis 2020, because every fiscal number in the project currently rests on that one document.
+
+---
+
+## 9. WP1 results (session 2, 2026-10-24)
+
+**Source.** SB XVIII 13167 = P.Vindob. G 40822 = TM 27666, DDbDP EpiDoc (idp.data commit `f03d0f3…`, SHA-256 in `data/raw/idp_data/ATTRIBUTION.md`). The encoded text is the principal edition in *Tyche* 26 (2011), a full re-edition of the verso. HGV dates the papyrus to the mid-2nd century (126–175 CE, low precision), provenance unknown **[sourced]**. All numerals are extracted by code into `data/curated/pvindob_g40822_numerals.csv`.
+
+**What the text itself establishes [sourced: DDbDP lines cited]:**
+
+1. Total = 1,151 T 5,852 dr (v ii 29), stated as the value of **three parts** of the cargo (v ii 27). The whole-cargo-base interpretation is rejected (D009).
+2. Column i lists whole quantities and the quarter removed: nard 20 boxes (of 80); ivory 105 T 13 min, quarter 26 T 18¼, removed 26 T 30; schidai 17 T 33, quarter 4 T 23¼, removed 4 T 46. The tetarte was taken **in kind**, plus a small surplus.
+3. The 'arabarch rates' of 0.25 % and 2.88 % are ratios of these surpluses (11¾ and 22¾ minae) to listed weights, not statutory rates (K14).
+4. The recto lists borrower-borne costs until the tetarte: camel driver, desert freight (*phoretron*), Nile freight. It gives the creditor the right to collect the tetarte and dispose of the three parts on default. **No interest rate survives** in the transcribed text, so RQ3 has no in-region rate evidence.
+
+**What the project derived [calculated; `romeco.m0.pvindob_arithmetic`, tests in `tests/test_pvindob_arithmetic.py`]:**
+
+- The valuation procedure, reproduced exactly for ivory and schidai: remove the surplus, convert at 95 litrai per talent, truncate to whole litrai (7,478; 1,214), re-express in the merchants' talent, truncate to whole minae (76 T 41; 12 T 27), price (100 and 70 dr/mina), add the surplus. Every intermediate figure in v ii 4–26 matches.
+- The merchants' talent (lost in the lacuna at v ii 9) is pinned by the two truncations to **(97.497, 97.510] litrai**, which includes the 97.5 used by De Romanis.
+- Pepper: the value 771 T 4,632 dr (v i 25–26) is preserved. At Morelli's 24 dr/mina it gives exactly 3,215 T 43 min, the numeral at v i 21; at De Romanis's 6 dr/mina (with a myriad lost in the lacuna) it gives four times as much. E001: whole pepper c. **135 t vs c. 540 t**; whole weighed cargo c. 195 t vs c. 625 t **[calculated; malabathron term approximate]**.
+
+**Consequences.** Fiscal bounds (E000) are unaffected, because they depend on value, which both readings share. The desert-throughput test (WP2) must be run under both readings (D011). Two DDbDP encoding issues were found and are overridden in code (K12). Reporting them upstream requires your papyri.info account and is your call.
+
+**Still open for WP1 closure:** direct reading of De Romanis 2014 (open access, but blocked to this environment) and 2020, plus the Tyche 2011 article, to move INT-HERM-02/04/05 and INT-TET-03 out of `machine_summary_only`.

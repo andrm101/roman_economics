@@ -63,14 +63,15 @@ def build(db_path: str | Path = ":memory:", root: Path = ROOT) -> duckdb.DuckDBP
 
     reading_ids = []
     for r in _rows(cur / "hermapollon_total_readings.csv"):
-        total = int(r["talents"]) * 6000 + float(r["drachmas"])  # CR-MON-EG-001; display value only
+        total = (int(r["talents"]) * 6000 + float(r["drachmas"])  # CR-MON-EG-001; display value only
+                 if r["talents"].strip() else None)
         con.execute(ins, [r["reading_id"], r["document_id"], r["locus"], r["quantity_concept"], total, total,
-                          "drachma_EG", r["note"], r["read_by"], r["reported_in"], r["reported_page"],
+                          "drachma_EG" if total is not None else None, r["note"], r["read_by"], r["reported_in"], r["reported_page"],
                           r["record_origin"], r["epistemic_status"], r["review_status"]])
         reading_ids.append(r["reading_id"])
 
     for r in _rows(cur / "hermapollon_interpretations.csv"):
-        doc = "DOC-PVINDOB-G40822" if r["interpretation_id"].startswith("INT-HERM") else "DOC-STRABO-GEOG"
+        doc = "DOC-PVINDOB-G40822" if "PVINDOB" in r["applies_to"] else "DOC-STRABO-GEOG"
         status = "inspected" if r["review_status"] == "inspected" else r["review_status"]
         con.execute(ins, [r["interpretation_id"], doc, r["applies_to"], "interpretation", None, None, None,
                           r["claim"], r["asserted_by"], r["asserted_in"], r["page"],
@@ -83,8 +84,10 @@ def build(db_path: str | Path = ":memory:", root: Path = ROOT) -> duckdb.DuckDBP
     params = yaml.safe_load((root / "config" / "parameters.yaml").read_text(encoding="utf-8"))["parameters"]
     for pid, p in params.items():
         lo, hi = (p.get("bounds") or [None, None])
+        base = p.get("baseline")
         con.execute("INSERT INTO parameter VALUES (?,?,?,?,?,?,?)",
-                    [pid, p.get("definition"), p.get("unit"), p.get("baseline"), lo, hi, p["status"]])
+                    [pid, p.get("definition"), p.get("unit"), base if isinstance(base, (int, float)) else None,
+                     lo, hi, p["status"]])
         for ev in p.get("evidence") or []:
             con.execute("INSERT OR IGNORE INTO dependency VALUES (?,?,'derived_from')", [pid, ev])
 

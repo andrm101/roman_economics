@@ -20,16 +20,41 @@ parameters:
     symbol: "A_H"
     definition: Gross assessed value of the Hermapollon cargo (whole cargo, before tetarte)
     unit: sestertius_notional
-    baseline: 9235803        # RD-HERM-TOTAL-HS1985 under INT-HERM-01
-    bounds: [6911852, 9235803]
+    baseline: 9215803        # RD-HERM-TOTAL-MORELLI (principal edition) under INT-HERM-01 (D008)
+    bounds: [9215803, 9235803]
     alternatives:
-      HS1985_residual: 9235803
       MORELLI_residual: 9215803
-      HS1985_whole_base: 6926852
-      MORELLI_whole_base: 6911852
+      HS1985_residual: 9235803        # superseded reading, kept for sensitivity
+      HS1985_whole_base: 6926852      # rejected interpretation (INT-HERM-03), sensitivity only
+      MORELLI_whole_base: 6911852     # rejected interpretation (INT-HERM-03), sensitivity only
+    rejected_alternatives: [HS1985_whole_base, MORELLI_whole_base]
     status: measured_input
-    evidence: [RD-HERM-TOTAL-HS1985, RD-HERM-TOTAL-MORELLI, INT-HERM-01, INT-HERM-02, INT-HERM-03]
-    note: "Derived by project code (romeco.m0.hermapollon); depends on a single document."
+    evidence: [RD-HERM-TOTAL-MORELLI, RD-HERM-L27-THREE-PARTS, RD-HERM-COLI-QUARTERS, RD-HERM-TOTAL-HS1985, INT-HERM-01, INT-HERM-02, INT-HERM-03]
+    note: "Derived by project code (romeco.m0.hermapollon); depends on a single document. Three-quarters scope now read directly in the text (v col. ii l. 27)."
+  merchant_talent_litrai:
+    definition: Roman pounds (litrai) per 'merchants' talent' used to re-express tetarte weights before pricing
+    unit: litrai_per_talent
+    baseline: 97.5
+    bounds: [97.4967, 97.5100]
+    status: measured_input
+    evidence: [RD-HERM-COLI-QUARTERS]
+    note: "Lost in the lacuna of v col. ii l. 9; identified from the document's own truncations at ll. 7/10 and 19/20 (romeco.m0.pvindob_arithmetic.merchant_talent_interval)."
+  pepper_price_dr_per_mina:
+    definition: Valuation price of pepper in the verso
+    unit: drachma_EG_per_mina
+    baseline: null
+    bounds: [6, 24]
+    alternatives: {DeRomanis_6: 6, Morelli_24: 24}
+    status: external_estimate
+    evidence: [RD-HERM-PEPPER-PART, INT-HERM-04, INT-HERM-05]
+    note: "Value preserved, price/weight disputed. Changes cargo MASS by a factor of 4, not cargo value."
+  tax_mode:
+    definition: How the tetarte was collected
+    unit: categorical
+    baseline: in_kind
+    status: measured_input
+    evidence: [RD-HERM-COLI-QUARTERS, INT-TET-03]
+    note: "Quarter shares (and a surplus) listed as quantities removed; De Romanis 2014 keeps 'entirely in money' open."
   N:
     symbol: "N"
     definition: India-bound sailings from Egyptian Red Sea ports per year

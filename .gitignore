@@ -1,6 +1,8 @@
 # Acquired source files: never commit unless the rights register permits redistribution
 data/raw/*
 !data/raw/README.md
+# CC BY 3.0 papyri.info snapshot (redistributable with attribution; see ATTRIBUTION.md)
+!data/raw/idp_data/
 # Build artefacts
 *.duckdb
 *.duckdb.wal

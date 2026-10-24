@@ -1,0 +1,8 @@
+experiment: E001_cargo_mass_readings
+question: RQ1 (input to the H1a/H1b desert-throughput test)
+purpose: Hermapollon pepper mass under the two published price/reading scenarios, from the preserved value (v col. i ll. 25-26).
+model: romeco.m0.pvindob_arithmetic (deterministic)
+inputs: [RD-HERM-PEPPER-PART, INT-HERM-04, INT-HERM-05, merchant_talent_litrai]
+expected_patterns: mass ratio exactly 4 (price ratio); value invariant
+outputs_record_origin: project_derivation
+run: python -m romeco.cli mass

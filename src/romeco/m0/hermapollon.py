@@ -41,6 +41,8 @@ def load_total_readings(path: Path | None = None) -> dict[str, Reading]:
     out = {}
     with open(path, newline="", encoding="utf-8") as fh:
         for row in csv.DictReader(fh):
+            if row["quantity_concept"] != "stated_total_valuation_timai":
+                continue  # scope/context readings carry no total
             out[row["reading_id"]] = Reading(
                 row["reading_id"], int(row["talents"]), Fraction(row["drachmas"]),
                 Fraction(row["obols"]), row["read_by"], row["review_status"],
@@ -103,13 +105,14 @@ class ItemCheck:
 
 
 _TALENT_ADJ = {
-    # Price-per-mina applied on a heavier recalculation talent than the
-    # 95-lb official talent in which quantities are stated (inference from
-    # the summarised unit table; to be verified on the page).
-    "ivory_sound": ("CR-WT-EG-001", "CR-WT-EG-002"),
-    "schidai": ("CR-WT-EG-001", "CR-WT-EG-002"),
+    # Pepper only: lacunose, reconstructed by De Romanis; approximate
+    # official-to-recalculation talent factor from the summarised unit table.
     "pepper": ("CR-WT-EG-001", "CR-WT-EG-003"),
 }
+# Ivory and schidai are recomputed exactly from the papyrus's own procedure
+# (romeco.m0.pvindob_arithmetic): surcharge removal, litrai truncation,
+# merchants' talent, truncation to whole minae.
+_EXACT = {"ivory_sound": "ivory", "schidai": "schidai"}
 
 
 def load_items(path: Path | None = None) -> list[dict]:
@@ -127,6 +130,10 @@ def item_checks() -> list[ItemCheck]:
         price = Fraction(row["price_dr"])
         if row["price_basis"] == "per_container":
             recomputed, adj = Fraction(row["qty_containers"]) * price, "none"
+        elif row["commodity"] in _EXACT:
+            from romeco.m0 import pvindob_arithmetic as P
+            recomputed = getattr(P, _EXACT[row["commodity"]])().value_total_dr
+            adj = "papyrus_procedure"
         else:
             minae = Fraction(row["qty_talents"]) * 60 + Fraction(row["qty_minae"])
             factor = Fraction(1)

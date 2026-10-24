@@ -14,9 +14,9 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 | `registers/` | Source, rights, documents, search log, hypotheses, contradictions, decisions, experiments, research log |
 | `config/` | `project.yaml` (scope, seed, paths) and `parameters.yaml` (parameter register with status and bounds) |
 | `data/curated/` | Reviewed evidence tables (readings, interpretations, anchors) with provenance columns |
-| `data/raw/` | Acquired files, local only (git-ignored) |
+| `data/raw/` | Acquired files, local only (git-ignored), except the CC BY papyri.info snapshot in `data/raw/idp_data/` |
 | `schema/` | DuckDB evidence schema and competency queries |
-| `src/romeco/` | `units` (scoped conversion rules), `evidence_db`, `m0` (Hermapollon audit, voyage accounting, fiscal bounds), `cli` |
+| `src/romeco/` | `units` (scoped conversion rules), `evidence_db`, `ingest.epidoc` (EpiDoc reader), `m0` (Hermapollon audit, papyrus arithmetic, voyage accounting, fiscal bounds), `cli` |
 | `tests/` | Unit, accounting-identity, reproduction and schema tests |
 | `experiments/` | Pre-registered manifests and run outputs |
 | `bib/` | Working BibTeX library (only verified fields) |
@@ -25,10 +25,12 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 
 ```bash
 pip install -e ".[dev]"          # Python >= 3.11; versions pinned in pyproject.toml
-pytest                            # 42 tests
+pytest                            # 52 tests
 python -m romeco.cli audit        # Hermapollon readings x interpretations
 python -m romeco.cli e000         # M0 anchor-consistency experiment -> experiments/E000_*/outputs
 python -m romeco.cli cq           # build evidence DB (in memory) and run competency queries
+python -m romeco.cli extract-pvindob  # line-anchored numerals of P.Vindob. G 40822 from the DDbDP snapshot
+python -m romeco.cli mass         # E001: Hermapollon pepper mass under rival readings
 ```
 
 ## Conventions
