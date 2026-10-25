@@ -38,3 +38,13 @@ def test_unknown_rule_raises():
 def test_every_rule_has_source_and_status():
     for r in RULES.values():
         assert r.source_id and r.status in {"documented_in_source", "scholarly_convention", "project_assumption", "modern_definition"}
+
+
+def test_expansion_candidates_are_not_registered_as_read():
+    """D031: brainstormed sources stay unverified until registered with an honest status."""
+    import csv
+    from pathlib import Path
+    root = Path(__file__).resolve().parents[1]
+    rows = list(csv.DictReader(open(root / "registers" / "expansion_source_candidates.csv", encoding="utf-8")))
+    assert rows and all(r["access_status"] == "unverified_candidate" for r in rows)
+    assert len({r["cand_id"] for r in rows}) == len(rows)

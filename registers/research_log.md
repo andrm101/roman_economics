@@ -97,3 +97,17 @@
 - Builder `romeco.semantic.build` and CLI `graph`. The DuckDB store stays canonical (D027). Support vs considered is split by question selection (D028). Candidates link only via `possiblyBearsOn` (D029).
 - Acceptance: 17 tests (round trip, rivals, SHACL positive + 5 negatives, CQ6–CQ11). All CQ answers matched the pre-registered expectations after two query fixes: subclass typing without inference, and editions excluded from CQ11 citation counts. Suite: 128 passed.
 - Date correction D030.
+
+## 2026-10-25 — Session 10 (expansion brainstorm and documentation)
+
+- Researcher request: expand to a "digital twin" of the Roman world, covering wars, plagues, temperature, barbarian and enemy accounts, and technology, as documentation for a future Claude Code agentic deployment.
+- Pushback recorded (D031): evidence twin, not digital twin; ingestion gated per domain.
+- Wrote `docs/expansion/00–05`:
+  - charter;
+  - domain map (9 domains, link register L01–L08);
+  - ontology 0.2.0 draft, time model and storage;
+  - question bank RQ-X1–X8, with RQ-X1 recommended;
+  - agent roles AG-* with gates and guardrails;
+  - roadmap WP10–WP18.
+- 32 candidate sources recalled from knowledge and registered as `unverified_candidate` only. None is inspected.
+- Not done: Claude Code configuration (Part 2).

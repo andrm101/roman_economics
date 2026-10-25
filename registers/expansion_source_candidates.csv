@@ -1,0 +1,33 @@
+cand_id,domain,kind,name_as_recalled,creators_as_recalled,year_as_recalled,role_in_project,access_status,notes
+XC001,DOM-WAR,dataset,Coin Hoards of the Roman Empire (CHRE),University of Oxford project,,hoards for RQ-X4; DOM-MON,unverified_candidate,check host and licence and export format
+XC002,DOM-WAR,dataset,Seshat Global History Databank,Seshat project,,polity and warfare variables for comparison,unverified_candidate,check licence (believed non-commercial share-alike; verify)
+XC003,DOM-WAR,dataset,Epigraphic Database Heidelberg (EDH),Heidelberg Academy,,military and building inscriptions; dates,unverified_candidate,check open-data dump and licence
+XC004,DOM-WAR,dataset,Epigraphik-Datenbank Clauss-Slaby (EDCS),M. Clauss et al.,,epigraphic search,unverified_candidate,check terms; bulk use may not be permitted
+XC005,DOM-EPI,work,The Fate of Rome: Climate Disease and the End of an Empire,Kyle Harper,2017,maximalist synthesis (climate + plague),unverified_candidate,monograph; access via researcher
+XC006,DOM-EPI,work,Plagues climate change and the end of an empire: a response to Kyle Harper's The Fate of Rome,John Haldon et al.,2018,critical response (History Compass; multi-part),unverified_candidate,verify parts and pages
+XC007,DOM-EPI,work,Rejecting catastrophe: the case of the Justinianic Plague,Lee Mordechai; Merle Eisenberg,2019,minimalist reading (Past & Present),unverified_candidate,
+XC008,DOM-EPI,work,aDNA identification of Yersinia pestis in 6th-c. burials,David M. Wagner et al.,2014,pathogen identification (Lancet Infectious Diseases),unverified_candidate,
+XC009,DOM-EPI,work,Ancient Yersinia pestis genomes from across Western Europe (first pandemic),Marcel Keller et al.,2019,pathogen spread (PNAS),unverified_candidate,
+XC010,DOM-EPI,work,The impact of the Antonine plague,Richard Duncan-Jones,1996,Egyptian documentary evidence (JRA),unverified_candidate,
+XC011,DOM-CLI,dataset,2500 years of European climate variability and human susceptibility,Ulf Büntgen et al.,2011,tree-ring temperature and precipitation (Science),unverified_candidate,data via NOAA paleo archive; check
+XC012,DOM-CLI,dataset,Cooling and societal change during the Late Antique Little Ice Age from 536 to around 660 AD,Ulf Büntgen et al.,2016,LALIA reconstruction (Nature Geoscience),unverified_candidate,
+XC013,DOM-CLI,dataset,Timing and climate forcing of volcanic eruptions for the past 2500 years,Michael Sigl et al.,2015,eruption list (Nature),unverified_candidate,check chronology version used later
+XC014,DOM-CLI,dataset,Lead pollution recorded in Greenland ice indicates European emissions tracked plagues wars and imperial expansion during antiquity,Joseph R. McConnell et al.,2018,annual lead series (PNAS),unverified_candidate,supplementary data; check licence
+XC015,DOM-CLI,dataset,PAGES 2k Consortium temperature database,PAGES 2k Consortium,,multi-proxy reconstructions,unverified_candidate,check version
+XC016,DOM-CLI,dataset,Old World Drought Atlas (OWDA),Edward R. Cook et al.,2015,hydroclimate field (Science Advances),unverified_candidate,
+XC017,DOM-CLI,work,Climate change during and after the Roman Empire: reconstructing the past from scientific and historical evidence,Michael McCormick et al.,2012,synthesis (Journal of Interdisciplinary History),unverified_candidate,
+XC018,DOM-CLI,work,Volcanic suppression of Nile summer flooding triggers revolt and constrains interstate conflict in ancient Egypt,Joseph G. Manning et al.,2017,Ptolemaic analogue for RQ-X2 (Nature Communications),unverified_candidate,Ptolemaic period: transfer assumption required
+XC019,DOM-CLI,dataset,NOAA NCEI Paleoclimatology data archive,NOAA,,host for tree-ring and ice-core series,unverified_candidate,per-series terms
+XC020,DOM-EXT,text,Hou Hanshu (account of Daqin),Fan Ye (compiler),,Chinese account of the Roman East,unverified_candidate,original via Chinese Text Project (check terms); translation rights separate
+XC021,DOM-EXT,text,Weilüe (account of Daqin),Yu Huan,,Chinese account of the Roman East,unverified_candidate,survives in quotation; edition and translation to identify
+XC022,DOM-EXT,text,Shapur I trilingual inscription (Ka'ba-ye Zartosht),,,Sasanian account of wars with Rome,unverified_candidate,edition and translation to identify
+XC023,DOM-EXT,text,Tamil Sangam poems mentioning Yavanas,,,South Asian accounts of western traders,unverified_candidate,edition and translation to identify
+XC024,DOM-EXT,dataset,Trismegistos,KU Leuven et al.,,people places texts identifiers,unverified_candidate,check API terms
+XC025,DOM-TEC,work,Machines power and the ancient economy,Andrew Wilson,2002,revisionist technology synthesis (JRS),unverified_candidate,
+XC026,DOM-TEC,work,Technological innovation and economic progress in the ancient world: M.I. Finley re-considered,Kevin Greene,2000,technology debate (Economic History Review),unverified_candidate,
+XC027,DOM-TEC,dataset,OXREP databases (shipwrecks; mines; presses),Oxford Roman Economy Project,,installation and shipwreck data,unverified_candidate,check access and licence
+XC028,DOM-TEC,work,Ancient Shipwrecks of the Mediterranean and the Roman Provinces,A. J. Parker,1992,shipwreck catalogue (BAR),unverified_candidate,print
+XC029,DOM-DEM,work,The Demography of Roman Egypt,Roger S. Bagnall; Bruce W. Frier,1994,census returns,unverified_candidate,
+XC030,DOM-DEM,work,The biological standard of living in Europe during the last two millennia,Nikola Koepke; Joerg Baten,2005,stature series (European Review of Economic History),unverified_candidate,
+XC031,DOM-MON,work,The Metallurgy of Roman Silver Coinage: From the Reform of Nero to the Reform of Trajan,Kevin Butcher; Matthew Ponting,2014,fineness data (CUP),unverified_candidate,period coverage limited; check Alexandrian coverage
+XC032,DOM-WAR,dataset,Digital Atlas of Roman and Medieval Civilizations (DARMC),Harvard,,GIS layers,unverified_candidate,partly in use via Harper 2016 prices; other layers unverified

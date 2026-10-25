@@ -272,6 +272,7 @@ Next:
 | WP6 | M2 (gated by WP5 + an identified target) | Limiting-case convergence test; ablation table |
 | WP7 | Synthetic-data framework | Origin labels survive joins/exports (tests); recovery experiments documented as software validation |
 | WP8 | Paper-style account | Third party can trace every number to code, parameters, assertions and sources |
+| WP10–WP18 | Expansion to the evidence twin (proposal, D031): shared time, identity and coverage infrastructure; agent harness; rights audit; domain modules; RQ-X1 | see `docs/expansion/05_roadmap.md` |
 | WP9 ✅ | Semantic foundation (appended; the brief's 'Semantic foundation' milestone): minimal ontology, assertion graph, SHACL shapes, competency queries | Provenance and competing interpretations survive ingestion and querying: lossless round trip, rivals survive, SHACL positive + 5 negative cases, CQ6–CQ11 golden answers (`tests/test_semantic.py`) — **met 2026-10-24** |
 
 **Decision with the largest effect on validity:** treating λ (how typical the Hermapollon was) as unidentified and testing it through desert throughput, rather than assuming λ ≈ 1. **Decisions that can safely wait:** graph database, ABM framework, full CIDOC CRM mapping, cloud infrastructure.
@@ -401,3 +402,8 @@ The pipeline (`romeco.corpus`, `docs/corpus_pipeline.md`) acquires, parses, anch
 - CQ10: Pliny's 257 mp for Coptos–Berenike is found as a candidate in Adams 2007 (p. 39) and Mayhoff 6.103. These are a review lead, not independent support: Adams reports Pliny.
 
 **Limitations.** Q-HERM-SCOPE's INT-HERM-01 and -02 are compatible readings (both "three-quarters"), so the question records a scholarly framing difference, not a contradiction. Place identifications are generated from the crosswalk with uniform `uncertain` status; per-identification review is not yet done. The `possiblyBearsOn` matcher is value-and-unit only and will miss rounded or converted figures. Time is kept as integer bounds (OWL-Time deferred, D026).
+
+
+## 14. Expansion (proposal, 2026-10-25)
+
+The scope is extended in documentation only, to an evidence twin of the Roman world and its neighbours (D031). See `docs/expansion/` (charter, domain map, ontology and data, question bank, agentic workflow, roadmap). RQ1 remains the first module. The first cross-domain candidate is RQ-X1, the 160–187 Egyptian price break: mortality vs. money vs. document composition.

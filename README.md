@@ -19,6 +19,7 @@ The aim is not to reconstruct a precise Roman GDP or trade volume. The aim is to
 | `src/romeco/` | `units` (scoped conversion rules), `evidence_db`, `ingest.epidoc` (EpiDoc reader), `m0` (Hermapollon audit, papyrus arithmetic, voyage accounting, fiscal bounds), `cli` |
 | `src/romeco/corpus/` | WP4 corpus pipeline: registry, acquisition, parsing, extraction, discovery, export, benchmark |
 | `registers/corpus/` | File copies (items), relations, pipeline states, acquisition log, parse manifest, discovery candidates |
+| `docs/expansion/` | Proposal: evidence twin of the Roman world (domains, ontology 0.2 draft, question bank, agentic workflow, roadmap) |
 | `ontology/` | WP9 minimal ontology, SHACL shapes, standards alignment, SPARQL competency queries |
 | `src/romeco/semantic/` | WP9 graph builder (DuckDB store → RDF) and query runner |
 | `benchmark/` | WP4.6 extraction benchmark: protocol, samples, gold, results, gold review sheet |
