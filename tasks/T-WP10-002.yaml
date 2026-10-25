@@ -1,0 +1,36 @@
+task_id: T-WP10-002
+role: ag-mod
+wp: WP10
+status: done
+goal: >
+  Harden romeco.time per the T-WP10-001 audit (audits/T-WP10-001.md) and apply D034: the dating Monte Carlo
+  excludes circularly dated records automatically (02_ontology_and_data.md section 4), rejects duplicate record
+  IDs, and validates n_draws as a positive int (not bool); the lag join requires 1 <= B.t_low - A.t_high <= k,
+  so it is disjoint from the overlap join.
+inputs:
+  - docs/expansion/02_ontology_and_data.md
+  - registers/decision_log.md (D033, D034)
+  - audits/T-WP10-001.md
+  - src/romeco/time.py
+outputs_expected:
+  - src/romeco/time.py
+  - tests/test_time.py
+acceptance:
+  - pytest -q
+  - a planted circular A/B pair is excluded from monte_carlo() without the caller passing `exclude`
+  - duplicate record IDs raise an error
+  - n_draws=True and n_draws=0 raise an error
+  - the seed-42 reproducibility test from T-WP10-001 still passes
+  - "D034: A=(100,110), B=(110,120) is in overlap_join and not in lag_join; B=(111,120) is in lag_join with lag 1; no pair is in both joins (randomised check)"
+forbidden:
+  - changing any existing dated record
+  - changing join semantics beyond D034
+  - editing T-WP10-001 tests other than those asserting lag 0 is a lag-join match
+stop_and_escalate_if:
+  - automatic exclusion needs a join context the spec does not define (which side of the join)
+  - a check can only pass by editing evidence, or T-WP10-001 tests outside the D034 lag rule
+budget:
+  max_turns: 40
+  max_wall_minutes: 45
+approved_by: andrei
+notes: Proposed by AG-ORCH 2026-10-25 from the ag-aud notes on T-WP10-001. Researcher added the lag fix (D034) to scope and approved 2026-10-25.

@@ -59,7 +59,7 @@ roles:
     write: [data/curated/**, registers/documents.csv, registers/source_register.csv, registers/contradiction_register.md, tasks/reports/**]
     network: false
   ag-mod:
-    write: [src/romeco/m0/**, src/romeco/m1/**, src/romeco/m2/**, experiments/**, runs/**, tests/test_m*.py, registers/experiment_registry.csv, tasks/reports/**]
+    write: [src/romeco/m0/**, src/romeco/m1/**, src/romeco/m2/**, experiments/**, runs/**, tests/test_m*.py, src/romeco/time.py, tests/test_time.py, registers/experiment_registry.csv, tasks/reports/**]
     network: false
   ag-val:
     write: [validation/**, tasks/reports/**]

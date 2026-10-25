@@ -134,3 +134,10 @@
 - Bug 2: `acquire.run()` logged `skipped_unchanged` for a known item even when its cache file was missing, so a fresh clone or `purge_cache()` could never be restored. Now it rewrites the identical bytes and logs `restored_cache`. Test: `test_acquire_restores_missing_cache_for_known_item`.
 - Offline hook probe through the exact `settings.json` command, with Windows paths: 9/9 policy cases as expected (human-only write, held-out Read/Grep/Bash, `human_reviewed` text rule, unknown agent, main session).
 - Restored corpus cache: Pliny (git route, `restored_cache`); Adams 2007 from the researcher's own copy, SHA-256 identical to ITM-68c25790bd89 (stays git-ignored, RGT-OUP-ARR).
+- WP11 continued (same day):
+  - §5 live smoke test passed. ag-scribe → `config/parameters.yaml` and ag-mod → `benchmark/gold_heldout/` were both denied with `[romeco policy]`, after one attempt each.
+  - T-WP11-001 done: 3 review packets (PR #3).
+  - T-WP10-001: the first run escalated correctly (§4 join rules ambiguous) → D033. The second run delivered `romeco.time` (24 tests), with ag-val PASS and ag-aud pass with notes (PR #4). Main-session spot checks agree.
+- Hook false positives (5 so far): any Bash line naming a human-only path together with a redirect, pipe or heredoc is treated as a write. These were `md5sum`, `grep … | head` and heredoc report text. Agents fell back to file tools and never worked around a denial. Candidate policy refinement for the researcher.
+- D034 amends the D033 lag rule. T-WP10-002 approved with the lag fix in scope.
+- D033 reference metadata (DOIs, pages) entered from memory; not yet verified against the publishers (ag-aud has no network grant for this).
