@@ -1,7 +1,14 @@
 task_id: T-WP10-001
 role: ag-mod
 wp: WP10
-status: approved
+status: blocked
+blocked_reason: >
+  2026-10-25 (AG-ORCH): ag-mod stopped under stop_and_escalate_if; no code delivered. Spec
+  02_ontology_and_data.md section 4 leaves join rules undefined: (1) overlap-fraction denominator,
+  (2) lag-join boundaries (lag 0, inclusive k, B starting before A ends), (3) whether t_low/t_high
+  are duration or uncertainty bounds; minor: containment strictness, MC sampling distribution,
+  indirect-chain cycle detection. ag-val PASS on the escalation (validation/T-WP10-001.md).
+  Needs a researcher decision (decision log + parameters), then re-approval.
 goal: >
   Implement the shared time model (docs/expansion/02_ontology_and_data.md section 4): interval type with
   t_low/t_high/resolution/dating_method/dating_dependency, BCE/CE conversion without year 0,
