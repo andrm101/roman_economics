@@ -1337,6 +1337,14 @@ rxd: rx:graphVersion "0.1.0" .
     rx:scope "Generic Greek weight subdivision" ;
     rx:toUnit <https://github.com/andrm101/roman_economics/id/unit/mina> .
 
+<https://github.com/andrm101/roman_economics/id/source/SRC-ALLEN-1983> a rx:Source ;
+    dcterms:creator "James F. Allen" ;
+    dcterms:date "1983" ;
+    dcterms:identifier "SRC-ALLEN-1983" ;
+    dcterms:title "Maintaining knowledge about temporal intervals" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
 <https://github.com/andrm101/roman_economics/id/source/SRC-BAGNALL-ETAL-2000> a rx:Source ;
     dcterms:creator "R. S. Bagnall; C. Helms; A. M. F. W. Verhoogt" ;
     dcterms:date "2000" ;
@@ -1407,6 +1415,22 @@ rxd: rx:graphVersion "0.1.0" .
     dcterms:title "Riding the Monsoon: Geography and Iron Age Trade in the Indian Ocean" ;
     rx:accessStatus "machine_summary_only" ;
     rx:sourceKind "working_paper" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-CREMA-2012> a rx:Source ;
+    dcterms:creator "Enrico R. Crema" ;
+    dcterms:date "2012" ;
+    dcterms:identifier "SRC-CREMA-2012" ;
+    dcterms:title "Modelling temporal uncertainty in archaeological analysis" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-CREMA-BEVAN-LAKE-2010> a rx:Source ;
+    dcterms:creator "Enrico R. Crema; Andrew Bevan; Mark W. Lake" ;
+    dcterms:date "2010" ;
+    dcterms:identifier "SRC-CREMA-BEVAN-LAKE-2010" ;
+    dcterms:title "A probabilistic framework for assessing spatio-temporal point patterns in the archaeological record" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
 
 <https://github.com/andrm101/roman_economics/id/source/SRC-DEROMANIS-2020> a rx:Source ;
     dcterms:creator "Federico De Romanis" ;
@@ -1499,6 +1523,14 @@ rxd: rx:graphVersion "0.1.0" .
     dcterms:title "Debasement of Roman Silver coinage" ;
     rx:accessStatus "metadata_only" ;
     rx:sourceKind "dataset" .
+
+<https://github.com/andrm101/roman_economics/id/source/SRC-RATCLIFFE-2000> a rx:Source ;
+    dcterms:creator "Jerry H. Ratcliffe" ;
+    dcterms:date "2000" ;
+    dcterms:identifier "SRC-RATCLIFFE-2000" ;
+    dcterms:title "Aoristic analysis: the spatial interpretation of unspecific temporal events" ;
+    rx:accessStatus "cited_only" ;
+    rx:sourceKind "article" .
 
 <https://github.com/andrm101/roman_economics/id/source/SRC-RUFFING-NIKANOR> a rx:Source ;
     dcterms:creator "K. Ruffing" ;

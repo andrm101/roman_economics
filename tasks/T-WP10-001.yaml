@@ -1,7 +1,7 @@
 task_id: T-WP10-001
 role: ag-mod
 wp: WP10
-status: blocked
+status: approved
 blocked_reason: >
   2026-10-25 (AG-ORCH): ag-mod stopped under stop_and_escalate_if; no code delivered. Spec
   02_ontology_and_data.md section 4 leaves join rules undefined: (1) overlap-fraction denominator,
@@ -31,4 +31,4 @@ budget:
   max_turns: 60
   max_wall_minutes: 60
 approved_by: andrei
-notes: Before approval the researcher adds src/romeco/time.py and tests/test_time.py to the ag-mod write grant (roles.yaml is human-only).
+notes: Grant added (39b73e8). First run escalated (join rules ambiguous); resolved by D033 and the updated 02_ontology_and_data.md section 4. Re-approved 2026-10-25. Acceptance also covers D033 - overlap_frac |A∩B|/|A| with Jaccard; inclusive containment; 0 <= lag <= k; uniform seeded draws; cycles of any length.
