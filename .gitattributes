@@ -1,0 +1,2 @@
+# Raw evidence is checksummed: never convert line endings
+data/raw/** -text
