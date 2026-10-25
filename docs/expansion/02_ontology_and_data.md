@@ -59,7 +59,7 @@ Every dated record carries:
 **Join rules for cross-domain analysis (D033):**
 - **Overlap join:** returns pairs with `|A∩B| > 0`, reporting `overlap_frac = |A∩B| / |A|` (asymmetric; under uniform uncertainty, the probability that A's date falls in B, i.e. the aoristic weight) and the symmetric `jaccard = |A∩B| / |A∪B|`.
 - **Containment join:** `B.t_low ≤ A.t_low` and `A.t_high ≤ B.t_high`. Inclusive, so equal intervals count as contained (Allen 1983: *equals*, *during*, *starts*, *finishes*).
-- **Lag join:** `0 ≤ B.t_low − A.t_high ≤ k`, inclusive at both ends. A pair where B starts before A ends belongs to the overlap join, not the lag join.
+- **Lag join (D034):** `1 ≤ B.t_low − A.t_high ≤ k`. Lag 1 means B starts the year after A ends. A pair that shares any year (lag ≤ 0) belongs to the overlap join only, so the two joins are disjoint.
 
 Analyses must state which join they use. A correlation between two series must be **robust to resampling dates within their intervals**: a Monte Carlo over dating uncertainty that draws each date uniformly (integer years) within its interval, seeded (default 42) and reported. Circularly dated records are excluded from that test automatically. A record is circular if following `dating_dependency` links from it reaches the other side of the join, or returns to itself, over a chain of any length (A→B→A, A→C→B→A).
 
