@@ -54,12 +54,14 @@ Every dated record carries:
 | `calendar_source` | e.g. Egyptian civil year vs. Julian, for documentary dates. Conversion is a named rule, like units |
 | `dating_dependency` | ID of the claim the date depends on (e.g. a destruction layer dated *because* attributed to a known war). Prevents circular dating |
 
-**Join rules for cross-domain analysis:**
-- **Overlap join:** returns pairs whose intervals overlap, with the overlap fraction.
-- **Containment join:** A is inside B.
-- **Lag join:** B starts within k years after A ends.
+**Interval semantics (D033):** `[t_low, t_high]` bounds the *uncertainty* about one event's date, not a duration. Arithmetic uses astronomical years (1 BCE = 0, 2 BCE = −1). Bounds are inclusive, so an interval's length is `|A| = t_high − t_low + 1` years: (1 BCE, 1 CE) spans 2 years.
 
-Analyses must state which join they use. A correlation between two series must be **robust to resampling dates within their intervals**: a Monte Carlo over dating uncertainty, seeded and reported. Circularly dated records (where `dating_dependency` points to the other side of the join) are excluded from that test automatically.
+**Join rules for cross-domain analysis (D033):**
+- **Overlap join:** returns pairs with `|A∩B| > 0`, reporting `overlap_frac = |A∩B| / |A|` (asymmetric; under uniform uncertainty, the probability that A's date falls in B, i.e. the aoristic weight) and the symmetric `jaccard = |A∩B| / |A∪B|`.
+- **Containment join:** `B.t_low ≤ A.t_low` and `A.t_high ≤ B.t_high`. Inclusive, so equal intervals count as contained (Allen 1983: *equals*, *during*, *starts*, *finishes*).
+- **Lag join:** `0 ≤ B.t_low − A.t_high ≤ k`, inclusive at both ends. A pair where B starts before A ends belongs to the overlap join, not the lag join.
+
+Analyses must state which join they use. A correlation between two series must be **robust to resampling dates within their intervals**: a Monte Carlo over dating uncertainty that draws each date uniformly (integer years) within its interval, seeded (default 42) and reported. Circularly dated records are excluded from that test automatically. A record is circular if following `dating_dependency` links from it reaches the other side of the join, or returns to itself, over a chain of any length (A→B→A, A→C→B→A).
 
 ## 5. Storage
 

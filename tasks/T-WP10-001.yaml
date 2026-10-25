@@ -1,7 +1,14 @@
 task_id: T-WP10-001
 role: ag-mod
 wp: WP10
-status: proposed
+status: done
+blocked_reason:
+history: >
+  2026-10-25 (AG-ORCH) run 1: blocked; ag-mod escalated (join rules ambiguous), resolved by D033.
+  2026-10-25 (AG-ORCH) run 2: done. ag-mod 014f6ed; ag-val PASS (validation/T-WP10-001.md, 78ad7d8);
+  ag-aud pass_with_notes (audits/T-WP10-001.md). Audit notes: Monte Carlo does not exclude circular
+  records automatically (caller must pass `exclude`), proposed as T-WP10-002; D033 lag 0 overlaps the
+  overlap join (researcher decision); duplicate IDs merged silently; n_draws=True accepted.
 goal: >
   Implement the shared time model (docs/expansion/02_ontology_and_data.md section 4): interval type with
   t_low/t_high/resolution/dating_method/dating_dependency, BCE/CE conversion without year 0,
@@ -23,5 +30,5 @@ stop_and_escalate_if:
 budget:
   max_turns: 60
   max_wall_minutes: 60
-approved_by:
-notes: Before approval the researcher adds src/romeco/time.py and tests/test_time.py to the ag-mod write grant (roles.yaml is human-only).
+approved_by: andrei
+notes: Grant added (39b73e8). First run escalated (join rules ambiguous); resolved by D033 and the updated 02_ontology_and_data.md section 4. Re-approved 2026-10-25. Acceptance also covers D033 - overlap_frac |A∩B|/|A| with Jaccard; inclusive containment; 0 <= lag <= k; uniform seeded draws; cycles of any length.

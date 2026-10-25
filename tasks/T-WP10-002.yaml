@@ -1,0 +1,33 @@
+task_id: T-WP10-002
+role: ag-mod
+wp: WP10
+status: proposed
+goal: >
+  Harden romeco.time per the T-WP10-001 audit (audits/T-WP10-001.md): the dating Monte Carlo excludes
+  circularly dated records automatically (02_ontology_and_data.md section 4), rejects duplicate record
+  IDs, and validates n_draws as a positive int (not bool).
+inputs:
+  - docs/expansion/02_ontology_and_data.md
+  - registers/decision_log.md (D033)
+  - audits/T-WP10-001.md
+  - src/romeco/time.py
+outputs_expected:
+  - src/romeco/time.py
+  - tests/test_time.py
+acceptance:
+  - pytest -q
+  - a planted circular A/B pair is excluded from monte_carlo() without the caller passing `exclude`
+  - duplicate record IDs raise an error
+  - n_draws=True and n_draws=0 raise an error
+  - the seed-42 reproducibility test from T-WP10-001 still passes
+forbidden:
+  - changing any existing dated record
+  - changing the D033 join semantics (the lag-0 / overlap question is the researcher's)
+stop_and_escalate_if:
+  - automatic exclusion needs a join context the spec does not define (which side of the join)
+  - a check can only pass by editing evidence or tests from T-WP10-001
+budget:
+  max_turns: 40
+  max_wall_minutes: 45
+approved_by:
+notes: Proposed by AG-ORCH 2026-10-25 from the ag-aud notes on T-WP10-001. Lag-0 overlap with the overlap join is deliberately out of scope until the researcher decides.
