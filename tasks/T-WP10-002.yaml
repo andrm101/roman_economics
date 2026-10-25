@@ -1,7 +1,7 @@
 task_id: T-WP10-002
 role: ag-mod
 wp: WP10
-status: approved
+status: done
 goal: >
   Harden romeco.time per the T-WP10-001 audit (audits/T-WP10-001.md) and apply D034: the dating Monte Carlo
   excludes circularly dated records automatically (02_ontology_and_data.md section 4), rejects duplicate record
