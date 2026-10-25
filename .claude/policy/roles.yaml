@@ -1,0 +1,72 @@
+# Agent permission policy (WP11). Single source of truth for the PreToolUse hook
+# (romeco.agents.hooks) and for the consistency tests (tests/test_agents.py).
+# Applies to SUBAGENTS only (hook input carries agent_type). The researcher's own
+# interactive session is not restricted here, except the universal git rules.
+version: 1
+
+# Reviewer IDs that may appear as approvers (review_decisions.csv, human_reviewed rows).
+humans: [andrei]
+
+# No subagent may write these, whatever its role (epistemic decisions stay human).
+human_only_paths:
+  - registers/decision_log.md
+  - registers/review_decisions.csv
+  - data/curated/semantic/questions.csv
+  - config/parameters.yaml
+  - ontology/shapes.ttl
+  - ontology/romeco.ttl
+  - .claude/**
+  - CLAUDE.md
+
+# Paths only the listed roles may read (held-out evidence and gold sets).
+sealed_paths:
+  - glob: benchmark/gold_heldout/**
+    readers: [ag-val, ag-aud]
+    reason: held-out extraction gold (D025); extractor developers must not see it
+
+# Text that no subagent may write into any file (promotion and access upgrades are human acts).
+forbidden_new_text:
+  - pattern: 'human_reviewed'
+    files: [data/**, registers/**, review_queue/**]
+    reason: only a human promotes a candidate or claim to human_reviewed (D024)
+  - pattern: 'inspected_full_text|inspected_partial'
+    files: [registers/source_register.csv]
+    reason: access status may be upgraded only by a human after inspection
+  - pattern: 'resolved_working'
+    files: [data/curated/**, registers/**]
+    reason: resolving a question is a logged human decision (D028)
+
+roles:
+  ag-orch:
+    write: [tasks/**]
+    network: false
+  ag-disc:
+    write: [registers/search_log.csv, registers/corpus/discovery_candidates.csv, registers/expansion_source_candidates.csv, tasks/reports/**]
+    network: true
+  ag-rights:
+    write: [registers/rights_proposals.csv, tasks/reports/**]
+    network: true
+  ag-acq:
+    write: [registers/corpus/items.csv, registers/corpus/acquisition_log.csv, registers/corpus/pipeline_state.csv, data/raw/**, tasks/reports/**]
+    network: true
+  ag-parse:
+    write: [registers/corpus/parse_manifest.csv, registers/corpus/pipeline_state.csv, data/parsed/**, data/derived/corpus/**, src/romeco/corpus/**, tests/test_corpus.py, tasks/reports/**]
+    network: false
+  ag-rev:
+    write: [review_queue/**, tasks/reports/**]
+    network: false
+  ag-cur:
+    write: [data/curated/**, registers/documents.csv, registers/source_register.csv, registers/contradiction_register.md, tasks/reports/**]
+    network: false
+  ag-mod:
+    write: [src/romeco/m0/**, src/romeco/m1/**, src/romeco/m2/**, experiments/**, runs/**, tests/test_m*.py, registers/experiment_registry.csv, tasks/reports/**]
+    network: false
+  ag-val:
+    write: [validation/**, tasks/reports/**]
+    network: false
+  ag-aud:
+    write: [audits/**, tasks/reports/**]
+    network: true
+  ag-scribe:
+    write: [docs/**, registers/research_log.md, README.md, tasks/reports/**]
+    network: false

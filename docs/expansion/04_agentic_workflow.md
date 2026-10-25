@@ -1,6 +1,6 @@
 # Agentic workflow design (basis for a Claude Code deployment)
 
-**Status:** design. Part 2 will turn this into concrete Claude Code configuration (subagent definitions, skills, hooks, permission settings), checked against the Claude Code documentation current at deployment. Nothing here is deployed.
+**Status:** design, implemented as configuration in Part 2 (`06_claude_code_deployment.md`, D032). Not yet run live.
 
 ## 1. Principle: agents move work items between registered states; humans make the epistemic decisions
 

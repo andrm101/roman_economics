@@ -15,3 +15,5 @@ experiments/*/outputs/*.parquet
 data/interim/
 data/derived/graph/full.ttl
 .export/
+review_queue/*
+!review_queue/README.md

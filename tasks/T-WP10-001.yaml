@@ -1,0 +1,27 @@
+task_id: T-WP10-001
+role: ag-mod
+wp: WP10
+status: proposed
+goal: >
+  Implement the shared time model (docs/expansion/02_ontology_and_data.md section 4): interval type with
+  t_low/t_high/resolution/dating_method/dating_dependency, BCE/CE conversion without year 0,
+  overlap/containment/lag joins, seeded dating Monte Carlo, and a circular-dating cycle check.
+inputs:
+  - docs/expansion/02_ontology_and_data.md
+outputs_expected:
+  - src/romeco/time.py (new module; policy grant to be added by the researcher before approval)
+  - tests/test_time.py
+acceptance:
+  - pytest -q
+  - "astronomical conversion: 1 BCE -> 0, 1 CE -> 1; interval (-1, 1) spans 2 years, not 3"
+  - a planted A->B->A dating dependency is reported as circular
+  - the Monte Carlo is reproducible for a fixed seed
+forbidden:
+  - changing any existing dated record
+stop_and_escalate_if:
+  - the spec in 02_ontology_and_data.md is ambiguous on a join rule
+budget:
+  max_turns: 60
+  max_wall_minutes: 60
+approved_by:
+notes: Before approval the researcher adds src/romeco/time.py and tests/test_time.py to the ag-mod write grant (roles.yaml is human-only).

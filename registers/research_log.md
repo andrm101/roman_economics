@@ -111,3 +111,18 @@
   - roadmap WP10–WP18.
 - 32 candidate sources recalled from knowledge and registered as `unverified_candidate` only. None is inspected.
 - Not done: Claude Code configuration (Part 2).
+
+## 2026-10-25 — Session 11 (Part 2: Claude Code agent harness, WP11)
+
+- Read the current Claude Code docs (sub-agents, hooks, skills, permissions) and wrote the configuration against them:
+  - 11 subagents;
+  - 5 skills;
+  - `settings.json` with one PreToolUse hook, deny rules and bypass mode disabled;
+  - the policy file;
+  - task template plus two proposed tasks (T-WP11-001 dry run; T-WP10-001 time model);
+  - review-decision and rights-proposal registers;
+  - review-packet generator;
+  - `agents-check` CLI.
+- `agents-check` caught unquoted YAML in all 11 agent files (`description: Acquisition: …`). Claude Code would have skipped those files silently. Fixed.
+- `tests/test_agents.py`: 52 tests. Planted violations are denied: unapproved promotion, access-status upgrade, human-only paths for every role, held-out peeks (Read/Grep/Bash), force-push, destructive git, commit on main, network without grant, shell writes to human-only paths. Legitimate actions pass.
+- Not done: no live Claude Code run of the subagents or hook; manifest-before-run is not hook-enforced (D032; `06_claude_code_deployment.md` §3).

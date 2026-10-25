@@ -238,13 +238,24 @@ def cmd_graph() -> None:
         print(f"{out.name}: {n} triples; SHACL conforms={ok}; warnings={warn}")
 
 
+def cmd_agents_check() -> None:
+    """WP11: validate agent definitions, skills, task contracts and review decisions."""
+    from romeco.agents.tasks import check_all
+    errs = check_all()
+    for e in errs:
+        print("FAIL", e)
+    print("agents-check:", "OK" if not errs else f"{len(errs)} problem(s)")
+    if errs:
+        raise SystemExit(1)
+
+
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="romeco")
-    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput", "corpus", "benchmark", "graph"])
+    ap.add_argument("command", choices=["audit", "e000", "cq", "extract-pvindob", "mass", "fetch", "context", "throughput", "corpus", "benchmark", "graph", "agents-check"])
     args = ap.parse_args(argv)
     {"audit": cmd_audit, "e000": cmd_e000, "cq": cmd_cq,
      "extract-pvindob": cmd_extract_pvindob, "mass": cmd_mass,
-     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput, "corpus": cmd_corpus, "benchmark": cmd_benchmark, "graph": cmd_graph}[args.command]()
+     "fetch": cmd_fetch, "context": cmd_context, "throughput": cmd_throughput, "corpus": cmd_corpus, "benchmark": cmd_benchmark, "graph": cmd_graph, "agents-check": cmd_agents_check}[args.command]()
 
 
 if __name__ == "__main__":

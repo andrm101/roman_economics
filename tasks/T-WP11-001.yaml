@@ -1,0 +1,28 @@
+task_id: T-WP11-001
+role: ag-rev
+wp: WP11
+status: proposed
+goal: >
+  Dry run of the harness (WP11 acceptance): prepare review packets for the extraction candidates
+  that CQ10 links to ANC-PLINY-DESERT, with zero manual edits by the researcher during the run.
+inputs:
+  - data/derived/graph/full.ttl (regenerate with `python -m romeco.cli graph`)
+  - ontology/queries/CQ10_candidates_for_anchor.rq
+outputs_expected:
+  - review_queue/<ext_id>/packet.md and page.png for each candidate (git-ignored)
+  - review_queue/INDEX.md
+  - tasks/reports/T-WP11-001.md
+acceptance:
+  - python -m romeco.cli agents-check
+  - every CQ10 candidate for ANC-PLINY-DESERT has a packet
+  - registers/review_decisions.csv unchanged
+forbidden:
+  - writing review decisions or any human_reviewed status
+stop_and_escalate_if:
+  - a packet cannot render because the source file is absent
+  - a hook denies an action needed for the task
+budget:
+  max_turns: 30
+  max_wall_minutes: 30
+approved_by:
+notes: Proposed by the main session on 2026-10-25; the researcher approves by setting status to approved.

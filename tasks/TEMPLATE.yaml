@@ -1,0 +1,24 @@
+# Copy to tasks/T-WPnn-nnn.yaml (file name = task_id). Validated by `python -m romeco.cli agents-check`.
+task_id: T-WP00-000
+role: ag-parse              # one of the roles in .claude/policy/roles.yaml
+wp: WP00
+status: proposed            # proposed -> approved (researcher) -> in_progress -> done | blocked | rejected
+goal: >
+  One or two sentences: what changes in the repository when this is done.
+inputs:
+  - path or ID the agent starts from
+outputs_expected:
+  - files or rows that should exist afterwards
+acceptance:                 # commands or checks; machine-checkable where possible
+  - pytest -q
+forbidden:
+  - anything beyond the role's policy that this task must not touch
+stop_and_escalate_if:
+  - rights unclear
+  - a change would alter a claim that feeds a parameter
+  - a check can only pass by editing evidence or tests
+budget:
+  max_turns: 40
+  max_wall_minutes: 45
+approved_by:                # researcher id, set on approval
+notes:

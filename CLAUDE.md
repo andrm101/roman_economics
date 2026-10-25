@@ -8,3 +8,9 @@
 - New conversions go in `romeco.units.RULES` with scope, source and status.
 - Tag claims in research outputs as [sourced], [calculated], or [assumption].
 - Run `pytest` before committing. Append a dated entry to `registers/research_log.md` each session.
+
+## Agent harness (WP11)
+- Subagents (`.claude/agents/ag-*`) are bound by `.claude/policy/roles.yaml`, enforced by the PreToolUse hook `romeco.agents.hooks`. See `docs/expansion/06_claude_code_deployment.md`.
+- Every agent task has a contract in `tasks/` and a report in `tasks/reports/` (skill `task-protocol`).
+- Only the researcher writes decisions, review decisions, questions, parameters, ontology and policy. Agents propose.
+- Run `python -m romeco.cli agents-check` after changing agents, skills, tasks or policy.

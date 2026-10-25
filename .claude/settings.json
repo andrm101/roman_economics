@@ -1,0 +1,27 @@
+{
+  "$comment": "romeco agent harness (WP11). Policy lives in .claude/policy/roles.yaml; enforcement in src/romeco/agents/hooks.py. Checked against code.claude.com/docs (hooks, permissions, sub-agents, skills) on 2026-10-25.",
+  "permissions": {
+    "deny": [
+      "Bash(git push --force *)",
+      "Bash(git push -f *)",
+      "Bash(git filter-branch *)",
+      "Read(./.env)",
+      "Read(./secrets/**)"
+    ],
+    "disableBypassPermissionsMode": "disable"
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash|Edit|Write|NotebookEdit|MultiEdit|Read|Grep|Glob",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "PYTHONPATH=\"$CLAUDE_PROJECT_DIR/src\" python3 -m romeco.agents.hooks pre-tool-use",
+            "timeout": 20
+          }
+        ]
+      }
+    ]
+  }
+}
