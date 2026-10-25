@@ -1,11 +1,25 @@
-# Validation T-WP10-001 (ag-val)
+# Validation: T-WP10-001 (implementation run)
 
-Branch agent/T-WP10-001, base 39b73e8. Overall: PASS (escalation accepted; no code delivered, so functional acceptance criteria are unverified, not failed).
+Result: PASS
+Branch agent/T-WP10-001, commit 014f6ed, diff base fa465ab. Validator: AG-VAL, 2026-10-25.
 
-1. Diff scope: PASS. `git diff --stat 39b73e8..agent/T-WP10-001` lists one file, tasks/reports/T-WP10-001.md (57 insertions), covered by ag-mod grant `tasks/reports/**`. No dated record, register, parameter or policy file touched.
-2. `pytest -q`: PASS. 181 passed, 1 skipped.
-3. `python -m romeco.cli agents-check`: PASS. Output: `agents-check: OK`. `graph` also run: core.ttl 3046 triples, full.ttl 55078 triples, SHACL conforms=True, warnings=4.
-4. Report structure: PASS. Exactly five H2 sections (Summary, Files changed, Checks run, Not checked, Escalations); "Not checked" is non-empty.
-5. Escalation consistency with spec section 4: PASS. Lines 57-60 define overlap join "with the overlap fraction" (no denominator), lag join "within k years after A ends" (no k inclusivity, lag 0 or negative lag handling), containment "A is inside B" (strictness unstated). Interval meaning (duration vs uncertainty bounds) is also unstated in the t_low/t_high row. The stop condition "ambiguous on a join rule" is met.
+## Checks
+| Check | Result | Evidence |
+|---|---|---|
+| `pytest -q` (full suite) | PASS | 205 passed, 0 failed, 1 skipped |
+| `tests/test_time.py` | PASS | 24 passed |
+| `python -m romeco.cli graph` | PASS | core.ttl 3074 triples, SHACL conforms=True, warnings=4; full.ttl 55106 triples, SHACL conforms=True, warnings=4 |
+| `python -m romeco.cli agents-check` | PASS | `agents-check: OK` |
+| `python -m romeco.cli benchmark` | N/A | no extractor code changed |
+| Acceptance: 1 BCE -> 0, 1 CE -> 1; (-1, 1) spans 2 years | PASS | `test_astronomical_conversion_acceptance`, plus `test_year_zero_rejected`, `test_roundtrip` |
+| Acceptance: planted A->B->A reported circular | PASS | `test_planted_two_cycle_is_circular`, `test_longer_cycle_and_other_side`, `test_cycle_downstream_is_circular` |
+| Acceptance: Monte Carlo reproducible for fixed seed | PASS | `test_monte_carlo_reproducible_for_fixed_seed` |
+| D033 coverage | PASS | tests for overlap_frac and Jaccard, inclusive containment, lag 0 <= lag <= k (negative k rejected), uniform seeded draws, cycles of any length |
+| Diff within contract outputs and ag-mod grant | PASS | Changed files are `src/romeco/time.py`, `tests/test_time.py` (both in outputs_expected and the ag-mod grant) and `tasks/reports/T-WP10-001.md`. The report file is not listed in outputs_expected but is covered by the grant `tasks/reports/**` and the task-protocol. |
+| Forbidden: no change to existing dated records | PASS | The diff touches no file under data/, registers/ or config/. `time.py` has no file I/O or CSV writes. |
 
-Not run: benchmark (no extractor code changed). Acceptance criteria 2-4 (year-0 conversion, A->B->A cycle, seeded Monte Carlo) not testable: no src/romeco/time.py exists. Task needs researcher decisions on E1 items 1-3, then re-issue.
+## Not checked
+- Correctness of time.py beyond the tests present (no independent review of the numerical logic).
+- The skipped test in the full suite was not investigated.
+- The 4 SHACL warnings were not compared against a previous baseline.
+- The accuracy of the content of tasks/reports/T-WP10-001.md.
