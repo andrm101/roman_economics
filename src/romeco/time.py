@@ -1,6 +1,6 @@
-"""Shared time model (WP10; spec: docs/expansion/02_ontology_and_data.md section 4, D033).
+"""Shared time model (WP10; spec: docs/expansion/02_ontology_and_data.md section 4, D033, D034).
 
-Semantics fixed by D033:
+Semantics fixed by D033 (lag rule amended by D034):
 
 * ``[t_low, t_high]`` bounds the *uncertainty* about one event's date (aoristic
   reading), not a duration.
@@ -11,8 +11,11 @@ Semantics fixed by D033:
   (asymmetric aoristic weight) and ``jaccard = |A∩B| / |A∪B|``.
 * Containment join: ``B.low <= A.low`` and ``A.high <= B.high`` (inclusive; equal
   intervals count).
-* Lag join: ``0 <= B.low - A.high <= k``, inclusive at both ends.
+* Lag join (D034): ``1 <= B.low - A.high <= k``, inclusive at both ends. A pair
+  sharing any year (lag <= 0) belongs to the overlap join only, so the two joins
+  are disjoint.
 * Monte Carlo: uniform integer draws within each interval, seeded (default 42).
+  Circularly dated records are excluded automatically; record IDs must be unique.
 * Circular dating: following ``dating_dependency`` links over a chain of any
   length reaches the other side of the join, or returns to itself.
 
@@ -171,7 +174,11 @@ def containment_join(left: Iterable[Interval], right: Iterable[Interval]) -> lis
 
 
 def lag_join(left: Iterable[Interval], right: Iterable[Interval], k: int) -> list[LagPair]:
-    """All pairs (A in left, B in right) with ``0 <= B.low - A.high <= k``."""
+    """All pairs (A in left, B in right) with ``1 <= B.low - A.high <= k`` (D034).
+
+    Lag 1 means B starts the year after A ends. Pairs sharing a year (lag <= 0)
+    are overlap-join pairs only. ``k = 0`` is accepted and yields no pairs.
+    """
     if not isinstance(k, int) or isinstance(k, bool) or k < 0:
         raise ValueError(f"k must be a non-negative int, got {k!r}")
     rights = list(right)
@@ -179,7 +186,7 @@ def lag_join(left: Iterable[Interval], right: Iterable[Interval], k: int) -> lis
     for a in left:
         for b in rights:
             lag = lag_years(a, b)
-            if 0 <= lag <= k:
+            if 1 <= lag <= k:
                 out.append(LagPair(a.record_id, b.record_id, lag))
     return out
 
@@ -227,33 +234,95 @@ def circular_records(left: Sequence[Interval], right: Sequence[Interval],
 
 @dataclass(frozen=True)
 class MonteCarloResult:
-    """Values of a statistic over dating draws. Draws are simulated data."""
+    """Values of a statistic over dating draws. Draws are simulated data.
+
+    ``excluded`` is every record dropped before sampling (caller's ``exclude`` plus
+    ``circular``); ``circular`` is the subset detected automatically as circular.
+    """
 
     seed: int
     n_draws: int
     values: tuple[Any, ...]
     excluded: frozenset[str] = field(default_factory=frozenset)
     record_origin: str = "simulated"
+    circular: frozenset[str] = field(default_factory=frozenset)
+
+
+def check_unique_ids(intervals: Iterable[Interval]) -> None:
+    """Raise ``ValueError`` if any ``record_id`` occurs more than once."""
+    seen: set[str] = set()
+    dups: set[str] = set()
+    for iv in intervals:
+        if iv.record_id in seen:
+            dups.add(iv.record_id)
+        seen.add(iv.record_id)
+    if dups:
+        raise ValueError(f"duplicate record IDs: {sorted(dups)}")
 
 
 def draw_dates(intervals: Sequence[Interval], rng: random.Random) -> dict[str, int]:
-    """One uniform integer draw (astronomical year) per interval, in input order."""
+    """One uniform integer draw (astronomical year) per interval, in input order.
+
+    Raises ``ValueError`` on duplicate record IDs (they would collapse to one draw).
+    """
+    check_unique_ids(intervals)
     return {iv.record_id: rng.randint(iv.a_low, iv.a_high) for iv in intervals}
+
+
+def _check_n_draws(n_draws: object) -> None:
+    if not isinstance(n_draws, int) or isinstance(n_draws, bool) or n_draws < 1:
+        raise ValueError(f"n_draws must be a positive int, got {n_draws!r}")
+
+
+def _run(intervals: Sequence[Interval], statistic: Callable[[dict[str, int]], Any], n_draws: int,
+         seed: int, exclude: Iterable[str], circular: set[str]) -> MonteCarloResult:
+    excluded = frozenset(exclude) | frozenset(circular)
+    kept = [iv for iv in intervals if iv.record_id not in excluded]
+    rng = random.Random(seed)
+    values = tuple(statistic(draw_dates(kept, rng)) for _ in range(n_draws))
+    return MonteCarloResult(seed=seed, n_draws=n_draws, values=values, excluded=excluded,
+                            circular=frozenset(circular))
 
 
 def monte_carlo(intervals: Sequence[Interval], statistic: Callable[[dict[str, int]], Any],
                 n_draws: int, seed: int = DEFAULT_SEED,
-                exclude: Iterable[str] = ()) -> MonteCarloResult:
+                exclude: Iterable[str] = (),
+                extra_dependencies: Mapping[str, str | None] | None = None) -> MonteCarloResult:
     """Resample dates uniformly within their intervals and evaluate ``statistic``.
 
-    ``statistic`` receives ``{record_id: astronomical_year}`` per draw. Records in
-    ``exclude`` (e.g. from :func:`circular_records`) are dropped before sampling.
-    Reproducible for a fixed seed and input order.
+    ``statistic`` receives ``{record_id: astronomical_year}`` per draw. Reproducible
+    for a fixed seed and input order.
+
+    Circular records are excluded automatically (spec section 4). With a flat list
+    there are no join sides, so only the "returns to itself" criterion applies: a
+    record whose ``dating_dependency`` chain (through ``intervals`` and
+    ``extra_dependencies``) enters a cycle. For the "reaches the other side of the
+    join" criterion use :func:`monte_carlo_join`. Records in ``exclude`` are also
+    dropped. Raises ``ValueError`` on duplicate record IDs or a non-positive /
+    non-int / bool ``n_draws``.
     """
-    if not isinstance(n_draws, int) or n_draws < 1:
-        raise ValueError(f"n_draws must be a positive int, got {n_draws!r}")
-    excluded = frozenset(exclude)
-    kept = [iv for iv in intervals if iv.record_id not in excluded]
-    rng = random.Random(seed)
-    values = tuple(statistic(draw_dates(kept, rng)) for _ in range(n_draws))
-    return MonteCarloResult(seed=seed, n_draws=n_draws, values=values, excluded=excluded)
+    _check_n_draws(n_draws)
+    intervals = list(intervals)
+    check_unique_ids(intervals)
+    deps: dict[str, str | None] = dict(extra_dependencies or {})
+    for iv in intervals:
+        deps[iv.record_id] = iv.dating_dependency
+    circular = {iv.record_id for iv in intervals if is_circular(iv.record_id, deps)}
+    return _run(intervals, statistic, n_draws, seed, exclude, circular)
+
+
+def monte_carlo_join(left: Sequence[Interval], right: Sequence[Interval],
+                     statistic: Callable[[dict[str, int]], Any], n_draws: int,
+                     seed: int = DEFAULT_SEED, exclude: Iterable[str] = (),
+                     extra_dependencies: Mapping[str, str | None] | None = None) -> MonteCarloResult:
+    """Monte Carlo for a two-sided join: excludes :func:`circular_records` automatically.
+
+    Draws over ``left`` then ``right`` (in that order). Record IDs must be unique
+    across both sides. Other arguments as in :func:`monte_carlo`.
+    """
+    _check_n_draws(n_draws)
+    left, right = list(left), list(right)
+    both = [*left, *right]
+    check_unique_ids(both)
+    circular = circular_records(left, right, extra_dependencies)
+    return _run(both, statistic, n_draws, seed, exclude, circular)
