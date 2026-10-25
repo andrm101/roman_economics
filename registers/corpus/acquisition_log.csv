@@ -41,3 +41,4 @@ timestamp,source_id,locator,outcome,detail
 2026-10-24T23:12:19+00:00,SRC-HANSON-2016-DB,file:data/raw/context/hanson_cities/manual/hanson2016_citiesdatabase_oxrep.xlsx,skipped_unchanged,5b9fc0195c3b
 2026-10-24T23:12:19+00:00,SRC-ITINERE-2025,file:data/raw/context/itinere/manual/itinere_roads.gpkg,skipped_unchanged,1b9470aaec69
 2026-10-24T23:12:19+00:00,SRC-BRUN-ETAL-2018,http:https://books.openedition.org/cdf/5230,blocked_by_environment,http locators are not fetched from this environment (allow-list); supply the file
+2026-10-25T11:22:48+00:00,SRC-PLINY-NH-MAYHOFF,git:https://github.com/PerseusDL/canonical-latinLit@0700a6b7e010:data/phi0978/phi001/phi0978.phi001.perseus-lat2.xml,restored_cache,113b3df1fa7e

@@ -126,3 +126,11 @@
 - `agents-check` caught unquoted YAML in all 11 agent files (`description: Acquisition: …`). Claude Code would have skipped those files silently. Fixed.
 - `tests/test_agents.py`: 52 tests. Planted violations are denied: unapproved promotion, access-status upgrade, human-only paths for every role, held-out peeks (Read/Grep/Bash), force-push, destructive git, commit on main, network without grant, shell writes to human-only paths. Legitimate actions pass.
 - Not done: no live Claude Code run of the subagents or hook; manifest-before-run is not hook-enforced (D032; `06_claude_code_deployment.md` §3).
+
+## 2026-10-25 — Session 12 (WP11 first deployment on Windows)
+
+- Fresh clone on Windows 11, Python 3.14. `pytest -q`: 180 passed, 1 skipped once two portability bugs were fixed. `agents-check`: OK.
+- Bug 1: `core.autocrlf=true` rewrote `data/raw/idp_data/.../27666.xml`, so `test_snapshot_checksum` failed. Fix: `.gitattributes` with `data/raw/** -text` (PR #1).
+- Bug 2: `acquire.run()` logged `skipped_unchanged` for a known item even when its cache file was missing, so a fresh clone or `purge_cache()` could never be restored. Now it rewrites the identical bytes and logs `restored_cache`. Test: `test_acquire_restores_missing_cache_for_known_item`.
+- Offline hook probe through the exact `settings.json` command, with Windows paths: 9/9 policy cases as expected (human-only write, held-out Read/Grep/Bash, `human_reviewed` text rule, unknown agent, main session).
+- Restored corpus cache: Pliny (git route, `restored_cache`); Adams 2007 from the researcher's own copy, SHA-256 identical to ITM-68c25790bd89 (stays git-ignored, RGT-OUP-ARR).

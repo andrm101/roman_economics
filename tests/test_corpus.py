@@ -19,6 +19,27 @@ def test_registry_is_referentially_valid():
     assert R.validate() == []
 
 
+def test_acquire_restores_missing_cache_for_known_item(tmp_path, monkeypatch):
+    from romeco.corpus import acquire as A
+    blob = b"<TEI/>"
+    h = A._sha256(blob)
+    item = dict(item_id=f"ITM-{h[:12]}", source_id="SRC-X", sha256=h, cache_path=f"data/raw/corpus/{h[:2]}/{h}.xml")
+    queue = tmp_path / "q.yaml"
+    queue.write_text(yaml.safe_dump({"items": [{"source_id": "SRC-X", "media_type": "application/tei+xml",
+                                                "locator": {"type": "git", "repo": "r", "commit": "c", "path": "a.xml"}}]}))
+    log = []
+    monkeypatch.setattr(R, "ROOT", tmp_path)
+    monkeypatch.setattr(R, "sources", lambda: {"SRC-X": {}})
+    monkeypatch.setattr(R, "read", lambda name: [item])
+    monkeypatch.setattr(R, "write", lambda *a: None)
+    monkeypatch.setattr(R, "append_log", lambda sid, ls, outcome, detail: log.append(outcome))
+    monkeypatch.setattr(A, "_read_locator", lambda loc: blob)
+    rep = A.run(queue_path=queue)
+    assert (tmp_path / item["cache_path"]).read_bytes() == blob
+    assert rep[0]["outcome"] == log[0] == "restored_cache"
+    assert A.run(queue_path=queue)[0]["outcome"] == "skipped_unchanged"
+
+
 def test_items_rights_flag_matches_rights_register():
     for it in R.read("items.csv"):
         assert it["redistribute_text"] == ("yes" if R.may_redistribute_text(it["rights_id"]) else "no")

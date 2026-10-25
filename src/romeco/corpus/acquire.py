@@ -84,8 +84,14 @@ def run(queue_path: Path = QUEUE, only: list[str] | None = None) -> list[dict]:
             continue
         h = _sha256(blob)
         if (sid, h) in by_key:
-            R.append_log(sid, ls, "skipped_unchanged", h[:12])
-            report.append(dict(source_id=sid, outcome="skipped_unchanged", sha256=h))
+            known = R.ROOT / by_key[(sid, h)]["cache_path"]
+            outcome = "skipped_unchanged"
+            if not known.exists():  # fresh clone or purged cache: same bytes, same item, restore the file
+                known.parent.mkdir(parents=True, exist_ok=True)
+                known.write_bytes(blob)
+                outcome = "restored_cache"
+            R.append_log(sid, ls, outcome, h[:12])
+            report.append(dict(source_id=sid, outcome=outcome, sha256=h))
             continue
         ext = Path(loc.get("path", "")).suffix.lower() or e.get("ext", "")
         dest = CACHE / h[:2] / f"{h}{ext}"
