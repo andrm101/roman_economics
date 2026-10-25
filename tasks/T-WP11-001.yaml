@@ -1,7 +1,7 @@
 task_id: T-WP11-001
 role: ag-rev
 wp: WP11
-status: approved
+status: done
 goal: >
   Dry run of the harness (WP11 acceptance): prepare review packets for the extraction candidates
   that CQ10 links to ANC-PLINY-DESERT, with zero manual edits by the researcher during the run.
